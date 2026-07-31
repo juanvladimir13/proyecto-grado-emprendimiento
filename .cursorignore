@@ -1,0 +1,36 @@
+# ==========================================
+#  Cursor IDE Codebase Indexing Ignore
+# ==========================================
+
+# Ignorar archivos compilados y auxiliares de LaTeX
+*.aux
+*.log
+*.toc
+*.lof
+*.lot
+*.out
+*.bbl
+*.blg
+*.run.xml
+*.bcf
+*.fdb_latexmk
+*.fls
+*.synctex.gz
+*.pdf
+main.pdf
+
+# Ignorar recursivamente auxiliares en directorios
+emprendimiento-capitulos/**/*.aux
+innovacion-capitulos/**/*.aux
+docs/**/*.aux
+preliminares/**/*.aux
+anexos/**/*.aux
+portada/**/*.aux
+
+# Ignorar directorios de configuración de IDEs o Agentes
+.agent/
+.antigravitycli/
+.cline/
+.cursor/
+.idea/
+.vscode/

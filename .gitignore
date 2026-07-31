@@ -1,0 +1,35 @@
+# ==========================================
+#  LaTex Generated / Auxiliary Files
+# ==========================================
+*.aux
+*.log
+*.toc
+*.lof
+*.lot
+*.out
+*.bbl
+*.blg
+*.run.xml
+*.bcf
+*.fdb_latexmk
+*.fls
+*.synctex.gz
+*.pdf
+
+# Subdirectory auxiliaries
+emprendimiento-capitulos/**/*.aux
+innovacion-capitulos/**/*.aux
+docs/**/*.aux
+preliminares/**/*.aux
+anexos/**/*.aux
+portada/**/*.aux
+
+# ==========================================
+#  AI Agent / Tool-Specific Temp Files
+# ==========================================
+.agent/
+.antigravitycli/
+.cline/
+.cursor/
+.idea/
+.vscode/

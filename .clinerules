@@ -1,0 +1,16 @@
+# Cline Rules & Guidelines
+
+Este proyecto de LaTeX modular sigue pautas estrictas para mantener la consistencia y escalabilidad del documento.
+
+Antes de comenzar cualquier tarea de desarrollo o modificación de código, lee las directrices del proyecto en el archivo principal `AGENTS.md`.
+
+## Resumen de Reglas Clave:
+1. **Variables Centralizadas:** Toda modificación de metadatos (autor, título, tutor, institución) debe realizarse únicamente en `estilos/configuracion.tex`.
+2. **Estilo de Títulos APA 7 Adaptado:**
+   - Todos los títulos y enlaces del documento en **negro** (`linkcolor=black`).
+   - Interlineado sencillo (`1.0`) para títulos de Nivel 1, 2, 3 y 4.
+   - Nivel 1 (`\chapter`) alineado a la **izquierda**, sin la palabra "Capítulo" en el prefijo (ej: `1. INTRODUCCIÓN`), y con espaciado anterior a `-15pt`.
+3. **Encabezados Desactivados:** Sin textos de cabecera ni línea horizontal superior (`headrulewidth=0pt`). Numeración centrada abajo.
+4. **Secciones Finales (Bibliografía/Anexos):** Sin numeración decimal en los títulos, y sin números de página ni cabeceras (`\pagestyle{empty}`).
+5. **Compilación y Limpieza:** Usa únicamente el script ejecutable `./compilar.sh` (admite `--clean` y `--only-clean`).
+6. **Idioma:** Redacción de la tesis y comentarios en español (exceptuando el abstract en inglés).

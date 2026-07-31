@@ -1,0 +1,51 @@
+\documentclass[11pt, oneside]{report}
+
+% --- Cargar Configuración de Estilos (Arial, Carta, Márgenes e Interlineado 1.5) ---
+\usepackage{estilos/estilos}
+
+\begin{document}
+
+% --- Portada ---
+\input{preliminares/caratula.tex}
+
+% --- Páginas Preliminares (Numeración Romana) ---
+\pagenumbering{roman}
+
+\input{preliminares/agradecimiento.tex}
+\input{preliminares/dedicatoria.tex}
+
+\cleardoublepage
+\tableofcontents
+\newpage
+\listoffigures
+\newpage
+\listoftables
+\newpage
+
+\input{preliminares/resumen.tex}
+
+% --- Cuerpo Principal (Numeración Arábiga) ---
+\cleardoublepage
+\pagenumbering{arabic}
+
+% === SELECCIÓN DE MODALIDAD ===
+% Descomenta la modalidad que deseas compilar y comenta la otra.
+
+% Opción 1: Emprendimiento Productivo
+\input{emprendimiento-capitulos/index.tex}
+
+% Opción 2: Innovación Tecnológica
+% \input{innovacion-capitulos/index.tex}
+% --- Bibliografía ---
+\cleardoublepage
+\pagestyle{empty}
+\assignpagestyle{\chapter}{empty}
+\addcontentsline{toc}{chapter}{Bibliografía}
+\bibliographystyle{plain}
+\bibliography{bibliografia/referencias}
+
+% --- Anexos ---
+\cleardoublepage
+\input{anexos/anexo_a.tex}
+
+\end{document}

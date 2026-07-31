@@ -1,0 +1,112 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{estilos/estilos}[2026/07/31 Configuración de Estilos para Emprendimiento Productivo]
+
+% --- Cargar Configuración Centralizada ---
+\input{estilos/configuracion.tex}
+
+% --- Paquetes de Formato e Idioma ---
+\RequirePackage[spanish, es-tabla]{babel}
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[T1]{fontenc}
+
+% --- Especificaciones de la Hoja y Márgenes ---
+% Carta: Superior=2.5cm, Inferior=2.5cm, Derecho=2.5cm, Izquierdo=3.0cm
+\RequirePackage{geometry}
+\geometry{
+    letterpaper,
+    top=2.5cm,
+    bottom=2.5cm,
+    left=3.0cm,
+    right=2.5cm,
+    headheight=15pt
+}
+
+% --- Tipografía Arial (11pt en documento principal) ---
+\RequirePackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
+% --- Interlineado 1.5 ---
+\RequirePackage{setspace}
+\onehalfspacing
+
+% --- Colores Institucionales ---
+\RequirePackage{xcolor}
+\definecolor{primary}{RGB}{24, 106, 59}      % Verde empresarial
+\definecolor{secondary}{RGB}{35, 155, 86}    % Verde secundario
+\definecolor{darktext}{RGB}{33, 33, 33}     % Texto principal
+
+% --- Formato de Títulos y Encabezados (APA 7ma Edición Adaptado) ---
+\RequirePackage{titlesec}
+
+% Nivel 1 (Alineado Izquierda, Negrita) - Aplicado a Capítulos
+\titleformat{\chapter}[block]
+  {\normalfont\Large\bfseries\setstretch{1.0}}
+  {\thechapter.}{0.5em}{}
+\titlespacing*{\chapter}{0pt}{-15pt}{10pt}
+
+% Versión sin numerar para Nivel 1 (Bibliografía, Anexos, etc. - Alineado Izquierda)
+\titleformat{name=\chapter,numberless}[block]
+  {\normalfont\Large\bfseries\setstretch{1.0}}
+  {}{0pt}{}
+\titlespacing*{name=\chapter,numberless}{0pt}{-15pt}{20pt}
+
+% Nivel 2 (Alineado Izquierda, Negrita) - Aplicado a Secciones
+\titleformat{\section}
+  {\normalfont\large\bfseries\setstretch{1.0}}
+  {\thesection}{1em}{}
+\titlespacing*{\section}{0pt}{12pt}{6pt}
+
+% Nivel 3 (Alineado Izquierda, Negrita y Cursiva) - Aplicado a Subsecciones
+\titleformat{\subsection}
+  {\normalfont\large\bfseries\itshape\setstretch{1.0}}
+  {\thesubsection}{1em}{}
+\titlespacing*{\subsection}{0pt}{12pt}{6pt}
+
+% Nivel 4 (Sangría 1.27cm, Negrita, Run-in con punto final) - Aplicado a Subsubsecciones
+\titleformat{\subsubsection}[runin]
+  {\normalfont\normalsize\bfseries\setstretch{1.0}}
+  {\thesubsubsection}{1em}{}[.]
+\titlespacing*{\subsubsection}
+  {1.27cm}{12pt}{0.5em}
+
+% Nivel 5 (Sangría 1.27cm, Negrita y Cursiva, Run-in con punto final) - Aplicado a Párrafos
+\titleformat{\paragraph}[runin]
+  {\normalfont\normalsize\bfseries\itshape}
+  {\theparagraph}{1em}{}[.]
+\titlespacing*{\paragraph}
+  {1.27cm}{12pt}{0.5em}
+
+
+% --- Encabezados y Pies de Página ---
+\RequirePackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\cfoot{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+
+% --- Paquetes para Gráficos y Tablas ---
+\RequirePackage{graphicx}
+\graphicspath{{imagenes/}} % Ruta por defecto para figuras
+\RequirePackage{booktabs}
+\RequirePackage{array}
+\RequirePackage{caption}
+\RequirePackage{subcaption}
+
+% --- Enlaces e Hipervínculos ---
+\RequirePackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    citecolor=secondary,
+    urlcolor=primary,
+    pdfstartview=FitH,
+    pdftitle={\tituloproyecto},
+    pdfauthor={\autorproyecto},
+    pdfsubject={\subtituloproyecto}
+}
+
+% --- Listas Mejoradas ---
+\RequirePackage{enumitem}
+\setlist{noitemsep, topsep=3pt}
+
+\endinput
