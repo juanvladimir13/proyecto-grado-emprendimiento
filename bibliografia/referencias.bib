@@ -1,14 +1,103 @@
-@book{kotler2016dirección,
+% ============================================================
+%  BIBLIOGRAFÍA — Formato APA 7ma Edición
+%  Cada entrada debe incluir todos los campos requeridos por
+%  el estilo biblatex-apa para generar referencias correctas.
+%
+%  Guía rápida de tipos de entrada:
+%    @book         → Libro completo
+%    @article      → Artículo de revista científica
+%    @online       → Página web o recurso en línea
+%    @mastersthesis→ Tesis de grado o maestría
+%    @misc         → Normas legales, reportes, otros
+%    @inbook       → Capítulo dentro de un libro editado
+% ============================================================
+
+% --- Libros ---
+
+@book{kotler2016direccion,
   author    = {Kotler, Philip and Keller, Kevin Lane},
-  title     = {Dirección de Marketing},
-  edition   = {15ª},
+  title     = {Dirección de marketing},
+  edition   = {15},
   year      = {2016},
-  publisher = {Pearson Educación}
+  publisher = {Pearson Educación},
+  address   = {Ciudad de México, México}
 }
 
 @book{osterwalder2010generacion,
   author    = {Osterwalder, Alexander and Pigneur, Yves},
   title     = {Generación de modelos de negocio},
   year      = {2010},
-  publisher = {Deusto}
+  publisher = {Deusto},
+  address   = {Barcelona, España}
 }
+
+@book{knuth1984literate,
+  author    = {Knuth, Donald E.},
+  title     = {The {TeXbook}},
+  year      = {1984},
+  publisher = {Addison-Wesley},
+  address   = {Reading, MA}
+}
+
+@book{lamport1994latex,
+  author    = {Lamport, Leslie},
+  title     = {{\LaTeX}: A document preparation system},
+  edition   = {2},
+  year      = {1994},
+  publisher = {Addison-Wesley},
+  address   = {Reading, MA}
+}
+
+% --- Recursos en línea ---
+
+@online{latexproject,
+  author  = {{The \LaTeX{} Project}},
+  title   = {An introduction to {\LaTeX}},
+  year    = {2024},
+  url     = {https://www.latex-project.org/about/},
+  urldate = {2026-08-14}
+}
+
+% --- Artículos de revista científica (ejemplo) ---
+
+@article{hernandez2014metodologia,
+  author    = {Hernández Sampieri, Roberto and Fernández Collado, Carlos
+               and Baptista Lucio, Pilar},
+  title     = {Definición del alcance de la investigación que se realizará:
+               exploratorio, descriptivo, correlacional o explicativo},
+  journal   = {Metodología de la investigación},
+  year      = {2014},
+  volume    = {6},
+  pages     = {88--101},
+  publisher = {McGraw-Hill}
+}
+
+% --- Ejemplos comentados (descomente y adapte según necesite) ---
+
+% Ejemplo: Tesis de grado
+% @mastersthesis{apellido2023titulo,
+%   author  = {Apellido, Nombre},
+%   title   = {Título de la tesis},
+%   year    = {2023},
+%   school  = {Universidad Mayor de San Andrés},
+%   address = {La Paz, Bolivia},
+%   type    = {Tesis de grado}
+% }
+
+% Ejemplo: Norma legal boliviana
+% @misc{bolivia2023rm0912,
+%   author       = {{Estado Plurinacional de Bolivia}},
+%   title        = {Resolución Ministerial {RM} 0912/2023: Reglamento de
+%                   Graduación del Bachillerato Técnico Humanístico},
+%   year         = {2023},
+%   howpublished = {Gaceta Oficial del Estado Plurinacional de Bolivia}
+% }
+
+% Ejemplo: Página web institucional
+% @online{institucion2026titulo,
+%   author  = {{Nombre de la Institución}},
+%   title   = {Título de la página},
+%   year    = {2026},
+%   url     = {https://www.ejemplo.com/pagina},
+%   urldate = {2026-01-15}
+% }

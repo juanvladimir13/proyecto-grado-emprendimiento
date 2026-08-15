@@ -11,6 +11,10 @@ Antes de comenzar cualquier tarea de desarrollo o modificación de código, lee 
    - Interlineado sencillo (`1.0`) para títulos de Nivel 1, 2, 3 y 4.
    - Nivel 1 (`\chapter`) alineado a la **izquierda**, sin la palabra "Capítulo" en el prefijo (ej: `1. INTRODUCCIÓN`), y con espaciado anterior a `-15pt`.
 3. **Encabezados Desactivados:** Sin textos de cabecera ni línea horizontal superior (`headrulewidth=0pt`). Numeración centrada abajo.
-4. **Secciones Finales (Bibliografía/Anexos):** Sin numeración decimal en los títulos, y sin números de página ni cabeceras (`\pagestyle{empty}`).
-5. **Compilación y Limpieza:** Usa únicamente el script ejecutable `./compilar.sh` (admite `--clean` y `--only-clean`).
-6. **Idioma:** Redacción de la tesis y comentarios en español (exceptuando el abstract en inglés).
+4. **Bibliografía APA 7ma Edición:** Motor `biblatex` con estilo `apa` y backend `biber`. Usar `\parencite{clave}` para citas parentéticas y `\textcite{clave}` para narrativas. Lista generada con `\printbibliography`.
+5. **Secciones Finales (Bibliografía/Anexos):** Sin numeración decimal en los títulos, y sin números de página ni cabeceras (`\pagestyle{empty}`).
+6. **Compilación y Limpieza:** Usa únicamente el script ejecutable `./compilar.sh` (admite `--clean` y `--only-clean`).
+7. **División de Palabras Desactivada:** No dividir palabras con guiones a fin de línea (`\hyphenpenalty=10000`).
+8. **Código Fuente y Programación:** Usar `codigo/` para scripts externos e importar con `\lstinputlisting[language=...]{codigo/archivo.ext}` (o bloques `lstlisting`) con el estilo `estilocodigo` preconfigurado en Courier.
+9. **Idioma:** Redacción de la tesis y comentarios en español (exceptuando el abstract en inglés).
+

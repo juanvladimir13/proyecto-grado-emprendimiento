@@ -18,11 +18,19 @@ Este archivo define la estructura, reglas y flujos de trabajo del proyecto para 
 ## 🛠️ Stack Tecnológico & Formato
 
 * **Motor de Documento:** LaTeX (`report` class).
-* **Tipografía:** Arial (`helvet`), tamaño de fuente `11pt` en cuerpo principal.
+* **Motor Bibliográfico:** `biblatex` con estilo `apa` (APA 7ma Edición) y backend `biber`, con `csquotes` (`autostyle`).
+* **Tipografía:** Arial (`helvet`) de tamaño `11pt` en cuerpo principal, y Courier (`courier`) para código fuente y texto monoespaciado.
+* **Código Fuente y Programación:** Entorno `listings` con sintaxis coloreada, soporte UTF-8 (español), tipografía Courier y estilo predeterminado `estilocodigo`.
 * **Tamaño de Hoja:** Carta (`letterpaper`).
 * **Márgenes:** Izquierdo: 3.0 cm | Derecho, Superior e Inferior: 2.5 cm.
 * **Interlineado:** 1.5 líneas (`\onehalfspacing`) en párrafos.
-* **Compilación:** Automatizada con el script ejecutable `./compilar.sh` en el raíz.
+* **División de Palabras (Silabación):** Desactivada globalmente (`\hyphenpenalty=10000`, `\exhyphenpenalty=10000`).
+* **Compilación:** Automatizada con el script ejecutable `./compilar.sh` en la raíz (utiliza `pdflatex` y `biber`).
+* **Dependencias de Sistema (TeX Live en Linux/Debian/Ubuntu):**
+  ```bash
+  sudo apt-get install -y texlive-latex-base texlive-latex-recommended texlive-latex-extra \
+                          texlive-bibtex-extra biber texlive-publishers texlive-lang-spanish
+  ```
 
 ---
 
@@ -33,10 +41,13 @@ proyecto-grado/
 ├── main.tex                                # Entrada principal de compilación LaTeX
 ├── README.md                               # Guía del usuario para compilar y usar la plantilla
 ├── AGENTS.md                               # Instrucciones y reglas para Agentes de IA (este archivo)
-├── compilar.sh                             # Script ejecutable de compilación y limpieza LaTeX
+├── ESTRUCTURA_CAPITULOS.md                 # Detalle temático de capítulos de ambas modalidades
+├── compilar.sh                             # Script ejecutable de compilación (pdflatex + biber) y limpieza
 ├── estilos/
-│   ├── estilos.sty                         # Estilos, carga de paquetes y personalización de títulos
-│   └── configuracion.tex                   # Variables de autor, título, tutor y universidad
+│   ├── estilos.sty                         # Estilos, carga de paquetes (biblatex-apa), títulos APA 7
+│   └── configuracion.tex                   # Variables centralizadas de autor, título, tutor e institución
+├── portada/                                # Portadas adicionales / alternativas
+│   └── portada.tex                         # Plantilla genérica de portada universitaria
 ├── preliminares/                           # Hojas frontales (numeración romana)
 │   ├── caratula.tex                        # Portada dinámica (usa variables de configuracion.tex)
 │   ├── agradecimiento.tex                  # Agradecimientos
@@ -45,12 +56,14 @@ proyecto-grado/
 ├── emprendimiento-capitulos/               # Modalidad: Emprendimiento Productivo (Capítulos 1-7)
 │   ├── index.tex                           # Ensamble de los 7 capítulos
 │   ├── datos-proyecto.md                   # Ficha de recopilación de datos
+│   ├── datos-prueba-desayunos.md           # Ficha con datos de prueba
 │   ├── 01_introduccion/
 │   ├── ...
 │   └── 07_conclusiones_recomendaciones/
 ├── innovacion-capitulos/                   # Modalidad: Innovación Tecnológica (Capítulos 1-9)
 │   ├── index.tex                           # Ensamble de los 9 capítulos
 │   ├── datos-proyecto.md                   # Ficha de recopilación de datos
+│   ├── datos-prueba-control-bovino.md      # Ficha con datos de prueba
 │   ├── 01_introduccion/
 │   ├── ...
 │   └── 09_conclusiones_recomendaciones/
@@ -58,11 +71,16 @@ proyecto-grado/
 │   ├── tabla_ejemplo.tex                   # Plantilla base de tabla
 │   ├── estudio_mercado_ejemplo.tex         # Tabla de análisis de mercado
 │   ├── inversiones_ejemplo.tex             # Plan de inversión
-│   └── costos_produccion_ejemplo.tex       # Tabla de costos operativos
+│   ├── costos_produccion_ejemplo.tex       # Tabla de costos operativos de producción
+│   ├── cronograma_ejemplo.tex              # Cronograma de actividades por fases
+│   └── costos_ejemplo.tex                  # Resumen de estructura de costos
+├── codigo/                                 # Código fuente y scripts (.py, .cpp, .ino, .sql, etc.)
+│   ├── README.md                           # Guía para almacenar e importar código externo
+│   └── ejemplo_controlador.py              # Script de prueba importable vía \lstinputlisting
 ├── imagenes/                               # Gráficos, diagramas y logotipos
 │   └── README.md
-├── bibliografia/                           # Bibliografía BibTeX
-│   └── referencias.bib                     # Base de datos de referencias (.bib)
+├── bibliografia/                           # Bibliografía BibLaTeX (APA 7ma Edición)
+│   └── referencias.bib                     # Base de datos de referencias (.bib) formateada en APA 7
 ├── anexos/                                 # Apéndices del documento
 │   └── anexo_a.tex                         # Contenido de los anexos
 └── docs/                                   # Regulaciones oficiales y documentos
@@ -80,6 +98,7 @@ proyecto-grado/
 
 ### 2. Estructuración de Capítulos
 * **REGLA:** Conserva el diseño modular. Cada capítulo debe residir en su propia carpeta dentro de `emprendimiento-capitulos/` o `innovacion-capitulos/` y contener un archivo `main.tex`. Los capítulos se incluyen mediante el archivo `index.tex` en la raíz de su respectiva carpeta.
+* **Rutas Internas:** Los archivos secundarios dentro de cada capítulo deben incluirse con el prefijo del directorio de su modalidad (ej. `\input{innovacion-capitulos/02_planteamiento_problema/diagnostico}`).
 
 ### 3. Estilos de Títulos y Alineación (Normas APA 7 Adaptadas)
 * **Color:** Todos los títulos y enlaces internos (TOC, LOF, LOT, referencias cruzadas) deben mostrarse en **negro** (`linkcolor=black`).
@@ -93,19 +112,33 @@ proyecto-grado/
 
 ### 4. Encabezados y Pies de Página
 * **Encabezados:** Están totalmente deshabilitados. No debe mostrarse texto de cabecera superior ni línea horizontal separadora (`headrulewidth=0pt`).
-* **Pies de Página:** La numeración de páginas debe mostrarse centrada en la parte inferior de las hojas que lo requieran (Capítulos 1 al 7).
+* **Pies de Página:** La numeración de páginas debe mostrarse centrada en la parte inferior de las hojas que lo requieran (Capítulos 1 al 7 u 1 al 9).
 
-### 5. Secciones Finales (Bibliografía y Anexos)
-* **Numeración de Capítulos:** Deben ser no numerados (`numberless` en `titlesec`) para evitar prefijos decimales o de capítulo.
+### 5. Secciones Finales, Citas y Bibliografía (APA 7ma Edición)
+* **Motor:** Se utiliza `biblatex` con `style=apa` y backend `biber`.
+* **Citas en el Texto:**
+  - Cita parentética (entre paréntesis): `\parencite{clave}` produce *(Apellido, Año)*.
+  - Cita narrativa (en el flujo del texto): `\textcite{clave}` produce *Apellido (Año)*.
+  - Citas múltiples: `\parencite{clave1, clave2}`.
+* **Inclusión de la Lista de Referencias:** Se imprime en `main.tex` mediante `\printbibliography[heading=bibintoc, title={Bibliografía}]`.
+* **Numeración de Capítulos:** La bibliografía y los anexos deben ser no numerados (`numberless` en `titlesec`) para evitar prefijos decimales o de capítulo.
 * **Numeración de Página:** Toda la sección de Bibliografía y Anexos debe estar totalmente limpia de números de página y cabeceras (`\pagestyle{empty}` y `\assignpagestyle{\chapter}{empty}`).
 
 ### 6. Inserción de Tablas e Imágenes
 * **Tablas:** Guardar en `tablas/` e importar vía `\input{tablas/archivo.tex}`. Usar `booktabs` y `array`.
 * **Imágenes:** Guardar en `imagenes/` e incluirlas sin prefijo de ruta (ya configurado en `estilos.sty`).
 
-### 7. Compilación y Limpieza
-* **REGLA:** Utilizar exclusivamente el script ejecutable `./compilar.sh` en lugar de comandos manuales aislados de `pdflatex` o `latexmk` para compilar el proyecto y realizar tareas de limpieza:
-  - `./compilar.sh` (compila PDF completo y conserva temporales).
+### 7. Inserción de Código Fuente y Algoritmos
+* **Motor:** Se utiliza el paquete `listings` con el estilo `estilocodigo` predeterminado y tipografía Courier.
+* **Rótulo:** Configurado en español como `Código` (ej. `Código 1: ...`).
+* **Ajuste de Línea (Wordwrap):** Activado automáticamente (`breaklines=true`, `breakautoindent=true`) con sangría de continuación (`breakindent=1.5em`) para líneas que superan el margen.
+* **Archivos Externos en `codigo/`:** Guardar los programas y scripts en `codigo/` e importarlos modularmente con `\lstinputlisting[language=Python, caption={...}, label={lst:...}]{codigo/archivo.py}`.
+* **Bloques Embebidos:** Usar `\begin{lstlisting}[language=Python, caption={...}, label={lst:...}]` indicando el lenguaje apropiado (ej. `Python`, `C`, `C++`, `Java`, `SQL`, `bash`, `HTML`).
+* **Código en Línea:** Usar `\lstinline|codigo|` o `\texttt{codigo}`.
+
+### 8. Compilación y Limpieza
+* **REGLA:** Utilizar exclusivamente el script ejecutable `./compilar.sh` en lugar de comandos manuales aislados para compilar el proyecto y realizar tareas de limpieza:
+  - `./compilar.sh` (compila PDF completo ejecutando `pdflatex` + `biber` + 2x `pdflatex` y conserva temporales).
   - `./compilar.sh --clean` (compila PDF completo y elimina archivos temporales).
   - `./compilar.sh --only-clean` (elimina archivos temporales sin compilar).
 

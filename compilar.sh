@@ -25,8 +25,8 @@ function compilar_pdf() {
     pdflatex -interaction=nonstopmode "$MAIN.tex" > /dev/null
     
     echo -e "${BLUE}=== Procesando Bibliografía (Paso 2/4) ===${NC}"
-    # Ejecutar bibtex (silencioso)
-    bibtex "$MAIN" > /dev/null 2>&1
+    # Ejecutar biber (motor APA 7 / biblatex)
+    biber "$MAIN" > /dev/null 2>&1
     
     echo -e "${BLUE}=== Enlazando referencias (Paso 3/4) ===${NC}"
     pdflatex -interaction=nonstopmode "$MAIN.tex" > /dev/null
