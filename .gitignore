@@ -1,5 +1,5 @@
 # ==========================================
-#  LaTex Generated / Auxiliary Files
+#  LaTeX Generated / Auxiliary Files
 # ==========================================
 *.aux
 *.log
@@ -14,7 +14,12 @@
 *.fdb_latexmk
 *.fls
 *.synctex.gz
+*.upa
+*.upb
+*.listing
+*-blx.bib
 *.pdf
+!docs/*.pdf
 
 # Subdirectory auxiliaries
 emprendimiento-capitulos/**/*.aux
@@ -22,12 +27,12 @@ innovacion-capitulos/**/*.aux
 docs/**/*.aux
 preliminares/**/*.aux
 anexos/**/*.aux
-portada/**/*.aux
+estilos/**/*.aux
+tablas/**/*.aux
 
 # ==========================================
-#  AI Agent / Tool-Specific Temp Files
+#  IDE and Local Agent Cache Directories
 # ==========================================
-.agent/
 .antigravitycli/
 .cline/
 .cursor/

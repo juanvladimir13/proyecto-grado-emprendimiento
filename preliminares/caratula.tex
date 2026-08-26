@@ -1,45 +1,62 @@
 \begin{titlepage}
     \centering
     
-    % Logo o Emblema Institucional (opcional)
-    % \includegraphics[width=0.3\textwidth]{logo.png}\\[1cm]
-    
-    {\scshape\Large\textbf{\institucion}\par}
+    % --- Encabezado Institucional (BTH / RM 0912/2023) ---
+    {\scshape\large\textbf{ESTADO PLURINACIONAL DE BOLIVIA}\par}
+    \vspace{0.15cm}
+    {\scshape\normalsize \departamento\par}
+    \vspace{0.15cm}
+    {\scshape\small \distritoeducativo\par}
     \vspace{0.3cm}
-    {\scshape\large \facultad\par}
+    {\scshape\Large\textbf{\institucion}\par}
     \vspace{0.2cm}
-    {\scshape\small \programa\par}
+    {\scshape\normalsize \facultad\par}
     
-    \vspace{2.5cm}
+    \vspace{1.2cm}
     
-    % Título del Emprendimiento Productivo
-    {\Huge\bfseries\color{primary} \tituloproyecto \par}
-    \vspace{0.5cm}
-    {\Large\bfseries \subtituloproyecto \par}
+    % --- Modalidad y Especialidad ---
+    {\large\textbf{PROYECTO DE GRADO}\par}
+    \vspace{0.2cm}
+    {\large\textbf{MODALIDAD: \modalidad}\par}
+    \vspace{0.2cm}
+    {\normalsize ESPECIALIDAD: \textbf{\especialidad}\par}
+    {\small NIVEL: \textbf{\nivelformacion}\par}
     
-    \vspace{3cm}
+    \vspace{1.5cm}
     
-    % Autores y Tutor
-    \begin{minipage}{0.48\textwidth}
-        \begin{flushleft} \large
-            \textbf{\etiquetaautor}\\
-            \autorproyecto\\
-            \small C.I.: \ciautor
+    % --- Título del Proyecto ---
+    {\LARGE\bfseries\color{primary} \tituloproyecto \par}
+    \vspace{0.4cm}
+    {\large\bfseries \subtituloproyecto \par}
+    
+    \vspace{2.0cm}
+    
+    % --- Autores y Tutor ---
+    \noindent
+    \begin{minipage}[t]{0.48\textwidth}
+        \begin{flushleft} \normalsize
+            \textbf{\etiquetaautor}\\[0.15cm]
+            \textbf{\autoruno}\\
+            \small C.I.: \ciautoruno
+            \ifx\autordos\empty\else\\[0.3cm]
+            \textbf{\autordos}\\
+            \small C.I.: \ciautordos
+            \fi
         \end{flushleft}
     \end{minipage}
-    ~
-    \begin{minipage}{0.45\textwidth}
-        \begin{flushright} \large
-            \textbf{\etiquetatutor}\\
-            \tutorproyecto\\
+    \hfill
+    \begin{minipage}[t]{0.48\textwidth}
+        \begin{flushright} \normalsize
+            \textbf{\etiquetatutor}\\[0.15cm]
+            \textbf{\tutorproyecto}\\
             \small \cargotutorproyecto
         \end{flushright}
     \end{minipage}
     
     \vfill
     
-    % Lugar y Fecha
-    {\large \lugarproyecto \par}
-    {\large \fechaproyecto \par}
+    % --- Lugar y Gestión ---
+    {\normalsize \lugarproyecto \par}
+    {\normalsize Gestión \gestionproyecto \par}
     
 \end{titlepage}

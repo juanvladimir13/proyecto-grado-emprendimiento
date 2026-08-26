@@ -16,7 +16,10 @@
 *.fdb_latexmk
 *.fls
 *.synctex.gz
-*.pdf
+*.upa
+*.upb
+*.listing
+*-blx.bib
 main.pdf
 
 # Excluir archivos auxiliares recursivamente
@@ -25,13 +28,12 @@ innovacion-capitulos/**/*.aux
 docs/**/*.aux
 preliminares/**/*.aux
 anexos/**/*.aux
-portada/**/*.aux
+estilos/**/*.aux
+tablas/**/*.aux
 
-# Directorios de control y logs de herramientas/agentes
-.agent/
+# Directorios temporales de entornos
 .antigravitycli/
 .cline/
 .cursor/
 .idea/
 .vscode/
-*.log

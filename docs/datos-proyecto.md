@@ -1,53 +1,10 @@
-# Ficha de datos del proyecto
+# Ficha de Datos del Proyecto (Referencia General)
 
-## Datos generales
-- Nombre: 
-- Institución ejecutora: 
-- Ubicación: 
-- Duración: 
-- Tipo: 
+Este archivo sirve como referencia general para la recolección de datos de proyectos de grado.
 
-## Problema
-Comunidad de 340 familias sin conexión a red de agua potable. En época seca
-(may-oct) los pozos bajan su caudal 60%. Última intervención fue en 2015 y
-quedó incompleta.
+Para trabajar directamente con la ficha detallada y adaptada a la normativa del Bachillerato Técnico Humanístico (BTH, RM 0912/2023), por favor consulte los archivos especializados en cada modalidad:
 
-Causas principales:
-- Red de distribución construida en 2015 nunca se conectó a la fuente principal
-- Crecimiento poblacional del 15% desde 2018 no contemplado en diseño original
+* **Modalidad 1 (Emprendimiento Productivo):** Consulte [`emprendimiento-capitulos/datos-proyecto.md`](../emprendimiento-capitulos/datos-proyecto.md).
+* **Modalidad 2 (Innovación Tecnológica):** Consulte [`innovacion-capitulos/datos-proyecto.md`](../innovacion-capitulos/datos-proyecto.md).
 
-## Justificación
-- Por qué es necesario: 
-- Relación con políticas públicas (PDES, POA, plan municipal, etc.): 
-
-## Objetivos
-- General: 
-- Específicos:
-  - 
-  - 
-
-## Beneficiarios
-- Directos: 
-- Indirectos: 
-
-## Metodología
-- Enfoque: 
-- Actividades principales:
-  - 
-
-## Recursos
-- Humanos: 
-- Materiales: 
-- Presupuesto estimado: 
-- Fuente de financiamiento: 
-
-## Resultados esperados
-- 
-
-## Cronograma
-- Fases:
-  - 
-
-## Antecedentes
-- Intentos previos: 
-- Datos estadísticos relevantes (con fuente):
+Ambas fichas contienen todos los campos requeridos para nutrir `estilos/configuracion.tex`, los capítulos del documento y las tablas de costos e inversiones.

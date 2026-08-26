@@ -21,15 +21,19 @@
     \vspace{2.5cm}
     
     % Autores y Tutor
-    \begin{minipage}{0.48\textwidth}
+    \begin{minipage}[t]{0.48\textwidth}
         \begin{flushleft} \large
             \textbf{\etiquetaautor}\\
-            \autorproyecto\\
-            \small\href{mailto:\emailautor}{\emailautor}
+            \autoruno\\
+            \small\href{mailto:\emailautoruno}{\emailautoruno}
+            \ifx\autordos\empty\else\\[0.3cm]
+            \autordos\\
+            \small\href{mailto:\emailautordos}{\emailautordos}
+            \fi
         \end{flushleft}
     \end{minipage}
-    ~
-    \begin{minipage}{0.45\textwidth}
+    \hfill
+    \begin{minipage}[t]{0.45\textwidth}
         \begin{flushright} \large
             \textbf{\etiquetatutor}\\
             \tutorproyecto\\

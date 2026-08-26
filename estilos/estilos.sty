@@ -1,15 +1,21 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{estilos/estilos}[2026/07/31 Configuración de Estilos para Emprendimiento Productivo]
+\ProvidesPackage{estilos/estilos}[2026/08/23 Configuración Modular de Estilos - Proyecto de Grado BTH]
 
-% --- Cargar Configuración Centralizada ---
+% ============================================================
+% 1. CARGAR CONFIGURACIÓN CENTRALIZADA
+% ============================================================
 \input{estilos/configuracion.tex}
 
-% --- Paquetes de Formato e Idioma ---
+% ============================================================
+% 2. PAQUETES DE FORMATO, IDIOMA Y CODIFICACIÓN
+% ============================================================
 \RequirePackage[spanish, es-tabla]{babel}
 \RequirePackage[utf8]{inputenc}
 \RequirePackage[T1]{fontenc}
 
-% --- Desactivación de División de Palabras (Silabación / Hyphenation) ---
+% ============================================================
+% 3. CONTROL DE SILABACIÓN (DESACTIVAR GUIÓN DE FIN DE LÍNEA)
+% ============================================================
 \hyphenpenalty=10000
 \exhyphenpenalty=10000
 \righthyphenmin=62
@@ -18,8 +24,10 @@
 \emergencystretch=3em
 \hbadness=2000
 
-% --- Especificaciones de la Hoja y Márgenes ---
-% Carta: Superior=2.5cm, Inferior=2.5cm, Derecho=2.5cm, Izquierdo=3.0cm
+% ============================================================
+% 4. DIMENSIONES DE PÁGINA Y MÁRGENES (Formato Carta BTH)
+% ============================================================
+% Carta: Izquierdo: 3.0 cm | Derecho, Superior e Inferior: 2.5 cm
 \RequirePackage{geometry}
 \geometry{
     letterpaper,
@@ -27,82 +35,124 @@
     bottom=2.5cm,
     left=3.0cm,
     right=2.5cm,
-    headheight=15pt
+    headheight=15pt,
+    headsep=0pt
 }
 
-% --- Tipografía: Arial (Principal) y Courier (Código Fuente) ---
+% ============================================================
+% 5. TIPOGRAFÍA E INTERLINEADO
+% ============================================================
+% Arial (helvet) para texto principal, Courier para código
 \RequirePackage{helvet}
 \renewcommand{\familydefault}{\sfdefault}
 \RequirePackage{courier}
 
-% --- Interlineado 1.5 ---
+% Interlineado 1.5 en el cuerpo del texto
 \RequirePackage{setspace}
 \onehalfspacing
 
-% --- Colores Institucionales ---
+% ============================================================
+% 6. COLORES INSTITUCIONALES Y DE DISEÑO
+% ============================================================
 \RequirePackage{xcolor}
-\definecolor{primary}{RGB}{24, 106, 59}      % Verde empresarial
+\definecolor{primary}{RGB}{24, 106, 59}      % Verde institucional
 \definecolor{secondary}{RGB}{35, 155, 86}    % Verde secundario
-\definecolor{darktext}{RGB}{33, 33, 33}     % Texto principal
+\definecolor{darktext}{RGB}{33, 33, 33}      % Texto oscuro
+\definecolor{lightgray}{RGB}{245, 245, 245}  % Fondo claro
 
-% --- Formato de Títulos y Encabezados (APA 7ma Edición Adaptado) ---
+% ============================================================
+% 7. FORMATO DE TÍTULOS (Normas APA 7ma Edición Adaptadas)
+% ============================================================
 \RequirePackage{titlesec}
 
-% Nivel 1 (Alineado Izquierda, Negrita) - Aplicado a Capítulos
+% Nivel 1 (\chapter) - Alineado a la izquierda, Negrita, sin palabra "Capítulo"
 \titleformat{\chapter}[block]
   {\normalfont\Large\bfseries\setstretch{1.0}}
   {\thechapter.}{0.5em}{}
 \titlespacing*{\chapter}{0pt}{-15pt}{10pt}
 
-% Versión sin numerar para Nivel 1 (Bibliografía, Anexos, etc. - Alineado Izquierda)
+% Nivel 1 sin numerar (Bibliografía, Anexos, Resumen)
 \titleformat{name=\chapter,numberless}[block]
   {\normalfont\Large\bfseries\setstretch{1.0}}
   {}{0pt}{}
 \titlespacing*{name=\chapter,numberless}{0pt}{-15pt}{20pt}
 
-% Nivel 2 (Alineado Izquierda, Negrita) - Aplicado a Secciones
+% Nivel 2 (\section) - Alineado a la izquierda, Negrita
 \titleformat{\section}
   {\normalfont\large\bfseries\setstretch{1.0}}
   {\thesection}{1em}{}
 \titlespacing*{\section}{0pt}{12pt}{6pt}
 
-% Nivel 3 (Alineado Izquierda, Negrita y Cursiva) - Aplicado a Subsecciones
+% Nivel 3 (\subsection) - Alineado a la izquierda, Negrita y Cursiva
 \titleformat{\subsection}
   {\normalfont\large\bfseries\itshape\setstretch{1.0}}
   {\thesubsection}{1em}{}
 \titlespacing*{\subsection}{0pt}{12pt}{6pt}
 
-% Nivel 4 (Sangría 1.27cm, Negrita, Run-in con punto final) - Aplicado a Subsubsecciones
+% Nivel 4 (\subsubsection) - Sangría 1.27cm, Negrita, tipo run-in con punto
 \titleformat{\subsubsection}[runin]
   {\normalfont\normalsize\bfseries\setstretch{1.0}}
   {\thesubsubsection}{1em}{}[.]
 \titlespacing*{\subsubsection}
   {1.27cm}{12pt}{0.5em}
 
-% Nivel 5 (Sangría 1.27cm, Negrita y Cursiva, Run-in con punto final) - Aplicado a Párrafos
+% Nivel 5 (\paragraph) - Sangría 1.27cm, Negrita y Cursiva, tipo run-in con punto
 \titleformat{\paragraph}[runin]
   {\normalfont\normalsize\bfseries\itshape}
   {\theparagraph}{1em}{}[.]
 \titlespacing*{\paragraph}
   {1.27cm}{12pt}{0.5em}
 
-
-% --- Encabezados y Pies de Página ---
+% ============================================================
+% 8. ENCABEZADOS Y PIES DE PÁGINA
+% ============================================================
 \RequirePackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
 \cfoot{\thepage}
 \renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
 
-% --- Paquetes para Gráficos y Tablas ---
+% ============================================================
+% 9. TABLAS, FIGURAS Y ROTULACIÓN (APA 7)
+% ============================================================
 \RequirePackage{graphicx}
-\graphicspath{{imagenes/}} % Ruta por defecto para figuras
+\graphicspath{{imagenes/}} % Directorio por defecto para imágenes
 \RequirePackage{booktabs}
 \RequirePackage{array}
 \RequirePackage{caption}
 \RequirePackage{subcaption}
 
-% --- Enlaces e Hipervínculos ---
+\captionsetup{
+    font={small},
+    labelfont={bf},
+    justification=justified,
+    singlelinecheck=false,
+    skip=6pt
+}
+
+% ============================================================
+% 10. LISTAS Y ENUMERACIONES
+% ============================================================
+\RequirePackage{enumitem}
+\setlist{noitemsep, topsep=3pt, leftmargin=1.5em}
+
+% ============================================================
+% 11. BIBLIOGRAFÍA APA 7ma EDICIÓN (BibLaTeX + Biber)
+% ============================================================
+\RequirePackage[autostyle]{csquotes}
+\RequirePackage[
+    style=apa,
+    backend=biber,
+    sortcites=true,
+    sorting=nyt
+]{biblatex}
+\addbibresource{bibliografia/referencias.bib}
+\DeclareLanguageMapping{spanish}{spanish-apa}
+
+% ============================================================
+% 12. ENLACES E HIPERVÍNCULOS
+% ============================================================
 \RequirePackage{hyperref}
 \hypersetup{
     colorlinks=true,
@@ -112,30 +162,16 @@
     pdfstartview=FitH,
     pdftitle={\tituloproyecto},
     pdfauthor={\autorproyecto},
-    pdfsubject={\subtituloproyecto}
+    pdfsubject={\modalidad\ - \especialidad},
+    pdfkeywords={BTH, Bolivia, \modalidad, \especialidad}
 }
 
-% --- Listas Mejoradas ---
-\RequirePackage{enumitem}
-\setlist{noitemsep, topsep=3pt}
-
-% --- Bibliografía APA 7ma Edición ---
-\RequirePackage[autostyle]{csquotes}
-\RequirePackage[
-    style=apa,
-    backend=biber,
-    sortcites=true,
-    sorting=nyt
-]{biblatex}
-\addbibresource{bibliografia/referencias.bib}
-
-% Adaptar etiquetas de biblatex al español
-\DeclareLanguageMapping{spanish}{spanish-apa}
-
-% --- Soporte para Código Fuente y Lenguajes de Programación ---
+% ============================================================
+% 13. CÓDIGO FUENTE Y LENGUAJES DE PROGRAMACIÓN (Listings)
+% ============================================================
 \RequirePackage{listings}
 
-% Colores para la sintaxis de código
+% Colores de sintaxis para listings
 \definecolor{codebg}{RGB}{248, 249, 250}
 \definecolor{codeborder}{RGB}{222, 226, 230}
 \definecolor{codekeyword}{RGB}{0, 51, 179}
@@ -144,7 +180,7 @@
 \definecolor{codenumbers}{RGB}{140, 145, 155}
 \definecolor{codeidentifier}{RGB}{36, 41, 47}
 
-% Configuración del estilo general de código
+% Estilo predeterminado de código
 \lstdefinestyle{estilocodigo}{
     backgroundcolor=\color{codebg},
     commentstyle=\color{codecomment}\itshape,

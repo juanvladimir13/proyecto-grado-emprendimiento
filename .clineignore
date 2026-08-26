@@ -1,8 +1,12 @@
 # ==========================================
-#  Cline AI Agent Ignore File
+#  Cline AI Ignore File
 # ==========================================
 
-# Ignorar archivos temporales y auxiliares de LaTeX
+# Excluir binarios pesados y PDFs
+*.pdf
+main.pdf
+
+# Excluir temporales y auxiliares de compilación LaTeX
 *.aux
 *.log
 *.toc
@@ -16,19 +20,21 @@
 *.fdb_latexmk
 *.fls
 *.synctex.gz
-*.pdf
-main.pdf
+*.upa
+*.upb
+*.listing
+*-blx.bib
 
-# Ignorar recursivamente auxiliares en directorios
+# Auxiliares en subdirectorios
 emprendimiento-capitulos/**/*.aux
 innovacion-capitulos/**/*.aux
 docs/**/*.aux
 preliminares/**/*.aux
 anexos/**/*.aux
-portada/**/*.aux
+estilos/**/*.aux
+tablas/**/*.aux
 
-# Directorios de estado de agentes
-.agent/
+# Directorios de configuración de IDEs
 .antigravitycli/
 .cline/
 .cursor/

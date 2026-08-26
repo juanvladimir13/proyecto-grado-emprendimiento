@@ -1,28 +1,66 @@
 % ============================================================
-%  CONFIGURACIÓN CENTRALIZADA DEL PROYECTO
-%  Modifique SOLO este archivo para personalizar el documento.
+%  CONFIGURACIÓN CENTRALIZADA DEL PROYECTO (BTH / ACADÉMICO)
+%  Modifique ÚNICAMENTE este archivo para personalizar todos los
+%  datos de la carátula, encabezados y metadatos del documento.
 % ============================================================
 
-% --- Datos Institucionales ---
-\newcommand{\institucion}{INSTITUCIÓN ACADÉMICA / UNIVERSIDAD}
-\newcommand{\facultad}{FACULTAD DE CIENCIAS ECONÓMICAS Y EMPRESARIALES}
-\newcommand{\programa}{PROGRAMA DE EMPRENDIMIENTO PRODUCTIVO}
+% ------------------------------------------------------------
+% 1. DATOS INSTITUCIONALES (Normativa BTH - RM 0912/2023)
+% ------------------------------------------------------------
+\newcommand{\departamento}{COCHABAMBA - BOLIVIA}
+\newcommand{\distritoeducativo}{DISTRITO EDUCATIVO COCHABAMBA 1}
+\newcommand{\institucion}{UNIDAD EDUCATIVA TÉCNICO HUMANÍSTICO}
+\newcommand{\facultad}{NIVEL SECUNDARIO COMUNITARIO PRODUCTIVO} % Opcional / Universidad
 
-% --- Datos del Proyecto ---
-\newcommand{\tituloproyecto}{EMPRENDIMIENTO PRODUCTIVO}
-\newcommand{\subtituloproyecto}{Nombre Comercial y Plan de Negocios del Emprendimiento}
+% ------------------------------------------------------------
+% 2. MODALIDAD Y CARRERA / ESPECIALIDAD
+% ------------------------------------------------------------
+% Modalidades BTH: "EMPRENDIMIENTO PRODUCTIVO" o "INNOVACIÓN TECNOLÓGICA"
+\newcommand{\modalidad}{EMPRENDIMIENTO PRODUCTIVO}
+\newcommand{\especialidad}{TRANSFORMACIÓN DE ALIMENTOS}
+\newcommand{\nivelformacion}{TÉCNICO MEDIO}
 
-% --- Datos del Autor ---
-\newcommand{\autorproyecto}{Nombre Apellido Autor}
-\newcommand{\ciautor}{12345678}
-\newcommand{\emailautor}{estudiante@ejemplo.com}
-\newcommand{\etiquetaautor}{Emprendedor(es):}
+% ------------------------------------------------------------
+% 3. DATOS DEL PROYECTO
+% ------------------------------------------------------------
+\newcommand{\tituloproyecto}{PRODUCCIÓN Y COMERCIALIZACIÓN DE PAN INTEGRAL CON GRANOS ANDINOS}
+\newcommand{\subtituloproyecto}{Modelo de Negocio Sostenible y Plan Operativo "Panadería El Trigal"}
 
-% --- Datos del Tutor ---
-\newcommand{\tutorproyecto}{Lic. / Ing. Nombre Apellido}
-\newcommand{\cargotutorproyecto}{Asesor Empresarial}
-\newcommand{\etiquetatutor}{Tutor / Asesor:}
+% ------------------------------------------------------------
+% 4. DATOS DEL / DE LOS ESTUDIANTE(S) / AUTOR(ES)
+%    (El reglamento BTH permite proyectos individuales o en parejas)
+% ------------------------------------------------------------
+% Estudiante / Autor 1 (Obligatorio)
+\newcommand{\autoruno}{Juan Pérez Mamani}
+\newcommand{\ciautoruno}{8765432 C.B.}
+\newcommand{\emailautoruno}{juan.perez@ejemplo.com}
 
-% --- Lugar y Fecha ---
-\newcommand{\lugarproyecto}{Bolivia}
-\newcommand{\fechaproyecto}{\today}
+% Estudiante / Autor 2 (Opcional: deje vacío si es individual)
+\newcommand{\autordos}{} % Ej: María Flores Quispe (dejar vacío si no aplica)
+\newcommand{\ciautordos}{} % Ej: 7654321 C.B.
+\newcommand{\emailautordos}{}
+
+% Etiquetas descriptivas
+\newcommand{\etiquetaautor}{Postulante(s):}
+
+% ------------------------------------------------------------
+% 5. DATOS DEL TUTOR / ASESOR GUÍA
+% ------------------------------------------------------------
+\newcommand{\tutorproyecto}{Lic. Carlos Mendoza Rojas}
+\newcommand{\cargotutorproyecto}{Tutor Guía de Especialidad}
+\newcommand{\etiquetatutor}{Tutor(a) Guía:}
+
+% ------------------------------------------------------------
+% 6. LUGAR, GESTIÓN Y FECHA
+% ------------------------------------------------------------
+\newcommand{\lugarproyecto}{Cochabamba, Bolivia}
+\newcommand{\gestionproyecto}{2026}
+\newcommand{\fechaproyecto}{Noviembre de 2026}
+
+% ------------------------------------------------------------
+% 7. MACROS DE COMPATIBILIDAD (Para metadatos automáticos)
+% ------------------------------------------------------------
+\newcommand{\autorproyecto}{\autoruno\ifx\autordos\empty\else, \autordos\fi}
+\newcommand{\ciautor}{\ciautoruno\ifx\autordos\empty\else{} y \ciautordos\fi}
+\newcommand{\emailautor}{\emailautoruno}
+\newcommand{\programa}{\especialidad\ (\nivelformacion)}

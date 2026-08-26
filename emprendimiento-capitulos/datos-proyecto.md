@@ -12,33 +12,35 @@ emprendimiento-capitulos/
 ├── index.tex                                          # Ensamble de los 7 capítulos
 ├── datos-proyecto.md                                  # ← Este archivo (ficha de datos)
 ├── 01_introduccion/
-│   ├── main.tex                                       # Cap. 1 — INTRODUCCIÓN
+│   ├── main.tex                                       # Cap. 1 — INTRODUCCIÓN (ensamble)
+│   ├── contexto_oportunidad.tex                       #   └ Contexto general y oportunidad
+│   ├── propuesta_valor.tex                            #   └ Propuesta de valor
 │   └── marco_teorico.tex                              #   └ Marco teórico (fundamentos y gráficos)
 ├── 02_planteamiento_emprendimiento/
-│   └── main.tex                                       # Cap. 2 — PLANTEAMIENTO DEL EMPRENDIMIENTO PRODUCTIVO
-│                                                      #   └ Diagnóstico del contexto productivo
-│                                                      #   └ Objetivos (general, específicos, misión, visión)
-│                                                      #   └ Justificación
+│   ├── main.tex                                       # Cap. 2 — PLANTEAMIENTO DEL EMPRENDIMIENTO PRODUCTIVO
+│   ├── diagnostico.tex                                #   └ Diagnóstico del contexto productivo
+│   ├── objetivos.tex                                  #   └ Objetivos (general, específicos, misión, visión)
+│   └── justificacion.tex                              #   └ Justificación
 ├── 03_desarrollo_emprendimiento/
-│   └── main.tex                                       # Cap. 3 — DESARROLLO DEL EMPRENDIMIENTO PRODUCTIVO
-│                                                      #   └ Localización del emprendimiento
-│                                                      #   └ Análisis del mercado (oferta, demanda, público, entorno, ventaja)
-│                                                      #   └ Estrategia de promoción y distribución
-│                                                      #   └ Estructura organizacional
-│                                                      #   └ Diseño de producto o servicio
-│                                                      #   └ Ciclo de producción o servicio (opcional)
+│   ├── main.tex                                       # Cap. 3 — DESARROLLO DEL EMPRENDIMIENTO PRODUCTIVO
+│   ├── localizacion.tex                               #   └ Localización del emprendimiento
+│   ├── analisis_mercado.tex                           #   └ Análisis del mercado (oferta, demanda, ventaja)
+│   ├── estrategia_promocion.tex                       #   └ Estrategia de promoción y distribución
+│   ├── estructura_organizacional.tex                  #   └ Estructura organizacional
+│   ├── diseno_producto.tex                            #   └ Diseño de producto o servicio
+│   └── ciclo_produccion.tex                           #   └ Ciclo de producción o servicio (opcional)
 ├── 04_viabilidad_sostenibilidad/
-│   └── main.tex                                       # Cap. 4 — VIABILIDAD Y SOSTENIBILIDAD
-│                                                      #   └ Cálculo de inversiones (capital inversión + operación)
-│                                                      #   └ Costo de producción (variables + fijos)
+│   ├── main.tex                                       # Cap. 4 — VIABILIDAD Y SOSTENIBILIDAD
+│   ├── calculo_inversiones.tex                        #   └ Cálculo de inversiones (capital inversión + operación)
+│   └── costo_produccion.tex                           #   └ Costo de producción (variables + fijos)
 ├── 05_resultados/
 │   └── main.tex                                       # Cap. 5 — RESULTADOS
 ├── 06_proyecto_vida/
 │   └── main.tex                                       # Cap. 6 — PROYECTO DE VIDA
 └── 07_conclusiones_recomendaciones/
-    └── main.tex                                       # Cap. 7 — CONCLUSIONES Y RECOMENDACIONES
-                                                       #   └ Conclusiones
-                                                       #   └ Recomendaciones
+    ├── main.tex                                       # Cap. 7 — CONCLUSIONES Y RECOMENDACIONES
+    ├── conclusiones.tex                               #   └ Conclusiones
+    └── recomendaciones.tex                            #   └ Recomendaciones
 ```
 
 ---

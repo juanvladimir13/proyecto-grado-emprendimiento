@@ -5,7 +5,7 @@ Este proyecto de LaTeX modular sigue pautas estrictas para mantener la consisten
 Antes de comenzar cualquier tarea de desarrollo o modificación de código, lee las directrices del proyecto en el archivo principal `AGENTS.md`.
 
 ## Resumen de Reglas Clave:
-1. **Variables Centralizadas:** Toda modificación de metadatos (autor, título, tutor, institución) debe realizarse únicamente en `estilos/configuracion.tex`.
+1. **Variables Centralizadas:** Toda modificación de metadatos (autor(es), título, tutor, institución, especialidad) debe realizarse únicamente en `estilos/configuracion.tex`. Soporta 1 o 2 autores dinámicamente.
 2. **Estilo de Títulos APA 7 Adaptado:**
    - Todos los títulos y enlaces del documento en **negro** (`linkcolor=black`).
    - Interlineado sencillo (`1.0`) para títulos de Nivel 1, 2, 3 y 4.
@@ -13,8 +13,8 @@ Antes de comenzar cualquier tarea de desarrollo o modificación de código, lee 
 3. **Encabezados Desactivados:** Sin textos de cabecera ni línea horizontal superior (`headrulewidth=0pt`). Numeración centrada abajo.
 4. **Bibliografía APA 7ma Edición:** Motor `biblatex` con estilo `apa` y backend `biber`. Usar `\parencite{clave}` para citas parentéticas y `\textcite{clave}` para narrativas. Lista generada con `\printbibliography`.
 5. **Secciones Finales (Bibliografía/Anexos):** Sin numeración decimal en los títulos, y sin números de página ni cabeceras (`\pagestyle{empty}`).
-6. **Compilación y Limpieza:** Usa únicamente el script ejecutable `./compilar.sh` (admite `--clean` y `--only-clean`).
+6. **Compilación y Limpieza:** Usa únicamente el script ejecutable `./compilar.sh` (admite `--clean`, `--only-clean` y `--fast`).
 7. **División de Palabras Desactivada:** No dividir palabras con guiones a fin de línea (`\hyphenpenalty=10000`).
 8. **Código Fuente y Programación:** Usar `codigo/` para scripts externos e importar con `\lstinputlisting[language=...]{codigo/archivo.ext}` (o bloques `lstlisting`) con el estilo `estilocodigo` preconfigurado en Courier.
-9. **Idioma:** Redacción de la tesis y comentarios en español (exceptuando el abstract en inglés).
-
+9. **Estructura Modular:** Respetar la modularidad de capítulos, tablas en `tablas/` y anexos en `anexos/`.
+10. **Idioma:** Redacción de la tesis y comentarios en español (exceptuando el abstract en inglés).

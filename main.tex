@@ -5,7 +5,7 @@
 
 \begin{document}
 
-% --- Portada ---
+% --- Portada / Carátula Oficial ---
 \input{preliminares/caratula.tex}
 
 % --- Páginas Preliminares (Numeración Romana) ---
@@ -28,22 +28,25 @@
 \cleardoublepage
 \pagenumbering{arabic}
 
+% ============================================================
 % === SELECCIÓN DE MODALIDAD ===
 % Descomenta la modalidad que deseas compilar y comenta la otra.
+% ============================================================
 
-% Opción 1: Emprendimiento Productivo
+% Opción 1: Emprendimiento Productivo (Capítulos 1 al 7)
 \input{emprendimiento-capitulos/index.tex}
 
-% Opción 2: Innovación Tecnológica
+% Opción 2: Innovación Tecnológica (Capítulos 1 al 9)
 %\input{innovacion-capitulos/index.tex}
-% --- Bibliografía ---
+
+% --- Bibliografía (Normas APA 7ma Edición) ---
 \cleardoublepage
 \pagestyle{empty}
 \assignpagestyle{\chapter}{empty}
 \printbibliography[heading=bibintoc, title={Bibliografía}]
 
-% --- Anexos ---
+% --- Anexos y Apéndices ---
 \cleardoublepage
-\input{anexos/anexo_a.tex}
+\input{anexos/index.tex}
 
 \end{document}
