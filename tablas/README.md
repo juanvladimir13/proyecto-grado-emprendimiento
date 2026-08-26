@@ -8,13 +8,16 @@ En este directorio se almacenan todas las tablas independientes del documento, f
 
 ```text
 tablas/
-├── tabla_ejemplo.tex             # Estructura base de tabla formal con booktabs
-├── estudio_mercado_ejemplo.tex   # Matriz de análisis de competidores y mercado
-├── inversiones_ejemplo.tex       # Resumen de activos fijos y capital de operación
-├── costos_produccion_ejemplo.tex # Estructura de costos variables y costos fijos
-├── costos_ejemplo.tex            # Resumen de costos generales de innovación
-├── cronograma_ejemplo.tex        # Planificación temporal de actividades por fases
-└── README.md                     # Guía de uso (este archivo)
+├── tabla_ejemplo.tex                     # Estructura base de tabla formal con booktabs
+├── estudio_mercado_ejemplo.tex           # Matriz de análisis de competidores y mercado
+├── inversiones_ejemplo.tex               # Resumen de activos fijos y capital de operación
+├── costos_produccion_ejemplo.tex         # Estructura de costos variables y costos fijos
+├── costos_ejemplo.tex                    # Resumen de costos generales de innovación
+├── cronograma_ejemplo.tex                # Planificación temporal de actividades por fases
+├── especificaciones_tecnicas_ejemplo.tex # Matriz de especificaciones técnicas de hardware/software
+├── plan_mejora_ejemplo.tex               # Matriz de mejora continua (horizontes, KPIs y metas)
+├── comparacion_antes_despues_ejemplo.tex # Matriz comparativa antes vs después de la innovación
+└── README.md                             # Guía de uso (este archivo)
 ```
 
 ---

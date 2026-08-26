@@ -39,13 +39,13 @@ proyecto-grado/
 │   ├── index.tex                           # Ensamble de los 9 capítulos
 │   ├── datos-proyecto.md                   # Ficha de recopilación de datos
 │   ├── datos-prueba-control-bovino.md      # Ficha con datos de prueba
-│   ├── 01_introduccion/                    # Cap. 1: main.tex
-│   ├── 02_planteamiento_problema/          # Cap. 2: main.tex, diagnostico.tex, objetivos.tex, justificacion.tex, etc.
+│   ├── 01_introduccion/                    # Cap. 1: main.tex, contexto_general.tex, motivacion_pertinencia.tex, contribucion_esperada.tex
+│   ├── 02_planteamiento_problema/          # Cap. 2: main.tex, diagnostico.tex, identificacion_problema.tex, formulacion_problema.tex, objetivos.tex, justificacion.tex
 │   ├── 03_marco_referencial/               # Cap. 3: main.tex, antecedentes.tex, bases_teoricas.tex, marco_conceptual.tex
 │   ├── 04_desarrollo_innovacion/           # Cap. 4: main.tex, diseno.tex, planificacion.tex, recursos.tex, calculo_costos.tex
-│   ├── 05_metodologia/                     # Cap. 5: main.tex, tipo_investigacion.tex, tecnicas_instrumentos.tex
-│   ├── 06_estrategia_mejora/               # Cap. 6: main.tex
-│   ├── 07_resultados/                      # Cap. 7: main.tex, beneficios_impacto.tex
+│   ├── 05_metodologia/                     # Cap. 5: main.tex, tipo_investigacion.tex, poblacion_muestra.tex, tecnicas_instrumentos.tex, analisis_datos.tex
+│   ├── 06_estrategia_mejora/               # Cap. 6: main.tex, plan_mejora.tex, proyeccion_escalamiento.tex
+│   ├── 07_resultados/                      # Cap. 7: main.tex, resultados_obtenidos.tex, beneficios_impacto.tex, comparacion_antes_despues.tex
 │   ├── 08_proyecto_vida/                   # Cap. 8: main.tex
 │   └── 09_conclusiones_recomendaciones/    # Cap. 9: main.tex, conclusiones.tex, recomendaciones.tex
 ├── tablas/                                 # Tablas independientes e importables mediante \input
@@ -54,8 +54,12 @@ proyecto-grado/
 │   ├── estudio_mercado_ejemplo.tex         # Matriz/Tabla de mercado
 │   ├── inversiones_ejemplo.tex             # Plan y presupuesto de inversiones
 │   ├── costos_produccion_ejemplo.tex       # Análisis de costos de producción
+│   ├── costos_ejemplo.tex                  # Resumen de estructura de costos
 │   ├── cronograma_ejemplo.tex              # Cronograma de actividades por fases
-│   └── costos_ejemplo.tex                  # Resumen de estructura de costos
+│   ├── especificaciones_tecnicas_ejemplo.tex # Matriz de especificaciones técnicas
+│   ├── plan_mejora_ejemplo.tex             # Matriz del plan de mejora continua
+│   └── comparacion_antes_despues_ejemplo.tex # Matriz de comparación antes vs después
+
 ├── codigo/                                 # Código fuente y scripts (.py, .cpp, .ino, .sql, etc.)
 │   ├── README.md                           # Guía para almacenar e importar código externo
 │   └── ejemplo_controlador.py              # Script de prueba importable vía \lstinputlisting

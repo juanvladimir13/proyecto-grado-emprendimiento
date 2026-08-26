@@ -10,9 +10,13 @@
 ```text
 innovacion-capitulos/
 ├── index.tex                                          # Ensamble de los 9 capítulos
-├── datos-proyecto.md                                  # ← Este archivo (ficha de datos)
+├── datos-proyecto.md                                  # Ficha en blanco para recopilación de datos
+├── datos-prueba-control-bovino.md                     # ← Este archivo (datos de prueba)
 ├── 01_introduccion/
-│   └── main.tex                                       # Cap. 1 — INTRODUCCIÓN
+│   ├── main.tex                                       # Cap. 1 — INTRODUCCIÓN (ensamble)
+│   ├── contexto_general.tex                           #   └ Contexto general del sector
+│   ├── motivacion_pertinencia.tex                     #   └ Motivación y pertinencia
+│   └── contribucion_esperada.tex                      #   └ Contribución esperada
 ├── 02_planteamiento_problema/
 │   ├── main.tex                                       # Cap. 2 — PLANTEAMIENTO DEL PROBLEMA
 │   ├── diagnostico.tex                                #   └ Diagnóstico y descripción de la realidad
@@ -34,12 +38,18 @@ innovacion-capitulos/
 ├── 05_metodologia/
 │   ├── main.tex                                       # Cap. 5 — METODOLOGÍA
 │   ├── tipo_investigacion.tex                         #   └ Tipo de investigación
-│   └── tecnicas_instrumentos.tex                      #   └ Técnicas e instrumentos
+│   ├── poblacion_muestra.tex                          #   └ Población y muestra
+│   ├── tecnicas_instrumentos.tex                      #   └ Técnicas e instrumentos
+│   └── analisis_datos.tex                             #   └ Procedimiento de análisis de datos
 ├── 06_estrategia_mejora/
-│   └── main.tex                                       # Cap. 6 — ESTRATEGIA DE MEJORA Y PROYECCIÓN
+│   ├── main.tex                                       # Cap. 6 — ESTRATEGIA DE MEJORA Y PROYECCIÓN
+│   ├── plan_mejora.tex                                #   └ Plan de mejora continua
+│   └── proyeccion_escalamiento.tex                    #   └ Proyección y escalamiento
 ├── 07_resultados/
 │   ├── main.tex                                       # Cap. 7 — RESULTADOS
-│   └── beneficios_impacto.tex                         #   └ Beneficios e impacto
+│   ├── resultados_obtenidos.tex                       #   └ Resultados obtenidos
+│   ├── beneficios_impacto.tex                         #   └ Beneficios e impacto
+│   └── comparacion_antes_despues.tex                  #   └ Comparación antes vs. después
 ├── 08_proyecto_vida/
 │   └── main.tex                                       # Cap. 8 — PROYECTO DE VIDA
 └── 09_conclusiones_recomendaciones/
@@ -103,7 +113,7 @@ innovacion-capitulos/
 - **¿Qué mejora concreta genera respecto a la situación actual?:** Automatiza la ubicación del ganado en áreas extensas sin cobertura celular celular y emite alertas de salud tempranas.
 - **¿La innovación es incremental (mejora algo existente) o disruptiva (algo nuevo)?:** Incremental (democratiza el uso de collares de alto costo adaptándolos con tecnología LoRa de bajo costo para pequeños productores).
 
-> **Nutre:** `innovacion-capitulos/01_introduccion/main.tex`
+> **Nutre:** `innovacion-capitulos/01_introduccion/main.tex` → `contexto_general.tex`, `motivacion_pertinencia.tex`, `contribucion_esperada.tex`
 
 ---
 
@@ -340,7 +350,7 @@ innovacion-capitulos/
 - **Punto de equilibrio estimado** (unidades o meses): Venta de 2 collares cubre fijos del mes.
 - **Retorno de inversión estimado** (meses): 3 meses si se comercializa localmente.
 
-> **Nutre:** `innovacion-capitulos/04_desarrollo_innovacion/main.tex` → `diseno.tex`, `planificacion.tex`, `recursos.tex`, `calculo_costos.tex`; tablas referenciadas: `tablas/cronograma_ejemplo.tex`, `tablas/costos_ejemplo.tex`
+> **Nutre:** `innovacion-capitulos/04_desarrollo_innovacion/main.tex` → `diseno.tex`, `planificacion.tex`, `recursos.tex`, `calculo_costos.tex`; tablas referenciadas: `tablas/cronograma_ejemplo.tex`, `tablas/costos_ejemplo.tex`, `tablas/especificaciones_tecnicas_ejemplo.tex`
 
 ---
 
@@ -387,7 +397,7 @@ innovacion-capitulos/
 - **Tipo de análisis aplicado:** Estadística descriptiva: cálculo de medias de error de temperatura y porcentaje de pérdida de paquetes de red.
 - **Prueba estadística** (si aplica): Cálculo de Coeficiente de correlación de Pearson (entre temperatura corporal y temperatura ambiental para descartar falsos positivos).
 
-> **Nutre:** `innovacion-capitulos/05_metodologia/main.tex` → `tipo_investigacion.tex`, `tecnicas_instrumentos.tex`
+> **Nutre:** `innovacion-capitulos/05_metodologia/main.tex` → `tipo_investigacion.tex`, `poblacion_muestra.tex`, `tecnicas_instrumentos.tex`, `analisis_datos.tex`
 
 ---
 
@@ -410,7 +420,7 @@ innovacion-capitulos/
 - **¿El proyecto tiene potencial de comercialización?** (Sí/No + argumento breve): Sí. El precio de 550 Bs ($80) es un 60% más barato que los collares satelitales importados comerciales ($200).
 - **Mercado objetivo estimado** (tamaño, ubicación): Más de 5.000 medianos ganaderos en la Chiquitanía y regiones adyacentes.
 
-> **Nutre:** `innovacion-capitulos/06_estrategia_mejora/main.tex`
+> **Nutre:** `innovacion-capitulos/06_estrategia_mejora/main.tex` → `plan_mejora.tex`, `proyeccion_escalamiento.tex`; tablas referenciadas: `tablas/plan_mejora_ejemplo.tex`
 
 ---
 
@@ -457,7 +467,8 @@ innovacion-capitulos/
    - Después de la innovación: Inmediata (reporte automatizado cada hora).
    - Variación (%): Mejora en tiempo de reacción del 100%.
 
-> **Nutre:** `innovacion-capitulos/07_resultados/main.tex` → `beneficios_impacto.tex`
+> **Nutre:** `innovacion-capitulos/07_resultados/main.tex` → `resultados_obtenidos.tex`, `beneficios_impacto.tex`, `comparacion_antes_despues.tex`; tablas referenciadas: `tablas/comparacion_antes_despues_ejemplo.tex`
+
 
 ---
 
