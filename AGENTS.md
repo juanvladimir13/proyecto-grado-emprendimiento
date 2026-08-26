@@ -56,11 +56,11 @@ proyecto-grado/
 │   ├── index.tex                           # Ensamble de los 7 capítulos
 │   ├── datos-proyecto.md                   # Ficha de recopilación de datos
 │   ├── datos-prueba-desayunos.md           # Ficha con datos de prueba
-│   ├── 01_introduccion/                    # Cap. 1: main.tex, contexto_oportunidad.tex, propuesta_valor.tex, marco_teorico.tex
+│   ├── 01_introduccion/                    # Cap. 1: main.tex, contexto_general.tex, oportunidad_negocio.tex, propuesta_valor.tex, marco_teorico.tex
 │   ├── 02_planteamiento_emprendimiento/    # Cap. 2: main.tex, diagnostico.tex, objetivos.tex, justificacion.tex
 │   ├── 03_desarrollo_emprendimiento/       # Cap. 3: main.tex, localizacion.tex, analisis_mercado.tex, estrategia_promocion.tex, estructura_organizacional.tex, diseno_producto.tex, ciclo_produccion.tex
 │   ├── 04_viabilidad_sostenibilidad/       # Cap. 4: main.tex, calculo_inversiones.tex, costo_produccion.tex
-│   ├── 05_resultados/                      # Cap. 5: main.tex
+│   ├── 05_resultados/                      # Cap. 5: main.tex, resultados_cuantitativos.tex, resultados_cualitativos.tex, indicadores_validados.tex
 │   ├── 06_proyecto_vida/                   # Cap. 6: main.tex
 │   └── 07_conclusiones_recomendaciones/    # Cap. 7: main.tex, conclusiones.tex, recomendaciones.tex
 ├── innovacion-capitulos/                   # Modalidad: Innovación Tecnológica (Capítulos 1-9)
@@ -80,13 +80,17 @@ proyecto-grado/
 │   ├── README.md                           # Guía para estructurar tablas APA 7 con booktabs
 │   ├── tabla_ejemplo.tex                   # Plantilla base de tabla
 │   ├── estudio_mercado_ejemplo.tex         # Tabla de análisis de mercado
+│   ├── estructura_organizacional_ejemplo.tex # Matriz de estructura organizacional, cargos y remuneraciones
 │   ├── inversiones_ejemplo.tex             # Plan de inversión
 │   ├── costos_produccion_ejemplo.tex       # Tabla de costos operativos de producción
+│   ├── indicadores_financieros_ejemplo.tex # Resumen de indicadores financieros y punto de equilibrio
+│   ├── resultados_piloto_ejemplo.tex       # Resultados obtenidos en prueba piloto vs metas
 │   ├── costos_ejemplo.tex                  # Resumen de estructura de costos
 │   ├── cronograma_ejemplo.tex              # Cronograma de actividades por fases
 │   ├── especificaciones_tecnicas_ejemplo.tex # Matriz de especificaciones técnicas
 │   ├── plan_mejora_ejemplo.tex             # Matriz del plan de mejora continua
 │   └── comparacion_antes_despues_ejemplo.tex # Matriz de comparación antes vs después
+
 
 ├── codigo/                                 # Código fuente y scripts (.py, .cpp, .ino, .sql, etc.)
 │   ├── README.md                           # Guía para almacenar e importar código externo

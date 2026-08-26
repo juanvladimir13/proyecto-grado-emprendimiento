@@ -11,34 +11,39 @@
 emprendimiento-capitulos/
 ├── index.tex                                          # Ensamble de los 7 capítulos
 ├── datos-proyecto.md                                  # ← Este archivo (ficha de datos)
+├── datos-prueba-desayunos.md                          # Ficha con datos de prueba
 ├── 01_introduccion/
 │   ├── main.tex                                       # Cap. 1 — INTRODUCCIÓN (ensamble)
-│   ├── contexto_oportunidad.tex                       #   └ Contexto general y oportunidad
-│   ├── propuesta_valor.tex                            #   └ Propuesta de valor
-│   └── marco_teorico.tex                              #   └ Marco teórico (fundamentos y gráficos)
+│   ├── contexto_general.tex                           #   └ 1.1 Contexto general del sector
+│   ├── oportunidad_negocio.tex                        #   └ 1.2 Identificación de la oportunidad de negocio
+│   ├── propuesta_valor.tex                            #   └ 1.3 Propuesta de valor y diferenciación
+│   └── marco_teorico.tex                              #   └ 1.4 Marco teórico y conceptual
 ├── 02_planteamiento_emprendimiento/
-│   ├── main.tex                                       # Cap. 2 — PLANTEAMIENTO DEL EMPRENDIMIENTO PRODUCTIVO
-│   ├── diagnostico.tex                                #   └ Diagnóstico del contexto productivo
-│   ├── objetivos.tex                                  #   └ Objetivos (general, específicos, misión, visión)
-│   └── justificacion.tex                              #   └ Justificación
+│   ├── main.tex                                       # Cap. 2 — PLANTEAMIENTO DEL EMPRENDIMIENTO (ensamble)
+│   ├── diagnostico.tex                                #   └ 2.1 Diagnóstico del contexto productivo
+│   ├── objetivos.tex                                  #   └ 2.2 Objetivos (general, específicos, misión, visión)
+│   └── justificacion.tex                              #   └ 2.3 Justificación (económica, social, técnica)
 ├── 03_desarrollo_emprendimiento/
-│   ├── main.tex                                       # Cap. 3 — DESARROLLO DEL EMPRENDIMIENTO PRODUCTIVO
-│   ├── localizacion.tex                               #   └ Localización del emprendimiento
-│   ├── analisis_mercado.tex                           #   └ Análisis del mercado (oferta, demanda, ventaja)
-│   ├── estrategia_promocion.tex                       #   └ Estrategia de promoción y distribución
-│   ├── estructura_organizacional.tex                  #   └ Estructura organizacional
-│   ├── diseno_producto.tex                            #   └ Diseño de producto o servicio
-│   └── ciclo_produccion.tex                           #   └ Ciclo de producción o servicio (opcional)
+│   ├── main.tex                                       # Cap. 3 — DESARROLLO DEL EMPRENDIMIENTO (ensamble)
+│   ├── localizacion.tex                               #   └ 3.1 Localización (macro y micro)
+│   ├── analisis_mercado.tex                           #   └ 3.2 Análisis de mercado (oferta, demanda, ventaja)
+│   ├── estrategia_promocion.tex                       #   └ 3.3 Estrategia de promoción y distribución
+│   ├── estructura_organizacional.tex                  #   └ 3.4 Estructura organizacional (forma jurídica y cargos)
+│   ├── diseno_producto.tex                            #   └ 3.5 Diseño del producto/servicio (atributos y empaque)
+│   └── ciclo_produccion.tex                           #   └ 3.6 Ciclo de producción o servicio
 ├── 04_viabilidad_sostenibilidad/
-│   ├── main.tex                                       # Cap. 4 — VIABILIDAD Y SOSTENIBILIDAD
-│   ├── calculo_inversiones.tex                        #   └ Cálculo de inversiones (capital inversión + operación)
-│   └── costo_produccion.tex                           #   └ Costo de producción (variables + fijos)
+│   ├── main.tex                                       # Cap. 4 — VIABILIDAD Y SOSTENIBILIDAD (ensamble)
+│   ├── calculo_inversiones.tex                        #   └ 4.1 Inversiones (activos fijos y capital de operación)
+│   └── costo_produccion.tex                           #   └ 4.2 Costos de producción e indicadores financieros
 ├── 05_resultados/
-│   └── main.tex                                       # Cap. 5 — RESULTADOS
+│   ├── main.tex                                       # Cap. 5 — RESULTADOS (ensamble)
+│   ├── resultados_cuantitativos.tex                   #   └ 5.1 Resultados cuantitativos y ventas piloto
+│   ├── resultados_cualitativos.tex                    #   └ 5.2 Aceptación y percepción de calidad
+│   └── indicadores_validados.tex                      #   └ 5.3 Indicadores de rentabilidad validados
 ├── 06_proyecto_vida/
-│   └── main.tex                                       # Cap. 6 — PROYECTO DE VIDA
+│   └── main.tex                                       # Cap. 6 — PROYECTO DE VIDA (metas, competencias, ética)
 └── 07_conclusiones_recomendaciones/
-    ├── main.tex                                       # Cap. 7 — CONCLUSIONES Y RECOMENDACIONES
+    ├── main.tex                                       # Cap. 7 — CONCLUSIONES Y RECOMENDACIONES (ensamble)
     ├── conclusiones.tex                               #   └ Conclusiones
     └── recomendaciones.tex                            #   └ Recomendaciones
 ```
@@ -120,7 +125,7 @@ emprendimiento-capitulos/
    - Definición breve: [DATO PENDIENTE]
    - Fuente: [DATO PENDIENTE]
 
-> **Nutre:** `emprendimiento-capitulos/01_introduccion/main.tex`, `emprendimiento-capitulos/01_introduccion/marco_teorico.tex`
+> **Nutre:** `emprendimiento-capitulos/01_introduccion/main.tex` → `contexto_general.tex`, `oportunidad_negocio.tex`, `propuesta_valor.tex`, `marco_teorico.tex`
 
 ---
 
@@ -158,7 +163,7 @@ emprendimiento-capitulos/
 - **Número de beneficiarios indirectos** (proveedores, familias de empleados): [DATO PENDIENTE]
 - **Aprovechamiento de recursos locales mencionado:** [DATO PENDIENTE] _(ej. "Quinua y amaranto de productores del municipio de Sipe Sipe")_
 
-> **Nutre:** `emprendimiento-capitulos/02_planteamiento_emprendimiento/main.tex` (secciones: diagnóstico, objetivos, justificación)
+> **Nutre:** `emprendimiento-capitulos/02_planteamiento_emprendimiento/main.tex` → `diagnostico.tex`, `objetivos.tex`, `justificacion.tex`
 
 ---
 
@@ -265,7 +270,7 @@ emprendimiento-capitulos/
 - **Capacidad de producción por ciclo:** [DATO PENDIENTE] _(ej. "200 unidades por lote, 2 lotes/día")_
 - **Equipo o maquinaria principal utilizada:** [DATO PENDIENTE] _(ej. "Horno industrial de 10 bandejas, amasadora de 25 kg")_
 
-> **Nutre:** `emprendimiento-capitulos/03_desarrollo_emprendimiento/main.tex` (secciones: localización, análisis de mercado, estrategia de promoción, estructura organizacional, diseño de producto, ciclo de producción); tablas referenciadas: `tablas/estudio_mercado_ejemplo.tex`
+> **Nutre:** `emprendimiento-capitulos/03_desarrollo_emprendimiento/main.tex` → `localizacion.tex`, `analisis_mercado.tex`, `estrategia_promocion.tex`, `estructura_organizacional.tex`, `diseno_producto.tex`, `ciclo_produccion.tex`; tablas referenciadas: `tablas/estudio_mercado_ejemplo.tex`, `tablas/estructura_organizacional_ejemplo.tex`
 
 ---
 
@@ -361,7 +366,7 @@ emprendimiento-capitulos/
 - **Utilidad neta mensual proyectada (Bs):** [DATO PENDIENTE]
 - **Retorno de inversión estimado** (meses): [DATO PENDIENTE]
 
-> **Nutre:** `emprendimiento-capitulos/04_viabilidad_sostenibilidad/main.tex` (secciones: cálculo de inversiones, costo de producción); tablas referenciadas: `tablas/inversiones_ejemplo.tex`, `tablas/costos_produccion_ejemplo.tex`
+> **Nutre:** `emprendimiento-capitulos/04_viabilidad_sostenibilidad/main.tex` → `calculo_inversiones.tex`, `costo_produccion.tex`; tablas referenciadas: `tablas/inversiones_ejemplo.tex`, `tablas/costos_produccion_ejemplo.tex`, `tablas/indicadores_financieros_ejemplo.tex`
 
 ---
 
@@ -402,7 +407,7 @@ emprendimiento-capitulos/
    - Valor real/validado: [DATO PENDIENTE]
    - Variación: [DATO PENDIENTE]
 
-> **Nutre:** `emprendimiento-capitulos/05_resultados/main.tex`
+> **Nutre:** `emprendimiento-capitulos/05_resultados/main.tex` → `resultados_cuantitativos.tex`, `resultados_cualitativos.tex`, `indicadores_validados.tex`; tablas referenciadas: `tablas/resultados_piloto_ejemplo.tex`
 
 ---
 
@@ -445,7 +450,7 @@ emprendimiento-capitulos/
 - **Recomendación sobre capacitación del personal:** [DATO PENDIENTE]
 - **Recomendación institucional** (qué debería hacer la unidad educativa o municipio): [DATO PENDIENTE]
 
-> **Nutre:** `emprendimiento-capitulos/07_conclusiones_recomendaciones/main.tex` (secciones: conclusiones, recomendaciones)
+> **Nutre:** `emprendimiento-capitulos/07_conclusiones_recomendaciones/main.tex` → `conclusiones.tex`, `recomendaciones.tex`
 
 ---
 

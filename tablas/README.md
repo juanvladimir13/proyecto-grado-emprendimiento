@@ -10,8 +10,11 @@ En este directorio se almacenan todas las tablas independientes del documento, f
 tablas/
 ├── tabla_ejemplo.tex                     # Estructura base de tabla formal con booktabs
 ├── estudio_mercado_ejemplo.tex           # Matriz de análisis de competidores y mercado
+├── estructura_organizacional_ejemplo.tex # Matriz de estructura organizacional, cargos y remuneraciones
 ├── inversiones_ejemplo.tex               # Resumen de activos fijos y capital de operación
 ├── costos_produccion_ejemplo.tex         # Estructura de costos variables y costos fijos
+├── indicadores_financieros_ejemplo.tex   # Resumen de indicadores financieros y punto de equilibrio
+├── resultados_piloto_ejemplo.tex         # Resultados obtenidos en prueba piloto vs metas
 ├── costos_ejemplo.tex                    # Resumen de costos generales de innovación
 ├── cronograma_ejemplo.tex                # Planificación temporal de actividades por fases
 ├── especificaciones_tecnicas_ejemplo.tex # Matriz de especificaciones técnicas de hardware/software
