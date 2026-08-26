@@ -30,10 +30,13 @@ preliminares/**/*.aux
 anexos/**/*.aux
 estilos/**/*.aux
 tablas/**/*.aux
+codigo/**/*.aux
+imagenes/**/*.aux
 
-# Directorios temporales de entornos
+# Directorios temporales y cachés de entornos/IDEs
 .antigravitycli/
 .cline/
 .cursor/
 .idea/
 .vscode/
+

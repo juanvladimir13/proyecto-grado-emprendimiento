@@ -1,20 +1,29 @@
 # Cline Rules & Guidelines
 
-Este proyecto de LaTeX modular sigue pautas estrictas para mantener la consistencia y escalabilidad del documento.
+Este proyecto de LaTeX modular sigue pautas estrictas para mantener la consistencia, modularidad y cumplimiento de la normativa del Bachillerato Técnico Humanístico (BTH - RM 0912/2023) en Bolivia.
 
-Antes de comenzar cualquier tarea de desarrollo o modificación de código, lee las directrices del proyecto en el archivo principal `AGENTS.md`.
+Antes de comenzar cualquier tarea de desarrollo o modificación de código, lee las directrices del proyecto en el archivo principal `AGENTS.md` y la estructura de capítulos en `ESTRUCTURA_CAPITULOS.md`.
 
 ## Resumen de Reglas Clave:
-1. **Variables Centralizadas:** Toda modificación de metadatos (autor(es), título, tutor, institución, especialidad) debe realizarse únicamente en `estilos/configuracion.tex`. Soporta 1 o 2 autores dinámicamente.
-2. **Estilo de Títulos APA 7 Adaptado:**
-   - Todos los títulos y enlaces del documento en **negro** (`linkcolor=black`).
-   - Interlineado sencillo (`1.0`) para títulos de Nivel 1, 2, 3 y 4.
-   - Nivel 1 (`\chapter`) alineado a la **izquierda**, sin la palabra "Capítulo" en el prefijo (ej: `1. INTRODUCCIÓN`), y con espaciado anterior a `-15pt`.
-3. **Encabezados Desactivados:** Sin textos de cabecera ni línea horizontal superior (`headrulewidth=0pt`). Numeración centrada abajo.
+1. **Variables Centralizadas:** Toda modificación de metadatos (autor(es), título, tutor, institución, especialidad) debe realizarse únicamente en `estilos/configuracion.tex`. Soporta 1 o 2 autores dinámicamente (`\autoruno`, `\autordos`). NUNCA hardcodear nombres o datos en los `.tex`.
+2. **Estilo de Títulos APA 7ma Edición Adaptado:**
+   - Todos los títulos y enlaces internos en **negro** (`linkcolor=black`).
+   - Interlineado sencillo (`1.0` / `\setstretch{1.0}`) para títulos de Nivel 1 al 4.
+   - Nivel 1 (`\chapter`): Alineado a la **izquierda**, sin prefijo de palabra "Capítulo" (ej: `1. INTRODUCCIÓN`), y con espaciado anterior a `-15pt` en `titlesec`.
+   - Nivel 2 (`\section`): Alineado izquierda, Negrita.
+   - Nivel 3 (`\subsection`): Alineado izquierda, Negrita y Cursiva.
+   - Nivel 4 (`\subsubsection`): Sangría de 1.27 cm, Negrita, tipo *run-in* terminando con punto.
+   - Nivel 5 (`\paragraph`): Sangría de 1.27 cm, Negrita y Cursiva, tipo *run-in* terminando con punto.
+3. **Encabezados y Pies de Página:**
+   - Sin textos de cabecera ni línea horizontal superior (`headrulewidth=0pt`).
+   - Numeración de página arábiga centrada abajo (`\cfoot{\thepage}`).
+   - Preliminares con numeración romana (`\pagenumbering{roman}`).
+   - Secciones finales (Bibliografía/Anexos) sin numeración en títulos (`numberless`) y sin numeración de página (`\pagestyle{empty}`).
 4. **Bibliografía APA 7ma Edición:** Motor `biblatex` con estilo `apa` y backend `biber`. Usar `\parencite{clave}` para citas parentéticas y `\textcite{clave}` para narrativas. Lista generada con `\printbibliography`.
-5. **Secciones Finales (Bibliografía/Anexos):** Sin numeración decimal en los títulos, y sin números de página ni cabeceras (`\pagestyle{empty}`).
-6. **Compilación y Limpieza:** Usa únicamente el script ejecutable `./compilar.sh` (admite `--clean`, `--only-clean` y `--fast`).
-7. **División de Palabras Desactivada:** No dividir palabras con guiones a fin de línea (`\hyphenpenalty=10000`).
-8. **Código Fuente y Programación:** Usar `codigo/` para scripts externos e importar con `\lstinputlisting[language=...]{codigo/archivo.ext}` (o bloques `lstlisting`) con el estilo `estilocodigo` preconfigurado en Courier.
-9. **Estructura Modular:** Respetar la modularidad de capítulos, tablas en `tablas/` y anexos en `anexos/`.
-10. **Idioma:** Redacción de la tesis y comentarios en español (exceptuando el abstract en inglés).
+5. **Código Fuente y Programación:** Entorno `listings` con estilo `estilocodigo` predeterminado y tipografía Courier. Guardar programas en `codigo/` e importar con `\lstinputlisting[language=...]{codigo/archivo.ext}` (o bloques `lstlisting`).
+6. **Tablas e Ilustraciones:** Guardar tablas modulares en `tablas/` e importar vía `\input{tablas/archivo.tex}` usando `booktabs`. Figuras en `imagenes/` e incluir con `\includegraphics{archivo.ext}`.
+7. **Control de Silabación:** Desactivada globalmente (`\hyphenpenalty=10000`, `\exhyphenpenalty=10000`).
+8. **Compilación y Limpieza:** Usa exclusivamente el script ejecutable `./compilar.sh` (`--clean`, `--only-clean`, `--fast`).
+9. **Cambio de Modalidad:** Alternar la inclusión en `main.tex` entre `emprendimiento-capitulos/index.tex` e `innovacion-capitulos/index.tex`, y actualizar metadatos en `estilos/configuracion.tex`.
+10. **Estructura Modular e Idioma:** Respetar la división por capítulos y secciones. Redacción formal y comentarios en español (excepto abstract en inglés).
+

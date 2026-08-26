@@ -5,6 +5,7 @@
 # Excluir binarios pesados y PDFs
 *.pdf
 main.pdf
+!docs/*.pdf
 
 # Excluir temporales y auxiliares de compilación LaTeX
 *.aux
@@ -33,10 +34,13 @@ preliminares/**/*.aux
 anexos/**/*.aux
 estilos/**/*.aux
 tablas/**/*.aux
+codigo/**/*.aux
+imagenes/**/*.aux
 
-# Directorios de configuración de IDEs
+# Directorios de configuración y caché de IDEs
 .antigravitycli/
 .cline/
 .cursor/
 .idea/
 .vscode/
+

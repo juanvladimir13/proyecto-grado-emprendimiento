@@ -44,7 +44,7 @@ proyecto-grado/
 ├── ESTRUCTURA_CAPITULOS.md                 # Detalle temático de capítulos de ambas modalidades
 ├── compilar.sh                             # Script ejecutable de compilación (pdflatex + biber) y limpieza
 ├── estilos/
-│   ├── estilos.sty                         # Estilos, carga de paquetes (biblatex-apa), títulos APA 7
+│   ├── estilos.sty                         # Estilos, carga de paquetes (biblatex-apa, listings), títulos APA 7
 │   └── configuracion.tex                   # Variables centralizadas de autor(es), título, tutor e institución
 ├── preliminares/                           # Hojas frontales (numeración romana)
 │   ├── caratula.tex                        # Carátula oficial BTH (1 o 2 autores automáticos)
@@ -58,7 +58,7 @@ proyecto-grado/
 │   ├── datos-prueba-desayunos.md           # Ficha con datos de prueba
 │   ├── 01_introduccion/                    # Cap. 1: main.tex, contexto_oportunidad.tex, propuesta_valor.tex, marco_teorico.tex
 │   ├── 02_planteamiento_emprendimiento/    # Cap. 2: main.tex, diagnostico.tex, objetivos.tex, justificacion.tex
-│   ├── 03_desarrollo_emprendimiento/       # Cap. 3: main.tex, localizacion.tex, analisis_mercado.tex, estrategia_promocion.tex, etc.
+│   ├── 03_desarrollo_emprendimiento/       # Cap. 3: main.tex, localizacion.tex, analisis_mercado.tex, estrategia_promocion.tex, estructura_organizacional.tex, diseno_producto.tex, ciclo_produccion.tex
 │   ├── 04_viabilidad_sostenibilidad/       # Cap. 4: main.tex, calculo_inversiones.tex, costo_produccion.tex
 │   ├── 05_resultados/                      # Cap. 5: main.tex
 │   ├── 06_proyecto_vida/                   # Cap. 6: main.tex
@@ -68,7 +68,7 @@ proyecto-grado/
 │   ├── datos-proyecto.md                   # Ficha de recopilación de datos
 │   ├── datos-prueba-control-bovino.md      # Ficha con datos de prueba
 │   ├── 01_introduccion/                    # Cap. 1: main.tex
-│   ├── 02_planteamiento_problema/          # Cap. 2: main.tex, diagnostico.tex, objetivos.tex, justificacion.tex, etc.
+│   ├── 02_planteamiento_problema/          # Cap. 2: main.tex, diagnostico.tex, identificacion_problema.tex, formulacion_problema.tex, objetivos.tex, justificacion.tex
 │   ├── 03_marco_referencial/               # Cap. 3: main.tex, antecedentes.tex, bases_teoricas.tex, marco_conceptual.tex
 │   ├── 04_desarrollo_innovacion/           # Cap. 4: main.tex, diseno.tex, planificacion.tex, recursos.tex, calculo_costos.tex
 │   ├── 05_metodologia/                     # Cap. 5: main.tex, tipo_investigacion.tex, tecnicas_instrumentos.tex
@@ -88,7 +88,7 @@ proyecto-grado/
 │   ├── README.md                           # Guía para almacenar e importar código externo
 │   └── ejemplo_controlador.py              # Script de prueba importable vía \lstinputlisting
 ├── imagenes/                               # Gráficos, diagramas y logotipos
-│   └── README.md
+│   └── README.md                           # Instrucciones para la gestión de recursos gráficos
 ├── bibliografia/                           # Bibliografía BibLaTeX (APA 7ma Edición)
 │   └── referencias.bib                     # Base de datos de referencias (.bib) formateada en APA 7
 ├── anexos/                                 # Apéndices del documento
@@ -184,6 +184,6 @@ Estos archivos se han excluido formalmente en los siguientes archivos de configu
 * `.agentignore`: Regulación neutral para otros motores de IA.
 
 ### Lista de Patrones Excluidos:
-1. **Temporales de LaTeX:** `*.aux`, `*.log`, `*.toc`, `*.lof`, `*.lot`, `*.out`, `*.bbl`, `*.blg`, `*.fdb_latexmk`, `*.fls`, `*.synctex.gz`, `*.upa`, `*.upb`, `*.listing` (incluyendo directorios recursivos).
+1. **Temporales de LaTeX:** `*.aux`, `*.log`, `*.toc`, `*.lof`, `*.lot`, `*.out`, `*.bbl`, `*.blg`, `*.run.xml`, `*.bcf`, `*.fdb_latexmk`, `*.fls`, `*.synctex.gz`, `*.upa`, `*.upb`, `*.listing`, `*-blx.bib` (incluyendo directorios recursivos).
 2. **Archivos de Salida Binaria:** `*.pdf`, `main.pdf` (excepto `docs/*.pdf` regulatorios).
 3. **Directorios de Agentes/IDEs:** `.antigravitycli/`, `.cline/`, `.cursor/`, `.vscode/`, `.idea/`.

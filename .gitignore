@@ -29,6 +29,8 @@ preliminares/**/*.aux
 anexos/**/*.aux
 estilos/**/*.aux
 tablas/**/*.aux
+codigo/**/*.aux
+imagenes/**/*.aux
 
 # ==========================================
 #  IDE and Local Agent Cache Directories
@@ -38,3 +40,4 @@ tablas/**/*.aux
 .cursor/
 .idea/
 .vscode/
+
