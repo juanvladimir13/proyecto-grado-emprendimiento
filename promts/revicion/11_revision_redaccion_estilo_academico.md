@@ -36,6 +36,7 @@ Actúa como un **corrector de estilo académico y técnico**. Evalúa la redacci
 6. **Ausencia de redundancias**: eliminación de repeticiones innecesarias o frases de relleno que no aporten rigor informativo.
 7. **Formato de cifras y números (SI/ISO 80000-1)**: verificar que los números con decimales utilicen exclusivamente punto (`.`) (ej. `12.50`, `98.5%`) y NUNCA coma, y que las cifras de millares no utilicen comas ni puntos como separadores (ej. `4500` o `25 000`).
 8. **Listas y viñetas**: verificar que se priorice el entorno de viñetas (`itemize`) frente a listas numeradas (`enumerate`), reservando estas últimas únicamente para secuencias cronológicas, algorítmicas o procedimentales estrictas.
+9. **Uso de macros semánticas**: verificar que no se utilicen comandos manuales de bajo nivel cuando existan macros estandarizadas en `estilos.sty` (`\capitulopreliminar`, `\begin{estilodedicatoria}`, `\seccionanexo`, `\configurarseccionfinal`, `\palabrasclave`, `\notatabla`, etc.).
 
 ### Formato de salida esperado
 ```

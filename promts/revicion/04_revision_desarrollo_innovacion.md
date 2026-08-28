@@ -56,7 +56,7 @@ Actúa como un **revisor técnico e industrial de proyectos de grado BTH** en mo
 2. **Utilidad y calidad**: ¿se fundamenta con claridad cómo la innovación aporta valor práctico y qué estándares de calidad/ensayo se aplican?
 3. **Planificación y cronograma**: ¿las fases del cronograma cubren secuencialmente desde el diseño preliminar hasta las pruebas piloto? ¿los tiempos estimados son realistas para el ciclo escolar BTH?
 4. **Recursos requeridos**: ¿está completa la lista de materiales, sensores, módulos, herramientas o licencias necesarias?
-5. **Cálculo de costos y presupuesto**: ¿los precios unitarios y subtotales en las tablas de costos son consistentes y reflejan la moneda local (Bs.)? ¿se discriminan correctamente la inversión fija, costos operativos y el costo total del prototipo?
+5. **Cálculo de costos y presupuesto**: ¿los precios unitarios y subtotales en las tablas de costos son consistentes y reflejan la moneda local (Bs.)? ¿se discriminan correctamente la inversión fija, costos operativos y el costo total del prototipo? ¿cumplen la norma SI/ISO 80000-1 (punto decimal, sin coma para miles ni decimales) y utilizan la macro `\notatabla{...}` para notas al pie de tabla?
 
 ### Formato de salida esperado
 ```

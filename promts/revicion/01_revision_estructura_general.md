@@ -67,6 +67,7 @@ Actúa como un **revisor metodológico de proyectos de grado BTH**. Tu tarea es 
 2. **Jerarquía modular**: ¿se respeta la organización donde cada capítulo cuenta con su `main.tex` y sus subsecciones `.tex`?
 3. **Numeración y títulos**: ¿los títulos siguen la nomenclatura oficial de la modalidad sin prefijos redundantes ("Capítulo X") en los nombres de sección?
 4. **Balance estructural**: ¿los capítulos guardan una proporción equilibrada en su extensión según la relevancia técnica de cada apartado?
+5. **Estandarización semántica**: ¿los preliminares emplean `\capitulopreliminar` y `\begin{estilodedicatoria}`, los anexos emplean `\capitulopreliminar{ANEXOS}` y `\seccionanexo{...}`, y las secciones finales están configuradas con `\configurarseccionfinal`?
 
 ### Formato de salida esperado
 ```

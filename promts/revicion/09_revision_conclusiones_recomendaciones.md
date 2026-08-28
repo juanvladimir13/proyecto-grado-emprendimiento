@@ -54,6 +54,7 @@ Actúa como un **revisor de comités de titulación BTH**. Evalúa el **Capítul
 3. **Respuesta al problema inicial**: ¿las conclusiones dejan claramente establecido en qué medida se solucionó la deficiencia planteada en el diagnóstico del Capítulo 2?
 4. **Recomendaciones técnicas y aplicadas**: ¿son directrices concretas (mantenimiento, calibración, capacitación de usuarios, posibles mejoras) y no consejos genéricos o triviales?
 5. **Tono conclusivo**: ¿evita el uso de citas bibliográficas o discusiones teóricas nuevas en esta sección final?
+6. **Listas y viñetas**: ¿se estructuran las conclusiones y recomendaciones mediante viñetas (`itemize`) en lugar de listas numeradas (`enumerate`)?
 
 ### Formato de salida esperado
 ```
