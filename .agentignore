@@ -23,8 +23,7 @@
 main.pdf
 
 # Excluir archivos auxiliares recursivamente
-emprendimiento-capitulos/**/*.aux
-innovacion-capitulos/**/*.aux
+capitulos/**/*.aux
 docs/**/*.aux
 preliminares/**/*.aux
 anexos/**/*.aux

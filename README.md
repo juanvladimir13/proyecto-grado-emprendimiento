@@ -1,44 +1,31 @@
-# Proyecto de Grado BTH (LaTeX Modular)
+# Proyecto de Grado BTH — Innovación Tecnológica (LaTeX Modular)
 
-Este proyecto proporciona una estructura modular, organizada y escalable para la redacción de proyectos de grado y tesis técnicas bajo la normativa del **Bachillerato Técnico Humanístico (BTH)** en Bolivia (Resolución Ministerial RM 0912/2023) y contextos académicos utilizando **LaTeX**.
+Este proyecto proporciona una estructura modular, organizada y escalable para la redacción de proyectos de grado y tesis técnicas bajo la modalidad de **Innovación Tecnológica**, en estricto cumplimiento del **Reglamento de Graduación del Bachillerato Técnico Humanístico (BTH)** en Bolivia (Resolución Ministerial RM 0912/2023) y contextos académicos utilizando **LaTeX**.
 
 ---
 
 ## 📁 Descripción de la Estructura del Proyecto
 
-El proyecto está estructurado de manera modular para separar la configuración de metadatos, el contenido de los capítulos, las tablas independientes, el código fuente, las ilustraciones, la bibliografía y la documentación oficial.
+El proyecto está estructurado de manera modular para separar la configuración de metadatos, el contenido de los 9 capítulos de innovación tecnológica, las tablas independientes, el código fuente, las ilustraciones, la bibliografía, los prompts de apoyo y la documentación oficial.
 
 ```text
-proyecto-grado/
-├── main.tex                                # Archivo raíz que ensambla y compila el documento
+proyecto-grado-innovacion/
+├── main.tex                                # Archivo raíz que ensambla y compila el documento (\input{capitulos/index.tex})
 ├── README.md                               # Guía general de uso y comandos de compilación (este archivo)
 ├── AGENTS.md                               # Directrices y normas para agentes de IA
-├── ESTRUCTURA_CAPITULOS.md                 # Detalle temático de capítulos de ambas modalidades
+├── ESTRUCTURA_CAPITULOS.md                 # Detalle temático de los 9 capítulos de Innovación Tecnológica
 ├── compilar.sh                             # Script de compilación y limpieza (soporta --clean, --fast, etc.)
 ├── estilos/                                # Paquete y configuraciones de diseño de LaTeX
 │   ├── estilos.sty                         # Archivo de estilos (márgenes, fuentes, espaciados y paquetes)
-│   └── configuracion.tex                   # Metadatos centralizados (título, autor(es), tutor, institución)
+│   └── configuracion.tex                   # Metadatos centralizados (título, autor(es), tutor, institución, modalidad)
 ├── preliminares/                           # Hojas preliminares con numeración romana
 │   ├── caratula.tex                        # Carátula formal BTH (1 o 2 autores dinámicos)
 │   ├── portada_universitaria.tex           # Portada alternativa estilo universitario
-│   ├── agradecimiento.tex                  # Página de agradecimientos
-│   ├── dedicatoria.tex                     # Página de dedicatoria
+│   ├── agradecimiento.tex                  # Página de agradecimientos (estilo dedicatoria: derecha y cursiva)
+│   ├── dedicatoria.tex                     # Página de dedicatoria (derecha y cursiva)
 │   └── resumen.tex                         # Resumen en español, lengua extranjera e indígena
-├── emprendimiento-capitulos/               # Modalidad 1: "Emprendimiento Productivo" (Capítulos 1-7)
-│   ├── index.tex                           # Ensamble de los 7 capítulos
-│   ├── datos-proyecto.md                   # Ficha de recopilación de datos
-│   ├── datos-prueba-desayunos.md           # Ficha con datos de prueba
-│   ├── 01_introduccion/                    # Cap. 1: main.tex, contexto_general.tex, oportunidad_negocio.tex, propuesta_valor.tex, marco_teorico.tex
-│   ├── 02_planteamiento_emprendimiento/    # Cap. 2: main.tex, diagnostico.tex, objetivos.tex, justificacion.tex
-│   ├── 03_desarrollo_emprendimiento/       # Cap. 3: main.tex, localizacion.tex, analisis_mercado.tex, estrategia_promocion.tex, estructura_organizacional.tex, diseno_producto.tex, ciclo_produccion.tex
-│   ├── 04_viabilidad_sostenibilidad/       # Cap. 4: main.tex, calculo_inversiones.tex, costo_produccion.tex
-│   ├── 05_resultados/                      # Cap. 5: main.tex, resultados_cuantitativos.tex, resultados_cualitativos.tex, indicadores_validados.tex
-│   ├── 06_proyecto_vida/                   # Cap. 6: main.tex
-│   └── 07_conclusiones_recomendaciones/    # Cap. 7: main.tex, conclusiones.tex, recomendaciones.tex
-├── innovacion-capitulos/                   # Modalidad 2: "Innovación Tecnológica" (Capítulos 1-9)
+├── capitulos/                              # Modalidad: Innovación Tecnológica (Capítulos 1 al 9)
 │   ├── index.tex                           # Ensamble de los 9 capítulos
-│   ├── datos-proyecto.md                   # Ficha de recopilación de datos
-│   ├── datos-prueba-control-bovino.md      # Ficha con datos de prueba
 │   ├── 01_introduccion/                    # Cap. 1: main.tex, contexto_general.tex, motivacion_pertinencia.tex, contribucion_esperada.tex
 │   ├── 02_planteamiento_problema/          # Cap. 2: main.tex, diagnostico.tex, identificacion_problema.tex, formulacion_problema.tex, objetivos.tex, justificacion.tex
 │   ├── 03_marco_referencial/               # Cap. 3: main.tex, antecedentes.tex, bases_teoricas.tex, marco_conceptual.tex
@@ -62,8 +49,6 @@ proyecto-grado/
 │   ├── especificaciones_tecnicas_ejemplo.tex # Matriz de especificaciones técnicas
 │   ├── plan_mejora_ejemplo.tex             # Matriz del plan de mejora continua
 │   └── comparacion_antes_despues_ejemplo.tex # Matriz de comparación antes vs después
-
-
 ├── codigo/                                 # Código fuente y scripts (.py, .cpp, .ino, .sql, etc.)
 │   ├── README.md                           # Guía para almacenar e importar código externo
 │   └── ejemplo_controlador.py              # Script de prueba importable vía \lstinputlisting
@@ -77,10 +62,16 @@ proyecto-grado/
 │   ├── anexo_a_canvas.tex                  # Anexo A: Modelo Canvas
 │   ├── anexo_b_fichas_tecnicas.tex         # Anexo B: Cotizaciones y fichas técnicas
 │   └── anexo_c_codigo_fuente.tex           # Anexo C: Código fuente importado
+├── promts/                                 # Prompts de apoyo para redacción y revisión con IA
+│   ├── migracion/                          # Prompts para recopilación y redacción de capítulos
+│   │   └── ficha-proyecto.md               # Flujo estructurado paso a paso
+│   └── revicion/                           # Set de prompts para revisión académica por etapas
+│       ├── 00_README_flujo_revision.md     # Guía del flujo de revisión
+│       ├── 00_analisis-capitulos-tesis.md  # Prompt de análisis global de coherencia
+│       └── 01_ a 10_*.md                   # Prompts de revisión modular y checklist final
 └── docs/                                   # Regulaciones oficiales y documentos de soporte
-    ├── README.md                           # Guía de documentos oficiales
-    ├── REGLAMENTO_DE_GRADUACIN_DEL_BTH__RM_0912_2023.pdf  # Reglamento oficial de graduación BTH (RM 0912/2023)
-    └── datos-proyecto.md                   # Índice de fichas de recopilación de datos
+    ├── REGLAMENTO_BTH__RM_0912_2023.pdf    # Reglamento oficial de graduación BTH (RM 0912/2023)
+    └── ficha-proyecto.md                   # Ficha de datos y requerimientos del proyecto
 ```
 
 ---
@@ -163,8 +154,9 @@ pdflatex main.tex
 1. **Configurar Datos Institucionales y del Autor:**
    * Abre `estilos/configuracion.tex` y actualiza el título, institución, especialidad, tutor y datos del o los autores (soporta 1 o 2 autores automáticamente).
 
-2. **Seleccionar la Modalidad:**
-   * En `main.tex`, descomenta la modalidad deseada (`emprendimiento-capitulos/index.tex` o `innovacion-capitulos/index.tex`) y comenta la otra.
+2. **Estructura y Redacción de Capítulos (Innovación Tecnológica):**
+   * El documento compila los 9 capítulos modulares ubicados en `capitulos/` a través de `capitulos/index.tex`.
+   * Completa los datos en `docs/ficha-proyecto.md` (a partir del documento base `docs/proyecto.rtf` o `docs/proyecto.md`) y redacta cada sección en su respectiva subcarpeta (`01_introduccion/` a `09_conclusiones_recomendaciones/`).
 
 3. **Citar Fuentes Bibliográficas (Normas APA 7):**
    * Agrega entradas a `bibliografia/referencias.bib`.

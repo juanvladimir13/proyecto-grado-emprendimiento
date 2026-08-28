@@ -4,14 +4,12 @@ Este archivo define la estructura, reglas y flujos de trabajo del proyecto para 
 
 ---
 
-## 📋 Resumen del Proyecto
+### 📋 Resumen del Proyecto
 
-* **Nombre:** Proyecto de Grado BTH (LaTeX Modular)
-* **Objetivo:** Plantilla modular y parametrizada en LaTeX para la redacción de proyectos de grado y tesis académicas.
-* **Normativa:** Cumple con el Reglamento de Graduación del Bachillerato Técnico Humanístico (BTH) en Bolivia (Resolución Ministerial RM 0912/2023, ver [docs/REGLAMENTO_DE_GRADUACIN_DEL_BTH__RM_0912_2023.pdf](docs/REGLAMENTO_DE_GRADUACIN_DEL_BTH__RM_0912_2023.pdf)).
-* **Modalidades Soportadas:**
-  1. **Emprendimiento Productivo:** Directorio `emprendimiento-capitulos/` (Capítulos 1 al 7). (Activa por defecto en `main.tex`)
-  2. **Innovación Tecnológica:** Directorio `innovacion-capitulos/` (Capítulos 1 al 9).
+* **Nombre:** Proyecto de Grado BTH - Innovación Tecnológica (LaTeX Modular)
+* **Objetivo:** Plantilla modular y parametrizada en LaTeX para la redacción de proyectos de grado y tesis académicas bajo la modalidad de Innovación Tecnológica.
+* **Normativa:** Cumple con el Reglamento de Graduación del Bachillerato Técnico Humanístico (BTH) en Bolivia (Resolución Ministerial RM 0912/2023, ver [docs/REGLAMENTO_BTH__RM_0912_2023.pdf](docs/REGLAMENTO_BTH__RM_0912_2023.pdf)).
+* **Modalidad Implementada:** **Innovación Tecnológica** estructurada en 9 capítulos dentro del directorio `capitulos/`.
 
 ---
 
@@ -37,36 +35,23 @@ Este archivo define la estructura, reglas y flujos de trabajo del proyecto para 
 ## 📁 Estructura del Directorio
 
 ```text
-proyecto-grado/
-├── main.tex                                # Entrada principal de compilación LaTeX
+proyecto-grado-innovacion/
+├── main.tex                                # Entrada principal de compilación LaTeX (\input{capitulos/index.tex})
 ├── README.md                               # Guía del usuario para compilar y usar la plantilla
 ├── AGENTS.md                               # Instrucciones y reglas para Agentes de IA (este archivo)
-├── ESTRUCTURA_CAPITULOS.md                 # Detalle temático de capítulos de ambas modalidades
+├── ESTRUCTURA_CAPITULOS.md                 # Detalle temático de los 9 capítulos de Innovación Tecnológica
 ├── compilar.sh                             # Script ejecutable de compilación (pdflatex + biber) y limpieza
 ├── estilos/
 │   ├── estilos.sty                         # Estilos, carga de paquetes (biblatex-apa, listings), títulos APA 7
-│   └── configuracion.tex                   # Variables centralizadas de autor(es), título, tutor e institución
+│   └── configuracion.tex                   # Variables centralizadas de autor(es), título, tutor, institución y modalidad
 ├── preliminares/                           # Hojas frontales (numeración romana)
 │   ├── caratula.tex                        # Carátula oficial BTH (1 o 2 autores automáticos)
 │   ├── portada_universitaria.tex           # Portada alternativa estilo académico/universitario
-│   ├── agradecimiento.tex                  # Agradecimientos
-│   ├── dedicatoria.tex                     # Dedicatorias
+│   ├── agradecimiento.tex                  # Agradecimientos (estilo dedicatoria: raggedleft y cursiva)
+│   ├── dedicatoria.tex                     # Dedicatorias (estilo raggedleft y cursiva)
 │   └── resumen.tex                         # Resúmenes (castellano, extranjero y originario)
-├── emprendimiento-capitulos/               # Modalidad: Emprendimiento Productivo (Capítulos 1-7)
-│   ├── index.tex                           # Ensamble de los 7 capítulos
-│   ├── datos-proyecto.md                   # Ficha de recopilación de datos
-│   ├── datos-prueba-desayunos.md           # Ficha con datos de prueba
-│   ├── 01_introduccion/                    # Cap. 1: main.tex, contexto_general.tex, oportunidad_negocio.tex, propuesta_valor.tex, marco_teorico.tex
-│   ├── 02_planteamiento_emprendimiento/    # Cap. 2: main.tex, diagnostico.tex, objetivos.tex, justificacion.tex
-│   ├── 03_desarrollo_emprendimiento/       # Cap. 3: main.tex, localizacion.tex, analisis_mercado.tex, estrategia_promocion.tex, estructura_organizacional.tex, diseno_producto.tex, ciclo_produccion.tex
-│   ├── 04_viabilidad_sostenibilidad/       # Cap. 4: main.tex, calculo_inversiones.tex, costo_produccion.tex
-│   ├── 05_resultados/                      # Cap. 5: main.tex, resultados_cuantitativos.tex, resultados_cualitativos.tex, indicadores_validados.tex
-│   ├── 06_proyecto_vida/                   # Cap. 6: main.tex
-│   └── 07_conclusiones_recomendaciones/    # Cap. 7: main.tex, conclusiones.tex, recomendaciones.tex
-├── innovacion-capitulos/                   # Modalidad: Innovación Tecnológica (Capítulos 1-9)
+├── capitulos/                              # Modalidad: Innovación Tecnológica (Capítulos 1 al 9)
 │   ├── index.tex                           # Ensamble de los 9 capítulos
-│   ├── datos-proyecto.md                   # Ficha de recopilación de datos
-│   ├── datos-prueba-control-bovino.md      # Ficha con datos de prueba
 │   ├── 01_introduccion/                    # Cap. 1: main.tex, contexto_general.tex, motivacion_pertinencia.tex, contribucion_esperada.tex
 │   ├── 02_planteamiento_problema/          # Cap. 2: main.tex, diagnostico.tex, identificacion_problema.tex, formulacion_problema.tex, objetivos.tex, justificacion.tex
 │   ├── 03_marco_referencial/               # Cap. 3: main.tex, antecedentes.tex, bases_teoricas.tex, marco_conceptual.tex
@@ -90,8 +75,6 @@ proyecto-grado/
 │   ├── especificaciones_tecnicas_ejemplo.tex # Matriz de especificaciones técnicas
 │   ├── plan_mejora_ejemplo.tex             # Matriz del plan de mejora continua
 │   └── comparacion_antes_despues_ejemplo.tex # Matriz de comparación antes vs después
-
-
 ├── codigo/                                 # Código fuente y scripts (.py, .cpp, .ino, .sql, etc.)
 │   ├── README.md                           # Guía para almacenar e importar código externo
 │   └── ejemplo_controlador.py              # Script de prueba importable vía \lstinputlisting
@@ -105,10 +88,25 @@ proyecto-grado/
 │   ├── anexo_a_canvas.tex                  # Anexo A: Modelo Canvas
 │   ├── anexo_b_fichas_tecnicas.tex         # Anexo B: Cotizaciones y fichas técnicas
 │   └── anexo_c_codigo_fuente.tex           # Anexo C: Código fuente importado
+├── promts/                                 # Prompts de apoyo y guías de revisión para agentes de IA
+│   ├── migracion/                          # Prompts para migración de datos y llenado de fichas
+│   │   └── ficha-proyecto.md               # Flujo paso a paso para completar ficha y redactar capítulos
+│   └── revicion/                           # Flujo de revisión por etapas y análisis global
+│       ├── 00_README_flujo_revision.md     # Guía del flujo de revisión por etapas
+│       ├── 00_analisis-capitulos-tesis.md  # Prompt de análisis integral de coherencia y rigor
+│       ├── 01_revision_estructura_general.md
+│       ├── 02_revision_planteamiento_problema.md
+│       ├── 03_revision_marco_teorico.md
+│       ├── 04_revision_marco_metodologico.md
+│       ├── 05_revision_resultados.md
+│       ├── 06_revision_conclusiones_recomendaciones.md
+│       ├── 07_revision_coherencia_sincronia_global.md
+│       ├── 08_revision_redaccion_estilo_academico.md
+│       ├── 09_revision_citas_bibliografia.md
+│       └── 10_checklist_pre_entrega_final.md
 └── docs/                                   # Regulaciones oficiales y guías
-    ├── README.md                           # Guía de documentos oficiales
-    ├── REGLAMENTO_DE_GRADUACIN_DEL_BTH__RM_0912_2023.pdf  # Reglamento Ministerial oficial
-    └── datos-proyecto.md                   # Índice y guía general de recopilación de datos
+    ├── REGLAMENTO_BTH__RM_0912_2023.pdf    # Reglamento Ministerial oficial RM 0912/2023
+    └── ficha-proyecto.md                   # Ficha de datos y requerimientos del proyecto
 ```
 
 ---
@@ -120,8 +118,8 @@ proyecto-grado/
 * **ACCIÓN:** Utiliza o actualiza las macros correspondientes en `estilos/configuracion.tex` (`\institucion`, `\modalidad`, `\especialidad`, `\autoruno`, `\autordos`, `\tutorproyecto`, etc.).
 
 ### 2. Estructuración Modular de Capítulos
-* **REGLA:** Conserva el diseño modular. Cada capítulo reside en su propia carpeta dentro de `emprendimiento-capitulos/` o `innovacion-capitulos/` y contiene un archivo `main.tex` que ensambla las secciones individuales.
-* **Rutas Internas:** Los archivos secundarios dentro de cada capítulo deben incluirse con el prefijo del directorio de su modalidad (ej. `\input{emprendimiento-capitulos/02_planteamiento_emprendimiento/diagnostico}`).
+* **REGLA:** Conserva el diseño modular. Cada capítulo reside en su propia carpeta dentro de `capitulos/` y contiene un archivo `main.tex` que ensambla las secciones individuales.
+* **Rutas Internas:** Los archivos secundarios dentro de cada capítulo deben incluirse con el prefijo `capitulos/` (ej. `\input{capitulos/02_planteamiento_problema/diagnostico}`).
 
 ### 3. Estilos de Títulos y Alineación (Normas APA 7 Adaptadas)
 * **Color:** Todos los títulos y enlaces internos (TOC, LOF, LOT, referencias cruzadas) deben mostrarse en **negro** (`linkcolor=black`).
@@ -135,7 +133,7 @@ proyecto-grado/
 
 ### 4. Encabezados y Pies de Página
 * **Encabezados:** Están totalmente deshabilitados. No debe mostrarse texto de cabecera superior ni línea horizontal separadora (`headrulewidth=0pt`).
-* **Pies de Página:** La numeración de páginas debe mostrarse centrada en la parte inferior de las hojas que lo requieran (Capítulos 1 al 7 u 1 al 9).
+* **Pies de Página:** La numeración de páginas debe mostrarse centrada en la parte inferior de las hojas que lo requieran (Capítulos 1 al 9).
 
 ### 5. Secciones Finales, Citas y Bibliografía (APA 7ma Edición)
 * **Motor:** Se utiliza `biblatex` con `style=apa` y backend `biber`.
@@ -166,18 +164,16 @@ proyecto-grado/
   - `./compilar.sh --only-clean` (elimina archivos temporales sin compilar).
   - `./compilar.sh --fast` (compilación rápida de 1 sola pasada pdflatex para redacción continua).
 
----
+### 9. Estructura y Flujo de la Modalidad Innovación Tecnológica
+Este proyecto está configurado para la modalidad de **Innovación Tecnológica**:
+* La inclusión principal en `main.tex` carga directamente `capitulos/index.tex`.
+* Los 9 capítulos se ensamblan desde `capitulos/index.tex` conectando cada carpeta de capítulo (`capitulos/01_introduccion/` a `capitulos/09_conclusiones_recomendaciones/`).
+* Para alimentar el contenido con datos de un proyecto real, se completa la ficha `docs/ficha-proyecto.md` a partir del documento base `docs/proyecto.rtf` o `docs/proyecto.md`, consultando de manera interactiva los datos pendientes al usuario.
+* Los metadatos institucionales y del estudiante deben ajustarse en `estilos/configuracion.tex`.
 
-## 🔄 Procedimiento para Cambiar de Modalidad
-
-El documento soporta nativamente ambas modalidades mediante inclusión condicional en `main.tex`.
-Si el usuario solicita cambiar de modalidad (ej. de Emprendimiento a Innovación):
-1. Abre el archivo `main.tex` en la raíz del proyecto.
-2. Localiza la sección `=== SELECCIÓN DE MODALIDAD ===`.
-3. Comenta la instrucción de inclusión de la modalidad inactiva (ej. `% \input{emprendimiento-capitulos/index.tex}`).
-4. Descomenta la instrucción de la modalidad solicitada (ej. `\input{innovacion-capitulos/index.tex}`).
-5. Asegúrate de actualizar las macros institucionales en `estilos/configuracion.tex` (`\modalidad`, `\tituloproyecto`, `\especialidad`, etc.).
-6. Compila el proyecto con `./compilar.sh`.
+### 10. Uso de Prompts de Apoyo para Agentes (`promts/`)
+* **Migración y redacción:** Consultar `promts/migracion/ficha-proyecto.md` para el flujo ordenado de ingesta de datos a la ficha y posterior redacción capítulo a capítulo.
+* **Revisión y calidad:** Utilizar los prompts de `promts/revicion/` para revisiones modulares por fases (estructura, marco teórico, metodología, resultados, coherencia global y checklist pre-entrega).
 
 ---
 
@@ -192,6 +188,6 @@ Estos archivos se han excluido formalmente en los siguientes archivos de configu
 * `.agentignore`: Regulación neutral para otros motores de IA.
 
 ### Lista de Patrones Excluidos:
-1. **Temporales de LaTeX:** `*.aux`, `*.log`, `*.toc`, `*.lof`, `*.lot`, `*.out`, `*.bbl`, `*.blg`, `*.run.xml`, `*.bcf`, `*.fdb_latexmk`, `*.fls`, `*.synctex.gz`, `*.upa`, `*.upb`, `*.listing`, `*-blx.bib` (incluyendo directorios recursivos).
+1. **Temporales de LaTeX:** `*.aux`, `*.log`, `*.toc`, `*.lof`, `*.lot`, `*.out`, `*.bbl`, `*.blg`, `*.run.xml`, `*.bcf`, `*.fdb_latexmk`, `*.fls`, `*.synctex.gz`, `*.upa`, `*.upb`, `*.listing`, `*-blx.bib` (incluyendo `capitulos/**/*.aux`, `preliminares/**/*.aux`, `tablas/**/*.aux`, etc.).
 2. **Archivos de Salida Binaria:** `*.pdf`, `main.pdf` (excepto `docs/*.pdf` regulatorios).
 3. **Directorios de Agentes/IDEs:** `.antigravitycli/`, `.cline/`, `.cursor/`, `.vscode/`, `.idea/`.

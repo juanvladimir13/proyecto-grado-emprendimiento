@@ -1,12 +1,13 @@
 # Cline Rules & Guidelines
 
-Este proyecto de LaTeX modular sigue pautas estrictas para mantener la consistencia, modularidad y cumplimiento de la normativa del Bachillerato Técnico Humanístico (BTH - RM 0912/2023) en Bolivia.
+Este proyecto de LaTeX modular sigue pautas estrictas para mantener la consistencia, modularidad y cumplimiento de la normativa del Bachillerato Técnico Humanístico (BTH - RM 0912/2023) en Bolivia bajo la modalidad de **Innovación Tecnológica**.
 
 Antes de comenzar cualquier tarea de desarrollo o modificación de código, lee las directrices del proyecto en el archivo principal `AGENTS.md` y la estructura de capítulos en `ESTRUCTURA_CAPITULOS.md`.
 
 ## Resumen de Reglas Clave:
-1. **Variables Centralizadas:** Toda modificación de metadatos (autor(es), título, tutor, institución, especialidad) debe realizarse únicamente en `estilos/configuracion.tex`. Soporta 1 o 2 autores dinámicamente (`\autoruno`, `\autordos`). NUNCA hardcodear nombres o datos en los `.tex`.
-2. **Estilo de Títulos APA 7ma Edición Adaptado:**
+1. **Variables Centralizadas:** Toda modificación de metadatos (autor(es), título, tutor, institución, especialidad, modalidad) debe realizarse únicamente en `estilos/configuracion.tex`. Soporta 1 o 2 autores dinámicamente (`\autoruno`, `\autordos`). NUNCA hardcodear nombres o datos en los `.tex`.
+2. **Estructura Modular (Innovación Tecnológica):** El proyecto contiene 9 capítulos en el directorio `capitulos/` (`01_introduccion/` a `09_conclusiones_recomendaciones/`). Cada carpeta incluye un `main.tex` que ensambla las secciones. Rutas internas: `\input{capitulos/0X_.../...}`.
+3. **Estilo de Títulos APA 7ma Edición Adaptado:**
    - Todos los títulos y enlaces internos en **negro** (`linkcolor=black`).
    - Interlineado sencillo (`1.0` / `\setstretch{1.0}`) para títulos de Nivel 1 al 4.
    - Nivel 1 (`\chapter`): Alineado a la **izquierda**, sin prefijo de palabra "Capítulo" (ej: `1. INTRODUCCIÓN`), y con espaciado anterior a `-15pt` en `titlesec`.
@@ -14,16 +15,15 @@ Antes de comenzar cualquier tarea de desarrollo o modificación de código, lee 
    - Nivel 3 (`\subsection`): Alineado izquierda, Negrita y Cursiva.
    - Nivel 4 (`\subsubsection`): Sangría de 1.27 cm, Negrita, tipo *run-in* terminando con punto.
    - Nivel 5 (`\paragraph`): Sangría de 1.27 cm, Negrita y Cursiva, tipo *run-in* terminando con punto.
-3. **Encabezados y Pies de Página:**
+4. **Encabezados y Pies de Página:**
    - Sin textos de cabecera ni línea horizontal superior (`headrulewidth=0pt`).
-   - Numeración de página arábiga centrada abajo (`\cfoot{\thepage}`).
+   - Numeración de página arábiga centrada abajo (`\cfoot{\thepage}`) en Capítulos 1 al 9.
    - Preliminares con numeración romana (`\pagenumbering{roman}`).
    - Secciones finales (Bibliografía/Anexos) sin numeración en títulos (`numberless`) y sin numeración de página (`\pagestyle{empty}`).
-4. **Bibliografía APA 7ma Edición:** Motor `biblatex` con estilo `apa` y backend `biber`. Usar `\parencite{clave}` para citas parentéticas y `\textcite{clave}` para narrativas. Lista generada con `\printbibliography`.
-5. **Código Fuente y Programación:** Entorno `listings` con estilo `estilocodigo` predeterminado y tipografía Courier. Guardar programas en `codigo/` e importar con `\lstinputlisting[language=...]{codigo/archivo.ext}` (o bloques `lstlisting`).
-6. **Tablas e Ilustraciones:** Guardar tablas modulares en `tablas/` e importar vía `\input{tablas/archivo.tex}` usando `booktabs`. Figuras en `imagenes/` e incluir con `\includegraphics{archivo.ext}`.
-7. **Control de Silabación:** Desactivada globalmente (`\hyphenpenalty=10000`, `\exhyphenpenalty=10000`).
-8. **Compilación y Limpieza:** Usa exclusivamente el script ejecutable `./compilar.sh` (`--clean`, `--only-clean`, `--fast`).
-9. **Cambio de Modalidad:** Alternar la inclusión en `main.tex` entre `emprendimiento-capitulos/index.tex` e `innovacion-capitulos/index.tex`, y actualizar metadatos en `estilos/configuracion.tex`.
-10. **Estructura Modular e Idioma:** Respetar la división por capítulos y secciones. Redacción formal y comentarios en español (excepto abstract en inglés).
+5. **Bibliografía APA 7ma Edición:** Motor `biblatex` con estilo `apa` y backend `biber`. Usar `\parencite{clave}` para citas parentéticas y `\textcite{clave}` para narrativas sobre `bibliografia/referencias.bib`. Lista generada con `\printbibliography`.
+6. **Código Fuente y Programación:** Entorno `listings` con estilo `estilocodigo` predeterminado y tipografía Courier. Guardar programas en `codigo/` e importar con `\lstinputlisting[language=...]{codigo/archivo.ext}` (o bloques `lstlisting`).
+7. **Tablas e Ilustraciones:** Guardar tablas modulares en `tablas/` e importar vía `\input{tablas/archivo.tex}` usando `booktabs`. Figuras en `imagenes/` e incluir con `\includegraphics{archivo.ext}`.
+8. **Control de Silabación:** Desactivada globalmente (`\hyphenpenalty=10000`, `\exhyphenpenalty=10000`).
+9. **Compilación y Limpieza:** Usa exclusivamente el script ejecutable `./compilar.sh` (`--clean`, `--only-clean`, `--fast`).
+10. **Modalidad y Prompts:** Modalidad fija en Innovación Tecnológica (cargada en `main.tex` vía `\input{capitulos/index.tex}`). Ficha de datos en `docs/ficha-proyecto.md` (alimentada desde `docs/proyecto.rtf` o `docs/proyecto.md` y consultas al usuario). Prompts de migración y redacción en `promts/migracion/`, y de revisión académica en `promts/revicion/`. Páginas preliminares `agradecimiento.tex` y `dedicatoria.tex` comparten formato (derecha, cursiva, `\vspace*{3cm}`). Redacción formal y comentarios en español (excepto abstract).
 

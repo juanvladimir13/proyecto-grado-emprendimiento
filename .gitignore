@@ -22,8 +22,7 @@
 !docs/*.pdf
 
 # Subdirectory auxiliaries
-emprendimiento-capitulos/**/*.aux
-innovacion-capitulos/**/*.aux
+capitulos/**/*.aux
 docs/**/*.aux
 preliminares/**/*.aux
 anexos/**/*.aux

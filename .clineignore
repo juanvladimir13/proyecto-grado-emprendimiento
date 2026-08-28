@@ -27,8 +27,7 @@ main.pdf
 *-blx.bib
 
 # Auxiliares en subdirectorios
-emprendimiento-capitulos/**/*.aux
-innovacion-capitulos/**/*.aux
+capitulos/**/*.aux
 docs/**/*.aux
 preliminares/**/*.aux
 anexos/**/*.aux
