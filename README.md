@@ -68,7 +68,7 @@ proyecto-grado-innovacion/
 │   └── revicion/                           # Set de prompts para revisión académica por etapas
 │       ├── 00_README_flujo_revision.md     # Guía del flujo de revisión
 │       ├── 00_analisis-capitulos-tesis.md  # Prompt de análisis global de coherencia
-│       └── 01_ a 10_*.md                   # Prompts de revisión modular y checklist final
+│       └── 01_ a 13_*.md                   # Prompts de revisión modular (9 capítulos) y checklist pre-defensa
 └── docs/                                   # Regulaciones oficiales y documentos de soporte
     ├── REGLAMENTO_BTH__RM_0912_2023.pdf    # Reglamento oficial de graduación BTH (RM 0912/2023)
     └── ficha-proyecto.md                   # Ficha de datos y requerimientos del proyecto

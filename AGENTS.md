@@ -91,19 +91,23 @@ proyecto-grado-innovacion/
 ├── promts/                                 # Prompts de apoyo y guías de revisión para agentes de IA
 │   ├── migracion/                          # Prompts para migración de datos y llenado de fichas
 │   │   └── ficha-proyecto.md               # Flujo paso a paso para completar ficha y redactar capítulos
-│   └── revicion/                           # Flujo de revisión por etapas y análisis global
+│   └── revicion/                           # Flujo de revisión por etapas y análisis global (9 capítulos)
 │       ├── 00_README_flujo_revision.md     # Guía del flujo de revisión por etapas
 │       ├── 00_analisis-capitulos-tesis.md  # Prompt de análisis integral de coherencia y rigor
-│       ├── 01_revision_estructura_general.md
-│       ├── 02_revision_planteamiento_problema.md
-│       ├── 03_revision_marco_teorico.md
-│       ├── 04_revision_marco_metodologico.md
-│       ├── 05_revision_resultados.md
-│       ├── 06_revision_conclusiones_recomendaciones.md
-│       ├── 07_revision_coherencia_sincronia_global.md
-│       ├── 08_revision_redaccion_estilo_academico.md
-│       ├── 09_revision_citas_bibliografia.md
-│       └── 10_checklist_pre_entrega_final.md
+│       ├── 01_revision_estructura_general.md # Estructura general de 9 capítulos BTH RM 0912/2023
+│       ├── 01b_revision_introduccion.md    # Cap. 1: Contexto, motivación, pertinencia y contribución
+│       ├── 02_revision_planteamiento_problema.md # Cap. 2: Diagnóstico, problemas, objetivos
+│       ├── 03_revision_marco_referencial.md # Cap. 3: Antecedentes, bases teóricas, conceptos
+│       ├── 04_revision_desarrollo_innovacion.md # Cap. 4: Diseño, especificaciones, costos
+│       ├── 05_revision_metodologia.md      # Cap. 5: Enfoque, muestra, instrumentos, análisis
+│       ├── 06_revision_estrategia_mejora.md # Cap. 6: Plan de mejora continua y escalamiento
+│       ├── 07_revision_resultados.md       # Cap. 7: Pruebas piloto, impacto, antes vs después
+│       ├── 08_revision_proyecto_vida.md    # Cap. 8: Aspiraciones, competencias, compromiso
+│       ├── 09_revision_conclusiones_recomendaciones.md # Cap. 9: Cierre de objetivos y recomendaciones
+│       ├── 10_revision_coherencia_sincronia_global.md # Sincronía integral entre los 9 capítulos
+│       ├── 11_revision_redaccion_estilo_academico.md # Registro impersonal y estilo APA 7
+│       ├── 12_revision_citas_bibliografia.md # Normalización BibLaTeX APA 7ma Edición
+│       └── 13_checklist_pre_entrega_final.md # Checklist institucional BTH pre-defensa
 └── docs/                                   # Regulaciones oficiales y guías
     ├── REGLAMENTO_BTH__RM_0912_2023.pdf    # Reglamento Ministerial oficial RM 0912/2023
     └── ficha-proyecto.md                   # Ficha de datos y requerimientos del proyecto
@@ -173,7 +177,7 @@ Este proyecto está configurado para la modalidad de **Innovación Tecnológica*
 
 ### 10. Uso de Prompts de Apoyo para Agentes (`promts/`)
 * **Migración y redacción:** Consultar `promts/migracion/ficha-proyecto.md` para el flujo ordenado de ingesta de datos a la ficha y posterior redacción capítulo a capítulo.
-* **Revisión y calidad:** Utilizar los prompts de `promts/revicion/` para revisiones modulares por fases (estructura, marco teórico, metodología, resultados, coherencia global y checklist pre-entrega).
+* **Revisión y calidad:** Utilizar la suite especializada de 16 prompts en `promts/revicion/` adaptada a los 9 capítulos de Innovación Tecnológica (BTH RM 0912/2023): estructura general (`01`), capítulo 1 (`01b`), capítulos 2 al 9 modulares (`02` a `09`), auditoría de sincronía global (`10`), estilo y gramática (`11`), citas y bibliografía APA 7 (`12`), y checklist pre-entrega/defensa (`13`).
 
 ---
 

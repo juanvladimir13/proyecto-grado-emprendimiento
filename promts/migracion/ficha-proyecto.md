@@ -110,11 +110,11 @@ Lee docs/ficha-proyecto.md (ya completado y validado con el usuario) y estilos/c
 1. Extrae únicamente los datos institucionales/personales consolidados en la Sección 0:
    - Título del proyecto (\tituloproyecto).
    - Nombre(s) del/los autor(es) (\autoruno, \autordos).
-   - Datos del autor principal (\ciautor, \emailautor, \ciudadpais).
+   - Datos del autor principal (\ciautoruno, \emailautoruno, \lugarproyecto).
    - Nombre y cargo del tutor (\tutorproyecto).
    - Institución educativa, departamento/provincia y especialidad (\institucion, \especialidad).
    - Modalidad fijada en "INNOVACIÓN TECNOLÓGICA" (\modalidad).
-   - Fecha y gestión académica (\fechapresentacion, \gestionacademica).
+   - Fecha y gestión académica (\fechaproyecto, \gestionproyecto).
 
 2. Actualiza las macros correspondientes en `estilos/configuracion.tex`, siguiendo la Regla 1 de AGENTS.md:
    nunca quemes (hardcodees) estos datos directamente en los archivos .tex de capítulos,

@@ -1,34 +1,42 @@
-# Flujo de Revisión de Documentos de Proyecto de Grado
+# Flujo de Revisión Académica — Innovación Tecnológica (BTH)
 
-Este set de prompts está diseñado para revisar un proyecto de grado **por etapas**, en lugar de intentar evaluar todo el documento de una sola vez. Cada archivo es un prompt independiente que puedes pegar en una conversación con IA junto con el capítulo o sección correspondiente.
+Este set de **16 prompts** está diseñado para evaluar y perfeccionar el proyecto de grado en la modalidad de **Innovación Tecnológica** por etapas modulares, respetando la estructura de **9 capítulos** normada por el Reglamento de Graduación del Bachillerato Técnico Humanístico (RM 0912/2023).
 
-## Orden recomendado de uso
+---
 
-| # | Archivo | Qué revisa | Cuándo usarlo |
+## 📋 Matriz del Flujo de Revisión
+
+| # | Archivo | Qué revisa | Correspondencia en `capitulos/` |
 |---|---|---|---|
-| 1 | `01_revision_estructura_general.md` | Índice, organización de capítulos, normas institucionales | Al iniciar, con el índice/esqueleto del documento |
-| 2 | `02_revision_planteamiento_problema.md` | Cap. I: problema, objetivos, justificación, alcance | Al terminar el borrador del Cap. I |
-| 3 | `03_revision_marco_teorico.md` | Cap. II: marco teórico, cobertura conceptual, citas | Al terminar el borrador del Cap. II |
-| 4 | `04_revision_marco_metodologico.md` | Cap. III: metodología / ingeniería del proyecto | Al terminar el borrador del Cap. III |
-| 5 | `05_revision_resultados.md` | Cap. IV: resultados, pruebas, evidencia | Al terminar el borrador del Cap. IV |
-| 6 | `06_revision_conclusiones_recomendaciones.md` | Cap. V: conclusiones y recomendaciones | Al terminar el borrador del Cap. V |
-| 7 | `07_revision_coherencia_sincronia_global.md` | Coherencia y sincronía entre TODOS los capítulos | Cuando ya tengas el documento completo (o casi) |
-| 8 | `08_revision_redaccion_estilo_academico.md` | Redacción, gramática, registro académico | Después de cerrar el contenido, antes de pulir forma |
-| 9 | `09_revision_citas_bibliografia.md` | Formato de citas, consistencia con bibliografía | En paralelo o después del punto 8 |
-| 10 | `10_checklist_pre_entrega_final.md` | Checklist final integral antes de entregar | Última pasada, antes de imprimir/subir |
+| 00 | `00_analisis-capitulos-tesis.md` | Análisis integral de coherencia, rigor técnico y sincronía | Todo el documento consolidado |
+| 01 | `01_revision_estructura_general.md` | Índice general, 9 capítulos, carátula, preliminares y anexos | Estructura global y `main.tex` |
+| 01b | `01b_revision_introduccion.md` | Contexto sectorial, motivación, pertinencia y contribución esperada | Cap. 1 (`01_introduccion/`) |
+| 02 | `02_revision_planteamiento_problema.md` | Diagnóstico, problema, árbol de causas/efectos, objetivos y justificaciones | Cap. 2 (`02_planteamiento_problema/`) |
+| 03 | `03_revision_marco_referencial.md` | Antecedentes técnicos, bases científicas y marco conceptual/normativo | Cap. 3 (`03_marco_referencial/`) |
+| 04 | `04_revision_desarrollo_innovacion.md` | Diseño técnico, especificaciones, cronograma, recursos y desglose de costos | Cap. 4 (`04_desarrollo_innovacion/`) |
+| 05 | `05_revision_metodologia.md` | Enfoque, tipo de investigación, población/muestra de validación y análisis de datos | Cap. 5 (`05_metodologia/`) |
+| 06 | `06_revision_estrategia_mejora.md` | Plan de mejora continua a corto/mediano plazo y proyección de escalamiento | Cap. 6 (`06_estrategia_mejora/`) |
+| 07 | `07_revision_resultados.md` | Pruebas piloto, métricas de funcionamiento, impacto y matriz antes vs. después | Cap. 7 (`07_resultados/`) |
+| 08 | `08_revision_proyecto_vida.md` | Aspiraciones técnicas/universitarias, competencias consolidadas y compromiso social | Cap. 8 (`08_proyecto_vida/`) |
+| 09 | `09_revision_conclusiones_recomendaciones.md` | Cumplimiento verificable de objetivos y recomendaciones técnicas | Cap. 9 (`09_conclusiones_recomendaciones/`) |
+| 10 | `10_revision_coherencia_sincronia_global.md` | Sincronía integral entre los 9 capítulos y alineación de variables | Capítulos 1 al 9 |
+| 11 | `11_revision_redaccion_estilo_academico.md` | Registro formal, redacción impersonal en tercera persona y normas APA 7 | Redacción de todos los capítulos |
+| 12 | `12_revision_citas_bibliografia.md` | Correspondencia de citas parentéticas/narrativas con `referencias.bib` | `bibliografia/` y citas en texto |
+| 13 | `13_checklist_pre_entrega_final.md` | Verificación final exhaustiva antes de impresión y defensa de grado | Documento final y compilación PDF |
 
-## Cómo usar cada prompt
+---
 
-1. Abre el archivo del prompt correspondiente a la etapa en la que estás.
-2. Copia el contenido en tu conversación con la IA.
-3. Completa los campos entre `[corchetes]` con la información de tu proyecto.
-4. Pega el capítulo o sección a revisar donde se indica.
-5. Guarda el informe de hallazgos que te devuelva la IA — te servirá como insumo para el prompt #7 (coherencia global), que revisa que las correcciones de cada capítulo no generen nuevas inconsistencias entre ellos.
+## 🛠️ Cómo utilizar cada prompt
 
-## Nota sobre LaTeX
+### Para agentes de IA con acceso al repositorio
+1. Abre el archivo del prompt correspondiente al capítulo o fase que deseas validar.
+2. El agente debe leer `AGENTS.md` y seguir sus reglas antes de ejecutar la revisión.
+3. Los datos del proyecto se obtienen automáticamente de `estilos/configuracion.tex` y `docs/ficha-proyecto.md`.
+4. El agente lee directamente los archivos `.tex` del capítulo listados en cada prompt (sección "Archivos a revisar").
 
-Todos los prompts incluyen una instrucción para que la IA conserve intactos los comandos LaTeX (`\section`, `\cite`, `\ref`, `\label`, etc.) y no los confunda con errores de redacción, dado que la documentación se trabaja en ese formato.
-
-## Nota sobre proyectos técnicos/de sistemas
-
-Si tu proyecto de grado es de desarrollo de software (como un sistema web), el prompt #4 (`04_revision_marco_metodologico.md`) incluye una variante para metodologías de desarrollo (Scrum, RUP, XP, cascada, etc.) en lugar de metodología de investigación pura — usa la que corresponda a tu enfoque.
+### Para uso manual (copiar y pegar)
+1. Abre el archivo del prompt correspondiente al capítulo o fase que deseas validar.
+2. Copia su contenido y pégalo en la conversación con el asistente de IA.
+3. Rellena los campos entre `[corchetes]` con los datos específicos de tu proyecto (extraídos de `docs/ficha-proyecto.md` o del borrador del capítulo).
+4. Pega el contenido LaTeX de los archivos `.tex` del capítulo a evaluar.
+5. Los comandos LaTeX (`\section`, `\input`, `\cite`, `\ref`, `\label`, `\begin{table}`) deben conservarse intactos.

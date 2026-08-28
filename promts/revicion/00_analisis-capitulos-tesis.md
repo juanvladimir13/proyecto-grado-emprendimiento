@@ -1,68 +1,93 @@
-# Prompt: Análisis de Coherencia, Rigor Narrativo y Sincronía en Capítulos de Tesis
+# Prompt: Análisis de Coherencia, Rigor Técnico y Sincronía en Proyecto de Innovación Tecnológica
 
-Copia este prompt en una conversación con un asistente de IA (junto con el contenido de tus capítulos) para obtener un análisis exhaustivo.
+## Cuándo usar este prompt
+Como primer paso de una revisión integral, cuando se dispone de al menos 3 o más capítulos redactados y se desea un diagnóstico panorámico antes de las revisiones puntuales por capítulo.
+
+---
+
+## Instrucciones de uso
+
+### Para agentes de IA con acceso al repositorio
+1. Lee `AGENTS.md` y sigue sus reglas de formato LaTeX antes de cualquier revisión.
+2. Obtén los datos del proyecto desde `estilos/configuracion.tex` (`\tituloproyecto`, `\especialidad`, `\modalidad`).
+3. Lee los archivos `.tex` de todos los capítulos ensamblados desde `capitulos/index.tex`.
+4. Lee `bibliografia/referencias.bib` para verificar correspondencia de citas.
+5. Consulta `docs/ficha-proyecto.md` para contrastar los datos de la ficha con lo redactado.
+
+### Para uso manual (copiar y pegar)
+1. Copia este prompt en la conversación con el asistente de IA.
+2. Sustituye los campos entre `[corchetes]` con los datos de tu proyecto.
+3. Pega el contenido LaTeX de los capítulos a analizar al final.
+
+---
+
+## Archivos a revisar
+
+| Capítulo | Archivo de ensamble | Secciones |
+| :--- | :--- | :--- |
+| Cap. 1 | `capitulos/01_introduccion/main.tex` | `contexto_general.tex`, `motivacion_pertinencia.tex`, `contribucion_esperada.tex` |
+| Cap. 2 | `capitulos/02_planteamiento_problema/main.tex` | `diagnostico.tex`, `identificacion_problema.tex`, `formulacion_problema.tex`, `objetivos.tex`, `justificacion.tex` |
+| Cap. 3 | `capitulos/03_marco_referencial/main.tex` | `antecedentes.tex`, `bases_teoricas.tex`, `marco_conceptual.tex` |
+| Cap. 4 | `capitulos/04_desarrollo_innovacion/main.tex` | `diseno.tex`, `planificacion.tex`, `recursos.tex`, `calculo_costos.tex` |
+| Cap. 5 | `capitulos/05_metodologia/main.tex` | `tipo_investigacion.tex`, `poblacion_muestra.tex`, `tecnicas_instrumentos.tex`, `analisis_datos.tex` |
+| Cap. 6 | `capitulos/06_estrategia_mejora/main.tex` | `plan_mejora.tex`, `proyeccion_escalamiento.tex` |
+| Cap. 7 | `capitulos/07_resultados/main.tex` | `resultados_obtenidos.tex`, `beneficios_impacto.tex`, `comparacion_antes_despues.tex` |
+| Cap. 8 | `capitulos/08_proyecto_vida/main.tex` | *(contenido directo en main.tex)* |
+| Cap. 9 | `capitulos/09_conclusiones_recomendaciones/main.tex` | `conclusiones.tex`, `recomendaciones.tex` |
+| Bibliografía | `bibliografia/referencias.bib` | Base de datos BibLaTeX |
 
 ---
 
 ## PROMPT
 
-Actúa como un **revisor académico experto** especializado en metodología de investigación y redacción de tesis. Tu tarea es analizar los capítulos que te proporcionaré a continuación para garantizar **coherencia total**, **rigor narrativo** y **sincronía perfecta** entre todas sus partes.
+Actúa como un **revisor académico y técnico experto** especializado en proyectos de grado de la modalidad **Innovación Tecnológica** bajo la normativa del Bachillerato Técnico Humanístico (BTH, RM 0912/2023). Tu tarea es analizar los capítulos que te proporcionaré a continuación para garantizar **coherencia total**, **rigor técnico-metodológico** y **sincronía perfecta** entre todas sus partes.
 
 ### Contexto del documento
-- Tipo de trabajo: [tesis de grado / proyecto de titulación / tesina — especifica]
-- Área/tema: [completa aquí]
-- Capítulos incluidos en este análisis: [lista los capítulos, ej. Cap. 1 Introducción, Cap. 2 Marco Teórico, Cap. 3 Metodología, Cap. 4 Resultados, Cap. 5 Conclusiones]
-- Formato fuente: el texto puede incluir comandos LaTeX (\section, \cite, \ref, etc.) — consérvalos intactos en tus citas y no los interpretes como errores de redacción.
+- Modalidad: Proyecto de Grado — Innovación Tecnológica (BTH Bolivia)
+- Especialidad técnica: [lee `\especialidad` de `estilos/configuracion.tex` o completa aquí]
+- Título del proyecto: [lee `\tituloproyecto` de `estilos/configuracion.tex` o completa aquí]
+- Capítulos incluidos en este análisis: [los 9 capítulos ensamblados desde `capitulos/index.tex`]
+- Formato fuente: el texto incluye comandos LaTeX (`\chapter`, `\section`, `\cite`, `\ref`, `\label`, `\input`, etc.) — consérvalos intactos en tus citas y no los interpretes como errores.
 
 ### Criterios de evaluación
 
-**1. Coherencia total**
-- Consistencia terminológica: mismos términos técnicos usados de forma uniforme en todos los capítulos (sin sinónimos que generen ambigüedad).
-- Coherencia conceptual: que las definiciones del marco teórico se apliquen sin contradicción en metodología, resultados y conclusiones.
-- Coherencia entre objetivos, hipótesis (si aplica), resultados y conclusiones: cada objetivo específico debe tener su correlato verificable en resultados y su cierre explícito en las conclusiones.
-- Alineación del título, el problema de investigación y las conclusiones finales.
+**1. Coherencia total del proyecto de innovación**
+- Consistencia terminológica: mismos términos técnicos usados de forma uniforme en todos los capítulos (ej. especificaciones de hardware, software, procesos o componentes).
+- Coherencia conceptual: que las bases teóricas y antecedentes del Cap. 3 sustenten directamente el diseño del prototipo en el Cap. 4.
+- Alineación estricta entre Objetivos Específicos (Cap. 2), Desarrollo y Metodología (Caps. 4 y 5), Resultados (Cap. 7) y Conclusiones (Cap. 9): cada objetivo específico debe tener su correlato en la implementación, su medición cuantitativa en resultados y su conclusión explícita.
+- Alineación del título, el problema identificado y las conclusiones finales.
 
-**2. Rigor narrativo**
-- Hilo conductor: que exista una progresión lógica capítulo a capítulo (cada capítulo debe conectar explícitamente con el anterior y anticipar el siguiente).
-- Transiciones: evaluar si las transiciones entre secciones y capítulos son fluidas o abruptas.
-- Argumentación: identificar afirmaciones sin sustento, saltos lógicos o conclusiones que no se derivan de la evidencia presentada.
-- Nivel de redacción académica: formalidad, precisión, ausencia de redundancias o relleno.
+**2. Rigor técnico y narrativo**
+- Hilo conductor: progresión lógica entre el problema diagnosticado en la realidad operativa, la concepción del prototipo innovador, su validación empírica y su impacto.
+- Fundamentación de costos y recursos: coherencia entre el diseño técnico, la lista de recursos y el presupuesto de inversión/operación (Cap. 4).
+- Evidencia empírica: que los resultados presenten pruebas objetivas (métricas de rendimiento, tablas de comparación antes vs. después, ensayos piloto).
+- Nivel de redacción formal: tercera persona, tono impersonal, ausencia de relleno o vaguedades.
 
-**3. Sincronía perfecta**
-- Referencias cruzadas: verificar que todo lo mencionado en un capítulo (variables, instrumentos, autores, tablas, figuras) esté correctamente introducido/definido antes de usarse.
-- Consistencia numérica y de datos: cifras, porcentajes o resultados citados en distintos capítulos deben coincidir exactamente.
-- Consistencia cronológica y de alcance: que el alcance definido en la introducción no se contradiga en metodología o conclusiones.
-- Bibliografía: que todo autor citado en el texto aparezca en las referencias y viceversa (si te proporciono la lista de referencias).
-
-### Instrucciones de trabajo
-1. Lee todos los capítulos proporcionados de manera integral antes de emitir juicios (no evalúes cada capítulo de forma aislada).
-2. Identifica y lista **inconsistencias concretas**, citando el capítulo, sección y una referencia textual breve (máx. 1-2 líneas) de cada hallazgo.
-3. Clasifica cada hallazgo por severidad: **Crítico** (rompe la coherencia argumental o metodológica), **Moderado** (afecta la claridad pero no invalida el argumento), **Menor** (estilo/redacción).
-4. Para cada hallazgo, propone una corrección concreta o una pregunta que el autor debe resolver.
-5. Al final, entrega un **resumen ejecutivo** con: (a) nivel general de coherencia (1-10), (b) los 3 problemas más urgentes a resolver, (c) fortalezas identificadas.
+**3. Sincronía perfecta entre capítulos**
+- Referencias cruzadas: variables, tablas y figuras mencionadas deben coincidir exactamente entre capítulos.
+- Consistencia numérica: costos, métricas, porcentajes de mejora o datos de muestra deben ser idénticos en todo el documento.
+- Coherencia con el Proyecto de Vida (Cap. 8): que las competencias y reflexiones vocacionales reflejen fielmente el desarrollo técnico realizado en los capítulos previos.
+- Bibliografía: todo autor citado en el texto debe existir en `referencias.bib` y viceversa.
 
 ### Formato de salida esperado
+
 ```
 ## Resumen ejecutivo
 - Nivel de coherencia general: X/10
-- Problemas urgentes: ...
-- Fortalezas: ...
+- Problemas urgentes a resolver: ...
+- Fortalezas técnicas y metodológicas identificadas: ...
 
 ## Hallazgos por capítulo
 ### Capítulo X
-| Severidad | Ubicación | Descripción | Sugerencia |
+| Severidad (Crítico / Moderado / Menor) | Sección | Descripción del problema | Sugerencia de corrección |
 |---|---|---|---|
 
-## Matriz de sincronía (objetivos ↔ resultados ↔ conclusiones)
-[tabla comparativa]
+## Matriz de sincronía (Problema ↔ Objetivos ↔ Innovación ↔ Resultados ↔ Conclusiones)
+[tabla comparativa detallada]
 
 ## Recomendaciones finales priorizadas
 1. ...
 ```
 
 ### Capítulos a analizar
-[Pega aquí el contenido completo de los capítulos, o adjúntalos como archivo]
-
----
-
-**Nota de uso:** cuantos más capítulos incluyas en una sola pasada, mejor podrá evaluarse la sincronía real entre ellos. Si tu documento es muy extenso, puedes correr primero un análisis por pares de capítulos consecutivos (ej. Cap.1↔Cap.2, Cap.2↔Cap.3) y luego una pasada final con todo el documento para la coherencia global.
+[Si eres un agente con acceso al repositorio, lee directamente los archivos listados en "Archivos a revisar". Si usas este prompt manualmente, pega aquí el contenido de los capítulos]

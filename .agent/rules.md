@@ -67,4 +67,4 @@ Este proyecto de LaTeX modular sigue pautas estrictas para mantener la consisten
 
 11. **Prompts de Apoyo (`promts/`):**
     - Guiar la redacción con [promts/migracion/ficha-proyecto.md](file:///home/juanvladimir13/Projects/proyecto-grado-innovacion/promts/migracion/ficha-proyecto.md).
-    - Revisar consistencia y rigor académico con los prompts modulares en [promts/revicion/](file:///home/juanvladimir13/Projects/proyecto-grado-innovacion/promts/revicion/).
+    - Revisar consistencia y rigor académico con la suite de 16 prompts modulares en [promts/revicion/](file:///home/juanvladimir13/Projects/proyecto-grado-innovacion/promts/revicion/) adaptada a los 9 capítulos de Innovación Tecnológica (BTH RM 0912/2023).

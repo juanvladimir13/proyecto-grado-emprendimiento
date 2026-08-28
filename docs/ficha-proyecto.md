@@ -557,4 +557,4 @@ capitulos/
    - Tipo: [DATO PENDIENTE] _(ej. "Certificado")_
    - ¿Ya disponible?: ☐
 
-> **Nutre:** `anexos/anexo_a.tex`
+> **Nutre:** `anexos/index.tex` → `anexo_a_canvas.tex`, `anexo_b_fichas_tecnicas.tex`, `anexo_c_codigo_fuente.tex`
