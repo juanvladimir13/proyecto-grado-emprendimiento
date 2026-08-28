@@ -153,6 +153,7 @@ pdflatex main.tex
 
 1. **Configurar Datos Institucionales y del Autor:**
    * Abre `estilos/configuracion.tex` y actualiza el título, institución, especialidad, tutor y datos del o los autores (soporta 1 o 2 autores automáticamente).
+   * Personaliza si lo requieres el espaciado de párrafos estilo Word con `\espacioposteriorparrafo` (por defecto `8pt`) y `\sangriaprimeralinea` (por defecto `0pt`).
 
 2. **Estructura y Redacción de Capítulos (Innovación Tecnológica):**
    * El documento compila los 9 capítulos modulares ubicados en `capitulos/` a través de `capitulos/index.tex`.

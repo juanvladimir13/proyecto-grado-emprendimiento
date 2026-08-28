@@ -22,6 +22,7 @@ Este archivo define la estructura, reglas y flujos de trabajo del proyecto para 
 * **Tamaño de Hoja:** Carta (`letterpaper`).
 * **Márgenes:** Izquierdo: 3.0 cm | Derecho, Superior e Inferior: 2.5 cm.
 * **Interlineado:** 1.5 líneas (`\onehalfspacing`) en párrafos.
+* **Espaciado entre Párrafos (Estilo Microsoft Word):** Espaciado posterior configurable (`\espacioposteriorparrafo`, por defecto `8pt`) y sangría de primera línea (`\sangriaprimeralinea`, por defecto `0pt`) centralizados en `estilos/configuracion.tex` y aplicados con el paquete `parskip`.
 * **División de Palabras (Silabación):** Desactivada globalmente (`\hyphenpenalty=10000`, `\exhyphenpenalty=10000`).
 * **Compilación:** Automatizada con el script ejecutable `./compilar.sh` en la raíz (utiliza `pdflatex` y `biber`).
 * **Dependencias de Sistema (TeX Live en Linux/Debian/Ubuntu):**
@@ -119,7 +120,7 @@ proyecto-grado-innovacion/
 
 ### 1. Modificaciones de Datos Personales o Institucionales
 * **REGLA:** **NUNCA** quemes (hardcodees) nombres de estudiantes, tutores, instituciones o títulos del proyecto directamente en los archivos `.tex` como `caratula.tex`, `portada_universitaria.tex` o capítulos.
-* **ACCIÓN:** Utiliza o actualiza las macros correspondientes en `estilos/configuracion.tex` (`\institucion`, `\modalidad`, `\especialidad`, `\autoruno`, `\autordos`, `\tutorproyecto`, etc.).
+* **ACCIÓN:** Utiliza o actualiza las macros correspondientes en `estilos/configuracion.tex` (`\institucion`, `\modalidad`, `\especialidad`, `\autoruno`, `\autordos`, `\tutorproyecto`, `\espacioposteriorparrafo`, `\sangriaprimeralinea`, etc.).
 
 ### 2. Estructuración Modular de Capítulos
 * **REGLA:** Conserva el diseño modular. Cada capítulo reside en su propia carpeta dentro de `capitulos/` y contiene un archivo `main.tex` que ensambla las secciones individuales.

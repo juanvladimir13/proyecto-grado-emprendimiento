@@ -40,7 +40,7 @@
 }
 
 % ============================================================
-% 5. TIPOGRAFÍA E INTERLINEADO
+% 5. TIPOGRAFÍA, INTERLINEADO Y ESPACIADO DE PÁRRAFOS
 % ============================================================
 % Arial (helvet) para texto principal, Courier para código
 \RequirePackage{helvet}
@@ -50,6 +50,13 @@
 % Interlineado 1.5 en el cuerpo del texto
 \RequirePackage{setspace}
 \onehalfspacing
+
+% Espaciado estándar entre párrafos estilo Microsoft Word
+% Carga parskip con el espaciado posterior y sangría configurados centralmente
+\RequirePackage[
+    skip=\espacioposteriorparrafo,
+    indent=\sangriaprimeralinea
+]{parskip}
 
 % ============================================================
 % 6. COLORES INSTITUCIONALES Y DE DISEÑO

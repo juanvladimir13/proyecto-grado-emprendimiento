@@ -11,7 +11,7 @@ Este proyecto de LaTeX modular sigue pautas estrictas para mantener la consisten
 
 1. **Variables Centralizadas:**
    - **NUNCA** quemes nombres de autores, tutores, institución, especialidad o título en archivos `.tex` (`caratula.tex`, `portada_universitaria.tex` o capítulos).
-   - Toda modificación de metadatos se realiza en [estilos/configuracion.tex](file:///home/juanvladimir13/Projects/proyecto-grado-innovacion/estilos/configuracion.tex). Soporta 1 o 2 autores dinámicamente (`\autoruno`, `\autordos`).
+   - Toda modificación de metadatos y espaciado de párrafos (`\espacioposteriorparrafo`, `\sangriaprimeralinea`) se realiza en [estilos/configuracion.tex](file:///home/juanvladimir13/Projects/proyecto-grado-innovacion/estilos/configuracion.tex). Soporta 1 o 2 autores dinámicamente (`\autoruno`, `\autordos`).
 
 2. **Estructura Modular de Capítulos (Innovación Tecnológica):**
    - Todos los capítulos se encuentran en [capitulos/](file:///home/juanvladimir13/Projects/proyecto-grado-innovacion/capitulos/) (Capítulos 1 al 9).

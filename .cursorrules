@@ -5,7 +5,7 @@ Este proyecto de LaTeX modular sigue pautas estrictas para mantener la consisten
 Antes de comenzar cualquier tarea de desarrollo o modificación de código, lee las directrices del proyecto en el archivo principal `AGENTS.md` y la estructura de capítulos en `ESTRUCTURA_CAPITULOS.md`.
 
 ## Resumen de Reglas Clave:
-1. **Variables Centralizadas:** Toda modificación de metadatos (autor(es), título, tutor, institución, especialidad, modalidad) debe realizarse únicamente en `estilos/configuracion.tex`. Soporta 1 o 2 autores dinámicamente (`\autoruno`, `\autordos`). NUNCA hardcodear nombres o datos en los `.tex`.
+1. **Variables Centralizadas:** Toda modificación de metadatos (autor(es), título, tutor, institución, especialidad, modalidad) y espaciado de párrafos (`\espacioposteriorparrafo`, `\sangriaprimeralinea`) debe realizarse únicamente en `estilos/configuracion.tex`. Soporta 1 o 2 autores dinámicamente (`\autoruno`, `\autordos`). NUNCA hardcodear nombres o datos en los `.tex`.
 2. **Estructura Modular (Innovación Tecnológica):** El proyecto contiene 9 capítulos en el directorio `capitulos/` (`01_introduccion/` a `09_conclusiones_recomendaciones/`). Cada carpeta incluye un `main.tex` que ensambla las secciones. Rutas internas: `\input{capitulos/0X_.../...}`.
 3. **Estilo de Títulos APA 7ma Edición Adaptado:**
    - Todos los títulos y enlaces internos en **negro** (`linkcolor=black`).

@@ -64,3 +64,17 @@
 \newcommand{\ciautor}{\ciautoruno\ifx\autordos\empty\else{} y \ciautordos\fi}
 \newcommand{\emailautor}{\emailautoruno}
 \newcommand{\programa}{\especialidad\ (\nivelformacion)}
+
+% ------------------------------------------------------------
+% 8. ESPACIADO DE PÁRRAFOS (Estilo Microsoft Word)
+% ------------------------------------------------------------
+% Espaciado posterior estándar después de cada párrafo:
+% - 8pt : Valor estándar predeterminado de Microsoft Word moderno (Office 2013-365)
+% - 6pt : Alternativa común para formato académico compacto
+% - 0pt : Formato LaTeX clásico (sin separación entre párrafos)
+\newcommand{\espacioposteriorparrafo}{8pt}
+
+% Sangría de primera línea del párrafo:
+% - 0pt    : Estándar en Microsoft Word cuando hay espaciado posterior (estilo bloque)
+% - 1.27cm : Estándar APA 7 tradicional (si se prefiere sangría sin espaciado posterior)
+\newcommand{\sangriaprimeralinea}{0pt}
