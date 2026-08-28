@@ -13,6 +13,7 @@ Al finalizar el borrador del **Capítulo 4: Desarrollo de la Innovación** (`cap
 3. Lee directamente los archivos `.tex` indicados en la sección "Archivos a revisar", incluyendo las tablas de `tablas/`.
 4. Lee `capitulos/02_planteamiento_problema/objetivos.tex` para verificar que el diseño responda a cada objetivo.
 5. Consulta `docs/ficha-proyecto.md` (Sección 4) para contrastar costos y recursos con los datos de la ficha.
+6. Ejecuta `./compilar.sh --check-tablas` para auditar la conformidad de las tablas del capítulo con APA 7 y verificar que no desborden los márgenes.
 
 ### Para uso manual (copiar y pegar)
 1. Copia este prompt en la conversación con el asistente de IA.

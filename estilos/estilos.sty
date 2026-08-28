@@ -127,9 +127,12 @@
 \graphicspath{{imagenes/}} % Directorio por defecto para imágenes
 \RequirePackage{booktabs}
 \RequirePackage{array}
+\RequirePackage{tabularx}
+\RequirePackage{adjustbox}
 \RequirePackage{caption}
 \RequirePackage{subcaption}
 
+% Configuración de etiquetas según Normas APA 7ma Edición
 \captionsetup{
     font={small},
     labelfont={bf},
@@ -137,6 +140,14 @@
     singlelinecheck=false,
     skip=6pt
 }
+
+% Columnas flexibles automáticas con tabularx para tablas que respetan \textwidth
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}
+
+% Espaciado vertical óptimo entre filas de tablas
+\renewcommand{\arraystretch}{1.15}
 
 % ============================================================
 % 10. LISTAS Y ENUMERACIONES

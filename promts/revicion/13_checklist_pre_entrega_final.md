@@ -14,6 +14,7 @@ Como última verificación previa a la impresión o entrega formal del documento
 4. Lee `main.tex` para verificar la estructura completa de inclusión.
 5. Lee `capitulos/index.tex` para verificar el ensamble de los 9 capítulos.
 6. Verifica la existencia de todos los archivos de `preliminares/`, `capitulos/`, `tablas/`, `anexos/` y `bibliografia/`.
+7. Ejecuta `./compilar.sh --check-tablas` para certificar que el 100% de las tablas cumplan con APA 7 y no desborden los márgenes.
 
 ### Para uso manual (copiar y pegar)
 1. Copia este prompt en la conversación con el asistente de IA.
@@ -79,6 +80,7 @@ Actúa como el **presidente de tribunal de titulación del Bachillerato Técnico
 4. **Verificación Técnica de Compilación:**
    - [ ] Compilación limpia con `./compilar.sh --clean` sin errores `LaTeX Error` ni advertencias `Unresolved references`.
    - [ ] Sin comandos duros o texto quemado fuera de `estilos/configuracion.tex`.
+   - [ ] Auditoría de tablas exitosa con `./compilar.sh --check-tablas` sin errores de formato APA 7 ni desbordamiento de página.
 
 ### Formato de salida esperado
 ```

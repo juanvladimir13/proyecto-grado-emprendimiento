@@ -14,6 +14,7 @@ Al finalizar el borrador del **Capítulo 7: Resultados** (`capitulos/07_resultad
 4. Lee `capitulos/02_planteamiento_problema/objetivos.tex` para verificar que cada objetivo tenga un resultado medido.
 5. Lee `capitulos/04_desarrollo_innovacion/calculo_costos.tex` y `capitulos/05_metodologia/poblacion_muestra.tex` para verificar consistencia numérica.
 6. Consulta `docs/ficha-proyecto.md` (Sección 7) para contrastar resultados con los datos de la ficha.
+7. Ejecuta `./compilar.sh --check-tablas` para certificar que las tablas de resultados piloto y comparación antes vs después cumplan con APA 7 y mantengan su estructura.
 
 ### Para uso manual (copiar y pegar)
 1. Copia este prompt en la conversación con el asistente de IA.

@@ -50,9 +50,27 @@ function compilar_rapido() {
     fi
 }
 
+function auditar_tablas() {
+    if [ -f "scripts/verificar_tablas.py" ]; then
+        python3 scripts/verificar_tablas.py
+        return $?
+    else
+        echo -e "${RED}Error: No se encontró 'scripts/verificar_tablas.py'.${NC}"
+        return 1
+    fi
+}
+
 function compilar_pdf() {
     # Eliminar PDF anterior para comprobar si se genera de nuevo
     rm -f "$MAIN.pdf"
+
+    # Verificación preventiva de tablas APA 7
+    if [ -f "scripts/verificar_tablas.py" ]; then
+        python3 scripts/verificar_tablas.py > /dev/null 2>&1
+        if [ $? -ne 0 ]; then
+            echo -e "${YELLOW}Advertencia: Hay tablas con inconsistencias de estilo. Ejecuta './compilar.sh --check-tablas' para auditarlas.${NC}"
+        fi
+    fi
 
     echo -e "${BLUE}=== Iniciando Compilación LaTeX (Paso 1/4) ===${NC}"
     pdflatex -interaction=nonstopmode "$MAIN.tex" > /dev/null
@@ -86,12 +104,16 @@ elif [ "$1" == "--clean" ]; then
 elif [ "$1" == "--fast" ]; then
     compilar_rapido
     exit 0
+elif [ "$1" == "--check-tablas" ]; then
+    auditar_tablas
+    exit $?
 elif [ "$1" == "--help" ] || [ "$1" == "-h" ]; then
     echo -e "${CYAN}Uso del script de compilación:${NC}"
     echo -e "  ./compilar.sh              # Compila el PDF completo (4 pasos) y conserva temporales"
     echo -e "  ./compilar.sh --clean      # Compila el PDF completo y elimina temporales"
     echo -e "  ./compilar.sh --only-clean # Elimina temporales sin compilar"
     echo -e "  ./compilar.sh --fast       # Compilación rápida de 1 sola pasada (para redacción)"
+    echo -e "  ./compilar.sh --check-tablas # Audita la conformidad de tablas con APA 7 y booktabs"
     exit 0
 elif [ -n "$1" ]; then
     echo -e "${RED}Parámetro desconocido: $1${NC}"

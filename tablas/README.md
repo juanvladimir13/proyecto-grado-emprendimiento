@@ -38,13 +38,19 @@ Para incluir una tabla en cualquier sección o capítulo `.tex`, utiliza la inst
 ## 📐 Estándar APA 7ma Edición para Tablas con `booktabs`
 
 1. **Líneas horizontales:** Usar únicamente `\toprule`, `\midrule` y `\bottomrule`.
-2. **Sin líneas verticales:** Las normas APA prohíben las líneas verticales en tablas (`|`).
-3. **Alineación:**
-   - Texto: alineado a la izquierda (`l`).
-   - Números: alineados a la derecha (`r`).
-   - Códigos o categorías breves: centrados (`c`).
+2. **Sin líneas verticales:** Las normas APA prohíben totalmente las líneas verticales en tablas (`|`).
+3. **Ubicación del Título (`\caption`):** Debe ubicarse siempre **arriba** de la tabla, seguido de `\label{tab:...}`.
+4. **Alineación:**
+   - Texto: alineado a la izquierda (`l` o `L`).
+   - Números: alineados a la derecha (`r` o `R`).
+   - Códigos o categorías breves: centrados (`c` o `C`).
+5. **Control de Ancho y Salto de Línea:** Para tablas con texto descriptivo extenso, usa `tabularx` con ancho `\textwidth` y columnas auto-ajustables `L`, `C`, `R` o `X` para evitar que la tabla se desborde del margen derecho.
 
-### Plantilla Base:
+---
+
+### 📄 Plantilla 1: Tabla Compacta de Datos Numéricos (`tabular`)
+Para tablas sencillas con números o textos breves:
+
 ```latex
 \begin{table}[htbp]
     \centering
@@ -62,3 +68,52 @@ Para incluir una tabla en cualquier sección o capítulo `.tex`, utiliza la inst
     \end{tabular}
 \end{table}
 ```
+
+---
+
+### 📄 Plantilla 2: Tabla Ancha con Texto Auto-Ajustable (`tabularx`)
+Para tablas que contienen descripciones, especificaciones o actividades donde las celdas necesitan salto de línea automático y ajustarse exactamente al ancho de la página (`\textwidth`):
+
+```latex
+\begin{table}[htbp]
+    \centering
+    \caption{Especificaciones y descripción de componentes del sistema.}
+    \label{tab:especificaciones_sistema}
+    \begin{tabularx}{\textwidth}{llL}
+        \toprule
+        \textbf{Componente} & \textbf{Parámetro} & \textbf{Descripción Técnica Detallada} \\
+        \midrule
+        Microcontrolador    & Procesamiento      & Placa ESP32 con conectividad Wi-Fi y Bluetooth BLE integrada. \\
+        Sensor DHT22        & Rango de Medición  & Rango térmico de -40 a 80 °C con precisión de $\pm$0.5 °C. \\
+        \bottomrule
+    \end{tabularx}
+\end{table}
+```
+
+*Columnas flexibles disponibles (definidas en `estilos.sty`):*
+- `L`: Texto alineado a la izquierda con auto-ajuste de ancho.
+- `C`: Texto centrado con auto-ajuste de ancho.
+- `R`: Texto alineado a la derecha con auto-ajuste de ancho.
+
+---
+
+## 🔍 Verificación Automatizada de Tablas
+
+Para validar que ninguna tabla agregada viole las normas APA 7 ni rompa la diagramación:
+
+```bash
+./compilar.sh --check-tablas
+```
+
+O directamente con Python:
+```bash
+python3 scripts/verificar_tablas.py
+```
+
+El script verifica:
+- [x] Ausencia de líneas verticales (`|`).
+- [x] Uso de `booktabs` en vez de `\hline`.
+- [x] Ubicación superior obligatoria del `\caption`.
+- [x] Presencia de `\label{tab:...}` y `\centering`.
+- [x] Alerta preventiva de celdas con texto largo que requieran `tabularx`.
+- [x] Detección de tablas no enlazadas en los capítulos.

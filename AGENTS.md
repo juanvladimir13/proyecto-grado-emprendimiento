@@ -150,8 +150,12 @@ proyecto-grado-innovacion/
 * **Numeración de Capítulos:** La bibliografía y los anexos deben ser no numerados (`numberless` en `titlesec`) para evitar prefijos decimales o de capítulo.
 * **Numeración de Página:** Toda la sección de Bibliografía y Anexos debe estar totalmente limpia de números de página y cabeceras (`\pagestyle{empty}` y `\assignpagestyle{\chapter}{empty}`).
 
-### 6. Inserción de Tablas e Imágenes
-* **Tablas:** Guardar en `tablas/` e importar vía `\input{tablas/archivo.tex}`. Usar `booktabs` y `array`.
+### 6. Inserción y Verificación de Tablas e Imágenes
+* **Tablas (Normas APA 7ma Edición):** Guardar en `tablas/` e importar vía `\input{tablas/archivo.tex}`.
+  - Usar siempre `booktabs` (`\toprule`, `\midrule`, `\bottomrule`). **PROHIBIDO** el uso de líneas verticales (`|`) y de `\hline`.
+  - El título `\caption{...}` debe ubicarse obligatoriamente **arriba** de la tabla, seguido de `\label{tab:...}` y `\centering`.
+  - Para tablas con descripciones extensas, usar el entorno `tabularx` con ancho `\textwidth` y columnas auto-ajustables `L`, `C`, `R` o `X` (definidas en `estilos.sty`) para evitar desbordamientos del margen derecho.
+  - **Auditoría de Tablas:** Ejecutar `./compilar.sh --check-tablas` (o `python3 scripts/verificar_tablas.py`) para validar que ninguna tabla rompa la diagramación ni viole APA 7.
 * **Imágenes:** Guardar en `imagenes/` e incluirlas sin prefijo de ruta (ya configurado en `estilos.sty`).
 
 ### 7. Inserción de Código Fuente y Algoritmos
