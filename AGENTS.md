@@ -68,7 +68,12 @@ proyecto-grado-emprendimiento/
 │   ├── inversiones_ejemplo.tex             # Plan de inversión fija y capital de operación (Cap. 4)
 │   ├── costos_produccion_ejemplo.tex       # Tabla de costos operativos de producción variables y fijos (Cap. 4)
 │   ├── indicadores_financieros_ejemplo.tex # Resumen de indicadores financieros y punto de equilibrio (Cap. 4)
-│   └── resultados_piloto_ejemplo.tex       # Resultados obtenidos en prueba piloto vs metas (Cap. 5)
+│   ├── resultados_piloto_ejemplo.tex       # Resultados obtenidos en prueba piloto vs metas (Cap. 5)
+│   ├── costos_ejemplo.tex                  # Plantilla alternativa de costos generales
+│   ├── cronograma_ejemplo.tex              # Cronograma de actividades por fases
+│   ├── especificaciones_tecnicas_ejemplo.tex # Matriz de especificaciones técnicas
+│   ├── plan_mejora_ejemplo.tex             # Matriz de mejora continua
+│   └── comparacion_antes_despues_ejemplo.tex # Matriz comparativa antes vs después
 ├── codigo/                                 # Código fuente y scripts (.py, .cpp, .ino, .sql, etc.)
 │   ├── README.md                           # Guía para almacenar e importar código externo
 │   └── ejemplo_controlador.py              # Script de prueba importable vía \lstinputlisting
