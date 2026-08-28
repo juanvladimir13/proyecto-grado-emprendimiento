@@ -175,3 +175,6 @@ pdflatex main.tex
 
 5. **Insertar Código Fuente:**
    * Almacena scripts en `codigo/` e impórtalos con `\lstinputlisting[language=Python, caption={...}, label={lst:...}]{codigo/script.py}`.
+
+6. **Listas y Viñetas:**
+   * Priorizar obligatoriamente el uso de viñetas (`\begin{itemize}`) sobre listas numeradas (`\begin{enumerate}`), reservando estas últimas únicamente para secuencias cronológicas estrictas o procedimientos paso a paso.

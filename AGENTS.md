@@ -194,6 +194,12 @@ Este proyecto está configurado para la modalidad de **Innovación Tecnológica*
   - **Cifras de 4 dígitos:** Escribir juntas sin espacio ni separador (ej. `1000`, `3500`, `4500.00`, `7700.00`).
   - **Cifras de 5 o más dígitos:** Escribir continuas o con espacio como separador de grupos de tres dígitos (ej. `25000.00` o `25 000.00`, `46 500.00`), nunca con comas ni puntos.
 
+### 12. Listas y Elementos de Enumeración (Prioridad de Viñetas)
+* **REGLA:** Priorizar obligatoriamente el uso de viñetas (`\begin{itemize}`) en lugar de listas numeradas (`\begin{enumerate}`).
+* **Criterio de Uso:**
+  - Emplear siempre el entorno `itemize` para listas de objetivos específicos, conclusiones, recomendaciones, características técnicas, componentes, ventajas, requerimientos y elementos descriptivos generales.
+  - Reservar el entorno de lista numerada (`enumerate`) **exclusivamente** para secuencias algorítmicas estrictas, pasos procedimentales ordenados o cronologías donde la numeración correlativa sea indispensable e inherente a la explicación técnica.
+
 ---
 
 ## 🚫 Archivos Ignorados por Agentes de IA

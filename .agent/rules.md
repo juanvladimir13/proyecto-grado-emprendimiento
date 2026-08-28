@@ -78,3 +78,9 @@ Este proyecto de LaTeX modular sigue pautas estrictas para mantener la consisten
     - **Separador de miles:** **PROHIBIDO** el uso de comas (`,`) o puntos (`.`) como separadores de millares (evitar `1,000` y `1.000`).
     - Cifras de 4 dígitos se escriben juntas sin separación (`1000`, `3500`, `4500.00`, `7700.00`).
     - Cifras de 5 o más dígitos se escriben continuas o con espacio (`25 000.00` o `25000.00`, `46 500.00`), nunca con comas ni puntos.
+
+13. **Listas y Elementos de Enumeración (Prioridad de Viñetas):**
+    - Priorizar obligatoriamente el uso del entorno de viñetas (`\begin{itemize}`) frente a listas numeradas (`\begin{enumerate}`).
+    - Emplear siempre `itemize` para listar objetivos específicos, conclusiones, recomendaciones, características técnicas, componentes y elementos descriptivos generales.
+    - Reservar `\begin{enumerate}` exclusivamente para secuencias algorítmicas estrictas, cronologías o pasos procedimentales secuenciales donde la numeración sea indispensable.
+
