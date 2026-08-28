@@ -90,17 +90,7 @@ Innovación Tecnológica. Antes de tocar cualquier archivo, lee AGENTS.md y sigu
      bloques temáticos lógicos para facilitar sus respuestas:
      * Bloque Institucional y Preliminares (Sección 0): Título del proyecto, autor(es),
        C.I., institución educativa, tutor/asesor, fecha/gestión, dedicatoria y agradecimiento.
-     * Bloque Diagnóstico y Problema (Secciones 1 y 2): Contexto geográfico y social,
-       diagnóstico de campo (muestra, porcentajes hallados), formulación del problema,
-       objetivos (general y específicos) y justificaciones.
-     * Bloque Desarrollo de la Innovación (Secciones 3 y 4): Arquitectura y especificaciones
-       técnicas del prototipo/sistema, componentes de hardware/software, cronograma de fases
-       y desglose de costos (inversión inicial, costos operativos y totales).
-     * Bloque Metodología y Resultados (Secciones 5, 6 y 7): Métricas evaluadas, resultados
-       de pruebas piloto, comparación cuantitativa/cualitativa "antes vs. después", y plan
-       de mejora continua.
-     * Bloque Vocacional y Conclusiones (Secciones 8 y 9): Competencias adquiridas, impacto
-       en el proyecto de vida del estudiante, conclusiones técnicas y recomendaciones.
+     * Bloque Diagnóstico y Problema (Secciones 1 y 2): Contexto geográfico y social y objetivos (general y específicos).
    - Conforme el usuario responda cada consulta, actualiza de inmediato `docs/ficha-proyecto.md`,
      reemplazando los `[DATO PENDIENTE]` por los datos concretos proporcionados.
 
@@ -200,6 +190,7 @@ Reglas mientras redactas:
    BibLaTeX APA 7 y cítalas en el texto con \parencite{} o \textcite{}.
 5. No toques estilos/, preliminares/ ni configuracion.tex en este paso.
 6. Al terminar cada capítulo, lista las secciones completadas y las que hayan quedado con %% FALTA DATO.
+7. Reemplazo de contenido: Sustituye el texto de plantilla/guía de cada archivo .tex con la nueva redacción formal fundamentada, conservando intactas las etiquetas `\section{...}` y `\label{...}` existentes para preservar la integridad de la estructura y referencias cruzadas.
 
 Al terminar los 9 capítulos, entrega un resumen general del contenido redactado.
 ```
