@@ -48,6 +48,7 @@ Para incluir una tabla en cualquier sección o capítulo `.tex`, utiliza la inst
 6. **Formato Numérico (Norma SI/ISO 80000-1):**
    - **Parte decimal:** Usar obligatoriamente **punto (`.`)** (ej. `12.50`, `98.5%`, `0.75`). **NUNCA** usar coma (`,`).
    - **Separador de miles:** **PROHIBIDO** el uso de comas (`,`) o puntos (`.`). Escribir cifras de 4 dígitos juntas sin separador (ej. `4500.00`, `1000`) y para 5 o más cifras usar espacio o continuo (ej. `25 000.00` o `25000.00`).
+7. **Notas al pie de tabla (`\notatabla`):** Para fuentes de procedencia o aclaraciones metodológicas, usar obligatoriamente la macro semántica `\notatabla{...}` después de `\end{tabular}` o `\end{tabularx}`.
 
 ---
 
@@ -69,6 +70,7 @@ Para tablas sencillas con números o textos breves:
         \textbf{Total}    &                   & \textbf{230.00} \\
         \bottomrule
     \end{tabular}
+    \notatabla{Elaboración propia con base en cotizaciones locales.}
 \end{table}
 ```
 
@@ -90,6 +92,7 @@ Para tablas que contienen descripciones, especificaciones o actividades donde la
         Sensor DHT22        & Rango de Medición  & Rango térmico de -40 a 80 °C con precisión de $\pm$0.5 °C. \\
         \bottomrule
     \end{tabularx}
+    \notatabla{Datos técnicos extraídos de las hojas de especificaciones del fabricante.}
 \end{table}
 ```
 

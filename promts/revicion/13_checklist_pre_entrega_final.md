@@ -54,12 +54,12 @@ Actúa como el **presidente de tribunal de titulación del Bachillerato Técnico
 ### Checklist Oficial a Verificar
 
 1. **Hojas preliminares (numeración romana minúscula):**
-   - [ ] Carátula oficial BTH con logos institucionales, datos completos del autor/autores, tutor, UE, subsistema y año de gestión.
+   - [ ] Carátula oficial BTH con logos institucionales, tipografía normalizada (`\titulocaratula`, `\subtitulocaratula`), datos del autor/autores (sin campos de C.I.), tutor, UE, subsistema y año de gestión.
    - [ ] Portada académica interior.
-   - [ ] Dedicatoria y Agradecimiento con formato unificado (alineados a la derecha, en cursiva y con espaciado superior).
-   - [ ] Resumen en castellano (máx. 300 palabras), con palabras clave.
-   - [ ] Resumen en lengua originaria (quechua, aymara o guaraní según contexto regional), con palabras clave.
-   - [ ] Abstract en lengua extranjera (inglés), con keywords.
+   - [ ] Dedicatoria y Agradecimiento con formato semántico unificado (`\capitulopreliminar` y entorno `\begin{estilodedicatoria}` con espaciado `\espaciosuperiordedicatoria`).
+   - [ ] Resumen en castellano (máx. 300 palabras), con `\palabrasclave{...}`.
+   - [ ] Resumen en lengua originaria (quechua, aymara o guaraní según contexto regional), con `\simikuna{...}`.
+   - [ ] Abstract en lengua extranjera (inglés), con `\keywords{...}`.
    - [ ] Índice General de Contenidos, Índice de Tablas e Índice de Figuras generados automáticamente.
 
 2. **Estructura de los 9 Capítulos (numeración arábiga centrada al pie):**
@@ -74,13 +74,16 @@ Actúa como el **presidente de tribunal de titulación del Bachillerato Técnico
    - [ ] **Capítulo 9 (Conclusiones y Recomendaciones):** Cierre puntual de cada objetivo específico y recomendaciones técnicas aplicadas.
 
 3. **Secciones Finales (sin numeración de página visible):**
+   - [ ] Estilo de página limpio (`\configurarseccionfinal`) sin cabeceras ni pie de página visible.
    - [ ] **Bibliografía:** Formato APA 7ma Edición generado con `biblatex`, sin citas rotas ni referencias no citadas.
-   - [ ] **Anexos:** Modelo Canvas (Anexo A), Fichas técnicas/cotizaciones (Anexo B) y Código fuente en Courier (Anexo C).
+   - [ ] **Anexos:** Ensamble raíz con `\capitulopreliminar{ANEXOS}` y secciones con `\seccionanexo{...}`: Modelo Canvas (Anexo A), Fichas técnicas/cotizaciones (Anexo B) y Código fuente en Courier (Anexo C).
 
 4. **Verificación Técnica de Compilación:**
    - [ ] Compilación limpia con `./compilar.sh --clean` sin errores `LaTeX Error` ni advertencias `Unresolved references`.
    - [ ] Sin comandos duros o texto quemado fuera de `estilos/configuracion.tex`.
-   - [ ] Auditoría de tablas exitosa con `./compilar.sh --check-tablas` sin errores de formato APA 7 ni desbordamiento de página.
+   - [ ] Auditoría de tablas exitosa con `./compilar.sh --check-tablas` sin errores de formato APA 7 ni desbordamiento de página, con notas formateadas con `\notatabla`.
+   - [ ] Formato numérico conforme a SI/ISO 80000-1 (punto decimal, sin coma para miles ni decimales).
+   - [ ] Prioridad de viñetas respetada (uso predominante de `itemize` frente a `enumerate`).
 
 ### Formato de salida esperado
 ```

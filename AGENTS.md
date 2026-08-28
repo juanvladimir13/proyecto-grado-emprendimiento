@@ -46,11 +46,11 @@ proyecto-grado-innovacion/
 │   ├── estilos.sty                         # Estilos, carga de paquetes (biblatex-apa, listings), títulos APA 7
 │   └── configuracion.tex                   # Variables centralizadas de autor(es), título, tutor, institución y modalidad
 ├── preliminares/                           # Hojas frontales (numeración romana)
-│   ├── caratula.tex                        # Carátula oficial BTH (1 o 2 autores automáticos)
+│   ├── caratula.tex                        # Carátula oficial BTH (\titulocaratula, \subtitulocaratula)
 │   ├── portada_universitaria.tex           # Portada alternativa estilo académico/universitario
-│   ├── agradecimiento.tex                  # Agradecimientos (estilo dedicatoria: raggedleft y cursiva)
-│   ├── dedicatoria.tex                     # Dedicatorias (estilo raggedleft y cursiva)
-│   └── resumen.tex                         # Resúmenes (castellano, extranjero y originario)
+│   ├── agradecimiento.tex                  # Agradecimientos (\capitulopreliminar y \begin{estilodedicatoria})
+│   ├── dedicatoria.tex                     # Dedicatorias (\capitulopreliminar y \begin{estilodedicatoria})
+│   └── resumen.tex                         # Resúmenes (\capitulopreliminar, \palabrasclave, \keywords, \simikuna)
 ├── capitulos/                              # Modalidad: Innovación Tecnológica (Capítulos 1 al 9)
 │   ├── index.tex                           # Ensamble de los 9 capítulos
 │   ├── 01_introduccion/                    # Cap. 1: main.tex, contexto_general.tex, motivacion_pertinencia.tex, contribucion_esperada.tex
@@ -87,10 +87,10 @@ proyecto-grado-innovacion/
 │   └── referencias.bib                     # Base de datos de referencias (.bib) formateada en APA 7
 ├── anexos/                                 # Apéndices del documento
 │   ├── README.md                           # Guía para añadir y estructurar anexos
-│   ├── index.tex                           # Ensamble de anexos
-│   ├── anexo_a_canvas.tex                  # Anexo A: Modelo Canvas
-│   ├── anexo_b_fichas_tecnicas.tex         # Anexo B: Cotizaciones y fichas técnicas
-│   └── anexo_c_codigo_fuente.tex           # Anexo C: Código fuente importado
+│   ├── index.tex                           # Ensamble de anexos con \capitulopreliminar{ANEXOS}
+│   ├── anexo_a_canvas.tex                  # Anexo A: Modelo Canvas (\seccionanexo)
+│   ├── anexo_b_fichas_tecnicas.tex         # Anexo B: Cotizaciones y fichas técnicas (\seccionanexo)
+│   └── anexo_c_codigo_fuente.tex           # Anexo C: Código fuente importado (\seccionanexo)
 ├── promts/                                 # Prompts de apoyo y guías de revisión para agentes de IA
 │   ├── migracion/                          # Prompts para migración de datos y llenado de fichas
 │   │   └── ficha-proyecto.md               # Flujo paso a paso para completar ficha y redactar capítulos
@@ -122,7 +122,8 @@ proyecto-grado-innovacion/
 
 ### 1. Modificaciones de Datos Personales o Institucionales
 * **REGLA:** **NUNCA** quemes (hardcodees) nombres de estudiantes, tutores, instituciones o títulos del proyecto directamente en los archivos `.tex` como `caratula.tex`, `portada_universitaria.tex` o capítulos.
-* **ACCIÓN:** Utiliza o actualiza las macros correspondientes en `estilos/configuracion.tex` (`\institucion`, `\modalidad`, `\especialidad`, `\autoruno`, `\autordos`, `\tutorproyecto`, `\espacioposteriorparrafo`, `\sangriaprimeralinea`, etc.).
+* **ACCIÓN:** Utiliza o actualiza las macros correspondientes en `estilos/configuracion.tex` (`\institucion`, `\modalidad`, `\especialidad`, `\autoruno`, `\autordos`, `\tutorproyecto`, `\espacioposteriorparrafo`, `\sangriaprimeralinea`, `\espaciosuperiordedicatoria`, etc.).
+* **Campos C.I.:** El número de C.I. del estudiante no forma parte de la plantilla y fue removido de las macros y de la carátula oficial.
 
 ### 2. Estructuración Modular de Capítulos
 * **REGLA:** Conserva el diseño modular. Cada capítulo reside en su propia carpeta dentro de `capitulos/` y contiene un archivo `main.tex` que ensambla las secciones individuales.
@@ -151,11 +152,13 @@ proyecto-grado-innovacion/
 * **Inclusión de la Lista de Referencias:** Se imprime en `main.tex` mediante `\printbibliography[heading=bibintoc, title={Bibliografía}]`.
 * **Numeración de Capítulos:** La bibliografía y los anexos deben ser no numerados (`numberless` en `titlesec`) para evitar prefijos decimales o de capítulo.
 * **Numeración de Página:** Toda la sección de Bibliografía y Anexos debe estar totalmente limpia de números de página y cabeceras mediante la macro global `\configurarseccionfinal` (`\pagestyle{empty}` y `\assignpagestyle{\chapter}{empty}`).
+* **Estructura de Anexos:** Cada anexo individual debe declararse mediante `\seccionanexo{Título del Anexo}` para registrarse automáticamente en la tabla de contenidos sin numeración. El ensamble general en `anexos/index.tex` usa `\capitulopreliminar{ANEXOS}`.
 
 ### 6. Inserción y Verificación de Tablas e Imágenes
 * **Tablas (Normas APA 7ma Edición):** Guardar en `tablas/` e importar vía `\input{tablas/archivo.tex}`.
   - Usar siempre `booktabs` (`\toprule`, `\midrule`, `\bottomrule`). **PROHIBIDO** el uso de líneas verticales (`|`) y de `\hline`.
   - El título `\caption{...}` debe ubicarse obligatoriamente **arriba** de la tabla, seguido de `\label{tab:...}` y `\centering`.
+  - Para notas explicativas o fuentes al pie de la tabla, usar obligatoriamente la macro semántica `\notatabla{Fuente: ...}` (aplica tamaño pequeño, cursiva e interlineado ajustado según APA 7).
   - Para tablas con descripciones extensas, usar el entorno `tabularx` con ancho `\textwidth` y columnas auto-ajustables `L`, `C`, `R` o `X` (definidas en `estilos.sty`) para evitar desbordamientos del margen derecho.
   - **Auditoría de Tablas:** Ejecutar `./compilar.sh --check-tablas` (o `python3 scripts/verificar_tablas.py`) para validar que ninguna tabla rompa la diagramación ni viole APA 7.
 * **Imágenes:** Guardar en `imagenes/` e incluirlas sin prefijo de ruta (ya configurado en `estilos.sty`).
@@ -199,6 +202,16 @@ Este proyecto está configurado para la modalidad de **Innovación Tecnológica*
 * **Criterio de Uso:**
   - Emplear siempre el entorno `itemize` para listas de objetivos específicos, conclusiones, recomendaciones, características técnicas, componentes, ventajas, requerimientos y elementos descriptivos generales.
   - Reservar el entorno de lista numerada (`enumerate`) **exclusivamente** para secuencias algorítmicas estrictas, pasos procedimentales ordenados o cronologías donde la numeración correlativa sea indispensable e inherente a la explicación técnica.
+
+### 13. Macros Semánticas Estandarizadas de la Plantilla
+* **REGLA:** Utilizar obligatoriamente las macros semánticas provistas en `estilos.sty` para preservar la coherencia y mantenibilidad del documento:
+  - `\capitulopreliminar{Título}`: Capítulos preliminares no numerados con entrada automática al TOC (`Agradecimiento`, `Dedicatoria`, `Resumen`, `ANEXOS`), en sustitución de `\chapter*{...}\addcontentsline{...}` manual.
+  - `\begin{estilodedicatoria}...\end{estilodedicatoria}`: Entorno semántico para dedicatoria y agradecimiento (alineación derecha, cursiva y espaciado vertical configurable vía `\espaciosuperiordedicatoria` en `estilos/configuracion.tex`).
+  - `\seccionanexo{Título}`: Encabezados de secciones de anexos con inclusión automática en el TOC (`\seccionanexo{Anexo A: Modelo Canvas...}`).
+  - `\configurarseccionfinal`: Macro global que desactiva numeración de página y cabeceras (`empty`) para Bibliografía y Anexos.
+  - `\palabrasclave{...}`, `\keywords{...}`, `\simikuna{...}`: Bloques semánticos normalizados para palabras clave en resúmenes (castellano, extranjero y lengua originaria).
+  - `\notatabla{...}`: Formato estandarizado para notas y fuentes al pie de tablas e ilustraciones bajo APA 7ma Edición.
+  - `\titulocaratula{...}` y `\subtitulocaratula{...}`: Formato tipográfico y paleta institucional en la portada oficial.
 
 ---
 

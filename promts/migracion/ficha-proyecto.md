@@ -89,7 +89,7 @@ Innovación Tecnológica. Antes de tocar cualquier archivo, lee AGENTS.md y sigu
    - Presenta las preguntas al usuario de manera clara, estructurada y agrupada por
      bloques temáticos lógicos para facilitar sus respuestas:
      * Bloque Institucional y Preliminares (Sección 0): Título del proyecto, autor(es),
-       C.I., institución educativa, tutor/asesor, fecha/gestión, dedicatoria y agradecimiento.
+       institución educativa, tutor/asesor, fecha/gestión, dedicatoria y agradecimiento.
      * Bloque Diagnóstico y Problema (Secciones 1 y 2): Contexto geográfico y social y objetivos (general y específicos).
    - Conforme el usuario responda cada consulta, actualiza de inmediato `docs/ficha-proyecto.md`,
      reemplazando los `[DATO PENDIENTE]` por los datos concretos proporcionados.
@@ -191,6 +191,9 @@ Reglas mientras redactas:
 5. No toques estilos/, preliminares/ ni configuracion.tex en este paso.
 6. Al terminar cada capítulo, lista las secciones completadas y las que hayan quedado con %% FALTA DATO.
 7. Reemplazo de contenido: Sustituye el texto de plantilla/guía de cada archivo .tex con la nueva redacción formal fundamentada, conservando intactas las etiquetas `\section{...}` y `\label{...}` existentes para preservar la integridad de la estructura y referencias cruzadas.
+8. Prioridad de viñetas: Prioriza obligatoriamente `\begin{itemize}` sobre `\begin{enumerate}`, reservando este último solo para secuencias algorítmicas o procedimentales estrictas.
+9. Formato numérico (SI/ISO 80000-1): Usa punto decimal (ej. 12.50, 98.5%), nunca comas decimales ni comas/puntos de miles (cifras de 4 dígitos juntas: 4500.00, 5 o más con espacio: 25 000.00).
+10. Notas en tablas: Usa la macro semántica `\notatabla{Fuente: ...}` para notas o procedencia al pie de tablas APA 7.
 
 Al terminar los 9 capítulos, entrega un resumen general del contenido redactado.
 ```

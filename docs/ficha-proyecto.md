@@ -68,7 +68,6 @@ capitulos/
 - **Título del proyecto de grado:** [DATO PENDIENTE]
 - **Subtítulo o nombre comercial del producto/servicio:** [DATO PENDIENTE]
 - **Nombre(s) completo(s) del/los autor(es):** [DATO PENDIENTE]
-- **C.I. del autor principal:** [DATO PENDIENTE]
 - **Correo electrónico del autor:** [DATO PENDIENTE]
 - **Nombre completo del tutor/asesor:** [DATO PENDIENTE]
 - **Grado académico y cargo del tutor:** [DATO PENDIENTE] _(ej. "Lic. en Ingeniería, Docente de Física")_

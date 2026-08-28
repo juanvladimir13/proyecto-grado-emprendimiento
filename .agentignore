@@ -20,7 +20,11 @@
 *.upb
 *.listing
 *-blx.bib
+
+# Excluir binarios pesados y PDFs
+*.pdf
 main.pdf
+!docs/*.pdf
 
 # Excluir archivos auxiliares recursivamente
 capitulos/**/*.aux

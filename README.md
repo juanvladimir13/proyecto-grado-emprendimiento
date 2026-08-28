@@ -19,11 +19,11 @@ proyecto-grado-innovacion/
 │   ├── estilos.sty                         # Archivo de estilos (márgenes, fuentes, espaciados y paquetes)
 │   └── configuracion.tex                   # Metadatos centralizados (título, autor(es), tutor, institución, modalidad)
 ├── preliminares/                           # Hojas preliminares con numeración romana
-│   ├── caratula.tex                        # Carátula formal BTH (1 o 2 autores dinámicos)
+│   ├── caratula.tex                        # Carátula formal BTH (\titulocaratula, \subtitulocaratula)
 │   ├── portada_universitaria.tex           # Portada alternativa estilo universitario
-│   ├── agradecimiento.tex                  # Página de agradecimientos (estilo dedicatoria: derecha y cursiva)
-│   ├── dedicatoria.tex                     # Página de dedicatoria (derecha y cursiva)
-│   └── resumen.tex                         # Resumen en español, lengua extranjera e indígena
+│   ├── agradecimiento.tex                  # Página de agradecimientos (\capitulopreliminar y \begin{estilodedicatoria})
+│   ├── dedicatoria.tex                     # Página de dedicatoria (\capitulopreliminar y \begin{estilodedicatoria})
+│   └── resumen.tex                         # Resumen (\capitulopreliminar, \palabrasclave, \keywords, \simikuna)
 ├── capitulos/                              # Modalidad: Innovación Tecnológica (Capítulos 1 al 9)
 │   ├── index.tex                           # Ensamble de los 9 capítulos
 │   ├── 01_introduccion/                    # Cap. 1: main.tex, contexto_general.tex, motivacion_pertinencia.tex, contribucion_esperada.tex
@@ -60,10 +60,10 @@ proyecto-grado-innovacion/
 │   └── referencias.bib                     # Archivo BibLaTeX (.bib) con fuentes de citas en APA 7
 ├── anexos/                                 # Apéndices e información complementaria
 │   ├── README.md                           # Guía para añadir anexos
-│   ├── index.tex                           # Ensamble general de anexos
-│   ├── anexo_a_canvas.tex                  # Anexo A: Modelo Canvas
-│   ├── anexo_b_fichas_tecnicas.tex         # Anexo B: Cotizaciones y fichas técnicas
-│   └── anexo_c_codigo_fuente.tex           # Anexo C: Código fuente importado
+│   ├── index.tex                           # Ensamble general de anexos (\capitulopreliminar{ANEXOS})
+│   ├── anexo_a_canvas.tex                  # Anexo A: Modelo Canvas (\seccionanexo)
+│   ├── anexo_b_fichas_tecnicas.tex         # Anexo B: Cotizaciones y fichas técnicas (\seccionanexo)
+│   └── anexo_c_codigo_fuente.tex           # Anexo C: Código fuente importado (\seccionanexo)
 ├── promts/                                 # Prompts de apoyo para redacción y revisión con IA
 │   ├── migracion/                          # Prompts para recopilación y redacción de capítulos
 │   │   └── ficha-proyecto.md               # Flujo estructurado paso a paso
@@ -157,8 +157,8 @@ pdflatex main.tex
 ## 💡 Guía Rápida de Uso
 
 1. **Configurar Datos Institucionales y del Autor:**
-   * Abre `estilos/configuracion.tex` y actualiza el título, institución, especialidad, tutor y datos del o los autores (soporta 1 o 2 autores automáticamente).
-   * Personaliza si lo requieres el espaciado de párrafos estilo Word con `\espacioposteriorparrafo` (por defecto `8pt`) y `\sangriaprimeralinea` (por defecto `0pt`).
+   * Abre `estilos/configuracion.tex` y actualiza el título, institución, especialidad, tutor y datos del o los autores (soporta 1 o 2 autores automáticamente; no requiere C.I.).
+   * Personaliza si lo requieres el espaciado de párrafos estilo Word con `\espacioposteriorparrafo` (por defecto `8pt`), la sangría con `\sangriaprimeralinea` (por defecto `0pt`) y el espaciado superior de dedicatorias con `\espaciosuperiordedicatoria` (por defecto `3cm`).
 
 2. **Estructura y Redacción de Capítulos (Innovación Tecnológica):**
    * El documento compila los 9 capítulos modulares ubicados en `capitulos/` a través de `capitulos/index.tex`.
@@ -169,7 +169,7 @@ pdflatex main.tex
    * En el texto usa `\parencite{clave}` para citas entre paréntesis *(Apellido, 2024)* o `\textcite{clave}` para citas narrativas *Apellido (2024)*.
 
 4. **Insertar y Auditar Tablas e Imágenes:**
-   * Crea tablas en `tablas/` e impórtalas con `\input{tablas/mi_tabla.tex}` usando `booktabs`. Para tablas anchas o con descripciones extensas usa `tabularx` (columnas `L`, `C`, `R` o `X`) para evitar que desborden los márgenes.
+   * Crea tablas en `tablas/` e impórtalas con `\input{tablas/mi_tabla.tex}` usando `booktabs`. Para notas al pie de tabla usa siempre `\notatabla{Fuente: ...}`. Para tablas anchas o con descripciones extensas usa `tabularx` (columnas `L`, `C`, `R` o `X`) para evitar que desborden los márgenes.
    * Audita la conformidad de tus tablas con APA 7 en cualquier momento mediante `./compilar.sh --check-tablas`.
    * Guarda imágenes en `imagenes/` e inclúyelas con `\includegraphics[width=...]{nombre.png}`.
 
