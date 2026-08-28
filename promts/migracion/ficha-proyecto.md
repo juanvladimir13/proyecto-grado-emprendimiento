@@ -110,7 +110,7 @@ Lee docs/ficha-proyecto.md (ya completado y validado con el usuario) y estilos/c
 1. Extrae únicamente los datos institucionales/personales consolidados en la Sección 0:
    - Título del proyecto (\tituloproyecto).
    - Nombre(s) del/los autor(es) (\autoruno, \autordos).
-   - Datos del autor principal (\ciautoruno, \emailautoruno, \lugarproyecto).
+   - Datos del autor principal (\emailautoruno, \lugarproyecto).
    - Nombre y cargo del tutor (\tutorproyecto).
    - Institución educativa, departamento/provincia y especialidad (\institucion, \especialidad).
    - Modalidad fijada en "INNOVACIÓN TECNOLÓGICA" (\modalidad).

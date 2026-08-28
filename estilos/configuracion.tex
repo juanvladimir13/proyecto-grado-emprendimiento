@@ -32,12 +32,10 @@
 % ------------------------------------------------------------
 % Estudiante / Autor 1 (Obligatorio)
 \newcommand{\autoruno}{Juan Pérez Mamani}
-\newcommand{\ciautoruno}{8765432 C.B.}
 \newcommand{\emailautoruno}{juan.perez@ejemplo.com}
 
 % Estudiante / Autor 2 (Opcional: deje vacío si es individual)
 \newcommand{\autordos}{} % Ej: María Flores Quispe (dejar vacío si no aplica)
-\newcommand{\ciautordos}{} % Ej: 7654321 C.B.
 \newcommand{\emailautordos}{}
 
 % Etiquetas descriptivas
@@ -61,7 +59,6 @@
 % 7. MACROS DE COMPATIBILIDAD (Para metadatos automáticos)
 % ------------------------------------------------------------
 \newcommand{\autorproyecto}{\autoruno\ifx\autordos\empty\else, \autordos\fi}
-\newcommand{\ciautor}{\ciautoruno\ifx\autordos\empty\else{} y \ciautordos\fi}
 \newcommand{\emailautor}{\emailautoruno}
 \newcommand{\programa}{\especialidad\ (\nivelformacion)}
 
