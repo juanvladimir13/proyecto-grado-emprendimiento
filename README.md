@@ -52,6 +52,8 @@ proyecto-grado-innovacion/
 ├── codigo/                                 # Código fuente y scripts (.py, .cpp, .ino, .sql, etc.)
 │   ├── README.md                           # Guía para almacenar e importar código externo
 │   └── ejemplo_controlador.py              # Script de prueba importable vía \lstinputlisting
+├── scripts/                                # Scripts de utilidad y validación
+│   └── verificar_tablas.py                 # Auditoría de tablas APA 7 y prevención de desbordamientos
 ├── imagenes/                               # Repositorio de recursos gráficos e ilustraciones
 │   └── README.md                           # Instrucciones para la gestión de imágenes
 ├── bibliografia/                           # Base de datos bibliográfica (APA 7ma Edición)
@@ -105,6 +107,9 @@ El proyecto incluye el script ejecutable `./compilar.sh` que gestiona todo el ci
 
 # Compilación rápida de 1 sola pasada (ideal durante redacción de texto):
 ./compilar.sh --fast
+
+# Auditar la conformidad de las tablas con normas APA 7ma Edición y diagramación:
+./compilar.sh --check-tablas
 
 # Solo limpiar archivos auxiliares sin compilar:
 ./compilar.sh --only-clean
@@ -163,8 +168,9 @@ pdflatex main.tex
    * Agrega entradas a `bibliografia/referencias.bib`.
    * En el texto usa `\parencite{clave}` para citas entre paréntesis *(Apellido, 2024)* o `\textcite{clave}` para citas narrativas *Apellido (2024)*.
 
-4. **Insertar Tablas e Imágenes:**
-   * Crea tablas en `tablas/` e impórtalas con `\input{tablas/mi_tabla.tex}`.
+4. **Insertar y Auditar Tablas e Imágenes:**
+   * Crea tablas en `tablas/` e impórtalas con `\input{tablas/mi_tabla.tex}` usando `booktabs`. Para tablas anchas o con descripciones extensas usa `tabularx` (columnas `L`, `C`, `R` o `X`) para evitar que desborden los márgenes.
+   * Audita la conformidad de tus tablas con APA 7 en cualquier momento mediante `./compilar.sh --check-tablas`.
    * Guarda imágenes en `imagenes/` e inclúyelas con `\includegraphics[width=...]{nombre.png}`.
 
 5. **Insertar Código Fuente:**

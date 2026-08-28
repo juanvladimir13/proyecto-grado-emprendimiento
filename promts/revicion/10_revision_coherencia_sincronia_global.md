@@ -57,6 +57,7 @@ Actúa como un **auditor técnico y metodológico de proyectos de grado**. Tu mi
    - ¿Los costos de inversión y componentes calculados en el Cap. 4 coinciden con los montos citados en el Cap. 2 (justificación) y Cap. 7 (análisis costo-beneficio)?
    - ¿Las especificaciones técnicas (voltajes, dimensiones, capacidades) son idénticas en Cap. 3, 4 y 7?
    - ¿El tamaño de la muestra o población evaluada en el Cap. 5 coincide con los datos presentados en el Cap. 7?
+   - ¿El formato numérico es homogéneo en todo el texto y tablas? (Uso obligatorio de punto `.` para decimales como `12.50` y ausencia de comas o puntos en millares, ej. `4500` o `25 000` según norma SI/ISO 80000-1).
 
 3. **Consistencia terminológica y conceptual:**
    - ¿Se utiliza la misma terminología técnica y denominación del prototipo a lo largo de los 9 capítulos, sin ambigüedades?

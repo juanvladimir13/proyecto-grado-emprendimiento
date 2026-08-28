@@ -45,6 +45,9 @@ Para incluir una tabla en cualquier sección o capítulo `.tex`, utiliza la inst
    - Números: alineados a la derecha (`r` o `R`).
    - Códigos o categorías breves: centrados (`c` o `C`).
 5. **Control de Ancho y Salto de Línea:** Para tablas con texto descriptivo extenso, usa `tabularx` con ancho `\textwidth` y columnas auto-ajustables `L`, `C`, `R` o `X` para evitar que la tabla se desborde del margen derecho.
+6. **Formato Numérico (Norma SI/ISO 80000-1):**
+   - **Parte decimal:** Usar obligatoriamente **punto (`.`)** (ej. `12.50`, `98.5%`, `0.75`). **NUNCA** usar coma (`,`).
+   - **Separador de miles:** **PROHIBIDO** el uso de comas (`,`) o puntos (`.`). Escribir cifras de 4 dígitos juntas sin separador (ej. `4500.00`, `1000`) y para 5 o más cifras usar espacio o continuo (ej. `25 000.00` o `25000.00`).
 
 ---
 

@@ -180,6 +180,31 @@ def auditar_archivo_tabla(ruta_archivo, nombre_relativo, tablas_incluidas):
                 )
                 break
 
+    # 9. Regla de formato numérico: Punto decimal obligatorio, sin coma ni punto en miles
+    patron_coma_num = re.compile(r"\b\d+,\d+\b")
+    patron_multi_puntos = re.compile(r"\b\d{1,3}(?:\.\d{3}){2,}\b")
+    for num_linea, linea in enumerate(lineas, 1):
+        linea_limpia = linea.strip()
+        if linea_limpia.startswith("%"):
+            continue
+        # Detección de coma en números (decimal o miles)
+        coincidencias_coma = patron_coma_num.findall(linea_limpia)
+        if coincidencias_coma:
+            for num in coincidencias_coma:
+                resultado["errores_criticos"].append(
+                    f"Línea {num_linea}: Uso indebido de coma en número '{num}'. "
+                    "Regla del proyecto (SI/ISO 80000-1): utilizar punto para decimales (ej. 12.50) "
+                    "y sin separador o espacio para miles (ej. 4500 o 25 000). Prohibido el uso de comas en números."
+                )
+        # Detección de múltiples puntos en un solo número
+        coincidencias_puntos = patron_multi_puntos.findall(linea_limpia)
+        if coincidencias_puntos:
+            for num in coincidencias_puntos:
+                resultado["errores_criticos"].append(
+                    f"Línea {num_linea}: Puntos repetidos en número '{num}'. "
+                    "No use punto como separador de miles. Use espacio o continuo (ej. 25 000 o 25000)."
+                )
+
     return resultado
 
 def auditar_todas_las_tablas():

@@ -79,6 +79,8 @@ proyecto-grado-innovacion/
 ├── codigo/                                 # Código fuente y scripts (.py, .cpp, .ino, .sql, etc.)
 │   ├── README.md                           # Guía para almacenar e importar código externo
 │   └── ejemplo_controlador.py              # Script de prueba importable vía \lstinputlisting
+├── scripts/                                # Scripts de utilidad y validación de calidad
+│   └── verificar_tablas.py                 # Auditoría de tablas APA 7 y prevención de desbordamientos
 ├── imagenes/                               # Gráficos, diagramas y logotipos
 │   └── README.md                           # Instrucciones para la gestión de recursos gráficos
 ├── bibliografia/                           # Bibliografía BibLaTeX (APA 7ma Edición)
@@ -172,6 +174,7 @@ proyecto-grado-innovacion/
   - `./compilar.sh --clean` (compila PDF completo y elimina archivos temporales).
   - `./compilar.sh --only-clean` (elimina archivos temporales sin compilar).
   - `./compilar.sh --fast` (compilación rápida de 1 sola pasada pdflatex para redacción continua).
+  - `./compilar.sh --check-tablas` (audita la conformidad de tablas con APA 7 y booktabs).
 
 ### 9. Estructura y Flujo de la Modalidad Innovación Tecnológica
 Este proyecto está configurado para la modalidad de **Innovación Tecnológica**:
@@ -183,6 +186,13 @@ Este proyecto está configurado para la modalidad de **Innovación Tecnológica*
 ### 10. Uso de Prompts de Apoyo para Agentes (`promts/`)
 * **Migración y redacción:** Consultar `promts/migracion/ficha-proyecto.md` para el flujo ordenado de ingesta de datos a la ficha y posterior redacción capítulo a capítulo.
 * **Revisión y calidad:** Utilizar la suite especializada de 16 prompts en `promts/revicion/` adaptada a los 9 capítulos de Innovación Tecnológica (BTH RM 0912/2023): estructura general (`01`), capítulo 1 (`01b`), capítulos 2 al 9 modulares (`02` a `09`), auditoría de sincronía global (`10`), estilo y gramática (`11`), citas y bibliografía APA 7 (`12`), y checklist pre-entrega/defensa (`13`).
+
+### 11. Formato de Números, Decimales y Separador de Miles (Norma SI/ISO 80000-1)
+* **REGLA:** En todo el proyecto (capítulos, tablas y anexos) se sigue la convención internacional técnica y de la RAE:
+  - **Parte decimal:** Usar obligatoriamente **punto (`.`)** (ej. `12.50`, `3.1416`, `98.5%`, `0.75 Bs.`). **PROHIBIDO** el uso de coma (`,`) para decimales (ej. evitar `12,50`).
+  - **Separador de miles:** **PROHIBIDO** el uso de comas (`,`) o puntos (`.`) como separadores de millares (ej. evitar `1,000` y `1.000`).
+  - **Cifras de 4 dígitos:** Escribir juntas sin espacio ni separador (ej. `1000`, `3500`, `4500.00`, `7700.00`).
+  - **Cifras de 5 o más dígitos:** Escribir continuas o con espacio como separador de grupos de tres dígitos (ej. `25000.00` o `25 000.00`, `46 500.00`), nunca con comas ni puntos.
 
 ---
 

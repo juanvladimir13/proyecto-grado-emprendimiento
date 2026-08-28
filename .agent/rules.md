@@ -45,7 +45,10 @@ Este proyecto de LaTeX modular sigue pautas estrictas para mantener la consisten
    - Ajuste automático de línea (`breaklines=true`) y rótulos en español (`Código`).
 
 7. **Tablas e Ilustraciones:**
-   - Tablas independientes en [tablas/](file:///home/juanvladimir13/Projects/proyecto-grado-innovacion/tablas/) e importar vía `\input{tablas/archivo.tex}` usando `booktabs`.
+   - Tablas independientes en [tablas/](file:///home/juanvladimir13/Projects/proyecto-grado-innovacion/tablas/) e importar vía `\input{tablas/archivo.tex}`.
+   - Normas APA 7: usar `booktabs` (`\toprule`, `\midrule`, `\bottomrule`), PROHIBIDO el uso de líneas verticales (`|`) y de `\hline`. El `\caption` debe ubicarse obligatoriamente arriba de la tabla.
+   - Para tablas anchas o con descripciones extensas, usar `tabularx` con columnas auto-ajustables `L`, `C`, `R` o `X` para evitar desbordamientos del margen derecho (`\textwidth`).
+   - Auditar tablas con `./compilar.sh --check-tablas` (o [scripts/verificar_tablas.py](file:///home/juanvladimir13/Projects/proyecto-grado-innovacion/scripts/verificar_tablas.py)).
    - Figuras en [imagenes/](file:///home/juanvladimir13/Projects/proyecto-grado-innovacion/imagenes/) e incluir con `\includegraphics{archivo.ext}` (ruta ya preconfigurada).
 
 8. **Control de Silabación:**
@@ -57,6 +60,7 @@ Este proyecto de LaTeX modular sigue pautas estrictas para mantener la consisten
      * `./compilar.sh --clean` (compilación completa + eliminación de temporales).
      * `./compilar.sh --fast` (compilación rápida de 1 sola pasada pdflatex).
      * `./compilar.sh --only-clean` (limpieza de temporales sin compilar).
+     * `./compilar.sh --check-tablas` (auditoría de tablas APA 7 y diagramación).
 
 10. **Modalidad y Ensamble:**
     - Modalidad activa: **Innovación Tecnológica** (Capítulos 1 al 9).
@@ -68,3 +72,9 @@ Este proyecto de LaTeX modular sigue pautas estrictas para mantener la consisten
 11. **Prompts de Apoyo (`promts/`):**
     - Guiar la redacción con [promts/migracion/ficha-proyecto.md](file:///home/juanvladimir13/Projects/proyecto-grado-innovacion/promts/migracion/ficha-proyecto.md).
     - Revisar consistencia y rigor académico con la suite de 16 prompts modulares en [promts/revicion/](file:///home/juanvladimir13/Projects/proyecto-grado-innovacion/promts/revicion/) adaptada a los 9 capítulos de Innovación Tecnológica (BTH RM 0912/2023).
+
+12. **Formato de Números, Decimales y Separador de Miles (Norma SI/ISO 80000-1):**
+    - **Parte decimal:** Usar obligatoriamente punto (`.`) (ej. `12.50`, `3.1416`, `98.5%`, `0.75`). **PROHIBIDO** el uso de coma (`,`) en decimales.
+    - **Separador de miles:** **PROHIBIDO** el uso de comas (`,`) o puntos (`.`) como separadores de millares (evitar `1,000` y `1.000`).
+    - Cifras de 4 dígitos se escriben juntas sin separación (`1000`, `3500`, `4500.00`, `7700.00`).
+    - Cifras de 5 o más dígitos se escriben continuas o con espacio (`25 000.00` o `25000.00`, `46 500.00`), nunca con comas ni puntos.
