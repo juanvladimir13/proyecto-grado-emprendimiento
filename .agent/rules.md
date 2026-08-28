@@ -1,6 +1,6 @@
 # Antigravity Rules & Guidelines
 
-Este proyecto de LaTeX modular sigue pautas estrictas para mantener la consistencia, modularidad y cumplimiento de la normativa del Bachillerato Técnico Humanístico (BTH - RM 0912/2023) en Bolivia bajo la modalidad de **Innovación Tecnológica**.
+Este proyecto de LaTeX modular sigue pautas estrictas para mantener la consistencia, modularidad y cumplimiento de la normativa del Bachillerato Técnico Humanístico (BTH - RM 0912/2023) en Bolivia bajo la modalidad de **Emprendimiento Productivo**.
 
 > [!IMPORTANT]
 > Consulta siempre la especificación principal en [AGENTS.md](AGENTS.md) y la estructura de capítulos en [ESTRUCTURA_CAPITULOS.md](ESTRUCTURA_CAPITULOS.md) antes de crear o modificar archivos.
@@ -14,10 +14,10 @@ Este proyecto de LaTeX modular sigue pautas estrictas para mantener la consisten
    - Toda modificación de metadatos, espaciado de párrafos (`\espacioposteriorparrafo`, `\sangriaprimeralinea`) y diagramación (`\espaciosuperiordedicatoria`) se realiza en [estilos/configuracion.tex](estilos/configuracion.tex). Soporta 1 o 2 autores dinámicamente (`\autoruno`, `\autordos`).
    - Los campos de C.I. del estudiante fueron removidos y no forman parte de la plantilla.
 
-2. **Estructura Modular de Capítulos (Innovación Tecnológica):**
-   - Todos los capítulos se encuentran en [capitulos/](capitulos/) (Capítulos 1 al 9).
-   - Cada capítulo reside en su propia subcarpeta (`01_introduccion/` a `09_conclusiones_recomendaciones/`) con su respectivo `main.tex` que ensambla las secciones.
-   - Las inclusiones dentro de cada capítulo usan el prefijo `capitulos/` (ej. `\input{capitulos/02_planteamiento_problema/diagnostico}`).
+2. **Estructura Modular de Capítulos (Emprendimiento Productivo):**
+   - Todos los capítulos se encuentran en [capitulos/](capitulos/) (Capítulos 1 al 7).
+   - Cada capítulo reside en su propia subcarpeta (`01_introduccion/` a `07_conclusiones_recomendaciones/`) con su respectivo `main.tex` que ensambla las secciones.
+   - Las inclusiones dentro de cada capítulo usan el prefijo `capitulos/` (ej. `\input{capitulos/02_planteamiento_emprendimiento/diagnostico}`).
 
 3. **Estilo de Títulos APA 7ma Edición Adaptado:**
    - Todos los títulos y enlaces internos (TOC, LOF, LOT, referencias) en **negro** (`linkcolor=black`).
@@ -30,7 +30,7 @@ Este proyecto de LaTeX modular sigue pautas estrictas para mantener la consisten
 
 4. **Encabezados y Pies de Página:**
    - Encabezados deshabilitados (`headrulewidth=0pt`, sin texto superior).
-   - Pies de página: numeración arábiga centrada abajo (`\cfoot{\thepage}`) en Capítulos 1 al 9.
+   - Pies de página: numeración arábiga centrada abajo (`\cfoot{\thepage}`) en Capítulos 1 al 7.
    - Páginas preliminares en números romanos (`\pagenumbering{roman}`).
    - Bibliografía y Anexos: no numerados (`numberless`) y limpios de numeración de página y cabeceras mediante `\configurarseccionfinal`.
 
@@ -48,6 +48,7 @@ Este proyecto de LaTeX modular sigue pautas estrictas para mantener la consisten
 
 7. **Tablas e Ilustraciones:**
    - Tablas independientes en [tablas/](tablas/) e importar vía `\input{tablas/archivo.tex}`.
+   - Tablas vinculadas al modelo de emprendimiento: `estudio_mercado_ejemplo.tex`, `estructura_organizacional_ejemplo.tex`, `inversiones_ejemplo.tex`, `costos_produccion_ejemplo.tex`, `indicadores_financieros_ejemplo.tex`, `resultados_piloto_ejemplo.tex`.
    - Normas APA 7: usar `booktabs` (`\toprule`, `\midrule`, `\bottomrule`), PROHIBIDO el uso de líneas verticales (`|`) y de `\hline`. El `\caption` debe ubicarse obligatoriamente arriba de la tabla.
    - Para notas explicativas o fuentes de tablas/figuras, usar la macro semántica `\notatabla{Fuente: ...}` (tamaño pequeño, cursiva e interlineado APA 7).
    - Para tablas anchas o con descripciones extensas, usar `tabularx` con columnas auto-ajustables `L`, `C`, `R` o `X` para evitar desbordamientos del margen derecho (`\textwidth`).
@@ -66,7 +67,7 @@ Este proyecto de LaTeX modular sigue pautas estrictas para mantener la consisten
      * `./compilar.sh --check-tablas` (auditoría de tablas APA 7 y diagramación).
 
 10. **Modalidad y Ensamble:**
-    - Modalidad activa: **Innovación Tecnológica** (Capítulos 1 al 9).
+    - Modalidad activa: **Emprendimiento Productivo** (Capítulos 1 al 7).
     - Ensamble raíz en [main.tex](main.tex) vía `\input{capitulos/index.tex}`.
     - Metadatos institucionales y del estudiante centralizados en [estilos/configuracion.tex](estilos/configuracion.tex).
     - Ficha de datos del proyecto en [docs/ficha-proyecto.md](docs/ficha-proyecto.md) (alimentada desde `docs/proyecto.rtf` o `docs/proyecto.md` y consultas interactivas).
@@ -76,7 +77,7 @@ Este proyecto de LaTeX modular sigue pautas estrictas para mantener la consisten
 
 11. **Prompts de Apoyo (`promts/`):**
     - Guiar la redacción con [promts/migracion/ficha-proyecto.md](promts/migracion/ficha-proyecto.md).
-    - Revisar consistencia y rigor académico con la suite de 16 prompts modulares en [promts/revicion/](promts/revicion/) adaptada a los 9 capítulos de Innovación Tecnológica (BTH RM 0912/2023).
+    - Revisar consistencia y rigor comercial y técnico con la suite de 14 prompts modulares en [promts/revicion/](promts/revicion/) adaptada a los 7 capítulos de Emprendimiento Productivo (BTH RM 0912/2023).
 
 12. **Formato de Números, Decimales y Separador de Miles (Norma SI/ISO 80000-1):**
     - **Parte decimal:** Usar obligatoriamente punto (`.`) (ej. `12.50`, `3.1416`, `98.5%`, `0.75`). **PROHIBIDO** el uso de coma (`,`) en decimales.
@@ -98,4 +99,3 @@ Este proyecto de LaTeX modular sigue pautas estrictas para mantener la consisten
       * `\palabrasclave{...}`, `\keywords{...}`, `\simikuna{...}`: Bloques semánticos de palabras clave.
       * `\notatabla{...}`: Notas al pie de tablas y figuras APA 7.
       * `\titulocaratula{...}` y `\subtitulocaratula{...}`: Formato tipográfico en carátula.
-

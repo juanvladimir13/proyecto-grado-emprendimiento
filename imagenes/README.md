@@ -1,4 +1,4 @@
-# Carpeta de Imágenes para Innovación Tecnológica
+# Carpeta de Imágenes para Emprendimiento Productivo
 
 Guarde en este directorio los logotipos de la empresa, fotografías del producto, organigramas y esquemas de ubicación (.png, .jpg, .pdf).
 

@@ -20,10 +20,9 @@ anexos/
 ## 📌 ¿Cómo agregar un nuevo anexo?
 
 1. Crea un nuevo archivo `.tex` dentro de `anexos/` (ej. `anexos/anexo_d_encuestas.tex`).
-2. Redacta el contenido usando `\section*{Anexo D: Título del Anexo}` y añade su entrada al índice:
+2. Redacta el contenido usando la macro semántica `\seccionanexo{Título del Anexo}` (agrega automáticamente la entrada correspondiente al índice de contenidos):
    ```latex
-   \section*{Anexo D: Cuestionario de Encuesta Aplicada}
-   \addcontentsline{toc}{section}{Anexo D: Cuestionario de Encuesta Aplicada}
+   \seccionanexo{Anexo D: Cuestionario de Encuesta Aplicada}
    
    Contenido del anexo...
    ```

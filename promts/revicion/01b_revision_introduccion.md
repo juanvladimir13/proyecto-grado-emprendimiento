@@ -11,7 +11,7 @@ Al finalizar la redacción del borrador del **Capítulo 1: Introducción** (`cap
 1. Lee `AGENTS.md` y sigue sus reglas de formato LaTeX antes de cualquier revisión.
 2. Obtén los datos del proyecto desde `estilos/configuracion.tex` (`\tituloproyecto`, `\especialidad`, `\modalidad`).
 3. Lee directamente los archivos `.tex` indicados en la sección "Archivos a revisar".
-4. Si necesitas contrastar con los objetivos o el diagnóstico, lee `capitulos/02_planteamiento_problema/objetivos.tex` y `capitulos/02_planteamiento_problema/diagnostico.tex`.
+4. Si necesitas contrastar con los objetivos o el diagnóstico, lee `capitulos/02_planteamiento_emprendimiento/diagnostico.tex` y `capitulos/02_planteamiento_emprendimiento/objetivos.tex`.
 5. Consulta `docs/ficha-proyecto.md` (Sección 1) para verificar los datos de contexto.
 
 ### Para uso manual (copiar y pegar)
@@ -25,53 +25,61 @@ Al finalizar la redacción del borrador del **Capítulo 1: Introducción** (`cap
 
 | Archivo | Contenido |
 | :--- | :--- |
-| `capitulos/01_introduccion/main.tex` | Ensamble del capítulo (`\chapter` y `\input` de las secciones) |
-| `capitulos/01_introduccion/contexto_general.tex` | Contexto general del sector y ámbito geográfico |
-| `capitulos/01_introduccion/motivacion_pertinencia.tex` | Motivación personal y pertinencia normativa/social |
-| `capitulos/01_introduccion/contribucion_esperada.tex` | Contribución esperada y tipo de innovación |
+| `capitulos/01_introduccion/main.tex` | Ensamble del capítulo (`\chapter` y `\input` de las cuatro secciones) |
+| `capitulos/01_introduccion/contexto_general.tex` | Contexto general del sector económico, dinámica comercial y ámbito geográfico |
+| `capitulos/01_introduccion/oportunidad_negocio.tex` | Identificación fundamentada de la oportunidad de negocio y demanda insatisfecha |
+| `capitulos/01_introduccion/propuesta_valor.tex` | Propuesta de valor, atributos de diferenciación y ventaja competitiva |
+| `capitulos/01_introduccion/marco_teorico.tex` | Fundamentación teórica del modelo de negocio, marco conceptual y herramientas |
 
 ---
 
 ## PROMPT
 
-Actúa como un **revisor académico de proyectos de grado BTH** en modalidad **Innovación Tecnológica**. Evalúa el **Capítulo 1: Introducción** que te proporcionaré, verificando que presente un panorama claro, fundamentado y motivador del proyecto de innovación tecnológica.
+Actúa como un **revisor académico y de planes de negocio BTH** en modalidad **Emprendimiento Productivo**. Evalúa el **Capítulo 1: Introducción** que te proporcionaré, verificando que presente un panorama fundamentado, coherente y comercialmente viable de la iniciativa productiva.
 
 ### Contexto del documento
-- Modalidad: Innovación Tecnológica (BTH Bolivia, RM 0912/2023)
+- Modalidad: Emprendimiento Productivo (BTH Bolivia, RM 0912/2023, Anexo 1, inciso A)
 - Especialidad técnica: [lee `\especialidad` de `estilos/configuracion.tex` o completa aquí]
 - Título del proyecto: [lee `\tituloproyecto` de `estilos/configuracion.tex` o completa aquí]
 - Secciones analizadas de `capitulos/01_introduccion/`:
-  * `contexto_general.tex`: Contexto del sector productivo/tecnológico, ámbito geográfico, población destinataria y situación actual con datos verificables.
-  * `motivacion_pertinencia.tex`: Evento o necesidad que originó la idea, relevancia normativa o social y pertinencia temporal.
-  * `contribucion_esperada.tex`: Tipo de solución propuesta (producto, servicio, sistema), mejora concreta respecto a la situación actual y carácter de la innovación (incremental o disruptiva).
-- El texto incluye comandos LaTeX (`\section`, `\label`, `\cite`, `\parencite`, `\textcite`) — consérvalos intactos.
+  * `contexto_general.tex`: Caracterización del sector productivo o comercial, ámbito geográfico, dinámica económica local y datos cuantitativos con fuentes citadas.
+  * `oportunidad_negocio.tex`: Necesidad insatisfecha identificada en el mercado objetivo, factores desatendidos por la competencia actual y origen de la iniciativa.
+  * `propuesta_valor.tex`: Propuesta de valor concreta, atributos diferenciadores (calidad, innovación, precio, sostenibilidad) y ventaja competitiva.
+  * `marco_teorico.tex`: Bases teóricas de modelos de negocio (Canvas, administración), marco conceptual (cadena productiva, costos, punto de equilibrio) y herramientas metodológicas.
+- El texto incluye comandos LaTeX (`\section`, `\subsection`, `\label`, `\cite`, `\parencite`, `\textcite`) — consérvalos intactos.
 
 ### Qué debes evaluar
-1. **Contextualización del sector**: ¿se describe el área de aplicación con datos cuantitativos verificables (cifras del INE, estudios sectoriales, registros institucionales) y fuentes correctamente citadas?
-2. **Delimitación geográfica y poblacional**: ¿se identifica con precisión dónde se implementará la innovación y a quiénes beneficiará directamente?
-3. **Motivación y pertinencia**: ¿la motivación personal se articula con una necesidad real del entorno? ¿se conecta con políticas públicas, planes de desarrollo o tendencias tecnológicas relevantes?
-4. **Contribución esperada**: ¿se describe con claridad qué tipo de solución se propone y qué mejora concreta genera? ¿se clasifica explícitamente como innovación incremental o disruptiva con justificación?
-5. **Hilo conductor hacia el Capítulo 2**: ¿la introducción prepara al lector para comprender el problema que se abordará en el diagnóstico del Capítulo 2?
-6. **Tono y registro**: ¿mantiene español formal, tercera persona impersonal, sin coloquialismos ni afirmaciones sin respaldo?
+1. **Contextualización del rubro productivo:** ¿se describe el sector con datos cuantitativos verificables (INE, cámaras sectoriales, registros municipales) y fuentes debidamente citadas con APA 7?
+2. **Claridad de la oportunidad de negocio:** ¿se demuestra con claridad la existencia de una brecha o demanda insatisfecha que hace oportuna la creación del negocio?
+3. **Propuesta de valor diferenciadora:** ¿se definen con precisión los atributos que diferencian al producto o servicio de los competidores existentes?
+4. **Rigor teórico-conceptual:** ¿el marco teórico conecta teorías reconocidas de modelos de negocio y define con claridad los conceptos económicos que se usarán en los capítulos posteriores?
+5. **Hilo conductor hacia el Capítulo 2:** ¿la introducción prepara al lector para el diagnóstico de campo y los objetivos planteados en el Capítulo 2?
+6. **Estilo y formato:** ¿emplea registro académico formal, tercera persona impersonal, sin afirmaciones publicitarias infundadas y con citas APA 7 correctas?
 
 ### Formato de salida esperado
 ```
 ## Diagnóstico general del Capítulo 1
-[Evaluación global: fortalezas y debilidades]
+[Evaluación global: solidez conceptual, fortalezas y debilidades]
 
-## Evaluación por sección
-| Sección | Aspecto evaluado | Nivel (Sólido / Parcial / Débil) | Observación |
-|---|---|---|---|
-| Contexto general | Datos cuantitativos y fuentes | ... | ... |
-| Motivación y pertinencia | Articulación necesidad–relevancia | ... | ... |
-| Contribución esperada | Claridad de la propuesta innovadora | ... | ... |
+## Evaluación sección por sección
+### 1.1 Contexto general del emprendimiento
+- Fortalezas:
+- Aspectos a mejorar:
 
-## Coherencia con el Capítulo 2
-[¿La introducción anticipa correctamente el problema que se diagnosticará?]
+### 1.2 Identificación de la oportunidad de negocio
+- Fortalezas:
+- Aspectos a mejorar:
 
-## Recomendaciones priorizadas
-1. ...
+### 1.3 Propuesta de valor y diferenciación
+- Fortalezas:
+- Aspectos a mejorar:
+
+### 1.4 Marco teórico y conceptual
+- Fortalezas:
+- Aspectos a mejorar:
+
+## Propuestas de redacción mejorada (LaTeX)
+```latex
+% Fragmentos con corrección de estilo o complementación técnica
 ```
-
-### Contenido a analizar
-[Si eres un agente con acceso al repositorio, lee directamente los archivos listados en "Archivos a revisar". Si usas este prompt manualmente, pega aquí el contenido de `capitulos/01_introduccion/`]
+```

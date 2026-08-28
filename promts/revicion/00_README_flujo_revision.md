@@ -1,6 +1,6 @@
-# Flujo de Revisión Académica — Innovación Tecnológica (BTH)
+# Flujo de Revisión Académica — Emprendimiento Productivo (BTH)
 
-Este set de **16 prompts** está diseñado para evaluar y perfeccionar el proyecto de grado en la modalidad de **Innovación Tecnológica** por etapas modulares, respetando la estructura de **9 capítulos** normada por el Reglamento de Graduación del Bachillerato Técnico Humanístico (RM 0912/2023).
+Este set de **14 prompts** está diseñado para evaluar y perfeccionar el proyecto de grado en la modalidad de **Emprendimiento Productivo** por etapas modulares, respetando la estructura oficial de **7 capítulos** normada por el Reglamento de Graduación del Bachillerato Técnico Humanístico (Resolución Ministerial RM 0912/2023, Anexo 1, inciso A).
 
 ---
 
@@ -8,21 +8,19 @@ Este set de **16 prompts** está diseñado para evaluar y perfeccionar el proyec
 
 | # | Archivo | Qué revisa | Correspondencia en `capitulos/` |
 |---|---|---|---|
-| 00 | `00_analisis-capitulos-tesis.md` | Análisis integral de coherencia, rigor técnico y sincronía | Todo el documento consolidado |
-| 01 | `01_revision_estructura_general.md` | Índice general, 9 capítulos, carátula, preliminares y anexos | Estructura global y `main.tex` |
-| 01b | `01b_revision_introduccion.md` | Contexto sectorial, motivación, pertinencia y contribución esperada | Cap. 1 (`01_introduccion/`) |
-| 02 | `02_revision_planteamiento_problema.md` | Diagnóstico, problema, árbol de causas/efectos, objetivos y justificaciones | Cap. 2 (`02_planteamiento_problema/`) |
-| 03 | `03_revision_marco_referencial.md` | Antecedentes técnicos, bases científicas y marco conceptual/normativo | Cap. 3 (`03_marco_referencial/`) |
-| 04 | `04_revision_desarrollo_innovacion.md` | Diseño técnico, especificaciones, cronograma, recursos y desglose de costos | Cap. 4 (`04_desarrollo_innovacion/`) |
-| 05 | `05_revision_metodologia.md` | Enfoque, tipo de investigación, población/muestra de validación y análisis de datos | Cap. 5 (`05_metodologia/`) |
-| 06 | `06_revision_estrategia_mejora.md` | Plan de mejora continua a corto/mediano plazo y proyección de escalamiento | Cap. 6 (`06_estrategia_mejora/`) |
-| 07 | `07_revision_resultados.md` | Pruebas piloto, métricas de funcionamiento, impacto y matriz antes vs. después | Cap. 7 (`07_resultados/`) |
-| 08 | `08_revision_proyecto_vida.md` | Aspiraciones técnicas/universitarias, competencias consolidadas y compromiso social | Cap. 8 (`08_proyecto_vida/`) |
-| 09 | `09_revision_conclusiones_recomendaciones.md` | Cumplimiento verificable de objetivos y recomendaciones técnicas | Cap. 9 (`09_conclusiones_recomendaciones/`) |
-| 10 | `10_revision_coherencia_sincronia_global.md` | Sincronía integral entre los 9 capítulos y alineación de variables | Capítulos 1 al 9 |
-| 11 | `11_revision_redaccion_estilo_academico.md` | Registro formal, redacción impersonal en tercera persona y normas APA 7 | Redacción de todos los capítulos |
-| 12 | `12_revision_citas_bibliografia.md` | Correspondencia de citas parentéticas/narrativas con `referencias.bib` | `bibliografia/` y citas en texto |
-| 13 | `13_checklist_pre_entrega_final.md` | Verificación final exhaustiva antes de impresión y defensa de grado | Documento final y compilación PDF |
+| 00 | `00_analisis-capitulos-tesis.md` | Análisis integral de coherencia comercial, viabilidad financiera y sincronía | Todo el documento consolidado |
+| 01 | `01_revision_estructura_general.md` | Estructura global, carátula, preliminares, 7 capítulos y anexos | Estructura global y `main.tex` |
+| 01b | `01b_revision_introduccion.md` | Contexto general, oportunidad de negocio, propuesta de valor y marco teórico | Cap. 1 (`01_introduccion/`) |
+| 02 | `02_revision_planteamiento_emprendimiento.md` | Diagnóstico de mercado, objetivos (general/específicos/misión/visión) y justificación | Cap. 2 (`02_planteamiento_emprendimiento/`) |
+| 03 | `03_revision_desarrollo_emprendimiento.md` | Localización, mercado, promoción, organización, producto y ciclo de producción | Cap. 3 (`03_desarrollo_emprendimiento/`) |
+| 04 | `04_revision_viabilidad_sostenibilidad.md` | Presupuesto de inversiones, costos fijos/variables, rentabilidad y punto de equilibrio | Cap. 4 (`04_viabilidad_sostenibilidad/`) |
+| 05 | `05_revision_resultados.md` | Pruebas piloto, ventas de validación comercial, satisfacción del cliente y métricas | Cap. 5 (`05_resultados/`) |
+| 06 | `06_revision_proyecto_vida.md` | Aspiraciones vocacionales, competencias empresariales y compromiso socioeconómico | Cap. 6 (`06_proyecto_vida/`) |
+| 07 | `07_revision_conclusiones_recomendaciones.md` | Cumplimiento verificable de objetivos, conclusiones y recomendaciones | Cap. 7 (`07_conclusiones_recomendaciones/`) |
+| 08 | `08_revision_coherencia_sincronia_global.md` | Sincronía integral entre los 7 capítulos y consistencia de variables | Capítulos 1 al 7 |
+| 09 | `09_revision_redaccion_estilo_academico.md` | Registro formal, redacción impersonal, estilo APA 7, normas numéricas y viñetas | Redacción de todos los capítulos |
+| 10 | `10_revision_citas_bibliografia.md` | Correspondencia de citas parentéticas/narrativas con `referencias.bib` | `bibliografia/` y citas en texto |
+| 11 | `11_checklist_pre_entrega_final.md` | Verificación institucional y técnica antes de encuadernación y defensa | Documento final y compilación PDF |
 
 ---
 

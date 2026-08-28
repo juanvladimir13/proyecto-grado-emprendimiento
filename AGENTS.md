@@ -6,10 +6,10 @@ Este archivo define la estructura, reglas y flujos de trabajo del proyecto para 
 
 ### 📋 Resumen del Proyecto
 
-* **Nombre:** Proyecto de Grado BTH - Innovación Tecnológica (LaTeX Modular)
-* **Objetivo:** Plantilla modular y parametrizada en LaTeX para la redacción de proyectos de grado y tesis académicas bajo la modalidad de Innovación Tecnológica.
-* **Normativa:** Cumple con el Reglamento de Graduación del Bachillerato Técnico Humanístico (BTH) en Bolivia (Resolución Ministerial RM 0912/2023, ver [docs/REGLAMENTO_BTH__RM_0912_2023.pdf](docs/REGLAMENTO_BTH__RM_0912_2023.pdf)).
-* **Modalidad Implementada:** **Innovación Tecnológica** estructurada en 9 capítulos dentro del directorio `capitulos/`.
+* **Nombre:** Proyecto de Grado BTH - Emprendimiento Productivo (LaTeX Modular)
+* **Objetivo:** Plantilla modular y parametrizada en LaTeX para la redacción de proyectos de grado y planes de negocio bajo la modalidad de Emprendimiento Productivo.
+* **Normativa:** Cumple con el Reglamento de Graduación del Bachillerato Técnico Humanístico (BTH) en Bolivia (Resolución Ministerial RM 0912/2023, Anexo 1, inciso A; ver [docs/REGLAMENTO_BTH__RM_0912_2023.pdf](docs/REGLAMENTO_BTH__RM_0912_2023.pdf)).
+* **Modalidad Implementada:** **Emprendimiento Productivo** estructurada en 7 capítulos dentro del directorio `capitulos/`.
 
 ---
 
@@ -36,11 +36,11 @@ Este archivo define la estructura, reglas y flujos de trabajo del proyecto para 
 ## 📁 Estructura del Directorio
 
 ```text
-proyecto-grado-innovacion/
+proyecto-grado-emprendimiento/
 ├── main.tex                                # Entrada principal de compilación LaTeX (\input{capitulos/index.tex})
 ├── README.md                               # Guía del usuario para compilar y usar la plantilla
 ├── AGENTS.md                               # Instrucciones y reglas para Agentes de IA (este archivo)
-├── ESTRUCTURA_CAPITULOS.md                 # Detalle temático de los 9 capítulos de Innovación Tecnológica
+├── ESTRUCTURA_CAPITULOS.md                 # Detalle temático de los 7 capítulos de Emprendimiento Productivo
 ├── compilar.sh                             # Script ejecutable de compilación (pdflatex + biber) y limpieza
 ├── estilos/
 │   ├── estilos.sty                         # Estilos, carga de paquetes (biblatex-apa, listings), títulos APA 7
@@ -51,31 +51,24 @@ proyecto-grado-innovacion/
 │   ├── agradecimiento.tex                  # Agradecimientos (\capitulopreliminar y \begin{estilodedicatoria})
 │   ├── dedicatoria.tex                     # Dedicatorias (\capitulopreliminar y \begin{estilodedicatoria})
 │   └── resumen.tex                         # Resúmenes (\capitulopreliminar, \palabrasclave, \keywords, \simikuna)
-├── capitulos/                              # Modalidad: Innovación Tecnológica (Capítulos 1 al 9)
-│   ├── index.tex                           # Ensamble de los 9 capítulos
-│   ├── 01_introduccion/                    # Cap. 1: main.tex, contexto_general.tex, motivacion_pertinencia.tex, contribucion_esperada.tex
-│   ├── 02_planteamiento_problema/          # Cap. 2: main.tex, diagnostico.tex, identificacion_problema.tex, formulacion_problema.tex, objetivos.tex, justificacion.tex
-│   ├── 03_marco_referencial/               # Cap. 3: main.tex, antecedentes.tex, bases_teoricas.tex, marco_conceptual.tex
-│   ├── 04_desarrollo_innovacion/           # Cap. 4: main.tex, diseno.tex, planificacion.tex, recursos.tex, calculo_costos.tex
-│   ├── 05_metodologia/                     # Cap. 5: main.tex, tipo_investigacion.tex, poblacion_muestra.tex, tecnicas_instrumentos.tex, analisis_datos.tex
-│   ├── 06_estrategia_mejora/               # Cap. 6: main.tex, plan_mejora.tex, proyeccion_escalamiento.tex
-│   ├── 07_resultados/                      # Cap. 7: main.tex, resultados_obtenidos.tex, beneficios_impacto.tex, comparacion_antes_despues.tex
-│   ├── 08_proyecto_vida/                   # Cap. 8: main.tex
-│   └── 09_conclusiones_recomendaciones/    # Cap. 9: main.tex, conclusiones.tex, recomendaciones.tex
+├── capitulos/                              # Modalidad: Emprendimiento Productivo (Capítulos 1 al 7)
+│   ├── index.tex                           # Ensamble de los 7 capítulos
+│   ├── 01_introduccion/                    # Cap. 1: main.tex, contexto_general.tex, oportunidad_negocio.tex, propuesta_valor.tex, marco_teorico.tex
+│   ├── 02_planteamiento_emprendimiento/    # Cap. 2: main.tex, diagnostico.tex, objetivos.tex, justificacion.tex
+│   ├── 03_desarrollo_emprendimiento/       # Cap. 3: main.tex, localizacion.tex, analisis_mercado.tex, estrategia_promocion.tex, estructura_organizacional.tex, diseno_producto.tex, ciclo_produccion.tex
+│   ├── 04_viabilidad_sostenibilidad/       # Cap. 4: main.tex, calculo_inversiones.tex, costo_produccion.tex
+│   ├── 05_resultados/                      # Cap. 5: main.tex, resultados_cuantitativos.tex, resultados_cualitativos.tex, indicadores_validados.tex
+│   ├── 06_proyecto_vida/                   # Cap. 6: main.tex (aspiraciones académicas, competencias empresariales, compromiso ético)
+│   └── 07_conclusiones_recomendaciones/    # Cap. 7: main.tex, conclusiones.tex, recomendaciones.tex
 ├── tablas/                                 # Tablas independientes incluidas vía \input{}
 │   ├── README.md                           # Guía para estructurar tablas APA 7 con booktabs
 │   ├── tabla_ejemplo.tex                   # Plantilla base de tabla
-│   ├── estudio_mercado_ejemplo.tex         # Tabla de análisis de mercado
-│   ├── estructura_organizacional_ejemplo.tex # Matriz de estructura organizacional, cargos y remuneraciones
-│   ├── inversiones_ejemplo.tex             # Plan de inversión
-│   ├── costos_produccion_ejemplo.tex       # Tabla de costos operativos de producción
-│   ├── indicadores_financieros_ejemplo.tex # Resumen de indicadores financieros y punto de equilibrio
-│   ├── resultados_piloto_ejemplo.tex       # Resultados obtenidos en prueba piloto vs metas
-│   ├── costos_ejemplo.tex                  # Resumen de estructura de costos
-│   ├── cronograma_ejemplo.tex              # Cronograma de actividades por fases
-│   ├── especificaciones_tecnicas_ejemplo.tex # Matriz de especificaciones técnicas
-│   ├── plan_mejora_ejemplo.tex             # Matriz del plan de mejora continua
-│   └── comparacion_antes_despues_ejemplo.tex # Matriz de comparación antes vs después
+│   ├── estudio_mercado_ejemplo.tex         # Tabla de análisis de mercado (Cap. 3)
+│   ├── estructura_organizacional_ejemplo.tex # Matriz de estructura organizacional, cargos y remuneraciones (Cap. 3)
+│   ├── inversiones_ejemplo.tex             # Plan de inversión fija y capital de operación (Cap. 4)
+│   ├── costos_produccion_ejemplo.tex       # Tabla de costos operativos de producción variables y fijos (Cap. 4)
+│   ├── indicadores_financieros_ejemplo.tex # Resumen de indicadores financieros y punto de equilibrio (Cap. 4)
+│   └── resultados_piloto_ejemplo.tex       # Resultados obtenidos en prueba piloto vs metas (Cap. 5)
 ├── codigo/                                 # Código fuente y scripts (.py, .cpp, .ino, .sql, etc.)
 │   ├── README.md                           # Guía para almacenar e importar código externo
 │   └── ejemplo_controlador.py              # Script de prueba importable vía \lstinputlisting
@@ -93,24 +86,22 @@ proyecto-grado-innovacion/
 │   └── anexo_c_codigo_fuente.tex           # Anexo C: Código fuente importado (\seccionanexo)
 ├── promts/                                 # Prompts de apoyo y guías de revisión para agentes de IA
 │   ├── migracion/                          # Prompts para migración de datos y llenado de fichas
-│   │   └── ficha-proyecto.md               # Flujo paso a paso para completar ficha y redactar capítulos
-│   └── revicion/                           # Flujo de revisión por etapas y análisis global (9 capítulos)
+│   │   └── ficha-proyecto.md               # Flujo paso a paso para completar ficha y redactar los 7 capítulos
+│   └── revicion/                           # Flujo de revisión por etapas y análisis global (7 capítulos)
 │       ├── 00_README_flujo_revision.md     # Guía del flujo de revisión por etapas
-│       ├── 00_analisis-capitulos-tesis.md  # Prompt de análisis integral de coherencia y rigor
-│       ├── 01_revision_estructura_general.md # Estructura general de 9 capítulos BTH RM 0912/2023
-│       ├── 01b_revision_introduccion.md    # Cap. 1: Contexto, motivación, pertinencia y contribución
-│       ├── 02_revision_planteamiento_problema.md # Cap. 2: Diagnóstico, problemas, objetivos
-│       ├── 03_revision_marco_referencial.md # Cap. 3: Antecedentes, bases teóricas, conceptos
-│       ├── 04_revision_desarrollo_innovacion.md # Cap. 4: Diseño, especificaciones, costos
-│       ├── 05_revision_metodologia.md      # Cap. 5: Enfoque, muestra, instrumentos, análisis
-│       ├── 06_revision_estrategia_mejora.md # Cap. 6: Plan de mejora continua y escalamiento
-│       ├── 07_revision_resultados.md       # Cap. 7: Pruebas piloto, impacto, antes vs después
-│       ├── 08_revision_proyecto_vida.md    # Cap. 8: Aspiraciones, competencias, compromiso
-│       ├── 09_revision_conclusiones_recomendaciones.md # Cap. 9: Cierre de objetivos y recomendaciones
-│       ├── 10_revision_coherencia_sincronia_global.md # Sincronía integral entre los 9 capítulos
-│       ├── 11_revision_redaccion_estilo_academico.md # Registro impersonal y estilo APA 7
-│       ├── 12_revision_citas_bibliografia.md # Normalización BibLaTeX APA 7ma Edición
-│       └── 13_checklist_pre_entrega_final.md # Checklist institucional BTH pre-defensa
+│       ├── 00_analisis-capitulos-tesis.md  # Prompt de análisis integral de coherencia y rigor comercial
+│       ├── 01_revision_estructura_general.md # Estructura general de 7 capítulos BTH RM 0912/2023
+│       ├── 01b_revision_introduccion.md    # Cap. 1: Contexto general, oportunidad de negocio, propuesta de valor, marco teórico
+│       ├── 02_revision_planteamiento_emprendimiento.md # Cap. 2: Diagnóstico, objetivos, justificación
+│       ├── 03_revision_desarrollo_emprendimiento.md    # Cap. 3: Localización, mercado, promoción, organización, producto, ciclo
+│       ├── 04_revision_viabilidad_sostenibilidad.md   # Cap. 4: Inversiones, costos fijos/variables, rentabilidad y punto de equilibrio
+│       ├── 05_revision_resultados.md                  # Cap. 5: Resultados cuantitativos, cualitativos e indicadores validados
+│       ├── 06_revision_proyecto_vida.md               # Cap. 6: Aspiraciones, competencias empresariales, independencia económica
+│       ├── 07_revision_conclusiones_recomendaciones.md # Cap. 7: Cierre de objetivos, conclusiones y recomendaciones
+│       ├── 08_revision_coherencia_sincronia_global.md # Sincronía integral entre los 7 capítulos
+│       ├── 09_revision_redaccion_estilo_academico.md  # Registro formal impersonal y estilo APA 7
+│       ├── 10_revision_citas_bibliografia.md          # Normalización BibLaTeX APA 7ma Edición
+│       └── 11_checklist_pre_entrega_final.md          # Checklist institucional BTH pre-defensa
 └── docs/                                   # Regulaciones oficiales y guías
     ├── REGLAMENTO_BTH__RM_0912_2023.pdf    # Reglamento Ministerial oficial RM 0912/2023
     └── ficha-proyecto.md                   # Ficha de datos y requerimientos del proyecto
@@ -127,7 +118,7 @@ proyecto-grado-innovacion/
 
 ### 2. Estructuración Modular de Capítulos
 * **REGLA:** Conserva el diseño modular. Cada capítulo reside en su propia carpeta dentro de `capitulos/` y contiene un archivo `main.tex` que ensambla las secciones individuales.
-* **Rutas Internas:** Los archivos secundarios dentro de cada capítulo deben incluirse con el prefijo `capitulos/` (ej. `\input{capitulos/02_planteamiento_problema/diagnostico}`).
+* **Rutas Internas:** Los archivos secundarios dentro de cada capítulo deben incluirse con el prefijo `capitulos/` (ej. `\input{capitulos/02_planteamiento_emprendimiento/diagnostico}`).
 
 ### 3. Estilos de Títulos y Alineación (Normas APA 7 Adaptadas)
 * **Color:** Todos los títulos y enlaces internos (TOC, LOF, LOT, referencias cruzadas) deben mostrarse en **negro** (`linkcolor=black`).
@@ -141,7 +132,7 @@ proyecto-grado-innovacion/
 
 ### 4. Encabezados y Pies de Página
 * **Encabezados:** Están totalmente deshabilitados. No debe mostrarse texto de cabecera superior ni línea horizontal separadora (`headrulewidth=0pt`).
-* **Pies de Página:** La numeración de páginas debe mostrarse centrada en la parte inferior de las hojas que lo requieran (Capítulos 1 al 9).
+* **Pies de Página:** La numeración de páginas debe mostrarse centrada en la parte inferior de las hojas que lo requieran (Capítulos 1 al 7).
 
 ### 5. Secciones Finales, Citas y Bibliografía (APA 7ma Edición)
 * **Motor:** Se utiliza `biblatex` con `style=apa` y backend `biber`.
@@ -179,16 +170,16 @@ proyecto-grado-innovacion/
   - `./compilar.sh --fast` (compilación rápida de 1 sola pasada pdflatex para redacción continua).
   - `./compilar.sh --check-tablas` (audita la conformidad de tablas con APA 7 y booktabs).
 
-### 9. Estructura y Flujo de la Modalidad Innovación Tecnológica
-Este proyecto está configurado para la modalidad de **Innovación Tecnológica**:
+### 9. Estructura y Flujo de la Modalidad Emprendimiento Productivo
+Este proyecto está configurado para la modalidad de **Emprendimiento Productivo**:
 * La inclusión principal en `main.tex` carga directamente `capitulos/index.tex`.
-* Los 9 capítulos se ensamblan desde `capitulos/index.tex` conectando cada carpeta de capítulo (`capitulos/01_introduccion/` a `capitulos/09_conclusiones_recomendaciones/`).
+* Los 7 capítulos se ensamblan desde `capitulos/index.tex` conectando cada carpeta de capítulo (`capitulos/01_introduccion/` a `capitulos/07_conclusiones_recomendaciones/`).
 * Para alimentar el contenido con datos de un proyecto real, se completa la ficha `docs/ficha-proyecto.md` a partir del documento base `docs/proyecto.rtf` o `docs/proyecto.md`, consultando de manera interactiva los datos pendientes al usuario.
 * Los metadatos institucionales y del estudiante deben ajustarse en `estilos/configuracion.tex`.
 
 ### 10. Uso de Prompts de Apoyo para Agentes (`promts/`)
 * **Migración y redacción:** Consultar `promts/migracion/ficha-proyecto.md` para el flujo ordenado de ingesta de datos a la ficha y posterior redacción capítulo a capítulo.
-* **Revisión y calidad:** Utilizar la suite especializada de 16 prompts en `promts/revicion/` adaptada a los 9 capítulos de Innovación Tecnológica (BTH RM 0912/2023): estructura general (`01`), capítulo 1 (`01b`), capítulos 2 al 9 modulares (`02` a `09`), auditoría de sincronía global (`10`), estilo y gramática (`11`), citas y bibliografía APA 7 (`12`), y checklist pre-entrega/defensa (`13`).
+* **Revisión y calidad:** Utilizar la suite especializada de 14 prompts en `promts/revicion/` adaptada a los 7 capítulos de Emprendimiento Productivo (BTH RM 0912/2023): estructura general (`01`), capítulo 1 (`01b`), capítulos 2 al 7 modulares (`02` a `07`), auditoría de sincronía global (`08`), estilo y gramática (`09`), citas y bibliografía APA 7 (`10`), y checklist pre-entrega/defensa (`11`).
 
 ### 11. Formato de Números, Decimales y Separador de Miles (Norma SI/ISO 80000-1)
 * **REGLA:** En todo el proyecto (capítulos, tablas y anexos) se sigue la convención internacional técnica y de la RAE:

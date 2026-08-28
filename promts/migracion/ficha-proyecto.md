@@ -1,60 +1,50 @@
-# Prompts para completar el proyecto de grado BTH (modalidad Innovación Tecnológica)
+# Prompts para completar el proyecto de grado BTH (modalidad Emprendimiento Productivo)
 
-Repo: `proyecto-grado-innovacion`. Pensados para pegarse EN ORDEN en un agente con acceso
-a archivos (Claude Code, Cursor, Cline, Copilot Chat, Antigravity, etc.) sobre el repo
+Repo: `proyecto-grado-emprendimiento`. Pensados para pegarse EN ORDEN en un agente con acceso
+a archivos (Antigravity, Cursor, Cline, Copilot Chat, etc.) sobre el repo
 clonado localmente. Revisa la salida de cada prompt antes de lanzar el siguiente.
 
 ---
 
-## 📁 Estructura del Directorio `capitulos/` (Innovación Tecnológica)
+## 📁 Estructura del Directorio `capitulos/` (Emprendimiento Productivo)
 
-El proyecto organiza los 9 capítulos de manera modular bajo el directorio `capitulos/`:
+El proyecto organiza los 7 capítulos de manera modular bajo el directorio `capitulos/`:
 
 ```text
 capitulos/
-├── index.tex                                          # Ensamble maestro de los 9 capítulos
+├── index.tex                                          # Ensamble maestro de los 7 capítulos
 ├── 01_introduccion/
 │   ├── main.tex                                       # Cap. 1 — INTRODUCCIÓN (ensamble)
-│   ├── contexto_general.tex                           #   └ Contexto general del sector
-│   ├── motivacion_pertinencia.tex                     #   └ Motivación y pertinencia
-│   └── contribucion_esperada.tex                      #   └ Contribución esperada
-├── 02_planteamiento_problema/
-│   ├── main.tex                                       # Cap. 2 — PLANTEAMIENTO DEL PROBLEMA
-│   ├── diagnostico.tex                                #   └ Diagnóstico y descripción de la realidad
-│   ├── identificacion_problema.tex                    #   └ Identificación del problema
-│   ├── formulacion_problema.tex                       #   └ Formulación del problema
-│   ├── objetivos.tex                                  #   └ Objetivos (general + específicos)
-│   └── justificacion.tex                              #   └ Justificación técnica, social y económica
-├── 03_marco_referencial/
-│   ├── main.tex                                       # Cap. 3 — MARCO REFERENCIAL
-│   ├── antecedentes.tex                               #   └ Antecedentes del proyecto
-│   ├── bases_teoricas.tex                             #   └ Bases teóricas
-│   └── marco_conceptual.tex                           #   └ Marco conceptual y normativo
-├── 04_desarrollo_innovacion/
-│   ├── main.tex                                       # Cap. 4 — DESARROLLO DE LA INNOVACIÓN
-│   ├── diseno.tex                                     #   └ Diseño técnico (especificaciones técnicas)
-│   ├── planificacion.tex                              #   └ Planificación y cronograma
-│   ├── recursos.tex                                   #   └ Recursos (humanos, materiales, financieros)
-│   └── calculo_costos.tex                             #   └ Cálculo de costos (inversión, operación, fijos, variables)
-├── 05_metodologia/
-│   ├── main.tex                                       # Cap. 5 — METODOLOGÍA
-│   ├── tipo_investigacion.tex                         #   └ Tipo de investigación
-│   ├── poblacion_muestra.tex                          #   └ Población y muestra
-│   ├── tecnicas_instrumentos.tex                      #   └ Técnicas e instrumentos de recolección
-│   └── analisis_datos.tex                             #   └ Procedimiento de análisis de datos
-├── 06_estrategia_mejora/
-│   ├── main.tex                                       # Cap. 6 — ESTRATEGIA DE MEJORA Y PROYECCIÓN
-│   ├── plan_mejora.tex                                #   └ Plan de mejora continua
-│   └── proyeccion_escalamiento.tex                    #   └ Proyección y escalamiento
-├── 07_resultados/
-│   ├── main.tex                                       # Cap. 7 — RESULTADOS
-│   ├── resultados_obtenidos.tex                       #   └ Resultados obtenidos
-│   ├── beneficios_impacto.tex                         #   └ Beneficios e impacto
-│   └── comparacion_antes_despues.tex                  #   └ Comparación antes vs. después
-├── 08_proyecto_vida/
-│   └── main.tex                                       # Cap. 8 — PROYECTO DE VIDA (redacción directa en main.tex)
-└── 09_conclusiones_recomendaciones/
-    ├── main.tex                                       # Cap. 9 — CONCLUSIONES Y RECOMENDACIONES
+│   ├── contexto_general.tex                           #   └ Contexto general del emprendimiento
+│   ├── oportunidad_negocio.tex                        #   └ Identificación de la oportunidad de negocio
+│   ├── propuesta_valor.tex                            #   └ Propuesta de valor y diferenciación
+│   └── marco_teorico.tex                              #   └ Marco teórico y conceptual
+├── 02_planteamiento_emprendimiento/
+│   ├── main.tex                                       # Cap. 2 — PLANTEAMIENTO DEL EMPRENDIMIENTO PRODUCTIVO
+│   ├── diagnostico.tex                                #   └ Diagnóstico del contexto productivo
+│   ├── objetivos.tex                                  #   └ Objetivos (general, específicos, misión, visión)
+│   └── justificacion.tex                              #   └ Justificación económica, social y técnica
+├── 03_desarrollo_emprendimiento/
+│   ├── main.tex                                       # Cap. 3 — DESARROLLO DEL EMPRENDIMIENTO PRODUCTIVO
+│   ├── localizacion.tex                               #   └ Macrolocalización y microlocalización
+│   ├── analisis_mercado.tex                           #   └ Oferta, demanda, público objetivo, ventaja competitiva
+│   ├── estrategia_promocion.tex                       #   └ Canales de distribución, precios y promoción
+│   ├── estructura_organizacional.tex                  #   └ Forma jurídica, organigrama y manual de funciones
+│   ├── diseno_producto.tex                            #   └ Características, atributos, empaque y marca
+│   └── ciclo_produccion.tex                           #   └ Flujo de procesos, capacidad y equipamiento
+├── 04_viabilidad_sostenibilidad/
+│   ├── main.tex                                       # Cap. 4 — VIABILIDAD Y SOSTENIBILIDAD
+│   ├── calculo_inversiones.tex                        #   └ Capital de inversión y capital de operación
+│   └── costo_produccion.tex                           #   └ Costos variables, fijos, rentabilidad y punto de equilibrio
+├── 05_resultados/
+│   ├── main.tex                                       # Cap. 5 — RESULTADOS
+│   ├── resultados_cuantitativos.tex                   #   └ Validación comercial y ventas piloto
+│   ├── resultados_cualitativos.tex                    #   └ Percepción y satisfacción del cliente
+│   └── indicadores_validados.tex                      #   └ Contraste financiero empírico vs metas
+├── 06_proyecto_vida/
+│   └── main.tex                                       # Cap. 6 — PROYECTO DE VIDA (redacción directa en main.tex)
+└── 07_conclusiones_recomendaciones/
+    ├── main.tex                                       # Cap. 7 — CONCLUSIONES Y RECOMENDACIONES
     ├── conclusiones.tex                               #   └ Conclusiones
     └── recomendaciones.tex                            #   └ Recomendaciones
 ```
@@ -65,7 +55,7 @@ capitulos/
 
 ```
 Actúa como asistente de redacción y estructuración de proyectos de grado en modalidad
-Innovación Tecnológica. Antes de tocar cualquier archivo, lee AGENTS.md y sigue sus reglas.
+Emprendimiento Productivo. Antes de tocar cualquier archivo, lee AGENTS.md y sigue sus reglas.
 
 1. Localización y lectura del documento base:
    - Busca dentro de la carpeta docs/ el archivo con la información base del proyecto:
@@ -76,7 +66,7 @@ Innovación Tecnológica. Antes de tocar cualquier archivo, lee AGENTS.md y sigu
 
 2. Carga inicial de la ficha técnica:
    - Abre `docs/ficha-proyecto.md` y lee detenidamente todos los campos solicitados
-     en cada sección (desde la Sección 0 hasta la Sección 9).
+     en cada sección (desde la Sección 0 hasta la Sección 7).
    - Vuelca de manera estructurada en `docs/ficha-proyecto.md` todos los datos reales,
      cifras, nombres y especificaciones disponibles en el documento base.
    - Conserva la etiqueta `[DATO PENDIENTE]` únicamente en los campos donde no exista
@@ -90,7 +80,14 @@ Innovación Tecnológica. Antes de tocar cualquier archivo, lee AGENTS.md y sigu
      bloques temáticos lógicos para facilitar sus respuestas:
      * Bloque Institucional y Preliminares (Sección 0): Título del proyecto, autor(es),
        institución educativa, tutor/asesor, fecha/gestión, dedicatoria y agradecimiento.
-     * Bloque Diagnóstico y Problema (Secciones 1 y 2): Contexto geográfico y social y objetivos (general y específicos).
+     * Bloque Oportunidad y Planteamiento (Secciones 1 y 2): Oportunidad de negocio,
+       propuesta de valor, diagnóstico del entorno y objetivos (general y específicos).
+     * Bloque Mercado y Operaciones (Sección 3): Localización, competencia, público
+       objetivo, estructura de personal, características del producto y procesos.
+     * Bloque Financiero y Resultados (Secciones 4 y 5): Monto de inversión, costos
+       fijos y variables, precio de venta, punto de equilibrio y métricas piloto.
+     * Bloque Proyecto de Vida y Cierre (Secciones 6 y 7): Metas vocacionales,
+       competencias desarrolladas, conclusiones y recomendaciones.
    - Conforme el usuario responda cada consulta, actualiza de inmediato `docs/ficha-proyecto.md`,
      reemplazando los `[DATO PENDIENTE]` por los datos concretos proporcionados.
 
@@ -109,11 +106,12 @@ Lee docs/ficha-proyecto.md (ya completado y validado con el usuario) y estilos/c
 
 1. Extrae únicamente los datos institucionales/personales consolidados en la Sección 0:
    - Título del proyecto (\tituloproyecto).
+   - Subtítulo o nombre comercial (\subtituloproyecto).
    - Nombre(s) del/los autor(es) (\autoruno, \autordos).
    - Datos del autor principal (\emailautoruno, \lugarproyecto).
    - Nombre y cargo del tutor (\tutorproyecto).
-   - Institución educativa, departamento/provincia y especialidad (\institucion, \especialidad).
-   - Modalidad fijada en "INNOVACIÓN TECNOLÓGICA" (\modalidad).
+   - Institución educativa, departamento/distrito y especialidad (\institucion, \distritoeducativo, \especialidad).
+   - Modalidad fijada en "EMPRENDIMIENTO PRODUCTIVO" (\modalidad).
    - Fecha y gestión académica (\fechaproyecto, \gestionproyecto).
 
 2. Actualiza las macros correspondientes en `estilos/configuracion.tex`, siguiendo la Regla 1 de AGENTS.md:
@@ -127,11 +125,11 @@ Lee docs/ficha-proyecto.md (ya completado y validado con el usuario) y estilos/c
 
 ---
 
-## Prompt 3 — Redactar el contenido de los 9 capítulos con los datos de la ficha
+## Prompt 3 — Redactar el contenido de los 7 capítulos con los datos de la ficha
 
 ```
 Lee por completo `docs/ficha-proyecto.md`, `AGENTS.md` y `ESTRUCTURA_CAPITULOS.md`
-(sección "Estructura de los 9 Capítulos (capitulos/)").
+(sección "Estructura de los 7 Capítulos (capitulos/)").
 
 Redacta el contenido de cada archivo .tex dentro de `capitulos/`, capítulo por
 capítulo, usando EXCLUSIVAMENTE la información consolidada en `docs/ficha-proyecto.md`.
@@ -142,38 +140,30 @@ Recorre en este orden estricto, respetando la estructura modular:
 
 - 01_introduccion/:
   * contexto_general.tex
-  * motivacion_pertinencia.tex
-  * contribucion_esperada.tex
-- 02_planteamiento_problema/:
+  * oportunidad_negocio.tex
+  * propuesta_valor.tex
+  * marco_teorico.tex
+- 02_planteamiento_emprendimiento/:
   * diagnostico.tex
-  * identificacion_problema.tex
-  * formulacion_problema.tex
   * objetivos.tex
   * justificacion.tex
-- 03_marco_referencial/:
-  * antecedentes.tex
-  * bases_teoricas.tex
-  * marco_conceptual.tex
-- 04_desarrollo_innovacion/:
-  * diseno.tex (incluye tabla de especificaciones técnicas)
-  * planificacion.tex (incluye tabla de cronograma)
-  * recursos.tex
-  * calculo_costos.tex (incluye tabla de costos)
-- 05_metodologia/:
-  * tipo_investigacion.tex
-  * poblacion_muestra.tex
-  * tecnicas_instrumentos.tex
-  * analisis_datos.tex
-- 06_estrategia_mejora/:
-  * plan_mejora.tex (incluye tabla de plan de mejora continua)
-  * proyeccion_escalamiento.tex
-- 07_resultados/:
-  * resultados_obtenidos.tex
-  * beneficios_impacto.tex
-  * comparacion_antes_despues.tex (incluye tabla comparativa antes vs después)
-- 08_proyecto_vida/:
+- 03_desarrollo_emprendimiento/:
+  * localizacion.tex
+  * analisis_mercado.tex (incluye tabla de estudio de mercado)
+  * estrategia_promocion.tex
+  * estructura_organizacional.tex (incluye tabla de estructura organizacional)
+  * diseno_producto.tex
+  * ciclo_produccion.tex
+- 04_viabilidad_sostenibilidad/:
+  * calculo_inversiones.tex (incluye tabla de presupuesto de inversión)
+  * costo_produccion.tex (incluye tablas de costos de producción e indicadores financieros)
+- 05_resultados/:
+  * resultados_cuantitativos.tex
+  * resultados_cualitativos.tex
+  * indicadores_validados.tex (incluye tabla de resultados piloto)
+- 06_proyecto_vida/:
   * main.tex
-- 09_conclusiones_recomendaciones/:
+- 07_conclusiones_recomendaciones/:
   * conclusiones.tex
   * recomendaciones.tex
 
@@ -182,9 +172,9 @@ Reglas mientras redactas:
    y lineamientos BTH descritos en AGENTS.md.
 2. Respeta el ensamble modular: el main.tex de cada capítulo ya hace \input{capitulos/...}
    a sus secciones; no dupliques \chapter{} dentro de las secciones individuales.
-3. Tablas e ilustraciones: Toda información estructurada (especificaciones técnicas,
-   cronograma, desglose de costos, plan de mejora, comparación antes/después) debe
-   alojarse como tabla independiente en tablas/ (siguiendo los archivos _ejemplo.tex con booktabs)
+3. Tablas e ilustraciones: Toda información cuantitativa estructurada (análisis de mercado,
+   organigrama/cargos, plan de inversión, desglose de costos, punto de equilibrio y pruebas piloto)
+   debe alojarse como tabla independiente en tablas/ (siguiendo los archivos _ejemplo.tex con booktabs)
    e importarse con \input{tablas/...}.
 4. Citas y bibliografía: Registra las fuentes en bibliografia/referencias.bib bajo estándar
    BibLaTeX APA 7 y cítalas en el texto con \parencite{} o \textcite{}.
@@ -195,7 +185,7 @@ Reglas mientras redactas:
 9. Formato numérico (SI/ISO 80000-1): Usa punto decimal (ej. 12.50, 98.5%), nunca comas decimales ni comas/puntos de miles (cifras de 4 dígitos juntas: 4500.00, 5 o más con espacio: 25 000.00).
 10. Notas en tablas: Usa la macro semántica `\notatabla{Fuente: ...}` para notas o procedencia al pie de tablas APA 7.
 
-Al terminar los 9 capítulos, entrega un resumen general del contenido redactado.
+Al terminar los 7 capítulos, entrega un resumen general del contenido redactado.
 ```
 
 ---
@@ -207,8 +197,10 @@ Ejecuta la compilación de prueba y verificación de consistencia:
 
 1. Ejecuta primero `./compilar.sh --fast` para verificar rápidamente que no existan
    errores de sintaxis LaTeX, comandos no cerrados o rutas rotas.
-2. Si la compilación rápida pasa sin errores, ejecuta `./compilar.sh --clean` para realizar
-   el ciclo completo de 4 pasos (pdflatex + biber + pdflatex x2) y limpiar archivos auxiliares.
-3. Notifica el resultado final: confirma la generación exitosa de `main.pdf`, el conteo total
+2. Ejecuta `./compilar.sh --check-tablas` para auditar la conformidad de las tablas
+   con normas APA 7ma Edición y diagramación booktabs.
+3. Si la compilación rápida y auditoría pasan sin errores, ejecuta `./compilar.sh --clean`
+   para realizar el ciclo completo de 4 pasos (pdflatex + biber + pdflatex x2) y limpiar archivos auxiliares.
+4. Notifica el resultado final: confirma la generación exitosa de `main.pdf`, el conteo total
    de páginas e informa si se resolvió el índice de contenidos, bibliografía y referencias cruzadas.
 ```

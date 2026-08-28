@@ -4,7 +4,7 @@
 r"""
 ===============================================================================
 Script de Verificación y Auditoría de Estilo de Tablas (Normas APA 7ma Edición)
-Proyecto de Grado BTH — Modalidad Innovación Tecnológica
+Proyecto de Grado BTH — Modalidad Emprendimiento Productivo
 ===============================================================================
 
 Este script audita todos los archivos de tablas en `tablas/*.tex` y cualquier
