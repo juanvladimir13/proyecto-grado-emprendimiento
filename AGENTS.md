@@ -150,7 +150,7 @@ proyecto-grado-innovacion/
   - Citas múltiples: `\parencite{clave1, clave2}`.
 * **Inclusión de la Lista de Referencias:** Se imprime en `main.tex` mediante `\printbibliography[heading=bibintoc, title={Bibliografía}]`.
 * **Numeración de Capítulos:** La bibliografía y los anexos deben ser no numerados (`numberless` en `titlesec`) para evitar prefijos decimales o de capítulo.
-* **Numeración de Página:** Toda la sección de Bibliografía y Anexos debe estar totalmente limpia de números de página y cabeceras (`\pagestyle{empty}` y `\assignpagestyle{\chapter}{empty}`).
+* **Numeración de Página:** Toda la sección de Bibliografía y Anexos debe estar totalmente limpia de números de página y cabeceras mediante la macro global `\configurarseccionfinal` (`\pagestyle{empty}` y `\assignpagestyle{\chapter}{empty}`).
 
 ### 6. Inserción y Verificación de Tablas e Imágenes
 * **Tablas (Normas APA 7ma Edición):** Guardar en `tablas/` e importar vía `\input{tablas/archivo.tex}`.

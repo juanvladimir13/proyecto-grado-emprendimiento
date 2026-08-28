@@ -248,4 +248,58 @@
 \lst@AddToHook{Init}{\hyphenpenalty=50\exhyphenpenalty=50\tolerance=10000\hbadness=10000}
 \makeatother
 
+% ============================================================
+% 14. ENTORNO PARA DEDICATORIAS Y AGRADECIMIENTOS
+% ============================================================
+\newenvironment{estilodedicatoria}{%
+    \vspace*{\espaciosuperiordedicatoria}%
+    \begin{raggedleft}\itshape%
+}{%
+    \par\end{raggedleft}%
+}
+
+% ============================================================
+% 15. COMANDOS PARA CAPÍTULOS PRELIMINARES Y RESUMEN
+% ============================================================
+% Capítulos preliminares no numerados con entrada automática en TOC
+\newcommand{\capitulopreliminar}[1]{%
+    \chapter*{#1}%
+    \addcontentsline{toc}{chapter}{#1}%
+}
+
+% Formato semántico para palabras clave en resúmenes
+\newcommand{\palabrasclave}[1]{\vspace{0.5cm}\noindent\textbf{Palabras clave:} #1\par}
+\newcommand{\keywords}[1]{\vspace{0.5cm}\noindent\textbf{Keywords:} #1\par}
+\newcommand{\simikuna}[1]{\vspace{0.5cm}\noindent\textbf{Simikuna:} #1\par}
+
+% ============================================================
+% 16. ESTILOS DE PÁGINA PARA SECCIONES FINALES (BIBLIOGRAFÍA Y ANEXOS)
+% ============================================================
+\newcommand{\configurarseccionfinal}{%
+    \pagestyle{empty}%
+    \assignpagestyle{\chapter}{empty}%
+}
+
+% ============================================================
+% 17. COMANDOS PARA SECCIONES DE ANEXOS
+% ============================================================
+\newcommand{\seccionanexo}[1]{%
+    \section*{#1}%
+    \addcontentsline{toc}{section}{#1}%
+}
+
+% ============================================================
+% 18. NOTAS DE TABLA Y FIGURAS (NORMAS APA 7)
+% ============================================================
+\newcommand{\notatabla}[1]{%
+    \par\vspace{4pt}%
+    {\small\textit{Nota.} #1\par}%
+}
+
+% ============================================================
+% 19. TIPOGRAFÍA Y FORMATO DE CARÁTULA
+% ============================================================
+\newcommand{\titulocaratula}[1]{{\LARGE\bfseries\color{primary} #1\par}}
+\newcommand{\subtitulocaratula}[1]{{\large\bfseries #1\par}}
+
 \endinput

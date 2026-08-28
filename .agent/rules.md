@@ -31,7 +31,7 @@ Este proyecto de LaTeX modular sigue pautas estrictas para mantener la consisten
    - Encabezados deshabilitados (`headrulewidth=0pt`, sin texto superior).
    - Pies de página: numeración arábiga centrada abajo (`\cfoot{\thepage}`) en Capítulos 1 al 9.
    - Páginas preliminares en números romanos (`\pagenumbering{roman}`).
-   - Bibliografía y Anexos: no numerados (`numberless`) y limpios de numeración de página y cabeceras (`\pagestyle{empty}`, `\assignpagestyle{\chapter}{empty}`).
+   - Bibliografía y Anexos: no numerados (`numberless`) y limpios de numeración de página y cabeceras mediante `\configurarseccionfinal`.
 
 5. **Bibliografía (BibLaTeX + Biber):**
    - Motor `biblatex` con `style=apa` y backend `biber` sobre [bibliografia/referencias.bib](file:///home/juanvladimir13/Projects/proyecto-grado-innovacion/bibliografia/referencias.bib).
@@ -67,7 +67,7 @@ Este proyecto de LaTeX modular sigue pautas estrictas para mantener la consisten
     - Ensamble raíz en [main.tex](file:///home/juanvladimir13/Projects/proyecto-grado-innovacion/main.tex) vía `\input{capitulos/index.tex}`.
     - Metadatos institucionales y del estudiante centralizados en [estilos/configuracion.tex](file:///home/juanvladimir13/Projects/proyecto-grado-innovacion/estilos/configuracion.tex).
     - Ficha de datos del proyecto en [docs/ficha-proyecto.md](file:///home/juanvladimir13/Projects/proyecto-grado-innovacion/docs/ficha-proyecto.md) (alimentada desde `docs/proyecto.rtf` o `docs/proyecto.md` y consultas interactivas).
-    - Preliminares: [agradecimiento.tex](file:///home/juanvladimir13/Projects/proyecto-grado-innovacion/preliminares/agradecimiento.tex) y [dedicatoria.tex](file:///home/juanvladimir13/Projects/proyecto-grado-innovacion/preliminares/dedicatoria.tex) comparten el mismo formato (`\vspace*{3cm}`, `\begin{raggedleft}` y `\textit{...}`).
+    - Preliminares: [agradecimiento.tex](file:///home/juanvladimir13/Projects/proyecto-grado-innovacion/preliminares/agradecimiento.tex) y [dedicatoria.tex](file:///home/juanvladimir13/Projects/proyecto-grado-innovacion/preliminares/dedicatoria.tex) utilizan el entorno global `\begin{estilodedicatoria}` (con espaciado superior configurable `\espaciosuperiordedicatoria`).
 
 11. **Prompts de Apoyo (`promts/`):**
     - Guiar la redacción con [promts/migracion/ficha-proyecto.md](file:///home/juanvladimir13/Projects/proyecto-grado-innovacion/promts/migracion/ficha-proyecto.md).
