@@ -46,9 +46,7 @@ proyecto-grado-emprendimiento/
 │   ├── estilos.sty                         # Estilos, carga de paquetes (biblatex-apa, listings), títulos APA 7
 │   └── configuracion.tex                   # Variables centralizadas de autor(es), título, tutor, institución y modalidad
 ├── preliminares/                           # Hojas frontales (numeración romana)
-│   ├── portada_bth.tex                     # Portada oficial BTH con marco ornamental (\marcoportadabth)
-│   ├── caratula.tex                        # Carátula oficial BTH ministerial alternativa
-│   ├── portada_universitaria.tex           # Portada alternativa estilo académico/universitario
+│   ├── caratula.tex                        # Portada oficial BTH ministerial con marco ornamental (\insertarmarcobth)
 │   ├── agradecimiento.tex                  # Agradecimientos (\capitulopreliminar y \begin{estilodedicatoria})
 │   ├── dedicatoria.tex                     # Dedicatorias (\capitulopreliminar y \begin{estilodedicatoria})
 │   └── resumen.tex                         # Resúmenes (\capitulopreliminar, \palabrasclave, \keywords, \simikuna)
@@ -115,7 +113,9 @@ proyecto-grado-emprendimiento/
 │       └── 11_checklist_pre_entrega_final.md          # Checklist institucional BTH pre-defensa
 └── docs/                                   # Regulaciones oficiales y guías
     ├── REGLAMENTO_BTH__RM_0912_2023.pdf    # Reglamento Ministerial oficial RM 0912/2023
-    └── ficha-proyecto.md                   # Ficha de datos y requerimientos del proyecto
+    ├── ficha-proyecto.md                   # Ficha de datos y requerimientos del proyecto
+    ├── proyecto.md                         # Archivo base de insumo del proyecto (formato Markdown/texto)
+    └── proyecto.rtf                        # Archivo base de insumo del proyecto (formato enriquecido RTF)
 ```
 
 ---
@@ -123,9 +123,9 @@ proyecto-grado-emprendimiento/
 ## 🎯 Reglas Críticas para la IA
 
 ### 1. Modificaciones de Datos Personales o Institucionales
-* **REGLA:** **NUNCA** quemes (hardcodees) nombres de estudiantes, tutores, instituciones o títulos del proyecto directamente en los archivos `.tex` como `caratula.tex`, `portada_universitaria.tex` o capítulos.
-* **ACCIÓN:** Utiliza o actualiza las macros correspondientes en `estilos/configuracion.tex` (`\institucion`, `\modalidad`, `\especialidad`, `\autoruno`, `\autordos`, `\tutorproyecto`, `\espacioposteriorparrafo`, `\sangriaprimeralinea`, `\espaciosuperiordedicatoria`, `\anchofigurapredeterminado`, `\anchografico`, `\espacionotafigura`, `\espacionotagrafico`, etc.).
-* **Campos C.I.:** El número de C.I. del estudiante no forma parte de la plantilla y fue removido de las macros y de la carátula oficial.
+* **REGLA:** **NUNCA** quemes (hardcodees) nombres de estudiantes, tutores, instituciones o títulos del proyecto directamente en los archivos `.tex` como `caratula.tex` o capítulos.
+* **ACCIÓN:** Utiliza o actualiza las macros correspondientes en `estilos/configuracion.tex` (`\institucion`, `\modalidad`, `\especialidad`, `\autoruno`, `\autordos`, `\tutorproyecto`, `\espacioposteriorparrafo`, `\sangriaprimeralinea`, `\espaciosuperiordedicatoria`, `\anchofigurapredeterminado`, `\anchografico`, `\espacionotafigura`, `\espacionotagrafico`, `\rutalogobth`, `\alturalogobth`, `\formulagradobth`, `\activarmarcobth`, etc.).
+* **Campos C.I.:** El número de C.I. del estudiante no forma parte de la plantilla y fue removido de las macros y de la portada oficial.
 
 ### 2. Estructuración Modular de Capítulos
 * **REGLA:** Conserva el diseño modular. Cada capítulo reside en su propia carpeta dentro de `capitulos/` y contiene un archivo `main.tex` que ensambla las secciones individuales.
@@ -221,9 +221,11 @@ Este proyecto está configurado para la modalidad de **Emprendimiento Productivo
   - `\palabrasclave{...}`, `\keywords{...}`, `\simikuna{...}`: Bloques semánticos normalizados para palabras clave en resúmenes (castellano, extranjero y lengua originaria).
   - `\notatabla{...}`: Formato estandarizado para notas y fuentes al pie de tablas bajo APA 7ma Edición.
   - `\notafigura{...}`, `\notaimagen{...}`, `\notagrafico{...}`: Formato estandarizado para notas y fuentes al pie de figuras, imágenes e ilustraciones bajo APA 7ma Edición (antepone `Nota.` en cursiva y alinea a la izquierda).
-  - `\titulocaratula{...}` y `\subtitulocaratula{...}`: Formato tipográfico y paleta institucional en la portada oficial.
-  - `\marcoportadabth` y `\marcoportadatikzbth`: Macros globales para inserción del marco ornamental oficial perimetral BTH en la portada.
-  - `\institucionportadabth{...}`, `\carreraportadabth{...}`, `\tituloportadabth{...}`, `\mencionportadabth{...}`, `\bloquepostulantesbth`, `\bloquetutorbth`: Macros semánticas estructuradas de la portada oficial BTH (`preliminares/portada_bth.tex`).
+  - `\titulocaratula{...}` y `\subtitulocaratula{...}`: Formato tipográfico y paleta institucional en títulos de carátula.
+  - `\insertarmarcobth`: Inserta condicionalmente el marco ornamental perimetral oficial BTH si la variable `\activarmarcobth` está habilitada (`1`).
+  - `\marcoportadabth` y `\marcoportadatikzbth`: Macros para renderizar el marco ornamental perimetral oficial BTH (gráfico PNG perimetral o diseño vectorial geométrico TikZ).
+  - `\institucionportadabth{...}`, `\especialidadportadabth{...}`, `\tituloportadabth{...}`, `\formulagradoportadabth{...}`, `\mencionportadabth{...}`, `\carreraportadabth{...}`, `\tutorportadabth{...}`, `\pieportadabth{...}{...}`: Macros semánticas de estructura de la portada oficial BTH (`preliminares/caratula.tex`).
+  - `\bloquepostulantesbth`, `\bloquetutorbth`, `\etiquetapostulantesbth{...}`, `\etiquetatutorbth{...}`: Bloques semánticos normalizados para postulante(s) y tutor guía en la portada.
 
 ---
 

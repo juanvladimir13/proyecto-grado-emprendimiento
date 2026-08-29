@@ -19,9 +19,7 @@ proyecto-grado-emprendimiento/
 │   ├── estilos.sty                         # Archivo de estilos (márgenes, fuentes, espaciados y paquetes)
 │   └── configuracion.tex                   # Metadatos centralizados (título, autor(es), tutor, institución, modalidad)
 ├── preliminares/                           # Hojas preliminares con numeración romana
-│   ├── portada_bth.tex                     # Portada oficial BTH con marco ornamental perimetral (\marcoportadabth)
-│   ├── caratula.tex                        # Carátula formal BTH alternativa ministerial
-│   ├── portada_universitaria.tex           # Portada alternativa estilo universitario
+│   ├── caratula.tex                        # Portada oficial BTH ministerial con marco ornamental (\insertarmarcobth)
 │   ├── agradecimiento.tex                  # Página de agradecimientos (\capitulopreliminar y \begin{estilodedicatoria})
 │   ├── dedicatoria.tex                     # Página de dedicatoria (\capitulopreliminar y \begin{estilodedicatoria})
 │   └── resumen.tex                         # Resumen (\capitulopreliminar, \palabrasclave, \keywords, \simikuna)
@@ -72,7 +70,9 @@ proyecto-grado-emprendimiento/
 │       └── 01_ a 11_*.md                   # Prompts de revisión modular (7 capítulos) y checklist pre-defensa
 └── docs/                                   # Regulaciones oficiales y documentos de soporte
     ├── REGLAMENTO_BTH__RM_0912_2023.pdf    # Reglamento oficial de graduación BTH (RM 0912/2023)
-    └── ficha-proyecto.md                   # Ficha de datos y requerimientos del proyecto
+    ├── ficha-proyecto.md                   # Ficha de datos y requerimientos del proyecto
+    ├── proyecto.md                         # Documento base de entrada del proyecto (texto/Markdown)
+    └── proyecto.rtf                        # Documento base de entrada del proyecto (formato enriquecido RTF)
 ```
 
 ---

@@ -26,7 +26,7 @@ Al iniciar el proceso de revisión, con el índice general o el árbol de capít
 | :--- | :--- |
 | Entrada principal | `main.tex` |
 | Ensamble de capítulos | `capitulos/index.tex` |
-| Preliminares | `preliminares/caratula.tex`, `preliminares/portada_universitaria.tex`, `preliminares/dedicatoria.tex`, `preliminares/agradecimiento.tex`, `preliminares/resumen.tex` |
+| Preliminares | `preliminares/caratula.tex`, `preliminares/dedicatoria.tex`, `preliminares/agradecimiento.tex`, `preliminares/resumen.tex` |
 | Cap. 1 | `capitulos/01_introduccion/main.tex` → `contexto_general.tex`, `oportunidad_negocio.tex`, `propuesta_valor.tex`, `marco_teorico.tex` |
 | Cap. 2 | `capitulos/02_planteamiento_emprendimiento/main.tex` → `diagnostico.tex`, `objetivos.tex`, `justificacion.tex` |
 | Cap. 3 | `capitulos/03_desarrollo_emprendimiento/main.tex` → `localizacion.tex`, `analisis_mercado.tex`, `estrategia_promocion.tex`, `estructura_organizacional.tex`, `diseno_producto.tex`, `ciclo_produccion.tex` |

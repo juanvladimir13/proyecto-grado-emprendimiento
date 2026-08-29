@@ -28,7 +28,7 @@ Como última verificación previa a la impresión, encuadernación o entrega for
 | :--- | :--- |
 | Entrada principal | `main.tex` |
 | Configuración | `estilos/configuracion.tex`, `estilos/estilos.sty` |
-| Preliminares | `preliminares/caratula.tex`, `preliminares/portada_universitaria.tex`, `preliminares/dedicatoria.tex`, `preliminares/agradecimiento.tex`, `preliminares/resumen.tex` |
+| Preliminares | `preliminares/caratula.tex`, `preliminares/dedicatoria.tex`, `preliminares/agradecimiento.tex`, `preliminares/resumen.tex` |
 | Capítulos 1 al 7 | `capitulos/index.tex` → 7 carpetas con `main.tex` y secciones `.tex` |
 | Tablas activas | `tablas/*.tex` (`estudio_mercado`, `estructura_organizacional`, `inversiones`, `costos_produccion`, `indicadores_financieros`, `resultados_piloto`) |
 | Bibliografía | `bibliografia/referencias.bib` |
