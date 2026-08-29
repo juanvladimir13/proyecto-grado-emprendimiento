@@ -17,9 +17,10 @@ proyecto-grado-emprendimiento/
 ├── compilar.sh                             # Script de compilación y limpieza (soporta --clean, --fast, etc.)
 ├── estilos/                                # Paquete y configuraciones de diseño de LaTeX
 │   ├── estilos.sty                         # Archivo de estilos (márgenes, fuentes, espaciados y paquetes)
+│   ├── caratula.sty                        # Estilos, dimensiones, marco perimetral y diagramación de la carátula BTH
 │   └── configuracion.tex                   # Metadatos centralizados (título, autor(es), tutor, institución, modalidad)
 ├── preliminares/                           # Hojas preliminares con numeración romana
-│   ├── caratula.tex                        # Portada oficial BTH ministerial con marco ornamental (\insertarmarcobth)
+│   ├── caratula.tex                        # Portada oficial BTH ministerial modular (\begin{entornocaratula})
 │   ├── agradecimiento.tex                  # Página de agradecimientos (\begin{estilodedicatoria}{Agradecimiento})
 │   ├── dedicatoria.tex                     # Página de dedicatoria (\begin{estilodedicatoria}{Dedicatoria})
 │   └── resumen.tex                         # Resumen (\capitulopreliminar, \palabrasclave, \keywords, \simikuna)

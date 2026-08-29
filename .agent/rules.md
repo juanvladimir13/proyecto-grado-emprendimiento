@@ -77,7 +77,7 @@ Este proyecto de LaTeX modular sigue pautas estrictas para mantener la consisten
     - Ficha de datos del proyecto en [docs/ficha-proyecto.md](docs/ficha-proyecto.md) (alimentada desde `docs/proyecto.rtf` o `docs/proyecto.md` y consultas interactivas).
     - Preliminares: [agradecimiento.tex](preliminares/agradecimiento.tex) y [dedicatoria.tex](preliminares/dedicatoria.tex) utilizan el entorno global `\begin{estilodedicatoria}{Título}` que alinea automáticamente el bloque a la parte inferior de la hoja incluyendo el título, con espaciados configurables (`\espacioinferiordedicatoria`, `\espaciotitulodedicatoria`).
     - Resúmenes en [preliminares/resumen.tex](preliminares/resumen.tex) formatean palabras clave con `\palabrasclave{...}`, `\keywords{...}` y `\simikuna{...}`.
-    - Portada oficial BTH unificada en [preliminares/caratula.tex](preliminares/caratula.tex) con marco ornamental perimetral (`\insertarmarcobth`), logotipo institucional (`\rutalogobth`), fórmula de grado (`\formulagradoportadabth`), bloques semánticos de postulantes y pie con lugar/gestión.
+    - Portada oficial BTH modular en [preliminares/caratula.tex](preliminares/caratula.tex) (estilos y diagramación modularizados en [estilos/caratula.sty](estilos/caratula.sty)) mediante el entorno `\begin{entornocaratula}` (o `\generarcaratula`), con marco ornamental perimetral (`\insertarmarcobth`), logotipo institucional (`\insertarlogobth`), fórmula de grado (`\formulagradoportadabth`), bloques semánticos de postulantes (`\bloquepostulantesbth`) y pie con lugar/gestión.
 
 11. **Prompts de Apoyo (`promts/`):**
     - Guiar la recopilación y redacción con [promts/migracion/ficha-proyecto.md](promts/migracion/ficha-proyecto.md).
@@ -95,7 +95,7 @@ Este proyecto de LaTeX modular sigue pautas estrictas para mantener la consisten
     - Reservar `\begin{enumerate}` exclusivamente para secuencias algorítmicas estrictas, cronologías o pasos procedimentales secuenciales donde la numeración sea indispensable.
 
 14. **Macros Semánticas Estandarizadas de la Plantilla:**
-    - Utilizar obligatoriamente las macros semánticas provistas en `estilos.sty`:
+    - Utilizar obligatoriamente las macros semánticas provistas en `estilos.sty` y `estilos/caratula.sty`:
       * `\capitulopreliminar{Título}`: Capítulos preliminares y Anexos sin numerar agregados a TOC.
       * `\begin{estilodedicatoria}{Título}...\end{estilodedicatoria}`: Entorno semántico para dedicatoria y agradecimiento alineado a la parte inferior de la hoja incluyendo título y entrada a TOC.
       * `\seccionanexo{Título}`: Encabezados de secciones de anexos agregados a TOC.
@@ -105,4 +105,4 @@ Este proyecto de LaTeX modular sigue pautas estrictas para mantener la consisten
       * `\notafigura{...}`, `\notaimagen{...}`, `\notagrafico{...}`: Notas al pie de figuras y gráficos bajo APA 7.
       * `\figuraapa[ancho]{archivo}{Título}{label}{Nota}` (y sus aliases `\insertarfigura`, `\graficoapa`, `\insertargrafico`): Inserción estandarizada de figuras APA 7.
       * `\titulocaratula{...}` y `\subtitulocaratula{...}`: Formato tipográfico en títulos de carátula.
-      * `\insertarmarcobth`, `\marcoportadabth`, `\marcoportadatikzbth`, `\institucionportadabth`, `\especialidadportadabth`, `\tituloportadabth`, `\formulagradoportadabth`, `\carreraportadabth`, `\mencionportadabth`, `\bloquepostulantesbth`, `\bloquetutorbth`, `\tutorportadabth`, `\pieportadabth`: Macros estructuradas de la portada oficial BTH (`preliminares/caratula.tex`).
+      * `\begin{entornocaratula}...\end{entornocaratula}` (o `\generarcaratula`), `\insertarmarcobth`, `\marcoportadabth`, `\marcoportadatikzbth`, `\institucionportadabth`, `\especialidadportadabth`, `\insertarlogobth`, `\tituloportadabth`, `\formulagradoportadabth`, `\bloquepostulantesbth`, `\bloquetutorbth`, `\pieportadabth`: Macros y entorno de la portada oficial BTH (`estilos/caratula.sty`).
