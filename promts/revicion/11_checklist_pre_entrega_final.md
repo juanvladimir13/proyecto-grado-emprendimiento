@@ -54,7 +54,7 @@ Actúa como el **presidente de tribunal de titulación del Bachillerato Técnico
 ### Checklist Oficial a Verificar
 
 1. **Hojas preliminares (numeración romana minúscula):**
-   - [ ] Carátula oficial BTH modular (`\begin{entornocaratula}`) con marco perimetral (`\insertarmarcobth`), logotipo institucional (`\insertarlogobth`), datos del postulante(s) (1 o 2 autores dinámicos sin C.I.), tutor, institución, especialidad, modalidad y año de gestión.
+   - [ ] Carátula oficial BTH modular (`\imprimircaratulabth` / `\begin{estilocaratulabth}`) con marco perimetral (`\insertarmarcobth` / `marco_portada_bth.png`), logotipo institucional (`\rutalogobth`), datos del postulante(s) (1 o 2 autores dinámicos sin C.I.), tutor, institución, especialidad, modalidad y año de gestión.
    - [ ] Dedicatoria y Agradecimiento con formato semántico unificado (`\begin{estilodedicatoria}{Título}`) alineado a la parte inferior de la hoja incluyendo título, cursiva a la derecha y registro en TOC.
    - [ ] Resumen en castellano (máx. 300 palabras), con `\palabrasclave{...}`.
    - [ ] Resumen en lengua originaria (quechua/aymara/guaraní) con `\simikuna{...}`.

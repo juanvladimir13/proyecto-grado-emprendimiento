@@ -62,7 +62,7 @@ Actúa como un **revisor metodológico de proyectos de grado BTH**. Tu tarea es 
 1. **Completitud estructural:** ¿figuran los 7 capítulos requeridos en el orden exacto normado por el RM 0912/2023?
 2. **Modularidad:** ¿cada capítulo cuenta con su carpeta propia y su archivo `main.tex` que importa las subsecciones correspondientes mediante `\input{capitulos/...}`?
 3. **Jerarquía y numeración:** ¿se respetan los niveles de titulación APA 7 adaptados (Capítulos sin la palabra "Capítulo", secciones y subsecciones sin salto de nivel)?
-4. **Preliminares y páginas finales:** ¿la carátula y preliminares utilizan las macros semánticas (`\begin{entornocaratula}`, `\insertarlogobth`, `\capitulopreliminar`, `\begin{estilodedicatoria}{Título}`, `\palabrasclave`)? ¿Bibliografía y Anexos usan `\configurarseccionfinal` y `\seccionanexo`?
+4. **Preliminares y páginas finales:** ¿la carátula y preliminares utilizan las macros semánticas (`\imprimircaratulabth`, `\begin{estilocaratulabth}`, `\capitulopreliminar`, `\begin{estilodedicatoria}{Título}`, `\palabrasclave`)? ¿Bibliografía y Anexos usan `\configurarseccionfinal` y `\seccionanexo`?
 5. **Alineación con `estilos/configuracion.tex`:** ¿los metadatos institucionales están centralizados sin quemar datos en el código de capítulos?
 
 ### Formato de salida esperado

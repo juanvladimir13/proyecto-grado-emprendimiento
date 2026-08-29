@@ -47,7 +47,7 @@ proyecto-grado-emprendimiento/
 │   ├── caratula.sty                        # Estilos, dimensiones, marco perimetral y diagramación de la carátula BTH
 │   └── configuracion.tex                   # Variables centralizadas de autor(es), título, tutor, institución y modalidad
 ├── preliminares/                           # Hojas frontales (numeración romana)
-│   ├── caratula.tex                        # Portada oficial BTH ministerial modular (\begin{entornocaratula})
+│   ├── caratula.tex                        # Portada oficial BTH ministerial modular (\imprimircaratulabth)
 │   ├── agradecimiento.tex                  # Agradecimientos (\begin{estilodedicatoria}{Agradecimiento})
 │   ├── dedicatoria.tex                     # Dedicatorias (\begin{estilodedicatoria}{Dedicatoria})
 │   └── resumen.tex                         # Resúmenes (\capitulopreliminar, \palabrasclave, \keywords, \simikuna)
@@ -85,7 +85,7 @@ proyecto-grado-emprendimiento/
 │   ├── figura_ejemplo.tex                  # Plantilla de ejemplo de figuras (entorno, macro y subfiguras)
 │   ├── ejemplo_figura.png                  # Gráfico de prueba para diagrama de flujo de producción
 │   ├── logo_bth.png                        # Logotipo oficial del Módulo Tecnológico Productivo BTH
-│   └── marco_bth.png                       # Marco ornamental perimetral oficial BTH con transparencia
+│   └── marco_portada_bth.png               # Marco ornamental perimetral oficial BTH con transparencia
 ├── bibliografia/                           # Bibliografía BibLaTeX (APA 7ma Edición)
 │   └── referencias.bib                     # Base de datos de referencias (.bib) formateada en APA 7
 ├── anexos/                                 # Apéndices del documento
@@ -223,11 +223,12 @@ Este proyecto está configurado para la modalidad de **Emprendimiento Productivo
   - `\notatabla{...}`: Formato estandarizado para notas y fuentes al pie de tablas bajo APA 7ma Edición.
   - `\notafigura{...}`, `\notaimagen{...}`, `\notagrafico{...}`: Formato estandarizado para notas y fuentes al pie de figuras, imágenes e ilustraciones bajo APA 7ma Edición (antepone `Nota.` en cursiva y alinea a la izquierda).
   - `\titulocaratula{...}` y `\subtitulocaratula{...}`: Formato tipográfico y paleta institucional en títulos de carátula.
-  - `\begin{entornocaratula}...\end{entornocaratula}` (o `\generarcaratula`): Entorno modular de portada oficial BTH (en `estilos/caratula.sty`) que encapsula geometría, tipografía Times (ptm), marco decorativo y centrado.
-  - `\insertarmarcobth`: Inserta condicionalmente el marco ornamental perimetral oficial BTH si la variable `\activarmarcobth` está habilitada (`1`).
-  - `\marcoportadabth` y `\marcoportadatikzbth`: Macros para renderizar el marco ornamental perimetral oficial BTH (gráfico PNG perimetral o diseño vectorial geométrico TikZ).
-  - `\institucionportadabth{...}`, `\especialidadportadabth{...}`, `\insertarlogobth{...}`, `\tituloportadabth{...}`, `\formulagradoportadabth{...}`, `\mencionportadabth{...}`, `\carreraportadabth{...}`, `\tutorportadabth{...}`, `\pieportadabth{...}{...}`: Macros semánticas de estructura de la portada oficial BTH (`preliminares/caratula.tex`).
-  - `\bloquepostulantesbth`, `\bloquetutorbth`, `\etiquetapostulantesbth{...}`, `\etiquetatutorbth{...}`: Bloques semánticos normalizados para postulante(s) (1 o 2 autores dinámicos) y tutor guía en la portada.
+  - `\imprimircaratulabth` (o `\imprimircaratula`, `\generarcaratula`, `\generarcaratulabth`): Comando de alto nivel para generar automáticamente la carátula oficial BTH con diagramación completa a partir de `estilos/configuracion.tex`.
+  - `\begin{estilocaratulabth}...\end{estilocaratulabth}` (o `\begin{entornocaratula}`): Entorno modular de portada oficial BTH (en `estilos/caratula.sty`) que encapsula geometría (3.0 cm izq/der, 2.5 cm sup/inf), tipografía Times New Roman (`ptm`), marco decorativo y centrado.
+  - `\insertarmarcobth`: Inserta condicionalmente el marco ornamental perimetral oficial BTH (`marco_portada_bth.png` vía `\AddToShipoutPictureBG*`) si la variable `\activarmarcobth` está habilitada (`1` o `true`).
+  - `\marcoportadabth`: Macro para renderizar directamente el marco ornamental perimetral oficial BTH en segundo plano.
+  - `\bloqueinstitucionportada{...}{...}`, `\bloquelogoportada[...]{...}`, `\bloquetituloportada{...}`, `\bloquegradoportada{...}`, `\bloquepostulantesportada{...}{...}{...}`, `\bloquetutorportada{...}{...}`, `\bloquepieportada{...}{...}`: Bloques semánticos estructurados con espaciado vertical integrado.
+  - `\institucionportadabth{...}`, `\especialidadportadabth{...}`, `\tituloportadabth{...}`, `\formulagradoportadabth{...}`, `\etiquetapostulantesbth{...}`, `\etiquetatutorbth{...}`, `\tutorportadabth{...}`, `\pieportadabth{...}{...}`: Macros semánticas tipográficas individuales de la portada oficial BTH.
 
 ---
 
