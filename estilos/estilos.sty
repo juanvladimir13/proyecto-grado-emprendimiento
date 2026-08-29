@@ -491,4 +491,54 @@
     \end{center}%
 }
 
+% ============================================================
+% 21. MACROS COMPLEMENTARIAS DE LA PORTADA BTH (CARATULA)
+% ============================================================
+% Inserta el marco ornamental perimetral BTH solo si \activarmarcobth == 1
+\newcommand{\insertarmarcobth}{%
+    \ifnum\activarmarcobth=1 %
+        \marcoportadabth%
+    \fi
+}
+
+% Especialidad técnica de la portada (línea centrada en comillas)
+\newcommand{\especialidadportadabth}[1]{%
+    \begin{center}%
+    \begin{minipage}{\anchotextoportadabth}%
+        \centering\normalfont\normalsize\bfseries%
+        ``#1''\par%
+    \end{minipage}%
+    \end{center}%
+}
+
+% Fórmula de grado académico oficial BTH (bloque centrado en cursiva)
+\newcommand{\formulagradoportadabth}[1]{%
+    \begin{center}%
+    \begin{minipage}{\anchotextoportadabth}%
+        \centering\normalfont\normalsize%
+        #1\par%
+    \end{minipage}%
+    \end{center}%
+}
+
+% Tutor guía / asesor de la portada BTH
+\newcommand{\tutorportadabth}[1]{%
+    \begin{center}%
+    \begin{minipage}{7.5cm}%
+        \centering\normalfont\normalsize\bfseries%
+        #1\par%
+    \end{minipage}%
+    \end{center}%
+}
+
+% Pie de la portada BTH: lugar y gestión de presentación
+\newcommand{\pieportadabth}[2]{%
+    \begin{center}%
+    \begin{minipage}{\anchotextoportadabth}%
+        \centering\normalfont\normalsize\bfseries%
+        #1\par\vspace{0.12cm}#2\par%
+    \end{minipage}%
+    \end{center}%
+}
+
 \endinput
