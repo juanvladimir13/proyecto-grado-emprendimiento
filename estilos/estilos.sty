@@ -417,31 +417,53 @@
 % Macro alternativa para marco perimetral puramente vectorial en TikZ
 \newcommand{\marcoportadatikzbth}{%
     \begin{tikzpicture}[remember picture, overlay]
-        % Rectángulo exterior
+        % Rectángulo exterior centrado
         \draw[line width=2.0pt, color=bthblue]
-            ([xshift=2.0cm, yshift=-1.8cm]current page.north west)
+            ([xshift=-0.5*\anchomarcoportadabth, yshift=0.5*\altomarcoportadabth]current page.center)
             rectangle
-            ([xshift=-2.0cm, yshift=1.8cm]current page.south east);
-        % Rectángulo interior
+            ([xshift=0.5*\anchomarcoportadabth, yshift=-0.5*\altomarcoportadabth]current page.center);
+        % Rectángulo interior centrado
         \draw[line width=0.8pt, color=bthblue]
-            ([xshift=2.28cm, yshift=-2.08cm]current page.north west)
+            ([xshift=-0.5*\anchomarcoportadabth+0.28cm, yshift=0.5*\altomarcoportadabth-0.28cm]current page.center)
             rectangle
-            ([xshift=-2.28cm, yshift=2.08cm]current page.south east);
+            ([xshift=0.5*\anchomarcoportadabth-0.28cm, yshift=-0.5*\altomarcoportadabth+0.28cm]current page.center);
     \end{tikzpicture}%
 }
 
 % Macros semánticas tipográficas de la Portada Oficial BTH
-\newcommand{\institucionportadabth}[1]{{\normalfont\Large\bfseries\setstretch{1.1} #1\par}}
+% Se encapsulan en contenedores de ancho \anchotextoportadabth para garantizar márgenes seguros
+\newcommand{\institucionportadabth}[1]{%
+    \begin{center}%
+    \begin{minipage}{\anchotextoportadabth}%
+        \centering\normalfont\Large\bfseries\setstretch{1.1}%
+        #1\par%
+    \end{minipage}%
+    \end{center}%
+}
 \newcommand{\carreraportadabth}[1]{{\normalfont\large\bfseries #1\par}}
-\newcommand{\tituloportadabth}[1]{{\normalfont\Large\bfseries\setstretch{1.15} #1\par}}
-\newcommand{\mencionportadabth}[1]{{\normalfont\normalsize\setstretch{1.1} #1\par}}
+\newcommand{\tituloportadabth}[1]{%
+    \begin{center}%
+    \begin{minipage}{\anchotextoportadabth}%
+        \centering\normalfont\Large\bfseries\setstretch{1.2}%
+        #1\par%
+    \end{minipage}%
+    \end{center}%
+}
+\newcommand{\mencionportadabth}[1]{%
+    \begin{center}%
+    \begin{minipage}{\anchotextoportadabth}%
+        \centering\normalfont\normalsize\setstretch{1.15}%
+        #1\par%
+    \end{minipage}%
+    \end{center}%
+}
 \newcommand{\etiquetapostulantesbth}[1]{{\normalfont\normalsize\bfseries #1\par}}
 \newcommand{\etiquetatutorbth}[1]{{\normalfont\normalsize\bfseries #1\par}}
 
 % Bloque semántico automatizado para postulante(s)
 \newcommand{\bloquepostulantesbth}{%
     \begin{center}%
-    \begin{minipage}{0.48\textwidth}%
+    \begin{minipage}{7.5cm}%
         \raggedright\normalsize%
         \ifdefempty{\autordos}{%
             \etiquetapostulantesbth{Postulante:}%
@@ -460,7 +482,7 @@
 % Bloque semántico automatizado para tutor guía
 \newcommand{\bloquetutorbth}{%
     \begin{center}%
-    \begin{minipage}{0.48\textwidth}%
+    \begin{minipage}{7.5cm}%
         \raggedright\normalsize%
         \etiquetatutorbth{Tutor:}%
         \vspace{0.12cm}%

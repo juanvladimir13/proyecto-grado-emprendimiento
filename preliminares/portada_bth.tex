@@ -1,33 +1,39 @@
+% --- Geometría simétrica y equilibrada para la Portada Oficial ---
+\newgeometry{
+    letterpaper,
+    top=2.4cm,
+    bottom=2.4cm,
+    left=2.5cm,
+    right=2.5cm
+}
+
 \begin{titlepage}
     % --- Marco Ornamental Perimetral Oficial BTH ---
     \marcoportadabth
 
     \centering
-    \vspace*{0.3cm}
 
     % --- 1. Institución Educativa / Módulo Tecnológico ---
     \institucionportadabth{\institucion}
-    \vspace{0.2cm}
 
     % --- 2. Carrera o Especialidad Técnica (entre comillas) ---
     \carreraportadabth{``\especialidad''}
-    \vspace{0.5cm}
+    \vspace{0.4cm}
 
     % --- 3. Escudo / Logotipo Institucional BTH ---
     \includegraphics[width=\anchologoportadabth]{\logoportadabth}\par
-    \vspace{0.7cm}
+    \vspace{0.3cm}
 
     % --- 4. Título del Proyecto ---
     \tituloportadabth{\tituloproyecto}
-    \vspace{0.4cm}
 
     % --- 5. Mención Académica de Modalidad y Grado Técnico Medio ---
     \mencionportadabth{\menciongradobth}
-    \vspace{0.9cm}
+    \vspace{0.3cm}
 
     % --- 6. Bloque de Postulante(s) ---
     \bloquepostulantesbth
-    \vspace{0.5cm}
+    \vspace{0.2cm}
 
     % --- 7. Bloque de Tutor Guía ---
     \bloquetutorbth
@@ -36,8 +42,9 @@
 
     % --- 8. Lugar y Gestión de Presentación ---
     {\normalsize\textbf{\lugarproyecto}\par}
-    \vspace{0.15cm}
+    \vspace{0.12cm}
     {\normalsize\textbf{\gestionproyecto}\par}
-    \vspace{0.3cm}
 
 \end{titlepage}
+
+\restoregeometry
