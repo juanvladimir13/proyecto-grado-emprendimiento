@@ -13,6 +13,7 @@
 \RequirePackage[utf8]{inputenc}
 \RequirePackage[T1]{fontenc}
 \RequirePackage{etoolbox}
+\RequirePackage{xparse}
 
 % ============================================================
 % 3. CONTROL DE SILABACIÓN (DESACTIVAR GUIÓN DE FIN DE LÍNEA)
@@ -307,11 +308,29 @@
 % ============================================================
 % 14. ENTORNO PARA DEDICATORIAS Y AGRADECIMIENTOS
 % ============================================================
-\newenvironment{estilodedicatoria}{%
-    \vspace*{\espaciosuperiordedicatoria}%
-    \begin{raggedleft}\itshape%
+% Alinea dedicatorias y agradecimientos a la parte inferior de la hoja incluyendo el título,
+% con entrada automática en el índice general (TOC).
+% Sintaxis: \begin{estilodedicatoria}{Título} ... \end{estilodedicatoria}
+%           o \begin{estilodedicatoria}[Título] ... \end{estilodedicatoria}
+\NewDocumentEnvironment{estilodedicatoria}{ o g }{%
+    \cleardoublepage%
+    \IfValueTF{#1}{\def\titulodedic{#1}}{%
+        \IfValueTF{#2}{\def\titulodedic{#2}}{\def\titulodedic{}}%
+    }%
+    \ifdefempty{\titulodedic}{}{%
+        \phantomsection%
+        \addcontentsline{toc}{chapter}{\titulodedic}%
+    }%
+    \null\vfill%
+    \begin{raggedleft}%
+    \ifdefempty{\titulodedic}{}{%
+        {\normalfont\Large\bfseries\setstretch{1.0} \titulodedic\par}%
+        \vspace{\espaciotitulodedicatoria}%
+    }%
+    \itshape%
 }{%
     \par\end{raggedleft}%
+    \vspace*{\espacioinferiordedicatoria}%
 }
 
 % ============================================================
