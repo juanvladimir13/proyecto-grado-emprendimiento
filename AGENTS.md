@@ -46,7 +46,8 @@ proyecto-grado-emprendimiento/
 │   ├── estilos.sty                         # Estilos, carga de paquetes (biblatex-apa, listings), títulos APA 7
 │   └── configuracion.tex                   # Variables centralizadas de autor(es), título, tutor, institución y modalidad
 ├── preliminares/                           # Hojas frontales (numeración romana)
-│   ├── caratula.tex                        # Carátula oficial BTH (\titulocaratula, \subtitulocaratula)
+│   ├── portada_bth.tex                     # Portada oficial BTH con marco ornamental (\marcoportadabth)
+│   ├── caratula.tex                        # Carátula oficial BTH ministerial alternativa
 │   ├── portada_universitaria.tex           # Portada alternativa estilo académico/universitario
 │   ├── agradecimiento.tex                  # Agradecimientos (\capitulopreliminar y \begin{estilodedicatoria})
 │   ├── dedicatoria.tex                     # Dedicatorias (\capitulopreliminar y \begin{estilodedicatoria})
@@ -83,7 +84,9 @@ proyecto-grado-emprendimiento/
 ├── imagenes/                               # Gráficos, diagramas y logotipos
 │   ├── README.md                           # Guía técnica de inclusión de figuras bajo APA 7
 │   ├── figura_ejemplo.tex                  # Plantilla de ejemplo de figuras (entorno, macro y subfiguras)
-│   └── ejemplo_figura.png                  # Gráfico de prueba para diagrama de flujo de producción
+│   ├── ejemplo_figura.png                  # Gráfico de prueba para diagrama de flujo de producción
+│   ├── logo_bth.png                        # Logotipo oficial del Módulo Tecnológico Productivo BTH
+│   └── marco_bth.png                       # Marco ornamental perimetral oficial BTH con transparencia
 ├── bibliografia/                           # Bibliografía BibLaTeX (APA 7ma Edición)
 │   └── referencias.bib                     # Base de datos de referencias (.bib) formateada en APA 7
 ├── anexos/                                 # Apéndices del documento
@@ -218,8 +221,9 @@ Este proyecto está configurado para la modalidad de **Emprendimiento Productivo
   - `\palabrasclave{...}`, `\keywords{...}`, `\simikuna{...}`: Bloques semánticos normalizados para palabras clave en resúmenes (castellano, extranjero y lengua originaria).
   - `\notatabla{...}`: Formato estandarizado para notas y fuentes al pie de tablas bajo APA 7ma Edición.
   - `\notafigura{...}`, `\notaimagen{...}`, `\notagrafico{...}`: Formato estandarizado para notas y fuentes al pie de figuras, imágenes e ilustraciones bajo APA 7ma Edición (antepone `Nota.` en cursiva y alinea a la izquierda).
-  - `\figuraapa[ancho]{archivo}{Título}{label}{Nota}`, `\insertarfigura{...}`, `\graficoapa{...}`, `\insertargrafico{...}`: Macros semánticas de alto nivel para inserción de figuras y gráficos que garantizan la estructura estricta APA 7 (caption arriba, gráfico centrado, nota abajo).
   - `\titulocaratula{...}` y `\subtitulocaratula{...}`: Formato tipográfico y paleta institucional en la portada oficial.
+  - `\marcoportadabth` y `\marcoportadatikzbth`: Macros globales para inserción del marco ornamental oficial perimetral BTH en la portada.
+  - `\institucionportadabth{...}`, `\carreraportadabth{...}`, `\tituloportadabth{...}`, `\mencionportadabth{...}`, `\bloquepostulantesbth`, `\bloquetutorbth`: Macros semánticas estructuradas de la portada oficial BTH (`preliminares/portada_bth.tex`).
 
 ---
 

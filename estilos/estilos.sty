@@ -12,6 +12,7 @@
 \RequirePackage[spanish, es-tabla]{babel}
 \RequirePackage[utf8]{inputenc}
 \RequirePackage[T1]{fontenc}
+\RequirePackage{etoolbox}
 
 % ============================================================
 % 3. CONTROL DE SILABACIÓN (DESACTIVAR GUIÓN DE FIN DE LÍNEA)
@@ -396,5 +397,76 @@
 % ============================================================
 \newcommand{\titulocaratula}[1]{{\LARGE\bfseries\color{primary} #1\par}}
 \newcommand{\subtitulocaratula}[1]{{\large\bfseries #1\par}}
+
+% ============================================================
+% 20. MARCO PERIMETRAL Y ESTILOS GLOBALES DE PORTADA BTH
+% ============================================================
+% Paleta de color institucional BTH
+\definecolor{bthblue}{RGB}{0, 56, 147}      % Azul oficial del marco perimetral BTH
+\definecolor{bthdarkblue}{RGB}{0, 32, 96}   % Azul institucional complementario
+
+% Macro para insertar el marco ornamental oficial BTH en la portada
+\newcommand{\marcoportadabth}{%
+    \begin{tikzpicture}[remember picture, overlay]
+        \node[inner sep=0pt] at (current page.center) {%
+            \includegraphics[width=\anchomarcoportadabth, height=\altomarcoportadabth]{\marcoportadabtharchivo}%
+        };
+    \end{tikzpicture}%
+}
+
+% Macro alternativa para marco perimetral puramente vectorial en TikZ
+\newcommand{\marcoportadatikzbth}{%
+    \begin{tikzpicture}[remember picture, overlay]
+        % Rectángulo exterior
+        \draw[line width=2.0pt, color=bthblue]
+            ([xshift=2.0cm, yshift=-1.8cm]current page.north west)
+            rectangle
+            ([xshift=-2.0cm, yshift=1.8cm]current page.south east);
+        % Rectángulo interior
+        \draw[line width=0.8pt, color=bthblue]
+            ([xshift=2.28cm, yshift=-2.08cm]current page.north west)
+            rectangle
+            ([xshift=-2.28cm, yshift=2.08cm]current page.south east);
+    \end{tikzpicture}%
+}
+
+% Macros semánticas tipográficas de la Portada Oficial BTH
+\newcommand{\institucionportadabth}[1]{{\normalfont\Large\bfseries\setstretch{1.1} #1\par}}
+\newcommand{\carreraportadabth}[1]{{\normalfont\large\bfseries #1\par}}
+\newcommand{\tituloportadabth}[1]{{\normalfont\Large\bfseries\setstretch{1.15} #1\par}}
+\newcommand{\mencionportadabth}[1]{{\normalfont\normalsize\setstretch{1.1} #1\par}}
+\newcommand{\etiquetapostulantesbth}[1]{{\normalfont\normalsize\bfseries #1\par}}
+\newcommand{\etiquetatutorbth}[1]{{\normalfont\normalsize\bfseries #1\par}}
+
+% Bloque semántico automatizado para postulante(s)
+\newcommand{\bloquepostulantesbth}{%
+    \begin{center}%
+    \begin{minipage}{0.48\textwidth}%
+        \raggedright\normalsize%
+        \ifdefempty{\autordos}{%
+            \etiquetapostulantesbth{Postulante:}%
+            \vspace{0.12cm}%
+            \autoruno\par%
+        }{%
+            \etiquetapostulantesbth{Postulantes:}%
+            \vspace{0.12cm}%
+            1. \autoruno\par\vspace{0.08cm}%
+            2. \autordos\par%
+        }%
+    \end{minipage}%
+    \end{center}%
+}
+
+% Bloque semántico automatizado para tutor guía
+\newcommand{\bloquetutorbth}{%
+    \begin{center}%
+    \begin{minipage}{0.48\textwidth}%
+        \raggedright\normalsize%
+        \etiquetatutorbth{Tutor:}%
+        \vspace{0.12cm}%
+        \tutorproyecto\par%
+    \end{minipage}%
+    \end{center}%
+}
 
 \endinput

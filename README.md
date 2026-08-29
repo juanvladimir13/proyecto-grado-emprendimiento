@@ -19,7 +19,8 @@ proyecto-grado-emprendimiento/
 │   ├── estilos.sty                         # Archivo de estilos (márgenes, fuentes, espaciados y paquetes)
 │   └── configuracion.tex                   # Metadatos centralizados (título, autor(es), tutor, institución, modalidad)
 ├── preliminares/                           # Hojas preliminares con numeración romana
-│   ├── caratula.tex                        # Carátula formal BTH (\titulocaratula, \subtitulocaratula)
+│   ├── portada_bth.tex                     # Portada oficial BTH con marco ornamental perimetral (\marcoportadabth)
+│   ├── caratula.tex                        # Carátula formal BTH alternativa ministerial
 │   ├── portada_universitaria.tex           # Portada alternativa estilo universitario
 │   ├── agradecimiento.tex                  # Página de agradecimientos (\capitulopreliminar y \begin{estilodedicatoria})
 │   ├── dedicatoria.tex                     # Página de dedicatoria (\capitulopreliminar y \begin{estilodedicatoria})

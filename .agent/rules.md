@@ -77,7 +77,7 @@ Este proyecto de LaTeX modular sigue pautas estrictas para mantener la consisten
     - Ficha de datos del proyecto en [docs/ficha-proyecto.md](docs/ficha-proyecto.md) (alimentada desde `docs/proyecto.rtf` o `docs/proyecto.md` y consultas interactivas).
     - Preliminares: [agradecimiento.tex](preliminares/agradecimiento.tex) y [dedicatoria.tex](preliminares/dedicatoria.tex) utilizan `\capitulopreliminar` y el entorno global `\begin{estilodedicatoria}` (con espaciado superior configurable `\espaciosuperiordedicatoria`).
     - Resúmenes en [preliminares/resumen.tex](preliminares/resumen.tex) formatean palabras clave con `\palabrasclave{...}`, `\keywords{...}` y `\simikuna{...}`.
-    - Carátula oficial formateada con `\titulocaratula{...}` y `\subtitulocaratula{...}`.
+    - Portada oficial BTH en [preliminares/portada_bth.tex](preliminares/portada_bth.tex) con marco ornamental perimetral (`\marcoportadabth`), escudo institucional y bloques semánticos (con carátula ministerial clásica en [preliminares/caratula.tex](preliminares/caratula.tex)).
 
 11. **Prompts de Apoyo (`promts/`):**
     - Guiar la recopilación y redacción con [promts/migracion/ficha-proyecto.md](promts/migracion/ficha-proyecto.md).
@@ -104,4 +104,5 @@ Este proyecto de LaTeX modular sigue pautas estrictas para mantener la consisten
       * `\notatabla{...}`: Notas al pie de tablas bajo APA 7.
       * `\notafigura{...}`, `\notaimagen{...}`, `\notagrafico{...}`: Notas al pie de figuras y gráficos bajo APA 7.
       * `\figuraapa[ancho]{archivo}{Título}{label}{Nota}` (y sus aliases `\insertarfigura`, `\graficoapa`, `\insertargrafico`): Inserción estandarizada de figuras APA 7.
-      * `\titulocaratula{...}` y `\subtitulocaratula{...}`: Formato tipográfico en carátula.
+      * `\titulocaratula{...}` y `\subtitulocaratula{...}`: Formato tipográfico en carátula clásica.
+      * `\marcoportadabth`, `\marcoportadatikzbth`, `\institucionportadabth`, `\carreraportadabth`, `\tituloportadabth`, `\mencionportadabth`, `\bloquepostulantesbth`, `\bloquetutorbth`: Macros estructuradas de la portada oficial BTH.
