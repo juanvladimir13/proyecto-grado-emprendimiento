@@ -1,5 +1,5 @@
 % ============================================================
-% PORTADA OFICIAL BTH (Normativa BTH / docs/portada.pdf)
+% PORTADA OFICIAL BTH (Normativa BTH / RM 0912/2023)
 % ============================================================
 % Diseñada según la diagramación, proporciones y recursos gráficos
 % de la portada oficial del Módulo Tecnológico Productivo San Julián.
@@ -8,6 +8,10 @@
 
 \newgeometry{left=3.0cm, right=3.0cm, top=2.5cm, bottom=2.5cm}
 \begin{titlepage}
+    % Tipografía: Times New Roman (ptm) exclusivamente para la portada oficial
+    \renewcommand{\familydefault}{ptm}
+    \normalfont
+
     % Insertar el marco decorativo perimetral en fondo si está activo
     \insertarmarcobth
     \centering
@@ -49,14 +53,14 @@
 
     % 6. Bloque del Tutor Guía
     \etiquetatutorbth{\etiquetatutor}
-    \vspace{0.12cm}
     \tutorportadabth{\tutorproyecto}
 
     \vfill
 
     % 7. Ciudad, País y Gestión
     \pieportadabth{\lugarproyecto}{\gestionproyecto}
-    \vspace*{2cm}
+    \vspace*{2.0cm}
 
 \end{titlepage}
 \restoregeometry
+\normalfont
