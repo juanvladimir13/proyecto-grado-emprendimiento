@@ -1,37 +1,14 @@
 % ============================================================
-% PORTADA OFICIAL BTH (Normativa BTH / RM 0912/2023)
+% CARÁTULA OFICIAL BTH (Normativa BTH / RM 0912/2023)
 % ============================================================
 % Diseñada según la diagramación, proporciones y recursos gráficos
-% oficiales del Bachillerato Técnico Humanístico (BTH).
+% de la portada oficial del Módulo Tecnológico Productivo San Julián.
 %
-% Los estilos, dimensiones, marco perimetral y diagramación
-% se encuentran modularizados en 'estilos/caratula.sty'.
-% Los datos institucionales y de autor se configuran en 'estilos/configuracion.tex'.
+% - Los datos del proyecto (autores, tutor, título, institución)
+%   se configuran centralizadamente en 'estilos/configuracion.tex'.
+% - Los estilos de geometría, tipografía Times New Roman, marco
+%   perimetral y espaciados residen modularmente en 'estilos/caratula.sty'.
 % ============================================================
 
-\begin{entornocaratula}
-
-    % 1. Encabezado Institucional y Especialidad
-    \institucionportadabth{\institucion}
-    \especialidadportadabth{\especialidad}
-
-    % 2. Logotipo Institucional Centrado
-    \insertarlogobth{\rutalogobth}
-
-    % 3. Título Oficial del Proyecto
-    \tituloportadabth{\tituloproyecto}
-
-    % 4. Fórmula de Grado Académico Oficial BTH
-    \formulagradoportadabth{\formulagradobth}
-
-    % 5. Bloque de Postulante(s) (1 o 2 autores dinámico)
-    \bloquepostulantesbth
-
-    % 6. Bloque del Tutor Guía
-    \bloquetutorbth
-
-    % 7. Pie institucional: Ciudad, País y Gestión
-    \pieportadabth{\lugarproyecto}{\gestionproyecto}
-
-\end{entornocaratula}
+\imprimircaratulabth
 
