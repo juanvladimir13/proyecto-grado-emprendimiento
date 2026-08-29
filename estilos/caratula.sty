@@ -109,13 +109,9 @@
     \begin{minipage}{0.48\textwidth}
         \etiquetapostulantesbth{#1}%
         \vspace{0.15cm}%
-        \ifdefempty{#3}{%
-            \noindent #2\par
-        }{%
-            \ifblank{#3}{%
-                \noindent #2\par
-            }{%
-                \noindent 1. #2\par
+        \noindent 1. #2\par
+        \ifdefempty{#3}{}{%
+            \ifblank{#3}{}{%
                 \vspace{0.12cm}%
                 \noindent 2. #3\par
             }%
