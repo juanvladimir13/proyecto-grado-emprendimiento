@@ -78,9 +78,12 @@ proyecto-grado-emprendimiento/
 │   ├── README.md                           # Guía para almacenar e importar código externo
 │   └── ejemplo_controlador.py              # Script de prueba importable vía \lstinputlisting
 ├── scripts/                                # Scripts de utilidad y validación de calidad
-│   └── verificar_tablas.py                 # Auditoría de tablas APA 7 y prevención de desbordamientos
+│   ├── verificar_tablas.py                 # Auditoría de tablas APA 7 y prevención de desbordamientos
+│   └── verificar_figuras.py                # Auditoría de figuras e imágenes bajo normas APA 7
 ├── imagenes/                               # Gráficos, diagramas y logotipos
-│   └── README.md                           # Instrucciones para la gestión de recursos gráficos
+│   ├── README.md                           # Guía técnica de inclusión de figuras bajo APA 7
+│   ├── figura_ejemplo.tex                  # Plantilla de ejemplo de figuras (entorno, macro y subfiguras)
+│   └── ejemplo_figura.png                  # Gráfico de prueba para diagrama de flujo de producción
 ├── bibliografia/                           # Bibliografía BibLaTeX (APA 7ma Edición)
 │   └── referencias.bib                     # Base de datos de referencias (.bib) formateada en APA 7
 ├── anexos/                                 # Apéndices del documento
@@ -154,10 +157,15 @@ proyecto-grado-emprendimiento/
 * **Tablas (Normas APA 7ma Edición):** Guardar en `tablas/` e importar vía `\input{tablas/archivo.tex}`.
   - Usar siempre `booktabs` (`\toprule`, `\midrule`, `\bottomrule`). **PROHIBIDO** el uso de líneas verticales (`|`) y de `\hline`.
   - El título `\caption{...}` debe ubicarse obligatoriamente **arriba** de la tabla, seguido de `\label{tab:...}` y `\centering`.
-  - Para notas explicativas o fuentes al pie de la tabla, usar obligatoriamente la macro semántica `\notatabla{Fuente: ...}` (aplica tamaño pequeño, cursiva e interlineado ajustado según APA 7).
+  - Para notas explicativas o fuentes al pie de la tabla, usar obligatoriamente la macro semántica `\notatabla{Fuente: ...}` (aplica tamaño pequeño, cursiva `Nota.` e interlineado ajustado alineado a la izquierda según APA 7).
   - Para tablas con descripciones extensas, usar el entorno `tabularx` con ancho `\textwidth` y columnas auto-ajustables `L`, `C`, `R` o `X` (definidas en `estilos.sty`) para evitar desbordamientos del margen derecho.
   - **Auditoría de Tablas:** Ejecutar `./compilar.sh --check-tablas` (o `python3 scripts/verificar_tablas.py`) para validar que ninguna tabla rompa la diagramación ni viole APA 7.
-* **Imágenes:** Guardar en `imagenes/` e incluirlas sin prefijo de ruta (ya configurado en `estilos.sty`).
+* **Imágenes y Figuras (Normas APA 7ma Edición):** Guardar en `imagenes/` e invocarlas sin prefijo de ruta (registrado en `estilos.sty`).
+  - **Ubicación del Título (`\caption`):** En APA 7, el número y título deben ubicarse obligatoriamente **ARRIBA** de la imagen (a diferencia de APA 6). La plantilla aplica automáticamente formato APA 7: número en negrita (`labelfont=bf`), salto de línea (`labelsep=newline`), título en cursiva (`textfont=it`) y alineación a la izquierda (`justification=raggedright`).
+  - **Centrado:** El elemento visual (`\includegraphics`) debe centrarse horizontalmente usando `\centering`.
+  - **Notas al Pie (`\notafigura` / `\notaimagen`):** Colocar obligatoriamente debajo de la imagen usando `\notafigura{Fuente: ...}` (antepone `Nota.` en cursiva y alinea a la izquierda).
+  - **Macro Semántica Directa:** Se puede emplear `\figuraapa[ancho]{archivo}{Título}{label}{Nota}` (o `\insertarfigura`) para estructurar automáticamente la figura cumpliendo el 100% de APA 7.
+  - **Auditoría de Figuras:** Ejecutar `./compilar.sh --check-figuras` (o `python3 scripts/verificar_figuras.py`) para validar ubicación del caption, etiquetas `fig:`, notas y existencia de archivos.
 
 ### 7. Inserción de Código Fuente y Algoritmos
 * **Motor:** Se utiliza el paquete `listings` con el estilo `estilocodigo` predeterminado y tipografía Courier.
@@ -174,6 +182,8 @@ proyecto-grado-emprendimiento/
   - `./compilar.sh --only-clean` (elimina archivos temporales sin compilar).
   - `./compilar.sh --fast` (compilación rápida de 1 sola pasada pdflatex para redacción continua).
   - `./compilar.sh --check-tablas` (audita la conformidad de tablas con APA 7 y booktabs).
+  - `./compilar.sh --check-figuras` (audita la conformidad de figuras e imágenes con APA 7).
+  - `./compilar.sh --check-recursos` (audita conjuntamente tablas y figuras).
 
 ### 9. Estructura y Flujo de la Modalidad Emprendimiento Productivo
 Este proyecto está configurado para la modalidad de **Emprendimiento Productivo**:
@@ -206,7 +216,9 @@ Este proyecto está configurado para la modalidad de **Emprendimiento Productivo
   - `\seccionanexo{Título}`: Encabezados de secciones de anexos con inclusión automática en el TOC (`\seccionanexo{Anexo A: Modelo Canvas...}`).
   - `\configurarseccionfinal`: Macro global que desactiva numeración de página y cabeceras (`empty`) para Bibliografía y Anexos.
   - `\palabrasclave{...}`, `\keywords{...}`, `\simikuna{...}`: Bloques semánticos normalizados para palabras clave en resúmenes (castellano, extranjero y lengua originaria).
-  - `\notatabla{...}`: Formato estandarizado para notas y fuentes al pie de tablas e ilustraciones bajo APA 7ma Edición.
+  - `\notatabla{...}`: Formato estandarizado para notas y fuentes al pie de tablas bajo APA 7ma Edición.
+  - `\notafigura{...}`, `\notaimagen{...}`: Formato estandarizado para notas y fuentes al pie de figuras e ilustraciones bajo APA 7ma Edición (antepone `Nota.` en cursiva y alinea a la izquierda).
+  - `\figuraapa[ancho]{archivo}{Título}{label}{Nota}`, `\insertarfigura{...}`: Macros semánticas de alto nivel para inserción de figuras que garantizan la estructura estricta APA 7 (caption arriba, gráfico centrado, nota abajo).
   - `\titulocaratula{...}` y `\subtitulocaratula{...}`: Formato tipográfico y paleta institucional en la portada oficial.
 
 ---

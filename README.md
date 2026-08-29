@@ -109,6 +109,12 @@ El proyecto incluye el script ejecutable `./compilar.sh` que gestiona todo el ci
 # Auditar la conformidad de las tablas con normas APA 7ma Edición y diagramación:
 ./compilar.sh --check-tablas
 
+# Auditar la conformidad de las figuras e imágenes con normas APA 7ma Edición:
+./compilar.sh --check-figuras
+
+# Auditar conjuntamente tablas y figuras:
+./compilar.sh --check-recursos
+
 # Solo limpiar archivos auxiliares sin compilar:
 ./compilar.sh --only-clean
 ```
@@ -166,10 +172,10 @@ pdflatex main.tex
    * Agrega entradas a `bibliografia/referencias.bib`.
    * En el texto usa `\parencite{clave}` para citas entre paréntesis *(Apellido, 2024)* o `\textcite{clave}` para citas narrativas *Apellido (2024)*.
 
-4. **Insertar y Auditar Tablas e Imágenes:**
-   * Crea tablas en `tablas/` e impórtalas con `\input{tablas/mi_tabla.tex}` usando `booktabs`. Para notas al pie de tabla usa siempre `\notatabla{Fuente: ...}`. Para tablas anchas o con descripciones extensas usa `tabularx` (columnas `L`, `C`, `R` o `X`) para evitar que desborden los márgenes.
-   * Audita la conformidad de tus tablas con APA 7 en cualquier momento mediante `./compilar.sh --check-tablas`.
-   * Guarda imágenes en `imagenes/` e inclúyelas con `\includegraphics[width=...]{nombre.png}`.
+4. **Insertar y Auditar Tablas e Imágenes (Normas APA 7ma Edición):**
+   * **Tablas:** Crear tablas en `tablas/` e importarlas con `\input{tablas/mi_tabla.tex}` usando `booktabs`. Para notas al pie de tabla usar siempre `\notatabla{Fuente: ...}`. Para tablas anchas o con descripciones extensas usar `tabularx` (columnas `L`, `C`, `R` o `X`) para evitar desbordamiento de márgenes.
+   * **Imágenes y Figuras:** Guardar en `imagenes/`. En APA 7 el número y título van **ARRIBA** de la imagen y la nota **ABAJO**. Insertar usando el entorno estándar con `\caption{...}`, `\label{fig:...}`, `\centering`, `\includegraphics[width=...]{nombre.png}` y `\notafigura{Fuente: ...}`, o mediante la macro directa `\figuraapa[ancho]{archivo}{Título}{label}{Nota}` (o `\insertarfigura`).
+   * **Auditoría Automatizada:** Validar en cualquier momento la conformidad de tablas y figuras con `./compilar.sh --check-tablas`, `./compilar.sh --check-figuras` o `./compilar.sh --check-recursos`.
 
 5. **Insertar Código Fuente:**
    * Almacena scripts en `codigo/` e impórtalos con `\lstinputlisting[language=Python, caption={...}, label={lst:...}]{codigo/script.py}`.

@@ -129,13 +129,68 @@
 \RequirePackage{array}
 \RequirePackage{tabularx}
 \RequirePackage{adjustbox}
+\RequirePackage{float}          % Soporte para modificador de posición [H]
 \RequirePackage{caption}
 \RequirePackage{subcaption}
+\RequirePackage{tikz}           % Generación de esquemas vectoriales y gráficos nativos
 
 % Configuración de etiquetas según Normas APA 7ma Edición
+% En APA 7, tanto para tablas como para figuras y gráficos:
+% 1. El número va en negrita (labelfont=bf).
+% 2. Salto de línea obligatorio entre el número y el título (labelsep=newline).
+% 3. El título descriptivo va en cursiva (textfont=it).
+% 4. Ambos se ubican ARRIBA del elemento gráfico/tabular y alineados a la izquierda (flush-left).
+% 5. position=top asegura que el espaciado (skip) se aplique entre el caption y la figura.
 \captionsetup{
     font={small},
     labelfont={bf},
+    textfont={it},
+    labelsep=newline,
+    justification=raggedright,
+    singlelinecheck=false,
+    skip=6pt,
+    position=top
+}
+
+% Configuración específica para figuras y gráficos
+\captionsetup[figure]{
+    font={small},
+    labelfont={bf},
+    textfont={it},
+    labelsep=newline,
+    justification=raggedright,
+    singlelinecheck=false,
+    skip=6pt,
+    position=top
+}
+
+% Configuración específica para tablas
+\captionsetup[table]{
+    font={small},
+    labelfont={bf},
+    textfont={it},
+    labelsep=newline,
+    justification=raggedright,
+    singlelinecheck=false,
+    skip=6pt,
+    position=top
+}
+
+% Subfiguras (a, b, c): etiqueta en negrita y en la misma línea centrada
+\captionsetup[sub]{
+    font={small},
+    labelfont={bf},
+    textfont={normalfont},
+    labelsep=space,
+    justification=centering
+}
+
+% Configuración para listings (código fuente): mantiene estilo técnico
+\captionsetup[lstlisting]{
+    font={small},
+    labelfont={bf},
+    textfont={normalfont},
+    labelsep=colon,
     justification=justified,
     singlelinecheck=false,
     skip=6pt
@@ -289,11 +344,51 @@
 }
 
 % ============================================================
-% 18. NOTAS DE TABLA Y FIGURAS (NORMAS APA 7)
+% 18. NOTAS Y MACROS DE FIGURAS, IMÁGENES, GRÁFICOS Y TABLAS (NORMAS APA 7)
 % ============================================================
+% Nota al pie de tabla según APA 7 (alineada a la izquierda, en cursiva "Nota.")
 \newcommand{\notatabla}[1]{%
-    \par\vspace{4pt}%
-    {\small\textit{Nota.} #1\par}%
+    \par\vspace{\espacionotafigura}%
+    {\small\raggedright\noindent\textit{Nota.} #1\par}%
+}
+
+% Nota al pie de figura/imagen/gráfico según APA 7 (alineada a la izquierda, en cursiva "Nota.")
+\newcommand{\notafigura}[1]{%
+    \par\vspace{\espacionotafigura}%
+    {\small\raggedright\noindent\textit{Nota.} #1\par}%
+}
+\newcommand{\notaimagen}[1]{\notafigura{#1}}
+\newcommand{\notagrafico}[1]{\notafigura{#1}}
+
+% Macro semántica estandarizada para insertar figuras bajo normas APA 7ma Edición
+% Estructura generada:
+%   1. \caption{Título} -> Número en negrita + salto + título en cursiva (ARRIBA)
+%   2. \label{etiqueta} -> Referencia cruzada
+%   3. \centering + \includegraphics -> Imagen o gráfico centrado
+%   4. \notafigura{Nota} -> Nota al pie en cursiva (ABAJO)
+% Sintaxis: \figuraapa[opciones_includegraphics]{archivo}{Título}{etiqueta}{Nota al pie}
+% Ejemplo: \figuraapa[width=0.8\textwidth]{ejemplo_figura.png}{Diagrama de flujo}{fig:flujo}{Elaboración propia.}
+\newcommand{\figuraapa}[5][\anchofigurapredeterminado]{%
+    \begin{figure}[htbp]
+        \caption{#3}%
+        \label{#4}%
+        \centering
+        \includegraphics[#1]{#2}%
+        \ifblank{#5}{}{%
+            \notafigura{#5}%
+        }%
+    \end{figure}%
+}
+
+% Aliases alternativos de alta legibilidad para figuras, imágenes y gráficos
+\newcommand{\insertarfigura}[5][\anchofigurapredeterminado]{%
+    \figuraapa[#1]{#2}{#3}{#4}{#5}%
+}
+\newcommand{\graficoapa}[5][\anchografico]{%
+    \figuraapa[#1]{#2}{#3}{#4}{#5}%
+}
+\newcommand{\insertargrafico}[5][\anchografico]{%
+    \figuraapa[#1]{#2}{#3}{#4}{#5}%
 }
 
 % ============================================================
