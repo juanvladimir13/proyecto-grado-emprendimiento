@@ -184,6 +184,7 @@ Reglas mientras redactas:
 8. Prioridad de viñetas: Prioriza obligatoriamente `\begin{itemize}` sobre `\begin{enumerate}`, reservando este último solo para secuencias algorítmicas o procedimentales estrictas.
 9. Formato numérico (SI/ISO 80000-1): Usa punto decimal (ej. 12.50, 98.5%), nunca comas decimales ni comas/puntos de miles (cifras de 4 dígitos juntas: 4500.00, 5 o más con espacio: 25 000.00).
 10. Notas en tablas: Usa la macro semántica `\notatabla{Fuente: ...}` para notas o procedencia al pie de tablas APA 7.
+11. Figuras e ilustraciones (APA 7): Guarda imágenes en `imagenes/` e inclúyelas centradas (`\centering`), con `\caption` ARRIBA y nota ABAJO con `\notafigura{Fuente: ...}` (o utiliza la macro semántica `\figuraapa[ancho]{archivo}{Título}{label}{Nota}`).
 
 Al terminar los 7 capítulos, entrega un resumen general del contenido redactado.
 ```
@@ -197,8 +198,8 @@ Ejecuta la compilación de prueba y verificación de consistencia:
 
 1. Ejecuta primero `./compilar.sh --fast` para verificar rápidamente que no existan
    errores de sintaxis LaTeX, comandos no cerrados o rutas rotas.
-2. Ejecuta `./compilar.sh --check-tablas` para auditar la conformidad de las tablas
-   con normas APA 7ma Edición y diagramación booktabs.
+2. Ejecuta `./compilar.sh --check-recursos` (o `./compilar.sh --check-tablas` y `./compilar.sh --check-figuras`)
+   para auditar la conformidad estricta de las tablas y figuras con normas APA 7ma Edición.
 3. Si la compilación rápida y auditoría pasan sin errores, ejecuta `./compilar.sh --clean`
    para realizar el ciclo completo de 4 pasos (pdflatex + biber + pdflatex x2) y limpiar archivos auxiliares.
 4. Notifica el resultado final: confirma la generación exitosa de `main.pdf`, el conteo total

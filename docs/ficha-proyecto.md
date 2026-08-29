@@ -160,11 +160,13 @@ capitulos/
 - **Características técnicas, composición o formulación del producto/servicio:** [DATO PENDIENTE]
 - **Presentación comercial, empaque y rotulado:** [DATO PENDIENTE]
 - **Nombre de marca y logotipo comercial:** [DATO PENDIENTE]
+- **Archivo gráfico del logotipo o marca (en `imagenes/`):** [DATO PENDIENTE] _(ej. `logo_emprendimiento.png`)_
 
 ### 3.6 Ciclo de producción o prestación del servicio (opcional)
 - **Fases secuenciales del proceso productivo (desde insumos hasta empaque final):** [DATO PENDIENTE]
 - **Capacidad instalada por ciclo/jornada:** [DATO PENDIENTE]
 - **Maquinaria, equipos y herramientas principales:** [DATO PENDIENTE]
+- **Diagrama de flujo de producción (en `imagenes/`):** [DATO PENDIENTE] _(ej. `ejemplo_figura.png`)_
 
 > **Nutre:** `capitulos/03_desarrollo_emprendimiento/`
 
@@ -206,8 +208,9 @@ capitulos/
 - **Comparación entre volumen estimado vs. demanda real:** [DATO PENDIENTE]
 
 ### 5.2 Resultados cualitativos y percepción del cliente
+- **Instrumento cualitativo aplicado (encuesta Likert, ficha de degustación/cata):** [DATO PENDIENTE]
 - **Nivel de satisfacción del cliente (% o escala):** [DATO PENDIENTE]
-- **Atributos más valorados por los consumidores (calidad, sabor, presentación, precio):** [DATO PENDIENTE]
+- **Atributos más valorados por los consumidores (calidad, sabor/funcionalidad, presentación, precio):** [DATO PENDIENTE]
 - **Observaciones o sugerencias recibidas para mejora del producto:** [DATO PENDIENTE]
 
 ### 5.3 Indicadores de rentabilidad validados
@@ -244,3 +247,31 @@ capitulos/
 - **Recomendación de reinversión y crecimiento futuro:** [DATO PENDIENTE]
 
 > **Nutre:** `capitulos/07_conclusiones_recomendaciones/`
+
+---
+
+## 8. ANEXOS DEL PROYECTO
+
+### 8.1 Anexo A: Modelo de Negocio Canvas
+- **Socios clave:** [DATO PENDIENTE]
+- **Actividades clave:** [DATO PENDIENTE]
+- **Recursos clave:** [DATO PENDIENTE]
+- **Propuesta de valor:** [DATO PENDIENTE]
+- **Relación con clientes:** [DATO PENDIENTE]
+- **Canales de distribución:** [DATO PENDIENTE]
+- **Segmentos de mercado:** [DATO PENDIENTE]
+- **Estructura de costos:** [DATO PENDIENTE]
+- **Fuentes de ingresos:** [DATO PENDIENTE]
+- **Archivo asociado:** `anexos/anexo_a_canvas.tex`
+
+### 8.2 Anexo B: Cotizaciones, Fichas Técnicas e Instrumentos
+- **Cotizaciones de proveedores (maquinaria, insumos):** [DATO PENDIENTE]
+- **Ficha técnica o bromatológica del producto:** [DATO PENDIENTE]
+- **Modelo de instrumento aplicado en prueba piloto (encuesta/ficha de cata):** [DATO PENDIENTE]
+- **Archivo asociado:** `anexos/anexo_b_fichas_tecnicas.tex`
+
+### 8.3 Anexo C: Código Fuente, Planos o Formulaciones
+- **Contenido complementario (código, fórmulas, planos de distribución):** [DATO PENDIENTE]
+- **Archivo asociado:** `anexos/anexo_c_codigo_fuente.tex`
+
+> **Nutre:** `anexos/index.tex` y `anexos/`

@@ -97,7 +97,7 @@ proyecto-grado-emprendimiento/
 │   │   └── ficha-proyecto.md               # Flujo paso a paso para completar ficha y redactar los 7 capítulos
 │   └── revicion/                           # Flujo de revisión por etapas y análisis global (7 capítulos)
 │       ├── 00_README_flujo_revision.md     # Guía del flujo de revisión por etapas
-│       ├── 00_analisis-capitulos-tesis.md  # Prompt de análisis integral de coherencia y rigor comercial
+│       ├── 00_analisis_capitulos_emprendimiento.md # Prompt de análisis integral de coherencia y rigor comercial
 │       ├── 01_revision_estructura_general.md # Estructura general de 7 capítulos BTH RM 0912/2023
 │       ├── 01b_revision_introduccion.md    # Cap. 1: Contexto general, oportunidad de negocio, propuesta de valor, marco teórico
 │       ├── 02_revision_planteamiento_emprendimiento.md # Cap. 2: Diagnóstico, objetivos, justificación
@@ -121,7 +121,7 @@ proyecto-grado-emprendimiento/
 
 ### 1. Modificaciones de Datos Personales o Institucionales
 * **REGLA:** **NUNCA** quemes (hardcodees) nombres de estudiantes, tutores, instituciones o títulos del proyecto directamente en los archivos `.tex` como `caratula.tex`, `portada_universitaria.tex` o capítulos.
-* **ACCIÓN:** Utiliza o actualiza las macros correspondientes en `estilos/configuracion.tex` (`\institucion`, `\modalidad`, `\especialidad`, `\autoruno`, `\autordos`, `\tutorproyecto`, `\espacioposteriorparrafo`, `\sangriaprimeralinea`, `\espaciosuperiordedicatoria`, etc.).
+* **ACCIÓN:** Utiliza o actualiza las macros correspondientes en `estilos/configuracion.tex` (`\institucion`, `\modalidad`, `\especialidad`, `\autoruno`, `\autordos`, `\tutorproyecto`, `\espacioposteriorparrafo`, `\sangriaprimeralinea`, `\espaciosuperiordedicatoria`, `\anchofigurapredeterminado`, `\anchografico`, `\espacionotafigura`, `\espacionotagrafico`, etc.).
 * **Campos C.I.:** El número de C.I. del estudiante no forma parte de la plantilla y fue removido de las macros y de la carátula oficial.
 
 ### 2. Estructuración Modular de Capítulos
@@ -217,8 +217,8 @@ Este proyecto está configurado para la modalidad de **Emprendimiento Productivo
   - `\configurarseccionfinal`: Macro global que desactiva numeración de página y cabeceras (`empty`) para Bibliografía y Anexos.
   - `\palabrasclave{...}`, `\keywords{...}`, `\simikuna{...}`: Bloques semánticos normalizados para palabras clave en resúmenes (castellano, extranjero y lengua originaria).
   - `\notatabla{...}`: Formato estandarizado para notas y fuentes al pie de tablas bajo APA 7ma Edición.
-  - `\notafigura{...}`, `\notaimagen{...}`: Formato estandarizado para notas y fuentes al pie de figuras e ilustraciones bajo APA 7ma Edición (antepone `Nota.` en cursiva y alinea a la izquierda).
-  - `\figuraapa[ancho]{archivo}{Título}{label}{Nota}`, `\insertarfigura{...}`: Macros semánticas de alto nivel para inserción de figuras que garantizan la estructura estricta APA 7 (caption arriba, gráfico centrado, nota abajo).
+  - `\notafigura{...}`, `\notaimagen{...}`, `\notagrafico{...}`: Formato estandarizado para notas y fuentes al pie de figuras, imágenes e ilustraciones bajo APA 7ma Edición (antepone `Nota.` en cursiva y alinea a la izquierda).
+  - `\figuraapa[ancho]{archivo}{Título}{label}{Nota}`, `\insertarfigura{...}`, `\graficoapa{...}`, `\insertargrafico{...}`: Macros semánticas de alto nivel para inserción de figuras y gráficos que garantizan la estructura estricta APA 7 (caption arriba, gráfico centrado, nota abajo).
   - `\titulocaratula{...}` y `\subtitulocaratula{...}`: Formato tipográfico y paleta institucional en la portada oficial.
 
 ---

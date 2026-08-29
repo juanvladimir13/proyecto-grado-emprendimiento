@@ -8,7 +8,7 @@ Este set de **14 prompts** está diseñado para evaluar y perfeccionar el proyec
 
 | # | Archivo | Qué revisa | Correspondencia en `capitulos/` |
 |---|---|---|---|
-| 00 | `00_analisis-capitulos-tesis.md` | Análisis integral de coherencia comercial, viabilidad financiera y sincronía | Todo el documento consolidado |
+| 00 | `00_analisis_capitulos_emprendimiento.md` | Análisis integral de coherencia comercial, viabilidad financiera y sincronía | Todo el documento consolidado |
 | 01 | `01_revision_estructura_general.md` | Estructura global, carátula, preliminares, 7 capítulos y anexos | Estructura global y `main.tex` |
 | 01b | `01b_revision_introduccion.md` | Contexto general, oportunidad de negocio, propuesta de valor y marco teórico | Cap. 1 (`01_introduccion/`) |
 | 02 | `02_revision_planteamiento_emprendimiento.md` | Diagnóstico de mercado, objetivos (general/específicos/misión/visión) y justificación | Cap. 2 (`02_planteamiento_emprendimiento/`) |

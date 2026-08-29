@@ -11,7 +11,7 @@ Este proyecto de LaTeX modular sigue pautas estrictas para mantener la consisten
 
 1. **Variables Centralizadas:**
    - **NUNCA** quemes nombres de autores, tutores, institución, especialidad o título en archivos `.tex` (`caratula.tex`, `portada_universitaria.tex` o capítulos).
-   - Toda modificación de metadatos, espaciado de párrafos (`\espacioposteriorparrafo`, `\sangriaprimeralinea`) y diagramación (`\espaciosuperiordedicatoria`) se realiza en [estilos/configuracion.tex](estilos/configuracion.tex). Soporta 1 o 2 autores dinámicamente (`\autoruno`, `\autordos`).
+   - Toda modificación de metadatos, espaciado de párrafos (`\espacioposteriorparrafo`, `\sangriaprimeralinea`), diagramación (`\espaciosuperiordedicatoria`) y parámetros de figuras (`\anchofigurapredeterminado`, `\anchografico`, `\espacionotafigura`, `\espacionotagrafico`) se realiza en [estilos/configuracion.tex](estilos/configuracion.tex). Soporta 1 o 2 autores dinámicamente (`\autoruno`, `\autordos`).
    - Los campos de C.I. del estudiante fueron removidos y no forman parte de la plantilla.
 
 2. **Estructura Modular de Capítulos (Emprendimiento Productivo):**
@@ -46,25 +46,29 @@ Este proyecto de LaTeX modular sigue pautas estrictas para mantener la consisten
      `\lstinputlisting[language=Python, caption={...}, label={lst:...}]{codigo/archivo.py}`
    - Ajuste automático de línea (`breaklines=true`) y rótulos en español (`Código`).
 
-7. **Tablas e Ilustraciones:**
-   - Tablas independientes en [tablas/](tablas/) e importar vía `\input{tablas/archivo.tex}`.
-   - Tablas vinculadas al modelo de emprendimiento: `estudio_mercado_ejemplo.tex`, `estructura_organizacional_ejemplo.tex`, `inversiones_ejemplo.tex`, `costos_produccion_ejemplo.tex`, `indicadores_financieros_ejemplo.tex`, `resultados_piloto_ejemplo.tex`.
-   - Normas APA 7: usar `booktabs` (`\toprule`, `\midrule`, `\bottomrule`), PROHIBIDO el uso de líneas verticales (`|`) y de `\hline`. El `\caption` debe ubicarse obligatoriamente arriba de la tabla.
-   - Para notas explicativas o fuentes de tablas/figuras, usar la macro semántica `\notatabla{Fuente: ...}` (tamaño pequeño, cursiva e interlineado APA 7).
-   - Para tablas anchas o con descripciones extensas, usar `tabularx` con columnas auto-ajustables `L`, `C`, `R` o `X` para evitar desbordamientos del margen derecho (`\textwidth`).
-   - Auditar tablas con `./compilar.sh --check-tablas` (o [scripts/verificar_tablas.py](scripts/verificar_tablas.py)).
-   - Figuras en [imagenes/](imagenes/) e incluir con `\includegraphics{archivo.ext}` (ruta ya preconfigurada).
+7. **Tablas, Figuras y Gráficos (Normas APA 7ma Edición):**
+   - **Tablas:** Guardar en [tablas/](tablas/) e importar vía `\input{tablas/archivo.tex}`. Usar `booktabs` (`\toprule`, `\midrule`, `\bottomrule`), PROHIBIDO líneas verticales (`|`) y `\hline`. El `\caption` va obligatoriamente **arriba** de la tabla. Notas al pie alineadas a la izquierda con `\notatabla{Fuente: ...}`. Para textos largos usar `tabularx` (columnas `L`, `C`, `R`, `X`) que respeten `\textwidth`. Auditar con `./compilar.sh --check-tablas`.
+   - **Figuras y Gráficos:** Guardar imágenes en [imagenes/](imagenes/) e invocar sin prefijo de ruta.
+     * En APA 7, el `\caption` (número en negrita, salto de línea y título en cursiva) se coloca obligatoriamente **ARRIBA** de la imagen.
+     * Elemento visual centrado con `\centering`.
+     * Notas al pie obligatorias abajo con `\notafigura{Fuente: ...}` (antepone *Nota.* en cursiva y alinea a la izquierda).
+     * Macro semántica directa de una línea: `\figuraapa[ancho]{archivo}{Título}{label}{Nota}` (o alias `\insertarfigura`, `\graficoapa`, `\insertargrafico`).
+     * Soporte para diagramas vectoriales nativos con `tikz` y control estricto de posición con `float` (`[H]`).
+     * Auditar figuras con `./compilar.sh --check-figuras` (o [scripts/verificar_figuras.py](scripts/verificar_figuras.py)).
+     * Auditar conjuntamente con `./compilar.sh --check-recursos`.
 
 8. **Control de Silabación:**
    - División de palabras desactivada globalmente (`\hyphenpenalty=10000`, `\exhyphenpenalty=10000`).
 
 9. **Compilación y Limpieza:**
    - Usar siempre el script ejecutable [compilar.sh](compilar.sh):
-     * `./compilar.sh` (compilación completa de 4 pasos).
+     * `./compilar.sh` (compilación completa de 4 pasos: pdflatex + biber + pdflatex x2).
      * `./compilar.sh --clean` (compilación completa + eliminación de temporales).
      * `./compilar.sh --fast` (compilación rápida de 1 sola pasada pdflatex).
      * `./compilar.sh --only-clean` (limpieza de temporales sin compilar).
      * `./compilar.sh --check-tablas` (auditoría de tablas APA 7 y diagramación).
+     * `./compilar.sh --check-figuras` (auditoría de figuras e imágenes APA 7).
+     * `./compilar.sh --check-recursos` (auditoría conjunta de tablas y figuras).
 
 10. **Modalidad y Ensamble:**
     - Modalidad activa: **Emprendimiento Productivo** (Capítulos 1 al 7).
@@ -76,8 +80,8 @@ Este proyecto de LaTeX modular sigue pautas estrictas para mantener la consisten
     - Carátula oficial formateada con `\titulocaratula{...}` y `\subtitulocaratula{...}`.
 
 11. **Prompts de Apoyo (`promts/`):**
-    - Guiar la redacción con [promts/migracion/ficha-proyecto.md](promts/migracion/ficha-proyecto.md).
-    - Revisar consistencia y rigor comercial y técnico con la suite de 14 prompts modulares en [promts/revicion/](promts/revicion/) adaptada a los 7 capítulos de Emprendimiento Productivo (BTH RM 0912/2023).
+    - Guiar la recopilación y redacción con [promts/migracion/ficha-proyecto.md](promts/migracion/ficha-proyecto.md).
+    - Revisar consistencia y rigor comercial y técnico con la suite de 14 prompts modulares en [promts/revicion/](promts/revicion/) adaptada a los 7 capítulos de Emprendimiento Productivo (BTH RM 0912/2023), iniciando con `00_analisis_capitulos_emprendimiento.md`.
 
 12. **Formato de Números, Decimales y Separador de Miles (Norma SI/ISO 80000-1):**
     - **Parte decimal:** Usar obligatoriamente punto (`.`) (ej. `12.50`, `3.1416`, `98.5%`, `0.75`). **PROHIBIDO** el uso de coma (`,`) en decimales.
@@ -97,5 +101,7 @@ Este proyecto de LaTeX modular sigue pautas estrictas para mantener la consisten
       * `\seccionanexo{Título}`: Encabezados de secciones de anexos agregados a TOC.
       * `\configurarseccionfinal`: Estilo de página limpio (`empty`) para bibliografía y anexos.
       * `\palabrasclave{...}`, `\keywords{...}`, `\simikuna{...}`: Bloques semánticos de palabras clave.
-      * `\notatabla{...}`: Notas al pie de tablas y figuras APA 7.
+      * `\notatabla{...}`: Notas al pie de tablas bajo APA 7.
+      * `\notafigura{...}`, `\notaimagen{...}`, `\notagrafico{...}`: Notas al pie de figuras y gráficos bajo APA 7.
+      * `\figuraapa[ancho]{archivo}{Título}{label}{Nota}` (y sus aliases `\insertarfigura`, `\graficoapa`, `\insertargrafico`): Inserción estandarizada de figuras APA 7.
       * `\titulocaratula{...}` y `\subtitulocaratula{...}`: Formato tipográfico en carátula.

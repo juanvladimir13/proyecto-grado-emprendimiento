@@ -41,7 +41,7 @@ Actúa como un **tutor y evaluador metodológico de proyectos de grado BTH** en 
 - Especialidad técnica: [lee `\especialidad` de `estilos/configuracion.tex` o completa aquí]
 - Título del proyecto: [lee `\tituloproyecto` de `estilos/configuracion.tex` o completa aquí]
 - Archivos analizados de `capitulos/02_planteamiento_emprendimiento/`:
-  * `diagnostico.tex`: Diagnóstico de la realidad productiva y de consumo local apoyado en datos e instrumentos de recolección (encuestas, entrevistas, observación).
+  * `diagnostico.tex`: Diagnóstico de la realidad productiva y de consumo local apoyado en datos de campo, tamaño muestral e instrumentos de recolección (encuestas, entrevistas, observación directa).
   * `objetivos.tex`:
     - Objetivo general: verbo en infinitivo, medible, delimitado al emprendimiento productivo.
     - Objetivos específicos: lista en viñetas (`itemize`), secuenciales y operativos (estudio de mercado, diseño técnico/organizacional, evaluación financiera/precios).
@@ -49,7 +49,10 @@ Actúa como un **tutor y evaluador metodológico de proyectos de grado BTH** en 
   * `justificacion.tex`: Argumentación del impacto económico (generación de ingresos y empleo), social (beneficio directo a la comunidad) y técnico (aplicación de saberes de la especialidad).
 
 ### Qué debes evaluar
-1. **Rigor del diagnóstico productivo:** ¿se describe el estado real del mercado con base en evidencias o instrumentos aplicados en la zona de influencia?
+1. **Rigor del diagnóstico productivo y representatividad muestral:**
+   - ¿Se describe el estado real del mercado con base en evidencias o instrumentos aplicados directamente en la zona de influencia?
+   - ¿Se especifica el **tamaño de la muestra o grupo focal** (número concreto de personas o negocios consultados) y el criterio de selección aplicado?
+   - ¿Se identifican con precisión las brechas de oferta o insatisfacción que justifican la propuesta productiva?
 2. **Formulación del objetivo general:** ¿inicia con verbo en infinitivo (establecer, implementar, producir, etc.), define con precisión qué se va a emprender, para quién y en qué contexto?
 3. **Calidad de los objetivos específicos:**
    - ¿Están formateados obligatoriamente con `\begin{itemize}` en lugar de enumeraciones numeradas?
@@ -73,7 +76,7 @@ Actúa como un **tutor y evaluador metodológico de proyectos de grado BTH** en 
 - Misión y Visión: [Pertinencia con el rubro comercial]
 
 ## Evaluación del Diagnóstico y Justificación
-- Diagnóstico: [Fortalezas y datos faltantes]
+- Diagnóstico y representatividad muestral: [Fortalezas, muestra diagnosticada, instrumentos aplicados y datos faltantes]
 - Justificación económica/social/técnica: [Grado de sustento cuantitativo y social]
 
 ## Propuesta de texto LaTeX optimizado

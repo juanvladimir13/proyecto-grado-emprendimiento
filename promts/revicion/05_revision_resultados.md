@@ -30,6 +30,7 @@ Al finalizar la redacción del borrador del **Capítulo 5: Resultados** (`capitu
 | `capitulos/05_resultados/resultados_cuantitativos.tex` | Validación comercial, unidades producidas/vendidas, ingresos brutos y demanda real |
 | `capitulos/05_resultados/resultados_cualitativos.tex` | Percepción del consumidor, atributos valorados y retroalimentación para mejora |
 | `capitulos/05_resultados/indicadores_validados.tex` | Contraste de metas financieras proyectadas vs. resultados reales (`tablas/resultados_piloto_ejemplo.tex`) |
+| `anexos/anexo_b_fichas_tecnicas.tex` | Evidencias documentales e instrumentos aplicados (cuestionarios, fichas de cata/degustación) |
 
 ---
 
@@ -50,9 +51,11 @@ Actúa como un **evaluador de validación de proyectos productivos y mercado BTH
 - ¿Se reportan con exactitud las unidades fabricadas, unidades vendidas, precio unitario e ingresos brutos obtenidos en Bs.?
 - ¿Se compara el comportamiento real de la demanda frente al volumen mínimo del punto de equilibrio del Cap. 4?
 
-**2. Resultados cualitativos y percepción del cliente**
-- ¿Se analizan las respuestas de los consumidores respecto a los atributos clave (calidad, sabor, durabilidad, presentación, precio)?
-- ¿Se presenta un nivel medible de satisfacción (porcentaje o escala Likert)?
+**2. Resultados cualitativos, percepción del cliente e instrumentos aplicados**
+- ¿Se describen con precisión los instrumentos metodológicos aplicados durante la prueba piloto (cuestionarios de satisfacción escala Likert, fichas de cata/degustación, encuestas de retroalimentación)?
+- ¿Se vincula o referencia el modelo de instrumento como evidencia documental en los Anexos (ej. `anexos/anexo_b_fichas_tecnicas.tex`)?
+- ¿Se analizan las respuestas de los consumidores respecto a los atributos clave (calidad, sabor/funcionalidad, durabilidad, presentación, precio)?
+- ¿Se presenta un nivel medible de satisfacción (porcentaje de aprobación o promedio en escala Likert)?
 - ¿Se recoge retroalimentación constructiva que justifique mejoras operativas futuras?
 
 **3. Indicadores de rentabilidad validados**
@@ -71,7 +74,7 @@ Actúa como un **evaluador de validación de proyectos productivos y mercado BTH
 
 ## Evaluación temática
 - Resultados Cuantitativos y Ventas:
-- Aceptación Cualitativa del Cliente:
+- Aceptación Cualitativa del Cliente e Instrumentos Aplicados (con respaldo en Anexos):
 - Contraste con Metas Financieras (Proyectado vs Real):
 
 ## Auditoría de la Tabla de Resultados Piloto
