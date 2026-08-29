@@ -47,8 +47,8 @@ proyecto-grado-emprendimiento/
 │   └── configuracion.tex                   # Variables centralizadas de autor(es), título, tutor, institución y modalidad
 ├── preliminares/                           # Hojas frontales (numeración romana)
 │   ├── caratula.tex                        # Portada oficial BTH ministerial con marco ornamental (\insertarmarcobth)
-│   ├── agradecimiento.tex                  # Agradecimientos (\capitulopreliminar y \begin{estilodedicatoria})
-│   ├── dedicatoria.tex                     # Dedicatorias (\capitulopreliminar y \begin{estilodedicatoria})
+│   ├── agradecimiento.tex                  # Agradecimientos (\begin{estilodedicatoria}{Agradecimiento})
+│   ├── dedicatoria.tex                     # Dedicatorias (\begin{estilodedicatoria}{Dedicatoria})
 │   └── resumen.tex                         # Resúmenes (\capitulopreliminar, \palabrasclave, \keywords, \simikuna)
 ├── capitulos/                              # Modalidad: Emprendimiento Productivo (Capítulos 1 al 7)
 │   ├── index.tex                           # Ensamble de los 7 capítulos
@@ -124,7 +124,7 @@ proyecto-grado-emprendimiento/
 
 ### 1. Modificaciones de Datos Personales o Institucionales
 * **REGLA:** **NUNCA** quemes (hardcodees) nombres de estudiantes, tutores, instituciones o títulos del proyecto directamente en los archivos `.tex` como `caratula.tex` o capítulos.
-* **ACCIÓN:** Utiliza o actualiza las macros correspondientes en `estilos/configuracion.tex` (`\institucion`, `\modalidad`, `\especialidad`, `\autoruno`, `\autordos`, `\tutorproyecto`, `\espacioposteriorparrafo`, `\sangriaprimeralinea`, `\espaciosuperiordedicatoria`, `\anchofigurapredeterminado`, `\anchografico`, `\espacionotafigura`, `\espacionotagrafico`, `\rutalogobth`, `\alturalogobth`, `\formulagradobth`, `\activarmarcobth`, etc.).
+* **ACCIÓN:** Utiliza o actualiza las macros correspondientes en `estilos/configuracion.tex` (`\institucion`, `\modalidad`, `\especialidad`, `\autoruno`, `\autordos`, `\tutorproyecto`, `\espacioposteriorparrafo`, `\sangriaprimeralinea`, `\espacioinferiordedicatoria`, `\espaciotitulodedicatoria`, `\espaciosuperiordedicatoria`, `\anchofigurapredeterminado`, `\anchografico`, `\espacionotafigura`, `\espacionotagrafico`, `\rutalogobth`, `\alturalogobth`, `\formulagradobth`, `\activarmarcobth`, etc.).
 * **Campos C.I.:** El número de C.I. del estudiante no forma parte de la plantilla y fue removido de las macros y de la portada oficial.
 
 ### 2. Estructuración Modular de Capítulos
@@ -214,8 +214,8 @@ Este proyecto está configurado para la modalidad de **Emprendimiento Productivo
 
 ### 13. Macros Semánticas Estandarizadas de la Plantilla
 * **REGLA:** Utilizar obligatoriamente las macros semánticas provistas en `estilos.sty` para preservar la coherencia y mantenibilidad del documento:
-  - `\capitulopreliminar{Título}`: Capítulos preliminares no numerados con entrada automática al TOC (`Agradecimiento`, `Dedicatoria`, `Resumen`, `ANEXOS`), en sustitución de `\chapter*{...}\addcontentsline{...}` manual.
-  - `\begin{estilodedicatoria}...\end{estilodedicatoria}`: Entorno semántico para dedicatoria y agradecimiento (alineación derecha, cursiva y espaciado vertical configurable vía `\espaciosuperiordedicatoria` en `estilos/configuracion.tex`).
+  - `\capitulopreliminar{Título}`: Capítulos preliminares no numerados con entrada automática al TOC (`Resumen`, `ANEXOS`), en sustitución de `\chapter*{...}\addcontentsline{...}` manual.
+  - `\begin{estilodedicatoria}{Título}...\end{estilodedicatoria}`: Entorno semántico para dedicatoria y agradecimiento alineado a la parte inferior de la hoja incluyendo el título, con registro automático en el TOC, texto en cursiva alineado a la derecha y espaciados configurables (`\espacioinferiordedicatoria`, `\espaciotitulodedicatoria` en `estilos/configuracion.tex`).
   - `\seccionanexo{Título}`: Encabezados de secciones de anexos con inclusión automática en el TOC (`\seccionanexo{Anexo A: Modelo Canvas...}`).
   - `\configurarseccionfinal`: Macro global que desactiva numeración de página y cabeceras (`empty`) para Bibliografía y Anexos.
   - `\palabrasclave{...}`, `\keywords{...}`, `\simikuna{...}`: Bloques semánticos normalizados para palabras clave en resúmenes (castellano, extranjero y lengua originaria).

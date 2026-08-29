@@ -20,8 +20,8 @@ proyecto-grado-emprendimiento/
 │   └── configuracion.tex                   # Metadatos centralizados (título, autor(es), tutor, institución, modalidad)
 ├── preliminares/                           # Hojas preliminares con numeración romana
 │   ├── caratula.tex                        # Portada oficial BTH ministerial con marco ornamental (\insertarmarcobth)
-│   ├── agradecimiento.tex                  # Página de agradecimientos (\capitulopreliminar y \begin{estilodedicatoria})
-│   ├── dedicatoria.tex                     # Página de dedicatoria (\capitulopreliminar y \begin{estilodedicatoria})
+│   ├── agradecimiento.tex                  # Página de agradecimientos (\begin{estilodedicatoria}{Agradecimiento})
+│   ├── dedicatoria.tex                     # Página de dedicatoria (\begin{estilodedicatoria}{Dedicatoria})
 │   └── resumen.tex                         # Resumen (\capitulopreliminar, \palabrasclave, \keywords, \simikuna)
 ├── capitulos/                              # Modalidad: Emprendimiento Productivo (Capítulos 1 al 7)
 │   ├── index.tex                           # Ensamble de los 7 capítulos
@@ -163,7 +163,7 @@ pdflatex main.tex
 
 1. **Configurar Datos Institucionales y del Autor:**
    * Abre `estilos/configuracion.tex` y actualiza el título, institución, especialidad, modalidad (`EMPRENDIMIENTO PRODUCTIVO`), tutor y datos del o los autores (soporta 1 o 2 autores automáticamente; no requiere C.I.).
-   * Personaliza si lo requieres el espaciado de párrafos estilo Word con `\espacioposteriorparrafo` (por defecto `8pt`), la sangría con `\sangriaprimeralinea` (por defecto `0pt`) y el espaciado superior de dedicatorias con `\espaciosuperiordedicatoria` (por defecto `3cm`).
+   * Personaliza si lo requieres el espaciado de párrafos estilo Word con `\espacioposteriorparrafo` (por defecto `8pt`), la sangría con `\sangriaprimeralinea` (por defecto `0pt`) y los espaciados de dedicatorias/agradecimientos con `\espacioinferiordedicatoria` (por defecto `1.5cm`) y `\espaciotitulodedicatoria` (por defecto `0.6cm`).
 
 2. **Estructura y Redacción de Capítulos (Emprendimiento Productivo):**
    * El documento compila los 7 capítulos modulares ubicados en `capitulos/` a través de `capitulos/index.tex`.

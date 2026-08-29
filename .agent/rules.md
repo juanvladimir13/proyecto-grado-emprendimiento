@@ -11,7 +11,7 @@ Este proyecto de LaTeX modular sigue pautas estrictas para mantener la consisten
 
 1. **Variables Centralizadas:**
    - **NUNCA** quemes nombres de autores, tutores, institución, especialidad o título en archivos `.tex` (`caratula.tex` o capítulos).
-   - Toda modificación de metadatos, espaciado de párrafos (`\espacioposteriorparrafo`, `\sangriaprimeralinea`), diagramación (`\espaciosuperiordedicatoria`), parámetros de figuras (`\anchofigurapredeterminado`, `\anchografico`, `\espacionotafigura`, `\espacionotagrafico`) y configuración de portada (`\rutalogobth`, `\alturalogobth`, `\formulagradobth`, `\activarmarcobth`) se realiza en [estilos/configuracion.tex](estilos/configuracion.tex). Soporta 1 o 2 autores dinámicamente (`\autoruno`, `\autordos`).
+   - Toda modificación de metadatos, espaciado de párrafos (`\espacioposteriorparrafo`, `\sangriaprimeralinea`), diagramación (`\espacioinferiordedicatoria`, `\espaciotitulodedicatoria`, `\espaciosuperiordedicatoria`), parámetros de figuras (`\anchofigurapredeterminado`, `\anchografico`, `\espacionotafigura`, `\espacionotagrafico`) y configuración de portada (`\rutalogobth`, `\alturalogobth`, `\formulagradobth`, `\activarmarcobth`) se realiza en [estilos/configuracion.tex](estilos/configuracion.tex). Soporta 1 o 2 autores dinámicamente (`\autoruno`, `\autordos`).
    - Los campos de C.I. del estudiante fueron removidos y no forman parte de la plantilla.
 
 2. **Estructura Modular de Capítulos (Emprendimiento Productivo):**
@@ -75,7 +75,7 @@ Este proyecto de LaTeX modular sigue pautas estrictas para mantener la consisten
     - Ensamble raíz en [main.tex](main.tex) vía `\input{capitulos/index.tex}`.
     - Metadatos institucionales y del estudiante centralizados en [estilos/configuracion.tex](estilos/configuracion.tex).
     - Ficha de datos del proyecto en [docs/ficha-proyecto.md](docs/ficha-proyecto.md) (alimentada desde `docs/proyecto.rtf` o `docs/proyecto.md` y consultas interactivas).
-    - Preliminares: [agradecimiento.tex](preliminares/agradecimiento.tex) y [dedicatoria.tex](preliminares/dedicatoria.tex) utilizan `\capitulopreliminar` y el entorno global `\begin{estilodedicatoria}` (con espaciado superior configurable `\espaciosuperiordedicatoria`).
+    - Preliminares: [agradecimiento.tex](preliminares/agradecimiento.tex) y [dedicatoria.tex](preliminares/dedicatoria.tex) utilizan el entorno global `\begin{estilodedicatoria}{Título}` que alinea automáticamente el bloque a la parte inferior de la hoja incluyendo el título, con espaciados configurables (`\espacioinferiordedicatoria`, `\espaciotitulodedicatoria`).
     - Resúmenes en [preliminares/resumen.tex](preliminares/resumen.tex) formatean palabras clave con `\palabrasclave{...}`, `\keywords{...}` y `\simikuna{...}`.
     - Portada oficial BTH unificada en [preliminares/caratula.tex](preliminares/caratula.tex) con marco ornamental perimetral (`\insertarmarcobth`), logotipo institucional (`\rutalogobth`), fórmula de grado (`\formulagradoportadabth`), bloques semánticos de postulantes y pie con lugar/gestión.
 
@@ -97,7 +97,7 @@ Este proyecto de LaTeX modular sigue pautas estrictas para mantener la consisten
 14. **Macros Semánticas Estandarizadas de la Plantilla:**
     - Utilizar obligatoriamente las macros semánticas provistas en `estilos.sty`:
       * `\capitulopreliminar{Título}`: Capítulos preliminares y Anexos sin numerar agregados a TOC.
-      * `\begin{estilodedicatoria}...\end{estilodedicatoria}`: Entorno semántico para dedicatoria y agradecimiento.
+      * `\begin{estilodedicatoria}{Título}...\end{estilodedicatoria}`: Entorno semántico para dedicatoria y agradecimiento alineado a la parte inferior de la hoja incluyendo título y entrada a TOC.
       * `\seccionanexo{Título}`: Encabezados de secciones de anexos agregados a TOC.
       * `\configurarseccionfinal`: Estilo de página limpio (`empty`) para bibliografía y anexos.
       * `\palabrasclave{...}`, `\keywords{...}`, `\simikuna{...}`: Bloques semánticos de palabras clave.
