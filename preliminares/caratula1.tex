@@ -1,0 +1,62 @@
+% ============================================================
+% PORTADA OFICIAL BTH (Normativa BTH / docs/portada.pdf)
+% ============================================================
+% Diseñada según la diagramación, proporciones y recursos gráficos
+% de la portada oficial del Módulo Tecnológico Productivo San Julián.
+% Modifique los datos de autor, tutor y título en 'estilos/configuracion.tex'.
+% ============================================================
+
+\newgeometry{left=3.0cm, right=3.0cm, top=2.5cm, bottom=2.5cm}
+\begin{titlepage}
+    % Insertar el marco decorativo perimetral en fondo si está activo
+    \insertarmarcobth
+    \centering
+
+    % 1. Encabezado Institucional y Especialidad
+    \vspace*{0.2cm}
+    \institucionportadabth{\institucion}
+    \vspace{0.25cm}
+    \especialidadportadabth{\especialidad}
+
+    % 2. Logotipo Institucional Centrado
+    \vspace{0.45cm}
+    \includegraphics[height=\alturalogobth]{\rutalogobth}
+    \vspace{0.5cm}
+
+    % 3. Título Oficial del Proyecto
+    \tituloportadabth{\tituloproyecto}
+    \vspace{0.45cm}
+
+    % 4. Fórmula de Grado Académico Oficial BTH
+    \formulagradoportadabth{\formulagradobth}
+
+    \vspace{0.8cm}
+
+    % 5. Bloque de Postulantes (Bloque centrado con lista)
+    \begin{minipage}{0.48\textwidth}
+        \etiquetapostulantesbth{\etiquetaautor}
+        \vspace{0.15cm}
+        \ifx\autordos\empty
+            \noindent \autoruno\par
+        \else
+            \noindent 1. \autoruno\par
+            \vspace{0.12cm}
+            \noindent 2. \autordos\par
+        \fi
+    \end{minipage}
+
+    \vspace{0.65cm}
+
+    % 6. Bloque del Tutor Guía
+    \etiquetatutorbth{\etiquetatutor}
+    \vspace{0.12cm}
+    \tutorportadabth{\tutorproyecto}
+
+    \vfill
+
+    % 7. Ciudad, País y Gestión
+    \pieportadabth{\lugarproyecto}{\gestionproyecto}
+    \vspace*{2cm}
+
+\end{titlepage}
+\restoregeometry

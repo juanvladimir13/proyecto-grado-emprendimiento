@@ -1,0 +1,22 @@
+\documentclass{report}
+\usepackage{xparse}
+\NewDocumentEnvironment{estilodedicatoria}{ o g }{%
+  \IfValueTF{#1}{BRACKET: #1}{%
+    \IfValueTF{#2}{BRACE: #2}{NONE}%
+  }\par
+}{%
+  \par END\par
+}
+\begin{document}
+\begin{estilodedicatoria}{Con Llaves}
+Texto 1
+\end{estilodedicatoria}
+
+\begin{estilodedicatoria}[Con Corchetes]
+Texto 2
+\end{estilodedicatoria}
+
+\begin{estilodedicatoria}
+Texto 3
+\end{estilodedicatoria}
+\end{document}
