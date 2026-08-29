@@ -36,7 +36,7 @@ Al iniciar el proceso de revisión, con el índice general o el árbol de capít
 | Cap. 7 | `capitulos/07_conclusiones_recomendaciones/main.tex` → `conclusiones.tex`, `recomendaciones.tex` |
 | Bibliografía | `bibliografia/referencias.bib` |
 | Anexos | `anexos/index.tex` → `anexo_a_canvas.tex`, `anexo_b_fichas_tecnicas.tex`, `anexo_c_codigo_fuente.tex` |
-| Configuración | `estilos/configuracion.tex`, `estilos/estilos.sty` |
+| Configuración | `estilos/configuracion.tex`, `estilos/estilos.sty`, `estilos/caratula.sty` |
 
 ---
 
@@ -47,7 +47,7 @@ Actúa como un **revisor metodológico de proyectos de grado BTH**. Tu tarea es 
 ### Contexto del documento
 - Modalidad: Proyecto de Grado — Emprendimiento Productivo (BTH)
 - Estructura oficial requerida:
-  1. Preliminares: Carátula, Portada, Dedicatoria, Agradecimiento, Resúmenes (castellano, originario, extranjero), Índices (TOC, tablas, figuras).
+  1. Preliminares: Carátula oficial BTH, Dedicatoria, Agradecimiento, Resúmenes (castellano, originario, extranjero), Índices (TOC, tablas, figuras).
   2. Capítulo 1: Introducción (contexto general, oportunidad de negocio, propuesta de valor, marco teórico y conceptual).
   3. Capítulo 2: Planteamiento del Emprendimiento Productivo (diagnóstico del contexto productivo, objetivos general/específicos/misión/visión, justificación).
   4. Capítulo 3: Desarrollo del Emprendimiento Productivo (localización macro/micro, análisis de mercado, estrategia de promoción y distribución, estructura organizacional, diseño de producto o servicio, ciclo de producción).
@@ -62,7 +62,7 @@ Actúa como un **revisor metodológico de proyectos de grado BTH**. Tu tarea es 
 1. **Completitud estructural:** ¿figuran los 7 capítulos requeridos en el orden exacto normado por el RM 0912/2023?
 2. **Modularidad:** ¿cada capítulo cuenta con su carpeta propia y su archivo `main.tex` que importa las subsecciones correspondientes mediante `\input{capitulos/...}`?
 3. **Jerarquía y numeración:** ¿se respetan los niveles de titulación APA 7 adaptados (Capítulos sin la palabra "Capítulo", secciones y subsecciones sin salto de nivel)?
-4. **Preliminares y páginas finales:** ¿la carátula y preliminares utilizan las macros semánticas (`\titulocaratula`, `\capitulopreliminar`, `\begin{estilodedicatoria}`, `\palabrasclave`)? ¿Bibliografía y Anexos usan `\configurarseccionfinal` y `\seccionanexo`?
+4. **Preliminares y páginas finales:** ¿la carátula y preliminares utilizan las macros semánticas (`\begin{entornocaratula}`, `\insertarlogobth`, `\capitulopreliminar`, `\begin{estilodedicatoria}{Título}`, `\palabrasclave`)? ¿Bibliografía y Anexos usan `\configurarseccionfinal` y `\seccionanexo`?
 5. **Alineación con `estilos/configuracion.tex`:** ¿los metadatos institucionales están centralizados sin quemar datos en el código de capítulos?
 
 ### Formato de salida esperado

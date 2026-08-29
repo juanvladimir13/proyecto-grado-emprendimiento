@@ -27,7 +27,7 @@ Como última verificación previa a la impresión, encuadernación o entrega for
 | Componente | Archivo(s) |
 | :--- | :--- |
 | Entrada principal | `main.tex` |
-| Configuración | `estilos/configuracion.tex`, `estilos/estilos.sty` |
+| Configuración | `estilos/configuracion.tex`, `estilos/estilos.sty`, `estilos/caratula.sty` |
 | Preliminares | `preliminares/caratula.tex`, `preliminares/dedicatoria.tex`, `preliminares/agradecimiento.tex`, `preliminares/resumen.tex` |
 | Capítulos 1 al 7 | `capitulos/index.tex` → 7 carpetas con `main.tex` y secciones `.tex` |
 | Tablas activas | `tablas/*.tex` (`estudio_mercado`, `estructura_organizacional`, `inversiones`, `costos_produccion`, `indicadores_financieros`, `resultados_piloto`) |
@@ -54,9 +54,8 @@ Actúa como el **presidente de tribunal de titulación del Bachillerato Técnico
 ### Checklist Oficial a Verificar
 
 1. **Hojas preliminares (numeración romana minúscula):**
-   - [ ] Carátula oficial BTH con logos institucionales, tipografía normalizada (`\titulocaratula`, `\subtitulocaratula`), datos del autor/autores (sin campos de C.I.), tutor, institución, modalidad ("EMPRENDIMIENTO PRODUCTIVO") y año de gestión.
-   - [ ] Portada académica interior.
-   - [ ] Dedicatoria y Agradecimiento con formato semántico unificado (`\capitulopreliminar` y entorno `\begin{estilodedicatoria}` con espaciado `\espaciosuperiordedicatoria`).
+   - [ ] Carátula oficial BTH modular (`\begin{entornocaratula}`) con marco perimetral (`\insertarmarcobth`), logotipo institucional (`\insertarlogobth`), datos del postulante(s) (1 o 2 autores dinámicos sin C.I.), tutor, institución, especialidad, modalidad y año de gestión.
+   - [ ] Dedicatoria y Agradecimiento con formato semántico unificado (`\begin{estilodedicatoria}{Título}`) alineado a la parte inferior de la hoja incluyendo título, cursiva a la derecha y registro en TOC.
    - [ ] Resumen en castellano (máx. 300 palabras), con `\palabrasclave{...}`.
    - [ ] Resumen en lengua originaria (quechua/aymara/guaraní) con `\simikuna{...}`.
    - [ ] Resumen en lengua extranjera (Abstract) con `\keywords{...}`.
