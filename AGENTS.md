@@ -96,7 +96,8 @@ proyecto-grado-emprendimiento/
 │   └── anexo_c_codigo_fuente.tex           # Anexo C: Código fuente importado (\seccionanexo)
 ├── promts/                                 # Prompts de apoyo y guías de revisión para agentes de IA
 │   ├── migracion/                          # Prompts para migración de datos y llenado de fichas
-│   │   └── ficha-proyecto.md               # Flujo paso a paso para completar ficha y redactar los 7 capítulos
+│   │   ├── ficha-proyecto.md               # Flujo paso a paso para completar ficha y redactar los 7 capítulos
+│   │   └── copiar-documento.md             # Flujo de copia textual directa (sin modificar redacción) a los 7 capítulos
 │   └── revicion/                           # Flujo de revisión por etapas y análisis global (7 capítulos)
 │       ├── 00_README_flujo_revision.md     # Guía del flujo de revisión por etapas
 │       ├── 00_analisis_capitulos_emprendimiento.md # Prompt de análisis integral de coherencia y rigor comercial
@@ -197,7 +198,9 @@ Este proyecto está configurado para la modalidad de **Emprendimiento Productivo
 * Los metadatos institucionales y del estudiante deben ajustarse en `estilos/configuracion.tex`.
 
 ### 10. Uso de Prompts de Apoyo para Agentes (`promts/`)
-* **Migración y redacción:** Consultar `promts/migracion/ficha-proyecto.md` para el flujo ordenado de ingesta de datos a la ficha y posterior redacción capítulo a capítulo.
+* **Migración y redacción:** 
+  - `promts/migracion/ficha-proyecto.md`: Flujo paso a paso para ingesta de datos a la ficha técnica, consulta interactiva y posterior redacción académica capítulo a capítulo.
+  - `promts/migracion/copiar-documento.md`: Flujo de copia directa y literal (verbatim) del documento fuente (`proyecto.rtf` / `proyecto.md`) a los 7 capítulos sin modificar redacción original.
 * **Revisión y calidad:** Utilizar la suite especializada de 14 prompts en `promts/revicion/` adaptada a los 7 capítulos de Emprendimiento Productivo (BTH RM 0912/2023): estructura general (`01`), capítulo 1 (`01b`), capítulos 2 al 7 modulares (`02` a `07`), auditoría de sincronía global (`08`), estilo y gramática (`09`), citas y bibliografía APA 7 (`10`), y checklist pre-entrega/defensa (`11`).
 
 ### 11. Formato de Números, Decimales y Separador de Miles (Norma SI/ISO 80000-1)
