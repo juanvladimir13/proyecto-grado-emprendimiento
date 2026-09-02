@@ -80,7 +80,7 @@ Este proyecto de LaTeX modular sigue pautas estrictas para mantener la consisten
     - Portada oficial BTH modular en [preliminares/caratula.tex](preliminares/caratula.tex) (estilos y diagramación modularizados en [estilos/caratula.sty](estilos/caratula.sty)) mediante `\imprimircaratulabth` (o el entorno `\begin{estilocaratulabth}`), con marco ornamental perimetral (`\insertarmarcobth` / `marco_portada_bth.png`), logotipo institucional (`\rutalogobth`), fórmula de grado (`\formulagradobth`), bloques semánticos estructurados y pie con lugar/gestión.
 
 11. **Prompts de Apoyo (`promts/`):**
-    - Guiar la recopilación y redacción con [promts/migracion/ficha-proyecto.md](promts/migracion/ficha-proyecto.md).
+    - Guiar la generación de archivos de contexto con [promts/migracion/crear-contexto.md](promts/migracion/crear-contexto.md), la recopilación y redacción con [promts/migracion/ficha-proyecto.md](promts/migracion/ficha-proyecto.md), o la migración literal con [promts/migracion/copiar-documento.md](promts/migracion/copiar-documento.md).
     - Revisar consistencia y rigor comercial y técnico con la suite de 14 prompts modulares en [promts/revicion/](promts/revicion/) adaptada a los 7 capítulos de Emprendimiento Productivo (BTH RM 0912/2023), iniciando con `00_analisis_capitulos_emprendimiento.md`.
 
 12. **Formato de Números, Decimales y Separador de Miles (Norma SI/ISO 80000-1):**

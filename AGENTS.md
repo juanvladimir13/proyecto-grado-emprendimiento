@@ -95,7 +95,8 @@ proyecto-grado-emprendimiento/
 │   ├── anexo_b_fichas_tecnicas.tex         # Anexo B: Cotizaciones y fichas técnicas (\seccionanexo)
 │   └── anexo_c_codigo_fuente.tex           # Anexo C: Código fuente importado (\seccionanexo)
 ├── promts/                                 # Prompts de apoyo y guías de revisión para agentes de IA
-│   ├── migracion/                          # Prompts para migración de datos y llenado de fichas
+│   ├── migracion/                          # Prompts para migración de datos, contexto y llenado de fichas
+│   │   ├── crear-contexto.md               # Prompt para generar o actualizar archivos de contexto Markdown
 │   │   ├── ficha-proyecto.md               # Flujo paso a paso para completar ficha y redactar los 7 capítulos
 │   │   └── copiar-documento.md             # Flujo de copia textual directa (sin modificar redacción) a los 7 capítulos
 │   └── revicion/                           # Flujo de revisión por etapas y análisis global (7 capítulos)
@@ -199,6 +200,7 @@ Este proyecto está configurado para la modalidad de **Emprendimiento Productivo
 
 ### 10. Uso de Prompts de Apoyo para Agentes (`promts/`)
 * **Migración y redacción:** 
+  - `promts/migracion/crear-contexto.md`: Prompt para generar o actualizar los archivos de contexto Markdown del proyecto.
   - `promts/migracion/ficha-proyecto.md`: Flujo paso a paso para ingesta de datos a la ficha técnica, consulta interactiva y posterior redacción académica capítulo a capítulo.
   - `promts/migracion/copiar-documento.md`: Flujo de copia directa y literal (verbatim) del documento fuente (`proyecto.rtf` / `proyecto.md`) a los 7 capítulos sin modificar redacción original.
 * **Revisión y calidad:** Utilizar la suite especializada de 14 prompts en `promts/revicion/` adaptada a los 7 capítulos de Emprendimiento Productivo (BTH RM 0912/2023): estructura general (`01`), capítulo 1 (`01b`), capítulos 2 al 7 modulares (`02` a `07`), auditoría de sincronía global (`08`), estilo y gramática (`09`), citas y bibliografía APA 7 (`10`), y checklist pre-entrega/defensa (`11`).

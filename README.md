@@ -51,9 +51,14 @@ proyecto-grado-emprendimiento/
 │   ├── README.md                           # Guía para almacenar e importar código externo
 │   └── ejemplo_controlador.py              # Script de prueba importable vía \lstinputlisting
 ├── scripts/                                # Scripts de utilidad y validación
+│   ├── verificar_figuras.py                # Auditoría de figuras e imágenes bajo normas APA 7
 │   └── verificar_tablas.py                 # Auditoría de tablas APA 7 y prevención de desbordamientos
 ├── imagenes/                               # Repositorio de recursos gráficos e ilustraciones
-│   └── README.md                           # Instrucciones para la gestión de imágenes
+│   ├── README.md                           # Guía técnica de inclusión de figuras bajo APA 7
+│   ├── figura_ejemplo.tex                  # Plantilla de ejemplo de figuras (entorno, macro y subfiguras)
+│   ├── ejemplo_figura.png                  # Gráfico de prueba para diagrama de flujo de producción
+│   ├── logo_bth.png                        # Logotipo oficial del Módulo Tecnológico Productivo BTH
+│   └── marco_portada_bth.png               # Marco ornamental perimetral oficial BTH con transparencia
 ├── bibliografia/                           # Base de datos bibliográfica (APA 7ma Edición)
 │   └── referencias.bib                     # Archivo BibLaTeX (.bib) con fuentes de citas en APA 7
 ├── anexos/                                 # Apéndices e información complementaria
@@ -63,12 +68,14 @@ proyecto-grado-emprendimiento/
 │   ├── anexo_b_fichas_tecnicas.tex         # Anexo B: Cotizaciones y fichas técnicas (\seccionanexo)
 │   └── anexo_c_codigo_fuente.tex           # Anexo C: Código fuente importado (\seccionanexo)
 ├── promts/                                 # Prompts de apoyo para redacción y revisión con IA
-│   ├── migracion/                          # Prompts para recopilación y redacción de capítulos
-│   │   └── ficha-proyecto.md               # Flujo estructurado paso a paso
+│   ├── migracion/                          # Prompts para recopilación, copia y redacción de capítulos
+│   │   ├── crear-contexto.md               # Prompt para generar o actualizar archivos de contexto Markdown
+│   │   ├── ficha-proyecto.md               # Flujo estructurado paso a paso con ficha técnica
+│   │   └── copiar-documento.md             # Flujo de copia textual directa sin modificar redacción
 │   └── revicion/                           # Set de prompts para revisión académica por etapas
 │       ├── 00_README_flujo_revision.md     # Guía del flujo de revisión
 │       ├── 00_analisis_capitulos_emprendimiento.md # Prompt de análisis global de coherencia
-│       └── 01_ a 11_*.md                   # Prompts de revisión modular (7 capítulos) y checklist pre-defensa
+│       └── 01_ a 11_*.md                   # Suite de 14 prompts de revisión modular (7 capítulos) y checklist pre-defensa
 └── docs/                                   # Regulaciones oficiales y documentos de soporte
     ├── REGLAMENTO_BTH__RM_0912_2023.pdf    # Reglamento oficial de graduación BTH (RM 0912/2023)
     ├── ficha-proyecto.md                   # Ficha de datos y requerimientos del proyecto
