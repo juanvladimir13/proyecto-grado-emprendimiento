@@ -203,7 +203,7 @@ Este proyecto está configurado para la modalidad de **Emprendimiento Productivo
   - `promts/migracion/crear-contexto.md`: Prompt para generar o actualizar los archivos de contexto Markdown del proyecto.
   - `promts/migracion/ficha-proyecto.md`: Flujo paso a paso para ingesta de datos a la ficha técnica, consulta interactiva y posterior redacción académica capítulo a capítulo.
   - `promts/migracion/copiar-documento.md`: Flujo de copia directa y literal (verbatim) del documento fuente (`proyecto.rtf` / `proyecto.md`) a los 7 capítulos sin modificar redacción original.
-* **Revisión y calidad:** Utilizar la suite especializada de 14 prompts en `promts/revicion/` adaptada a los 7 capítulos de Emprendimiento Productivo (BTH RM 0912/2023): estructura general (`01`), capítulo 1 (`01b`), capítulos 2 al 7 modulares (`02` a `07`), auditoría de sincronía global (`08`), estilo y gramática (`09`), citas y bibliografía APA 7 (`10`), y checklist pre-entrega/defensa (`11`).
+* **Revisión y calidad:** Utilizar la suite especializada de 15 prompts en `promts/revicion/` adaptada a los 7 capítulos de Emprendimiento Productivo (BTH RM 0912/2023): estructura general (`01`), capítulo 1 (`01b`), capítulos 2 al 7 modulares (`02` a `07`), auditoría de sincronía global (`08`), estilo y gramática (`09`), citas y bibliografía APA 7 (`10`), checklist pre-entrega/defensa (`11`) y humanización de redacción (`12`).
 
 ### 11. Formato de Números, Decimales y Separador de Miles (Norma SI/ISO 80000-1)
 * **REGLA:** En todo el proyecto (capítulos, tablas y anexos) se sigue la convención internacional técnica y de la RAE:

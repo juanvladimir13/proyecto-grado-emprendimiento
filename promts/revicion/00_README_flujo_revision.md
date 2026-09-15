@@ -1,6 +1,6 @@
 # Flujo de Revisión Académica — Emprendimiento Productivo (BTH)
 
-Este set de **14 prompts** está diseñado para evaluar y perfeccionar el proyecto de grado en la modalidad de **Emprendimiento Productivo** por etapas modulares, respetando la estructura oficial de **7 capítulos** normada por el Reglamento de Graduación del Bachillerato Técnico Humanístico (Resolución Ministerial RM 0912/2023, Anexo 1, inciso A).
+Este set de **15 prompts** está diseñado para evaluar y perfeccionar el proyecto de grado en la modalidad de **Emprendimiento Productivo** por etapas modulares, respetando la estructura oficial de **7 capítulos** normada por el Reglamento de Graduación del Bachillerato Técnico Humanístico (Resolución Ministerial RM 0912/2023, Anexo 1, inciso A).
 
 ---
 
@@ -21,6 +21,7 @@ Este set de **14 prompts** está diseñado para evaluar y perfeccionar el proyec
 | 09 | `09_revision_redaccion_estilo_academico.md` | Registro formal, redacción impersonal, estilo APA 7, normas numéricas y viñetas | Redacción de todos los capítulos |
 | 10 | `10_revision_citas_bibliografia.md` | Correspondencia de citas parentéticas/narrativas con `referencias.bib` | `bibliografia/` y citas en texto |
 | 11 | `11_checklist_pre_entrega_final.md` | Verificación institucional y técnica antes de encuadernación y defensa | Documento final y compilación PDF |
+| 12 | `12_humanizacion_redaccion.md` | Naturalidad, autenticidad y fluidez de la prosa; eliminación de patrones robóticos | Redacción de todos los capítulos |
 
 ---
 
