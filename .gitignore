@@ -34,9 +34,11 @@ imagenes/**/*.aux
 # ==========================================
 #  IDE and Local Agent Cache Directories
 # ==========================================
+.antigravity/
 .antigravitycli/
 .cline/
 .cursor/
+.gemini/
 .idea/
 .vscode/
 

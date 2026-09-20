@@ -37,9 +37,11 @@ codigo/**/*.aux
 imagenes/**/*.aux
 
 # Directorios temporales y cachés de entornos/IDEs
+.antigravity/
 .antigravitycli/
 .cline/
 .cursor/
+.gemini/
 .idea/
 .vscode/
 

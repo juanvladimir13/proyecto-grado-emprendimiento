@@ -216,9 +216,9 @@ Revisa el apartado de Bibliografía, Referencias o Fuentes del documento fuente 
 ```text
 Ejecuta la compilación y validación del documento LaTeX generado tras la copia literal:
 
-1. Ejecuta `./compilar.sh --fast` para verificar que la sintaxis LaTeX, escape de caracteres y enlaces modulares sean completamente válidos.
-2. Ejecuta `./compilar.sh --check-recursos` (o `./compilar.sh --check-tablas` y `./compilar.sh --check-figuras`) para auditar la conformidad estricta de tablas y figuras con normas APA 7ma Edición.
-3. Si la compilación rápida y auditoría pasan sin advertencias críticas ni errores, ejecuta `./compilar.sh --clean` para generar el PDF definitivo con el ciclo completo (pdflatex + biber + pdflatex x2) y limpiar archivos temporales.
+1. Ejecuta `./compilar.sh --fast` (o en Windows `compilar.bat --fast` / `.\compilar.ps1 --fast`) para verificar que la sintaxis LaTeX, escape de caracteres y enlaces modulares sean completamente válidos.
+2. Ejecuta `./compilar.sh --check-recursos` (o en Windows `compilar.bat --check-recursos`, o individualmente `--check-tablas` y `--check-figuras`) para auditar la conformidad estricta de tablas y figuras con normas APA 7ma Edición.
+3. Si la compilación rápida y auditoría pasan sin advertencias críticas ni errores, ejecuta `./compilar.sh --clean` (o en Windows `compilar.bat --clean`) para generar el PDF definitivo con el ciclo completo (pdflatex + biber + pdflatex x2) y limpiar archivos temporales.
 4. Notifica el resultado:
    - Confirma la generación de `main.pdf`.
    - Indica el número total de páginas generadas.
@@ -267,7 +267,7 @@ INSTRUCCIONES DE EJECUCIÓN:
    - Vuelca las referencias bibliográficas a `bibliografia/referencias.bib` en formato BibLaTeX APA 7. Si no existen fuentes, deja el archivo vacío con un comentario.
 
 5. Validación y Compilación:
-   - Ejecuta `./compilar.sh --fast`, `./compilar.sh --check-recursos` y luego `./compilar.sh --clean`.
+   - Ejecuta `./compilar.sh --fast` (o en Windows `compilar.bat --fast`), `./compilar.sh --check-recursos` (o `compilar.bat --check-recursos`) y luego `./compilar.sh --clean` (o `compilar.bat --clean`).
    - Presenta un informe final con el resumen de secciones migradas, tablas extraídas y confirmación de generación de `main.pdf`.
 ```
 

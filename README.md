@@ -14,6 +14,8 @@ proyecto-grado-emprendimiento/
 ├── README.md                               # Guía general de uso y comandos de compilación (este archivo)
 ├── AGENTS.md                               # Directrices y normas para agentes de IA
 ├── ESTRUCTURA_CAPITULOS.md                 # Detalle temático de los 7 capítulos de Emprendimiento Productivo
+├── compilar.bat                            # Wrapper CMD/Batch para compilación en Windows
+├── compilar.ps1                            # Script nativo de PowerShell para compilación en Windows
 ├── compilar.sh                             # Script de compilación y limpieza (soporta --clean, --fast, etc.)
 ├── estilos/                                # Paquete y configuraciones de diseño de LaTeX
 │   ├── estilos.sty                         # Archivo de estilos (márgenes, fuentes, espaciados y paquetes)
@@ -75,7 +77,7 @@ proyecto-grado-emprendimiento/
 │   └── revicion/                           # Set de prompts para revisión académica por etapas
 │       ├── 00_README_flujo_revision.md     # Guía del flujo de revisión
 │       ├── 00_analisis_capitulos_emprendimiento.md # Prompt de análisis global de coherencia
-│       └── 01_ a 11_*.md                   # Suite de 14 prompts de revisión modular (7 capítulos) y checklist pre-defensa
+│       └── 01_ a 12_*.md                   # Suite de 15 prompts de revisión modular (7 capítulos), humanización y checklist pre-defensa
 └── docs/                                   # Regulaciones oficiales y documentos de soporte
     ├── REGLAMENTO_BTH__RM_0912_2023.pdf    # Reglamento oficial de graduación BTH (RM 0912/2023)
     ├── ficha-proyecto.md                   # Ficha de datos y requerimientos del proyecto
@@ -103,9 +105,13 @@ A continuación se detallan los comandos disponibles en la terminal para compila
 
 ### 1. Compilación Automatizada con Script (Recomendado)
 
-El proyecto incluye el script ejecutable `./compilar.sh` que gestiona todo el ciclo (`pdflatex` → `biber` → `pdflatex` → `pdflatex`):
+El proyecto incluye scripts multiplataforma que gestionan todo el ciclo (`pdflatex` → `biber` → `pdflatex` → `pdflatex`):
+- **Linux / macOS:** `./compilar.sh`
+- **Windows (PowerShell):** `.\compilar.ps1`
+- **Windows (CMD / Batch):** `compilar.bat`
 
 ```bash
+# --- Linux / macOS ---
 # Compilar el documento completo y conservar archivos auxiliares:
 ./compilar.sh
 
@@ -126,6 +132,21 @@ El proyecto incluye el script ejecutable `./compilar.sh` que gestiona todo el ci
 
 # Solo limpiar archivos auxiliares sin compilar:
 ./compilar.sh --only-clean
+```
+
+```cmd
+REM --- Windows (CMD o PowerShell) ---
+REM Uso con el wrapper batch (CMD o PowerShell):
+compilar.bat
+compilar.bat --clean
+compilar.bat --fast
+compilar.bat --check-tablas
+compilar.bat --check-figuras
+compilar.bat --check-recursos
+compilar.bat --only-clean
+
+REM O directamente con PowerShell:
+.\compilar.ps1 --clean
 ```
 
 ---

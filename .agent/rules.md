@@ -60,15 +60,19 @@ Este proyecto de LaTeX modular sigue pautas estrictas para mantener la consisten
 8. **Control de Silabación:**
    - División de palabras desactivada globalmente (`\hyphenpenalty=10000`, `\exhyphenpenalty=10000`).
 
-9. **Compilación y Limpieza:**
-   - Usar siempre el script ejecutable [compilar.sh](compilar.sh):
-     * `./compilar.sh` (compilación completa de 4 pasos: pdflatex + biber + pdflatex x2).
-     * `./compilar.sh --clean` (compilación completa + eliminación de temporales).
-     * `./compilar.sh --fast` (compilación rápida de 1 sola pasada pdflatex).
-     * `./compilar.sh --only-clean` (limpieza de temporales sin compilar).
-     * `./compilar.sh --check-tablas` (auditoría de tablas APA 7 y diagramación).
-     * `./compilar.sh --check-figuras` (auditoría de figuras e imágenes APA 7).
-     * `./compilar.sh --check-recursos` (auditoría conjunta de tablas y figuras).
+9. **Compilación y Limpieza Multiplataforma:**
+   - Usar siempre los scripts provistos según el sistema operativo:
+     * Linux / macOS: [compilar.sh](compilar.sh) (`./compilar.sh`).
+     * Windows PowerShell: [compilar.ps1](compilar.ps1) (`.\compilar.ps1` o `powershell -ExecutionPolicy Bypass -File .\compilar.ps1`).
+     * Windows CMD / Batch: [compilar.bat](compilar.bat) (`compilar.bat`).
+   - Modos y parámetros disponibles en todas las plataformas:
+     * Sin parámetros: compilación completa de 4 pasos (`pdflatex` + `biber` + `pdflatex` x2).
+     * `--clean`: compilación completa + eliminación automática de archivos temporales.
+     * `--fast`: compilación rápida de 1 sola pasada `pdflatex`.
+     * `--only-clean`: limpieza de temporales sin compilar.
+     * `--check-tablas`: auditoría de tablas APA 7 y diagramación.
+     * `--check-figuras`: auditoría de figuras e imágenes APA 7.
+     * `--check-recursos`: auditoría conjunta de tablas y figuras.
 
 10. **Modalidad y Ensamble:**
     - Modalidad activa: **Emprendimiento Productivo** (Capítulos 1 al 7).
@@ -81,7 +85,7 @@ Este proyecto de LaTeX modular sigue pautas estrictas para mantener la consisten
 
 11. **Prompts de Apoyo (`promts/`):**
     - Guiar la generación de archivos de contexto con [promts/migracion/crear-contexto.md](promts/migracion/crear-contexto.md), la recopilación y redacción con [promts/migracion/ficha-proyecto.md](promts/migracion/ficha-proyecto.md), o la migración literal con [promts/migracion/copiar-documento.md](promts/migracion/copiar-documento.md).
-    - Revisar consistencia y rigor comercial y técnico con la suite de 14 prompts modulares en [promts/revicion/](promts/revicion/) adaptada a los 7 capítulos de Emprendimiento Productivo (BTH RM 0912/2023), iniciando con `00_analisis_capitulos_emprendimiento.md`.
+    - Revisar consistencia y rigor comercial y técnico con la suite especializada de 15 prompts modulares en [promts/revicion/](promts/revicion/) adaptada a los 7 capítulos de Emprendimiento Productivo (BTH RM 0912/2023), iniciando con `00_analisis_capitulos_emprendimiento.md`, incluyendo humanización de redacción (`12_humanizacion_redaccion.md`) y checklist institucional pre-defensa (`11_checklist_pre_entrega_final.md`).
 
 12. **Formato de Números, Decimales y Separador de Miles (Norma SI/ISO 80000-1):**
     - **Parte decimal:** Usar obligatoriamente punto (`.`) (ej. `12.50`, `3.1416`, `98.5%`, `0.75`). **PROHIBIDO** el uso de coma (`,`) en decimales.

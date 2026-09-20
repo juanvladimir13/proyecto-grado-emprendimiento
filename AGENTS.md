@@ -24,7 +24,7 @@ Este archivo define la estructura, reglas y flujos de trabajo del proyecto para 
 * **Interlineado:** 1.5 líneas (`\onehalfspacing`) en párrafos.
 * **Espaciado entre Párrafos (Estilo Microsoft Word):** Espaciado posterior configurable (`\espacioposteriorparrafo`, por defecto `8pt`) y sangría de primera línea (`\sangriaprimeralinea`, por defecto `0pt`) centralizados en `estilos/configuracion.tex` y aplicados con el paquete `parskip`.
 * **División de Palabras (Silabación):** Desactivada globalmente (`\hyphenpenalty=10000`, `\exhyphenpenalty=10000`).
-* **Compilación:** Automatizada con el script ejecutable `./compilar.sh` en la raíz (utiliza `pdflatex` y `biber`).
+* **Compilación:** Automatizada y multiplataforma con el script ejecutable `./compilar.sh` en Linux/macOS, y `compilar.bat` / `compilar.ps1` en Windows PowerShell (utiliza `pdflatex` y `biber`).
 * **Dependencias de Sistema (TeX Live en Linux/Debian/Ubuntu):**
   ```bash
   sudo apt-get install -y texlive-latex-base texlive-latex-recommended texlive-latex-extra \
@@ -41,6 +41,8 @@ proyecto-grado-emprendimiento/
 ├── README.md                               # Guía del usuario para compilar y usar la plantilla
 ├── AGENTS.md                               # Instrucciones y reglas para Agentes de IA (este archivo)
 ├── ESTRUCTURA_CAPITULOS.md                 # Detalle temático de los 7 capítulos de Emprendimiento Productivo
+├── compilar.bat                            # Wrapper CMD/Batch para compilación en Windows
+├── compilar.ps1                            # Script nativo de PowerShell para compilación en Windows
 ├── compilar.sh                             # Script ejecutable de compilación (pdflatex + biber) y limpieza
 ├── estilos/
 │   ├── estilos.sty                         # Estilos, carga de paquetes (biblatex-apa, listings), títulos APA 7
@@ -113,7 +115,8 @@ proyecto-grado-emprendimiento/
 │       ├── 08_revision_coherencia_sincronia_global.md # Sincronía integral entre los 7 capítulos
 │       ├── 09_revision_redaccion_estilo_academico.md  # Registro formal impersonal y estilo APA 7
 │       ├── 10_revision_citas_bibliografia.md          # Normalización BibLaTeX APA 7ma Edición
-│       └── 11_checklist_pre_entrega_final.md          # Checklist institucional BTH pre-defensa
+│       ├── 11_checklist_pre_entrega_final.md          # Checklist institucional BTH pre-defensa
+│       └── 12_humanizacion_redaccion.md               # Humanización y erradicación de patrones robóticos de IA
 └── docs/                                   # Regulaciones oficiales y guías
     ├── REGLAMENTO_BTH__RM_0912_2023.pdf    # Reglamento Ministerial oficial RM 0912/2023
     ├── ficha-proyecto.md                   # Ficha de datos y requerimientos del proyecto
@@ -182,14 +185,14 @@ proyecto-grado-emprendimiento/
 * **Código en Línea:** Usar `\lstinline|codigo|` o `\texttt{codigo}`.
 
 ### 8. Compilación y Limpieza
-* **REGLA:** Utilizar exclusivamente el script ejecutable `./compilar.sh` en lugar de comandos manuales aislados:
-  - `./compilar.sh` (compila PDF completo ejecutando `pdflatex` + `biber` + 2x `pdflatex` y conserva temporales).
-  - `./compilar.sh --clean` (compila PDF completo y elimina archivos temporales).
-  - `./compilar.sh --only-clean` (elimina archivos temporales sin compilar).
-  - `./compilar.sh --fast` (compilación rápida de 1 sola pasada pdflatex para redacción continua).
-  - `./compilar.sh --check-tablas` (audita la conformidad de tablas con APA 7 y booktabs).
-  - `./compilar.sh --check-figuras` (audita la conformidad de figuras e imágenes con APA 7).
-  - `./compilar.sh --check-recursos` (audita conjuntamente tablas y figuras).
+* **REGLA:** Utilizar exclusivamente los scripts provistos (`./compilar.sh` en Linux/macOS, o `compilar.bat` / `compilar.ps1` en Windows) en lugar de comandos manuales aislados:
+  - `./compilar.sh` o `compilar.bat` / `.\compilar.ps1` (compila PDF completo ejecutando `pdflatex` + `biber` + 2x `pdflatex` y conserva temporales).
+  - `./compilar.sh --clean` o `compilar.bat --clean` (compila PDF completo y elimina archivos temporales).
+  - `./compilar.sh --only-clean` o `compilar.bat --only-clean` (elimina archivos temporales sin compilar).
+  - `./compilar.sh --fast` o `compilar.bat --fast` (compilación rápida de 1 sola pasada pdflatex para redacción continua).
+  - `./compilar.sh --check-tablas` o `compilar.bat --check-tablas` (audita la conformidad de tablas con APA 7 y booktabs).
+  - `./compilar.sh --check-figuras` o `compilar.bat --check-figuras` (audita la conformidad de figuras e imágenes con APA 7).
+  - `./compilar.sh --check-recursos` o `compilar.bat --check-recursos` (audita conjuntamente tablas y figuras).
 
 ### 9. Estructura y Flujo de la Modalidad Emprendimiento Productivo
 Este proyecto está configurado para la modalidad de **Emprendimiento Productivo**:
@@ -250,4 +253,4 @@ Estos archivos se han excluido formalmente en los siguientes archivos de configu
 ### Lista de Patrones Excluidos:
 1. **Temporales de LaTeX:** `*.aux`, `*.log`, `*.toc`, `*.lof`, `*.lot`, `*.out`, `*.bbl`, `*.blg`, `*.run.xml`, `*.bcf`, `*.fdb_latexmk`, `*.fls`, `*.synctex.gz`, `*.upa`, `*.upb`, `*.listing`, `*-blx.bib` (incluyendo `capitulos/**/*.aux`, `preliminares/**/*.aux`, `tablas/**/*.aux`, etc.).
 2. **Archivos de Salida Binaria:** `*.pdf`, `main.pdf` (excepto `docs/*.pdf` regulatorios).
-3. **Directorios de Agentes/IDEs:** `.antigravitycli/`, `.cline/`, `.cursor/`, `.vscode/`, `.idea/`.
+3. **Directorios de Agentes/IDEs:** `.antigravity/`, `.antigravitycli/`, `.cline/`, `.cursor/`, `.gemini/`, `.vscode/`, `.idea/`.

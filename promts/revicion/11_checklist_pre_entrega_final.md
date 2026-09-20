@@ -10,11 +10,11 @@ Como última verificación previa a la impresión, encuadernación o entrega for
 ### Para agentes de IA con acceso al repositorio
 1. Lee `AGENTS.md` completo y verifica el cumplimiento de todas sus reglas (formato, estilos de títulos, macros, compilación).
 2. Obtén los datos del proyecto desde `estilos/configuracion.tex` para verificar que no haya texto quemado (hardcodeado) en otros archivos y la modalidad sea `EMPRENDIMIENTO PRODUCTIVO`.
-3. Ejecuta `./compilar.sh --clean` y verifica que compile sin errores `LaTeX Error` ni advertencias `Unresolved references`.
+3. Ejecuta `./compilar.sh --clean` (o en Windows `compilar.bat --clean`) y verifica que compile sin errores `LaTeX Error` ni advertencias `Unresolved references`.
 4. Lee `main.tex` para verificar la estructura completa de inclusión.
 5. Lee `capitulos/index.tex` para verificar el ensamble de los 7 capítulos.
 6. Verifica la existencia de todos los archivos de `preliminares/`, `capitulos/`, `tablas/`, `anexos/` y `bibliografia/`.
-7. Ejecuta `./compilar.sh --check-tablas` para certificar que el 100% de las tablas cumplan con APA 7 y no desborden los márgenes.
+7. Ejecuta `./compilar.sh --check-recursos` (o `./compilar.sh --check-tablas` y `--check-figuras`, o en Windows `compilar.bat --check-recursos`) para certificar que el 100% de las tablas y figuras cumplan con APA 7 y no desborden los márgenes.
 
 ### Para uso manual (copiar y pegar)
 1. Copia este prompt en la conversación con el asistente de IA.
@@ -34,7 +34,7 @@ Como última verificación previa a la impresión, encuadernación o entrega for
 | Bibliografía | `bibliografia/referencias.bib` |
 | Anexos | `anexos/index.tex` → `anexo_a_canvas.tex`, `anexo_b_fichas_tecnicas.tex`, `anexo_c_codigo_fuente.tex` |
 | Código fuente | `codigo/` (archivos importados vía `\lstinputlisting`) |
-| Compilación | `./compilar.sh --clean` → `main.pdf` |
+| Compilación | `./compilar.sh --clean` (o `compilar.bat --clean`) → `main.pdf` |
 
 ---
 
@@ -44,7 +44,7 @@ Actúa como el **presidente de tribunal de titulación del Bachillerato Técnico
 
 ### Contexto del documento
 - Modalidad: Proyecto de Grado — Emprendimiento Productivo (BTH Bolivia)
-- Compilación oficial: Ejecutado mediante `./compilar.sh --clean` (generación de `main.pdf`)
+- Compilación oficial: Ejecutado mediante `./compilar.sh --clean` o `compilar.bat --clean` (generación de `main.pdf`)
 - Formato tipográfico y márgenes:
   * Papel carta (`letterpaper`), Arial 11pt, interlineado 1.5 en texto principal.
   * Margen izquierdo: 3.0 cm | Márgenes superior, inferior y derecho: 2.5 cm.
@@ -77,11 +77,11 @@ Actúa como el **presidente de tribunal de titulación del Bachillerato Técnico
 4. **Calidad de tablas y diagramación:**
    - [ ] Todas las tablas construidas con `booktabs` (`\toprule`, `\midrule`, `\bottomrule`, sin líneas verticales ni `\hline`).
    - [ ] Rótulo `\caption` arriba de cada tabla y fuentes al pie con la macro `\notatabla{Fuente: ...}`.
-   - [ ] Verificación con `./compilar.sh --check-tablas` superada con 0 errores y 0 advertencias.
+   - [ ] Verificación con `./compilar.sh --check-recursos` (o `./compilar.sh --check-tablas` y `--check-figuras`, o en Windows `compilar.bat --check-recursos`) superada con 0 errores y 0 advertencias.
    - [ ] Formato numérico SI/ISO 80000-1 aplicado estrictamente (punto decimal `.`, sin coma de millares).
 
 5. **Compilación y entrega técnica:**
-   - [ ] Compilación limpia ejecutada con `./compilar.sh --clean`.
+   - [ ] Compilación limpia ejecutada con `./compilar.sh --clean` (o en Windows `compilar.bat --clean`).
    - [ ] Ausencia de advertencias críticas en `main.log`.
    - [ ] Archivo `main.pdf` listo para entrega o impresión final.
 

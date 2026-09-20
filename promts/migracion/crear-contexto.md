@@ -36,7 +36,7 @@ Actúa como especialista en ingeniería de prompts, documentación técnica y es
 - **Tema / Rubro Productivo:** [ej. Alimentos y bebidas, servicios tecnológicos, confección textil, agroindustria, manufactura, servicios mecánicos]
 - **Estilo de Citación y Bibliografía:** `biblatex` con estilo `apa` (APA 7ma Edición), backend `biber` y paquete `csquotes` (`autostyle`)
 - **Tipografía y Formato:** Arial 11pt (`helvet`), interlineado 1.5 (`\onehalfspacing`), espaciado entre párrafos 8pt (`parskip`), sangría de primera línea 0pt (`\sangriaprimeralinea`), Courier (`courier`) para código, papel Carta (`letterpaper`), márgenes (Izquierdo: 3.0 cm, Superior/Inferior/Derecho: 2.5 cm), silabación desactivada (`\hyphenpenalty=10000`, `\exhyphenpenalty=10000`)
-- **Motor y Script de Compilación:** `./compilar.sh` (`pdflatex` + `biber`), con opciones `--fast`, `--clean`, `--only-clean`, `--check-tablas`, `--check-figuras`, `--check-recursos`
+- **Motor y Script de Compilación:** `./compilar.sh` en Linux/macOS, o `compilar.bat` / `compilar.ps1` en Windows PowerShell (`pdflatex` + `biber`), con opciones `--fast`, `--clean`, `--only-clean`, `--check-tablas`, `--check-figuras`, `--check-recursos`
 
 ---
 
@@ -50,6 +50,8 @@ proyecto-grado-emprendimiento/
 ├── README.md                               # Guía del usuario para compilar y usar la plantilla
 ├── AGENTS.md                               # Instrucciones, reglas y lineamientos para Agentes de IA
 ├── ESTRUCTURA_CAPITULOS.md                 # Detalle temático y archivos de los 7 capítulos de Emprendimiento Productivo
+├── compilar.bat                            # Wrapper CMD/Batch para compilación en Windows
+├── compilar.ps1                            # Script nativo de PowerShell para compilación en Windows
 ├── compilar.sh                             # Script ejecutable de compilación (pdflatex + biber) y limpieza
 ├── estilos/
 │   ├── estilos.sty                         # Estilos, carga de paquetes (biblatex-apa, listings), títulos APA 7
@@ -105,7 +107,7 @@ proyecto-grado-emprendimiento/
 │   └── anexo_c_codigo_fuente.tex           # Anexo C: Código fuente importado (\seccionanexo)
 ├── promts/                                 # Prompts de apoyo y guías de revisión para agentes de IA
 │   ├── migracion/                          # crear-contexto.md, ficha-proyecto.md, copiar-documento.md
-│   └── revicion/                           # Suite de 14 prompts de revisión temática y checklist pre-defensa
+│   └── revicion/                           # Suite de 15 prompts de revisión temática, humanización y checklist pre-defensa
 └── docs/                                   # Regulaciones oficiales y documentos fuente
     ├── REGLAMENTO_BTH__RM_0912_2023.pdf    # Reglamento Ministerial oficial RM 0912/2023
     ├── ficha-proyecto.md                   # Ficha de datos y requerimientos del proyecto

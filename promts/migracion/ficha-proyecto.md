@@ -196,11 +196,11 @@ Al terminar los 7 capítulos, entrega un resumen general del contenido redactado
 ```
 Ejecuta la compilación de prueba y verificación de consistencia:
 
-1. Ejecuta primero `./compilar.sh --fast` para verificar rápidamente que no existan
+1. Ejecuta primero `./compilar.sh --fast` (o en Windows `compilar.bat --fast` / `.\compilar.ps1 --fast`) para verificar rápidamente que no existan
    errores de sintaxis LaTeX, comandos no cerrados o rutas rotas.
-2. Ejecuta `./compilar.sh --check-recursos` (o `./compilar.sh --check-tablas` y `./compilar.sh --check-figuras`)
+2. Ejecuta `./compilar.sh --check-recursos` (o en Windows `compilar.bat --check-recursos`, o individualmente `--check-tablas` y `--check-figuras`)
    para auditar la conformidad estricta de las tablas y figuras con normas APA 7ma Edición.
-3. Si la compilación rápida y auditoría pasan sin errores, ejecuta `./compilar.sh --clean`
+3. Si la compilación rápida y auditoría pasan sin errores, ejecuta `./compilar.sh --clean` (o en Windows `compilar.bat --clean`)
    para realizar el ciclo completo de 4 pasos (pdflatex + biber + pdflatex x2) y limpiar archivos auxiliares.
 4. Notifica el resultado final: confirma la generación exitosa de `main.pdf`, el conteo total
    de páginas e informa si se resolvió el índice de contenidos, bibliografía y referencias cruzadas.
