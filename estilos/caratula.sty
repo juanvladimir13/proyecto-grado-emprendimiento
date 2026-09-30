@@ -48,32 +48,32 @@
 % 2. TIPOGRAFÍA Y FORMATO DE BLOQUES INDIVIDUALES
 % ============================================================
 \newcommand{\institucionportadabth}[1]{%
-    \begin{minipage}{0.80\textwidth}
-        \centering\large\bfseries\setstretch{1.15} #1\par
+    \begin{minipage}{0.85\textwidth}
+        \centering\fontsize{14pt}{17pt}\selectfont\bfseries\setstretch{1.15} #1\par
     \end{minipage}\par
 }
 
-\newcommand{\especialidadportadabth}[1]{{\large\bfseries ``#1''\par}}
+\newcommand{\especialidadportadabth}[1]{{\fontsize{14pt}{17pt}\selectfont\bfseries ``#1''\par}}
 
 \newcommand{\tituloportadabth}[1]{%
-    \begin{minipage}{0.78\textwidth}
-        \centering\large\bfseries\setstretch{1.2} #1\par
+    \begin{minipage}{0.82\textwidth}
+        \centering\fontsize{14pt}{17pt}\selectfont\bfseries\setstretch{1.2} #1\par
     \end{minipage}\par
 }
 
 \newcommand{\formulagradoportadabth}[1]{%
     \begin{minipage}{0.88\textwidth}
-        \centering\normalsize\setstretch{1.15} #1\par
+        \centering\fontsize{12pt}{15pt}\selectfont\setstretch{1.15} #1\par
     \end{minipage}\par
 }
 
-\newcommand{\etiquetapostulantesbth}[1]{{\normalsize\textbf{#1}\par}}
+\newcommand{\etiquetapostulantesbth}[1]{{\fontsize{12pt}{15pt}\selectfont\textbf{#1}\par}}
 
-\newcommand{\etiquetatutorbth}[1]{{\normalsize\textbf{#1}\par\vspace{-\parskip}}}
+\newcommand{\etiquetatutorbth}[1]{{\fontsize{12pt}{15pt}\selectfont\textbf{#1}\par\vspace{-\parskip}}}
 
-\newcommand{\tutorportadabth}[1]{{\normalsize\setstretch{1.0} #1\par}}
+\newcommand{\tutorportadabth}[1]{{\fontsize{12pt}{15pt}\selectfont\setstretch{1.0} #1\par}}
 
-\newcommand{\pieportadabth}[2]{{\normalsize\bfseries\setstretch{1.0} #1\\#2\par}}
+\newcommand{\pieportadabth}[2]{{\fontsize{12pt}{15pt}\selectfont\bfseries\setstretch{1.0} #1\\#2\par}}
 
 % Macros de compatibilidad tipográfica previa
 \newcommand{\titulocaratula}[1]{\tituloportadabth{#1}}
@@ -90,9 +90,9 @@
 }
 
 \newcommand{\bloquelogoportada}[2][\alturalogobth]{%
-    \vspace{0.45cm}%
-    \par{\centering\includegraphics[height=#1]{#2}\par}%
-    \vspace{0.5cm}%
+    \vspace{0.35cm}%
+    \par{\centering\includegraphics[width=\anchologoportadabth,height=#1,keepaspectratio]{#2}\par}%
+    \vspace{0.4cm}%
 }
 
 \newcommand{\bloquetituloportada}[1]{%
@@ -102,13 +102,14 @@
 
 \newcommand{\bloquegradoportada}[1]{%
     \formulagradoportadabth{#1}%
-    \vspace{0.8cm}%
+    \vspace{0.7cm}%
 }
 
 \newcommand{\bloquepostulantesportada}[3]{%
-    \begin{minipage}{0.48\textwidth}
+    \begin{minipage}{0.55\textwidth}
         \etiquetapostulantesbth{#1}%
         \vspace{0.15cm}%
+        {\fontsize{12pt}{15pt}\selectfont
         \noindent 1. #2\par
         \ifdefempty{#3}{}{%
             \ifblank{#3}{}{%
@@ -116,8 +117,9 @@
                 \noindent 2. #3\par
             }%
         }%
+        }%
     \end{minipage}\par
-    \vspace{0.65cm}%
+    \vspace{0.55cm}%
 }
 
 \newcommand{\bloquetutorportada}[2]{%
@@ -134,10 +136,10 @@
 % ============================================================
 % 4. ENTORNO Y COMANDO GLOBAL DE CARÁTULA
 % ============================================================
-% Entorno que encapsula la geometría (3.0 cm izq/der, 2.5 cm sup/inf),
+% Entorno que encapsula la geometría (2.5 cm izq, 3.0 cm der, 2.5 cm sup/inf),
 % tipografía Times New Roman (ptm), marco decorativo y centrado.
 \newenvironment{estilocaratulabth}{%
-    \newgeometry{left=3.0cm, right=3.0cm, top=2.5cm, bottom=2.5cm}%
+    \newgeometry{left=2.5cm, right=3.0cm, top=2.5cm, bottom=2.5cm}%
     \begin{titlepage}%
         \renewcommand{\familydefault}{ptm}%
         \normalfont

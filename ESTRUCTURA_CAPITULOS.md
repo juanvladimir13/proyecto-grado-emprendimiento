@@ -24,9 +24,10 @@ Todos los archivos fuente de los capítulos se encuentran en el directorio `capi
   * `diagnostico.tex`: Diagnóstico del contexto productivo, análisis de brechas de oferta y necesidades no atendidas con respaldo de instrumentos de recolección.
   * `objetivos.tex`: Objetivos del emprendimiento productivo:
     - Objetivo general
-    - Objetivos específicos (estudio de mercado, diseño organizacional/procesos, estructura de costos y precios)
-    - Misión institucional (opcional)
-    - Visión empresarial (opcional)
+    - Objetivos específicos (estudio de mercado, diseño técnico/organizacional, estructura de costos y validación con prueba piloto)
+    - Misión institucional
+    - Visión empresarial
+    - Valores corporativos
   * `justificacion.tex`: Justificación económica, social y técnica (generación de autoempleo, aprovechamiento de recursos locales y beneficio comunitario).
 
 ### Capítulo 3: Desarrollo del Emprendimiento Productivo (`capitulos/03_desarrollo_emprendimiento/`)
@@ -38,7 +39,7 @@ Todos los archivos fuente de los capítulos se encuentran en el directorio `capi
   * `estrategia_promocion.tex`: Canales de distribución, logística de entrega, política de precios y estrategias de promoción comercial (redes sociales, ferias, material impreso).
   * `estructura_organizacional.tex`: Forma jurídica (empresa unipersonal o asociativa), organigrama funcional y manual de funciones/cargos (`tablas/estructura_organizacional_ejemplo.tex`).
   * `diseno_producto.tex`: Características, atributos técnicos y formulación del bien o servicio; empaque, rotulado, presentación y marca comercial.
-  * `ciclo_produccion.tex` *(opcional)*: Etapas del flujo de procesos operativos (desde insumos hasta producto terminado), controles de calidad, capacidad instalada y equipamiento principal.
+  * `ciclo_produccion.tex`: Etapas del flujo de procesos operativos (desde insumos hasta producto terminado), controles de calidad, capacidad instalada y equipamiento principal.
 
 ### Capítulo 4: Viabilidad y Sostenibilidad (`capitulos/04_viabilidad_sostenibilidad/`)
 * **Archivo de ensamble:** `capitulos/04_viabilidad_sostenibilidad/main.tex`
@@ -49,6 +50,7 @@ Todos los archivos fuente de los capítulos se encuentran en el directorio `capi
     - Costos variables (materia prima directa, insumos, envases, mano de obra directa)
     - Costos fijos (alquileres, servicios, depreciaciones, sueldos administrativos) (`tablas/costos_produccion_ejemplo.tex`)
     - Indicadores de rentabilidad, margen de contribución unitario, precio de venta sugerido y punto de equilibrio operativo (`tablas/indicadores_financieros_ejemplo.tex`).
+  * `sostenibilidad.tex`: Evaluación del impacto ambiental, gestión de residuos y mitigación ecológica, sumado al impacto social y beneficio directo a la comunidad.
 
 ### Capítulo 5: Resultados (`capitulos/05_resultados/`)
 * **Archivo de ensamble:** `capitulos/05_resultados/main.tex`

@@ -29,14 +29,14 @@
 % ============================================================
 % 4. DIMENSIONES DE PÁGINA Y MÁRGENES (Formato Carta BTH)
 % ============================================================
-% Carta: Izquierdo: 3.0 cm | Derecho, Superior e Inferior: 2.5 cm
+% Carta: Derecho: 3.0 cm | Izquierdo, Superior e Inferior: 2.5 cm (docs/formato.md)
 \RequirePackage{geometry}
 \geometry{
     letterpaper,
     top=2.5cm,
     bottom=2.5cm,
-    left=3.0cm,
-    right=2.5cm,
+    left=2.5cm,
+    right=3.0cm,
     headheight=15pt,
     headsep=0pt
 }
@@ -44,9 +44,9 @@
 % ============================================================
 % 5. TIPOGRAFÍA, INTERLINEADO Y ESPACIADO DE PÁRRAFOS
 % ============================================================
-% Arial (helvet) para texto principal, Courier para código
-\RequirePackage{helvet}
-\renewcommand{\familydefault}{\sfdefault}
+% Times New Roman para texto principal (12pt), Courier para código (docs/formato.md)
+\RequirePackage{mathptmx}
+\renewcommand{\familydefault}{\rmdefault}
 \RequirePackage{courier}
 
 % Interlineado 1.5 en el cuerpo del texto
@@ -115,12 +115,21 @@
 % ============================================================
 % 8. ENCABEZADOS Y PIES DE PÁGINA
 % ============================================================
+% Numeración de página en la parte inferior derecha (docs/formato.md)
 \RequirePackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
-\cfoot{\thepage}
+\rfoot{\thepage}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
+
+% Asegurar que las páginas iniciales de capítulo (plain) ubiquen el número en la parte inferior derecha
+\fancypagestyle{plain}{%
+    \fancyhf{}%
+    \rfoot{\thepage}%
+    \renewcommand{\headrulewidth}{0pt}%
+    \renewcommand{\footrulewidth}{0pt}%
+}
 
 % ============================================================
 % 9. TABLAS, FIGURAS Y ROTULACIÓN (APA 7)
