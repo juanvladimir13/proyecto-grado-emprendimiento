@@ -13,7 +13,7 @@ Este set de **15 prompts** está diseñado para evaluar y perfeccionar el proyec
 | 01b | `01b_revision_introduccion.md` | Contexto general, oportunidad de negocio, propuesta de valor y marco teórico | Cap. 1 (`01_introduccion/`) |
 | 02 | `02_revision_planteamiento_emprendimiento.md` | Diagnóstico de mercado, objetivos (general/específicos/misión/visión) y justificación | Cap. 2 (`02_planteamiento_emprendimiento/`) |
 | 03 | `03_revision_desarrollo_emprendimiento.md` | Localización, mercado, promoción, organización, producto y ciclo de producción | Cap. 3 (`03_desarrollo_emprendimiento/`) |
-| 04 | `04_revision_viabilidad_sostenibilidad.md` | Presupuesto de inversiones, costos fijos/variables, rentabilidad y punto de equilibrio | Cap. 4 (`04_viabilidad_sostenibilidad/`) |
+| 04 | `04_revision_viabilidad_sostenibilidad.md` | Presupuesto de inversiones, costos fijos/variables, rentabilidad, punto de equilibrio y sostenibilidad | Cap. 4 (`04_viabilidad_sostenibilidad/`) |
 | 05 | `05_revision_resultados.md` | Pruebas piloto, ventas de validación comercial, satisfacción del cliente y métricas | Cap. 5 (`05_resultados/`) |
 | 06 | `06_revision_proyecto_vida.md` | Aspiraciones vocacionales, competencias empresariales y compromiso socioeconómico | Cap. 6 (`06_proyecto_vida/`) |
 | 07 | `07_revision_conclusiones_recomendaciones.md` | Cumplimiento verificable de objetivos, conclusiones y recomendaciones | Cap. 7 (`07_conclusiones_recomendaciones/`) |

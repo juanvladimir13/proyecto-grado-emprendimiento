@@ -31,7 +31,7 @@ Al finalizar la redacción del borrador del **Capítulo 3: Desarrollo del Empren
 | `capitulos/03_desarrollo_emprendimiento/estrategia_promocion.tex` | Canales de distribución, logística de entrega, fijación de precios y promoción comercial |
 | `capitulos/03_desarrollo_emprendimiento/estructura_organizacional.tex` | Forma jurídica, organigrama y manual de funciones (`tablas/estructura_organizacional_ejemplo.tex`) |
 | `capitulos/03_desarrollo_emprendimiento/diseno_producto.tex` | Características técnicas, formulación, empaque, presentación y marca comercial |
-| `capitulos/03_desarrollo_emprendimiento/ciclo_produccion.tex` | Etapas del proceso productivo, capacidad instalada y equipamiento principal (opcional) |
+| `capitulos/03_desarrollo_emprendimiento/ciclo_produccion.tex` | Etapas del proceso productivo, capacidad instalada y equipamiento principal |
 
 ---
 

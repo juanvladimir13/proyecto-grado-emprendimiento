@@ -31,6 +31,7 @@ Al finalizar el borrador del **Capítulo 7: Conclusiones y Recomendaciones** (`c
 | `capitulos/07_conclusiones_recomendaciones/recomendaciones.tex` | Recomendaciones operativas, comerciales y de gestión |
 | **Dato cruzado:** `capitulos/02_planteamiento_emprendimiento/objetivos.tex` | Objetivos específicos a cerrar |
 | **Dato cruzado:** `capitulos/04_viabilidad_sostenibilidad/costo_produccion.tex` | Rentabilidad y punto de equilibrio calculados |
+| **Dato cruzado:** `capitulos/04_viabilidad_sostenibilidad/sostenibilidad.tex` | Sostenibilidad ambiental, social y mitigación de impacto |
 | **Dato cruzado:** `capitulos/05_resultados/indicadores_validados.tex` | Evidencia empírica de validación comercial |
 
 ---

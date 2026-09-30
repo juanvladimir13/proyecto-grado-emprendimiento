@@ -46,10 +46,10 @@ Actúa como el **presidente de tribunal de titulación del Bachillerato Técnico
 - Modalidad: Proyecto de Grado — Emprendimiento Productivo (BTH Bolivia)
 - Compilación oficial: Ejecutado mediante `./compilar.sh --clean` o `compilar.bat --clean` (generación de `main.pdf`)
 - Formato tipográfico y márgenes:
-  * Papel carta (`letterpaper`), Arial 11pt, interlineado 1.5 en texto principal.
-  * Margen izquierdo: 3.0 cm | Márgenes superior, inferior y derecho: 2.5 cm.
+  * Papel carta (`letterpaper`), Times New Roman 12pt (`mathptmx`), interlineado 1.5 en texto principal (conforme a `docs/formato.md`).
+  * Margen derecho: 3.0 cm | Márgenes superior, inferior e izquierdo: 2.5 cm.
   * Silabación/guionado desactivado globalmente.
-  * Sin encabezados de página (`headrulewidth=0pt`), números de página centrados al pie en arábigos (Capítulos 1 al 7).
+  * Sin encabezados de página (`headrulewidth=0pt`), números de página en la parte inferior derecha (`\rfoot{\thepage}`).
 
 ### Checklist Oficial a Verificar
 
@@ -65,7 +65,7 @@ Actúa como el **presidente de tribunal de titulación del Bachillerato Técnico
    - [ ] **Capítulo 1: Introducción:** Contexto del sector productivo, identificación fundamentada de la oportunidad de mercado, propuesta de valor diferenciada y marco teórico del modelo de negocio.
    - [ ] **Capítulo 2: Planteamiento del Emprendimiento Productivo:** Diagnóstico del contexto productivo con instrumentos aplicados, objetivo general y específicos formulados en viñetas (`itemize`), justificación económica, social y técnica.
    - [ ] **Capítulo 3: Desarrollo del Emprendimiento Productivo:** Localización (macro/micro), estudio de mercado y ventaja competitiva, estrategia de distribución y precios, estructura organizacional y cargos, diseño y presentación del producto/servicio, ciclo de procesos operativos.
-   - [ ] **Capítulo 4: Viabilidad y Sostenibilidad:** Presupuesto detallado de inversión fija y capital de operación, cálculo exacto de costos variables y costos fijos, precio unitario de venta y determinación del punto de equilibrio operativo.
+   - [ ] **Capítulo 4: Viabilidad y Sostenibilidad:** Presupuesto detallado de inversión fija y capital de operación, cálculo exacto de costos variables y costos fijos, precio unitario de venta, determinación del punto de equilibrio operativo, y sostenibilidad ambiental y social.
    - [ ] **Capítulo 5: Resultados:** Datos numéricos de prueba piloto o comercialización de campo, evaluación cualitativa de percepción del cliente y contraste de metas financieras empíricas vs. proyectadas.
    - [ ] **Capítulo 6: Proyecto de Vida:** Aspiraciones académicas/profesionales, competencias empresariales/socioemocionales consolidadas e independencia económica y compromiso comunitario.
    - [ ] **Capítulo 7: Conclusiones y Recomendaciones:** Cierre directo y riguroso de cada objetivo específico formulado, presentado obligatoriamente en viñetas (`itemize`); recomendaciones estratégicas para la consolidación comercial.

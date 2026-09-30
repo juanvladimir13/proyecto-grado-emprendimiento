@@ -35,7 +35,8 @@ capitulos/
 ├── 04_viabilidad_sostenibilidad/
 │   ├── main.tex                                       # Cap. 4 — VIABILIDAD Y SOSTENIBILIDAD
 │   ├── calculo_inversiones.tex                        #   └ Capital de inversión y capital de operación
-│   └── costo_produccion.tex                           #   └ Costos variables, fijos, rentabilidad y punto de equilibrio
+│   ├── costo_produccion.tex                           #   └ Costos variables, fijos, rentabilidad y punto de equilibrio
+│   └── sostenibilidad.tex                             #   └ Impacto ambiental, gestión de residuos y beneficio social
 ├── 05_resultados/
 │   ├── main.tex                                       # Cap. 5 — RESULTADOS
 │   ├── resultados_cuantitativos.tex                   #   └ Validación comercial y ventas piloto
@@ -157,6 +158,7 @@ Recorre en este orden estricto, respetando la estructura modular:
 - 04_viabilidad_sostenibilidad/:
   * calculo_inversiones.tex (incluye tabla de presupuesto de inversión)
   * costo_produccion.tex (incluye tablas de costos de producción e indicadores financieros)
+  * sostenibilidad.tex (evaluación de impacto ambiental y beneficio comunitario)
 - 05_resultados/:
   * resultados_cuantitativos.tex
   * resultados_cualitativos.tex

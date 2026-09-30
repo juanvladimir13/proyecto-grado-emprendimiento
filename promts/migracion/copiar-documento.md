@@ -77,7 +77,8 @@ capitulos/
 ├── 04_viabilidad_sostenibilidad/
 │   ├── main.tex                                       # Cap. 4 — VIABILIDAD Y SOSTENIBILIDAD
 │   ├── calculo_inversiones.tex                        #   └ Presupuesto de inversión fija/diferida y capital de trabajo
-│   └── costo_produccion.tex                           #   └ Costos variables, fijos, rentabilidad y punto de equilibrio
+│   ├── costo_produccion.tex                           #   └ Costos variables, fijos, rentabilidad y punto de equilibrio
+│   └── sostenibilidad.tex                             #   └ Sostenibilidad ambiental, gestión de residuos e impacto social
 ├── 05_resultados/
 │   ├── main.tex                                       # Cap. 5 — RESULTADOS
 │   ├── resultados_cuantitativos.tex                   #   └ Validación comercial y ventas piloto
@@ -172,6 +173,7 @@ REGLAS CRÍTICAS DE COPIA TEXTUAL:
    - Cap. 4 (`capitulos/04_viabilidad_sostenibilidad/`):
      * `calculo_inversiones.tex` -> Plan de inversión (activos fijos, diferidos) y capital de operación inicial.
      * `costo_produccion.tex` -> Costos variables, costos fijos, margen de contribución, precio sugerido y punto de equilibrio.
+     * `sostenibilidad.tex` -> Sostenibilidad ambiental, gestión de residuos y mitigación ecológica, más impacto social.
    - Cap. 5 (`capitulos/05_resultados/`):
      * `resultados_cuantitativos.tex` -> Validación comercial, volumen producido/colocado y ventas piloto en bolivianos.
      * `resultados_cualitativos.tex` -> Percepción del cliente y nivel de satisfacción con el producto/servicio.
@@ -254,7 +256,7 @@ INSTRUCCIONES DE EJECUCIÓN:
      * Cap. 1: `contexto_general.tex`, `oportunidad_negocio.tex`, `propuesta_valor.tex`, `marco_teorico.tex`.
      * Cap. 2: `diagnostico.tex`, `objetivos.tex`, `justificacion.tex`.
      * Cap. 3: `localizacion.tex`, `analisis_mercado.tex`, `estrategia_promocion.tex`, `estructura_organizacional.tex`, `diseno_producto.tex`, `ciclo_produccion.tex`.
-     * Cap. 4: `calculo_inversiones.tex`, `costo_produccion.tex`.
+     * Cap. 4: `calculo_inversiones.tex`, `costo_produccion.tex`, `sostenibilidad.tex`.
      * Cap. 5: `resultados_cuantitativos.tex`, `resultados_cualitativos.tex`, `indicadores_validados.tex`.
      * Cap. 6: `06_proyecto_vida/main.tex`.
      * Cap. 7: `conclusiones.tex`, `recomendaciones.tex`.

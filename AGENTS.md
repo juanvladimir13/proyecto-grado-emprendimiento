@@ -15,12 +15,12 @@ Este archivo define la estructura, reglas y flujos de trabajo del proyecto para 
 
 ## 🛠️ Stack Tecnológico & Formato
 
-* **Motor de Documento:** LaTeX (`report` class).
+* **Motor de Documento:** LaTeX (`report` class, 12pt).
 * **Motor Bibliográfico:** `biblatex` con estilo `apa` (APA 7ma Edición) y backend `biber`, con `csquotes` (`autostyle`).
-* **Tipografía:** Arial (`helvet`) de tamaño `11pt` en cuerpo principal, y Courier (`courier`) para código fuente y texto monoespaciado.
+* **Tipografía:** Times New Roman (`mathptmx`) de tamaño `12pt` en cuerpo principal, y Courier (`courier`) para código fuente y texto monoespaciado (conforme a `docs/formato.md`).
 * **Código Fuente y Programación:** Entorno `listings` con sintaxis coloreada, soporte UTF-8 (español), tipografía Courier y estilo predeterminado `estilocodigo`.
 * **Tamaño de Hoja:** Carta (`letterpaper`).
-* **Márgenes:** Izquierdo: 3.0 cm | Derecho, Superior e Inferior: 2.5 cm.
+* **Márgenes:** Derecho: 3.0 cm | Izquierdo, Superior e Inferior: 2.5 cm (conforme a `docs/formato.md`).
 * **Interlineado:** 1.5 líneas (`\onehalfspacing`) en párrafos.
 * **Espaciado entre Párrafos (Estilo Microsoft Word):** Espaciado posterior configurable (`\espacioposteriorparrafo`, por defecto `8pt`) y sangría de primera línea (`\sangriaprimeralinea`, por defecto `0pt`) centralizados en `estilos/configuracion.tex` y aplicados con el paquete `parskip`.
 * **División de Palabras (Silabación):** Desactivada globalmente (`\hyphenpenalty=10000`, `\exhyphenpenalty=10000`).
@@ -58,7 +58,7 @@ proyecto-grado-emprendimiento/
 │   ├── 01_introduccion/                    # Cap. 1: main.tex, contexto_general.tex, oportunidad_negocio.tex, propuesta_valor.tex, marco_teorico.tex
 │   ├── 02_planteamiento_emprendimiento/    # Cap. 2: main.tex, diagnostico.tex, objetivos.tex, justificacion.tex
 │   ├── 03_desarrollo_emprendimiento/       # Cap. 3: main.tex, localizacion.tex, analisis_mercado.tex, estrategia_promocion.tex, estructura_organizacional.tex, diseno_producto.tex, ciclo_produccion.tex
-│   ├── 04_viabilidad_sostenibilidad/       # Cap. 4: main.tex, calculo_inversiones.tex, costo_produccion.tex
+│   ├── 04_viabilidad_sostenibilidad/       # Cap. 4: main.tex, calculo_inversiones.tex, costo_produccion.tex, sostenibilidad.tex
 │   ├── 05_resultados/                      # Cap. 5: main.tex, resultados_cuantitativos.tex, resultados_cualitativos.tex, indicadores_validados.tex
 │   ├── 06_proyecto_vida/                   # Cap. 6: main.tex (aspiraciones académicas, competencias empresariales, compromiso ético)
 │   └── 07_conclusiones_recomendaciones/    # Cap. 7: main.tex, conclusiones.tex, recomendaciones.tex
@@ -119,6 +119,9 @@ proyecto-grado-emprendimiento/
 │       └── 12_humanizacion_redaccion.md               # Humanización y erradicación de patrones robóticos de IA
 └── docs/                                   # Regulaciones oficiales y guías
     ├── REGLAMENTO_BTH__RM_0912_2023.pdf    # Reglamento Ministerial oficial RM 0912/2023
+    ├── formato.md                          # Formato institucional y especificaciones de carátula
+    ├── protocolo.md                        # Protocolo metodológico corregido y alineado a los 7 capítulos
+    ├── protocolo-oficial.md                # Protocolo institucional original de referencia
     ├── ficha-proyecto.md                   # Ficha de datos y requerimientos del proyecto
     ├── proyecto.md                         # Archivo base de insumo del proyecto (formato Markdown/texto)
     └── proyecto.rtf                        # Archivo base de insumo del proyecto (formato enriquecido RTF)
@@ -149,7 +152,7 @@ proyecto-grado-emprendimiento/
 
 ### 4. Encabezados y Pies de Página
 * **Encabezados:** Están totalmente deshabilitados. No debe mostrarse texto de cabecera superior ni línea horizontal separadora (`headrulewidth=0pt`).
-* **Pies de Página:** La numeración de páginas debe mostrarse centrada en la parte inferior de las hojas que lo requieran (Capítulos 1 al 7).
+* **Pies de Página:** La numeración de páginas debe mostrarse en la esquina inferior derecha (`\rfoot{\thepage}`) en números romanos en minúscula para preliminares (`i`, `ii`, ...) y arábigos correlativos (`1`, `2`, ...) desde el Capítulo 1 hasta el Capítulo 7 (conforme a `docs/formato.md`).
 
 ### 5. Secciones Finales, Citas y Bibliografía (APA 7ma Edición)
 * **Motor:** Se utiliza `biblatex` con `style=apa` y backend `biber`.
@@ -232,7 +235,7 @@ Este proyecto está configurado para la modalidad de **Emprendimiento Productivo
   - `\notafigura{...}`, `\notaimagen{...}`, `\notagrafico{...}`: Formato estandarizado para notas y fuentes al pie de figuras, imágenes e ilustraciones bajo APA 7ma Edición (antepone `Nota.` en cursiva y alinea a la izquierda).
   - `\titulocaratula{...}` y `\subtitulocaratula{...}`: Formato tipográfico y paleta institucional en títulos de carátula.
   - `\imprimircaratulabth` (o `\imprimircaratula`, `\generarcaratula`, `\generarcaratulabth`): Comando de alto nivel para generar automáticamente la carátula oficial BTH con diagramación completa a partir de `estilos/configuracion.tex`.
-  - `\begin{estilocaratulabth}...\end{estilocaratulabth}` (o `\begin{entornocaratula}`): Entorno modular de portada oficial BTH (en `estilos/caratula.sty`) que encapsula geometría (3.0 cm izq/der, 2.5 cm sup/inf), tipografía Times New Roman (`ptm`), marco decorativo y centrado.
+  - `\begin{estilocaratulabth}...\end{estilocaratulabth}` (o `\begin{entornocaratula}`): Entorno modular de portada oficial BTH (en `estilos/caratula.sty`) que encapsula geometría (2.5 cm izq, 3.0 cm der, 2.5 cm sup/inf), tipografía Times New Roman (`ptm`), marco decorativo y centrado.
   - `\insertarmarcobth`: Inserta condicionalmente el marco ornamental perimetral oficial BTH (`marco_portada_bth.png` vía `\AddToShipoutPictureBG*`) si la variable `\activarmarcobth` está habilitada (`1` o `true`).
   - `\marcoportadabth`: Macro para renderizar directamente el marco ornamental perimetral oficial BTH en segundo plano.
   - `\bloqueinstitucionportada{...}{...}`, `\bloquelogoportada[...]{...}`, `\bloquetituloportada{...}`, `\bloquegradoportada{...}`, `\bloquepostulantesportada{...}{...}{...}`, `\bloquetutorportada{...}{...}`, `\bloquepieportada{...}{...}`: Bloques semánticos estructurados con espaciado vertical integrado.

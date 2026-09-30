@@ -30,7 +30,7 @@ Después de la redacción inicial (o de la migración de contenido desde `docs/p
 | Cap. 1 | `capitulos/01_introduccion/main.tex` | `contexto_general.tex`, `oportunidad_negocio.tex`, `propuesta_valor.tex`, `marco_teorico.tex` |
 | Cap. 2 | `capitulos/02_planteamiento_emprendimiento/main.tex` | `diagnostico.tex`, `objetivos.tex`, `justificacion.tex` |
 | Cap. 3 | `capitulos/03_desarrollo_emprendimiento/main.tex` | `localizacion.tex`, `analisis_mercado.tex`, `estrategia_promocion.tex`, `estructura_organizacional.tex`, `diseno_producto.tex`, `ciclo_produccion.tex` |
-| Cap. 4 | `capitulos/04_viabilidad_sostenibilidad/main.tex` | `calculo_inversiones.tex`, `costo_produccion.tex` |
+| Cap. 4 | `capitulos/04_viabilidad_sostenibilidad/main.tex` | `calculo_inversiones.tex`, `costo_produccion.tex`, `sostenibilidad.tex` |
 | Cap. 5 | `capitulos/05_resultados/main.tex` | `resultados_cuantitativos.tex`, `resultados_cualitativos.tex`, `indicadores_validados.tex` |
 | Cap. 6 | `capitulos/06_proyecto_vida/main.tex` | *(contenido directo en main.tex)* |
 | Cap. 7 | `capitulos/07_conclusiones_recomendaciones/main.tex` | `conclusiones.tex`, `recomendaciones.tex` |

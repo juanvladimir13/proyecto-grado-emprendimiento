@@ -31,6 +31,7 @@ Al finalizar la redacción del borrador del **Capítulo 4: Viabilidad y Sostenib
 | `capitulos/04_viabilidad_sostenibilidad/main.tex` | Ensamble del capítulo (`\chapter` y `\input` de las secciones) |
 | `capitulos/04_viabilidad_sostenibilidad/calculo_inversiones.tex` | Capital de inversión fija, activos diferidos y capital de operación (`tablas/inversiones_ejemplo.tex`) |
 | `capitulos/04_viabilidad_sostenibilidad/costo_produccion.tex` | Costos variables, fijos, indicadores de rentabilidad y punto de equilibrio (`tablas/costos_produccion_ejemplo.tex`, `tablas/indicadores_financieros_ejemplo.tex`) |
+| `capitulos/04_viabilidad_sostenibilidad/sostenibilidad.tex` | Sostenibilidad ambiental, gestión de residuos y mitigación ecológica, más impacto social comunitario |
 
 ---
 
