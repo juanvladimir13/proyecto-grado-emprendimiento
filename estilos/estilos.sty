@@ -29,14 +29,14 @@
 % ============================================================
 % 4. DIMENSIONES DE PÁGINA Y MÁRGENES (Formato Carta BTH)
 % ============================================================
-% Carta: Derecho: 3.0 cm | Izquierdo, Superior e Inferior: 2.5 cm (docs/formato.md)
+% Carta: Izquierdo: 3.0 cm (encuadernación) | Derecho, Superior e Inferior: 2.5 cm (docs/formato.md)
 \RequirePackage{geometry}
 \geometry{
     letterpaper,
     top=2.5cm,
     bottom=2.5cm,
-    left=2.5cm,
-    right=3.0cm,
+    left=3.0cm,
+    right=2.5cm,
     headheight=15pt,
     headsep=0pt
 }
@@ -74,40 +74,40 @@
 % ============================================================
 \RequirePackage{titlesec}
 
-% Nivel 1 (\chapter) - Alineado a la izquierda, Negrita, sin palabra "Capítulo"
+% Nivel 1 (\chapter) - Alineado a la izquierda, Negrita, sin palabra "Capítulo", tamaño 12pt
 \titleformat{\chapter}[block]
-  {\normalfont\Large\bfseries\setstretch{1.0}}
+  {\normalfont\fontsize{12pt}{15pt}\selectfont\bfseries\setstretch{1.0}}
   {\thechapter.}{0.5em}{}
-\titlespacing*{\chapter}{0pt}{-15pt}{10pt}
+\titlespacing*{\chapter}{0pt}{-26pt}{10pt}
 
 % Nivel 1 sin numerar (Bibliografía, Anexos, Resumen)
 \titleformat{name=\chapter,numberless}[block]
-  {\normalfont\Large\bfseries\setstretch{1.0}}
+  {\normalfont\fontsize{12pt}{15pt}\selectfont\bfseries\setstretch{1.0}}
   {}{0pt}{}
-\titlespacing*{name=\chapter,numberless}{0pt}{-15pt}{20pt}
+\titlespacing*{name=\chapter,numberless}{0pt}{-26pt}{20pt}
 
-% Nivel 2 (\section) - Alineado a la izquierda, Negrita
+% Nivel 2 (\section) - Alineado a la izquierda, Negrita, tamaño 12pt
 \titleformat{\section}
-  {\normalfont\large\bfseries\setstretch{1.0}}
+  {\normalfont\fontsize{12pt}{15pt}\selectfont\bfseries\setstretch{1.0}}
   {\thesection}{1em}{}
 \titlespacing*{\section}{0pt}{12pt}{6pt}
 
-% Nivel 3 (\subsection) - Alineado a la izquierda, Negrita y Cursiva
+% Nivel 3 (\subsection) - Alineado a la izquierda, Negrita y Cursiva, tamaño 12pt
 \titleformat{\subsection}
-  {\normalfont\large\bfseries\itshape\setstretch{1.0}}
+  {\normalfont\fontsize{12pt}{15pt}\selectfont\bfseries\itshape\setstretch{1.0}}
   {\thesubsection}{1em}{}
 \titlespacing*{\subsection}{0pt}{12pt}{6pt}
 
-% Nivel 4 (\subsubsection) - Sangría 1.27cm, Negrita, tipo run-in con punto
+% Nivel 4 (\subsubsection) - Sangría 1.27cm, Negrita, tipo run-in con punto, tamaño 12pt
 \titleformat{\subsubsection}[runin]
-  {\normalfont\normalsize\bfseries\setstretch{1.0}}
+  {\normalfont\fontsize{12pt}{15pt}\selectfont\bfseries\setstretch{1.0}}
   {\thesubsubsection}{1em}{}[.]
 \titlespacing*{\subsubsection}
   {1.27cm}{12pt}{0.5em}
 
-% Nivel 5 (\paragraph) - Sangría 1.27cm, Negrita y Cursiva, tipo run-in con punto
+% Nivel 5 (\paragraph) - Sangría 1.27cm, Negrita y Cursiva, tipo run-in con punto, tamaño 12pt
 \titleformat{\paragraph}[runin]
-  {\normalfont\normalsize\bfseries\itshape}
+  {\normalfont\fontsize{12pt}{15pt}\selectfont\bfseries\itshape}
   {\theparagraph}{1em}{}[.]
 \titlespacing*{\paragraph}
   {1.27cm}{12pt}{0.5em}
@@ -291,7 +291,7 @@
     rulecolor=\color{codeborder},
     xleftmargin=1.8em,
     framexleftmargin=1.5em,
-    xrightmargin=0.5em,
+    xrightmargin=1em,
     inputencoding=utf8,
     extendedchars=true,
     literate=

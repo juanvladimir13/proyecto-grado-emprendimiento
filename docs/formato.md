@@ -4,7 +4,7 @@
 - Tamaño de hoja: Carta / papel 21.59 cm x 27.94 cm
 - Tipo de letras para Carátula: Times New Roman
 - Tipo y tamaño de letra: Times New Roman 12 pts. Interlineado 1,5.
-- Márgenes: Derecho: 3,0 cm; Izquierdo, Superior e Inferior: 2,5 cm.
+- Márgenes: Izquierdo: 3,0 cm; Derecho, Superior e Inferior: 2,5 cm.
 - Numeración de página: Antes de la introducción en números romanos, después de la introducción en números arábigos en la parte inferior derecha.
 
 El proyecto debe cumplir con lo mínimo de 26 páginas desde RESUMEN hasta

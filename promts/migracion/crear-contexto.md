@@ -35,7 +35,7 @@ Actúa como especialista en ingeniería de prompts, documentación técnica y es
 - **Misión y Visión Empresarial:** [MISIÓN Y VISIÓN (opcional)]
 - **Tema / Rubro Productivo:** [ej. Alimentos y bebidas, servicios tecnológicos, confección textil, agroindustria, manufactura, servicios mecánicos]
 - **Estilo de Citación y Bibliografía:** `biblatex` con estilo `apa` (APA 7ma Edición), backend `biber` y paquete `csquotes` (`autostyle`)
-- **Tipografía y Formato:** Times New Roman 12pt (`mathptmx`), interlineado 1.5 (`\onehalfspacing`), espaciado entre párrafos 8pt (`parskip`), sangría de primera línea 0pt (`\sangriaprimeralinea`), Courier (`courier`) para código, papel Carta (`letterpaper`), márgenes (Derecho: 3.0 cm, Superior/Inferior/Izquierdo: 2.5 cm, conforme a `docs/formato.md`), numeración en esquina inferior derecha (`\rfoot{\thepage}`), silabación desactivada (`\hyphenpenalty=10000`, `\exhyphenpenalty=10000`)
+- **Tipografía y Formato:** Times New Roman 12pt (`mathptmx`), interlineado 1.5 (`\onehalfspacing`), espaciado entre párrafos 8pt (`parskip`), sangría de primera línea 0pt (`\sangriaprimeralinea`), Courier (`courier`) para código, papel Carta (`letterpaper`), márgenes (Izquierdo: 3.0 cm, Superior/Inferior/Derecho: 2.5 cm, conforme a `docs/formato.md`), numeración en esquina inferior derecha (`\rfoot{\thepage}`), silabación desactivada (`\hyphenpenalty=10000`, `\exhyphenpenalty=10000`)
 - **Motor y Script de Compilación:** `./compilar.sh` en Linux/macOS, o `compilar.bat` / `compilar.ps1` en Windows PowerShell (`pdflatex` + `biber`), con opciones `--fast`, `--clean`, `--only-clean`, `--check-tablas`, `--check-figuras`, `--check-recursos`
 
 ---
@@ -126,7 +126,7 @@ Genera o actualiza en la raíz del proyecto los siguientes 5 archivos Markdown:
 ### 1. `AGENTS.md` (en la raíz)
 Debe definir con rigor las directrices para cualquier agente de IA:
 - **Resumen del Proyecto:** Nombre, objetivo, marco normativo (BTH RM 0912/2023, Anexo 1, inciso A) y modalidad de Emprendimiento Productivo en 7 capítulos.
-- **Stack y Formato:** LaTeX `report` (12pt), `biblatex-apa` (Biber), Times New Roman 12pt (`mathptmx`), interlineado 1.5 (`\onehalfspacing`), espaciado de párrafos 8pt (`parskip`), sangría 0pt (`\sangriaprimeralinea`), márgenes carta (3.0 cm der / 2.5 cm otros), numeración inferior derecha, sin silabación.
+- **Stack y Formato:** LaTeX `report` (12pt), `biblatex-apa` (Biber), Times New Roman 12pt (`mathptmx`), interlineado 1.5 (`\onehalfspacing`), espaciado de párrafos 8pt (`parskip`), sangría 0pt (`\sangriaprimeralinea`), márgenes carta (3.0 cm izq / 2.5 cm otros), numeración inferior derecha, sin silabación.
 - **Estructura de Directorios:** Árbol completo del repositorio explicando el propósito de cada carpeta y archivo modular.
 - **Reglas Críticas de la IA:**
   1. *Parametrización:* Prohibido hardcodear datos personales o institucionales en archivos `.tex`; centralizarlos en `estilos/configuracion.tex`. El C.I. no se utiliza.

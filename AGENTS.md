@@ -20,7 +20,7 @@ Este archivo define la estructura, reglas y flujos de trabajo del proyecto para 
 * **Tipografía:** Times New Roman (`mathptmx`) de tamaño `12pt` en cuerpo principal, y Courier (`courier`) para código fuente y texto monoespaciado (conforme a `docs/formato.md`).
 * **Código Fuente y Programación:** Entorno `listings` con sintaxis coloreada, soporte UTF-8 (español), tipografía Courier y estilo predeterminado `estilocodigo`.
 * **Tamaño de Hoja:** Carta (`letterpaper`).
-* **Márgenes:** Derecho: 3.0 cm | Izquierdo, Superior e Inferior: 2.5 cm (conforme a `docs/formato.md`).
+* **Márgenes:** Izquierdo: 3.0 cm | Derecho, Superior e Inferior: 2.5 cm (conforme a `docs/formato.md`).
 * **Interlineado:** 1.5 líneas (`\onehalfspacing`) en párrafos.
 * **Espaciado entre Párrafos (Estilo Microsoft Word):** Espaciado posterior configurable (`\espacioposteriorparrafo`, por defecto `8pt`) y sangría de primera línea (`\sangriaprimeralinea`, por defecto `0pt`) centralizados en `estilos/configuracion.tex` y aplicados con el paquete `parskip`.
 * **División de Palabras (Silabación):** Desactivada globalmente (`\hyphenpenalty=10000`, `\exhyphenpenalty=10000`).
@@ -142,13 +142,14 @@ proyecto-grado-emprendimiento/
 
 ### 3. Estilos de Títulos y Alineación (Normas APA 7 Adaptadas)
 * **Color:** Todos los títulos y enlaces internos (TOC, LOF, LOT, referencias cruzadas) deben mostrarse en **negro** (`linkcolor=black`).
+* **Tamaño de Fuente:** Todos los títulos de Nivel 1 al 5 utilizan tamaño `12pt` (`\fontsize{12pt}{15pt}\selectfont`), manteniendo uniformidad con el cuerpo del documento.
 * **Interlineado:** Aplicar interlineado sencillo (`1.0`) interno en títulos de Nivel 1 al 4 (`\setstretch{1.0}`) para evitar separaciones excesivas cuando ocupan más de una línea.
-* **Nivel 1 (`\chapter`):** Debe alinearse a la **izquierda**, no debe contener el prefijo de palabra "Capítulo" (ej. `1. INTRODUCCIÓN`), y debe usar un espaciado anterior negativo de `-15pt` en `titlesec` para elevar la posición inicial de inicio de hoja.
+* **Nivel 1 (`\chapter`):** Debe alinearse a la **izquierda**, Negrita, 12pt, no debe contener el prefijo de palabra "Capítulo" (ej. `1. INTRODUCCIÓN`), y debe usar un espaciado anterior negativo de `-26pt` en `titlesec` para garantizar un margen superior de 2.50 cm.
 * **Otros Niveles:**
-  - Nivel 2 (`\section`): Alineado izquierda, Negrita.
-  - Nivel 3 (`\subsection`): Alineado izquierda, Negrita y Cursiva.
-  - Nivel 4 (`\subsubsection`): Sangría de 1.27 cm, Negrita, tipo *run-in* terminando con punto.
-  - Nivel 5 (`\paragraph`): Sangría de 1.27 cm, Negrita y Cursiva, tipo *run-in* terminando con punto.
+  - Nivel 2 (`\section`): Alineado izquierda, Negrita, 12pt.
+  - Nivel 3 (`\subsection`): Alineado izquierda, Negrita y Cursiva, 12pt.
+  - Nivel 4 (`\subsubsection`): Sangría de 1.27 cm, Negrita, tipo *run-in* terminando con punto, 12pt.
+  - Nivel 5 (`\paragraph`): Sangría de 1.27 cm, Negrita y Cursiva, tipo *run-in* terminando con punto, 12pt.
 
 ### 4. Encabezados y Pies de Página
 * **Encabezados:** Están totalmente deshabilitados. No debe mostrarse texto de cabecera superior ni línea horizontal separadora (`headrulewidth=0pt`).
@@ -235,7 +236,7 @@ Este proyecto está configurado para la modalidad de **Emprendimiento Productivo
   - `\notafigura{...}`, `\notaimagen{...}`, `\notagrafico{...}`: Formato estandarizado para notas y fuentes al pie de figuras, imágenes e ilustraciones bajo APA 7ma Edición (antepone `Nota.` en cursiva y alinea a la izquierda).
   - `\titulocaratula{...}` y `\subtitulocaratula{...}`: Formato tipográfico y paleta institucional en títulos de carátula.
   - `\imprimircaratulabth` (o `\imprimircaratula`, `\generarcaratula`, `\generarcaratulabth`): Comando de alto nivel para generar automáticamente la carátula oficial BTH con diagramación completa a partir de `estilos/configuracion.tex`.
-  - `\begin{estilocaratulabth}...\end{estilocaratulabth}` (o `\begin{entornocaratula}`): Entorno modular de portada oficial BTH (en `estilos/caratula.sty`) que encapsula geometría (2.5 cm izq, 3.0 cm der, 2.5 cm sup/inf), tipografía Times New Roman (`ptm`), marco decorativo y centrado.
+  - `\begin{estilocaratulabth}...\end{estilocaratulabth}` (o `\begin{entornocaratula}`): Entorno modular de portada oficial BTH (en `estilos/caratula.sty`) que encapsula geometría (3.0 cm izq, 2.5 cm der, 2.5 cm sup/inf), tipografía Times New Roman (`ptm`), marco decorativo y centrado.
   - `\insertarmarcobth`: Inserta condicionalmente el marco ornamental perimetral oficial BTH (`marco_portada_bth.png` vía `\AddToShipoutPictureBG*`) si la variable `\activarmarcobth` está habilitada (`1` o `true`).
   - `\marcoportadabth`: Macro para renderizar directamente el marco ornamental perimetral oficial BTH en segundo plano.
   - `\bloqueinstitucionportada{...}{...}`, `\bloquelogoportada[...]{...}`, `\bloquetituloportada{...}`, `\bloquegradoportada{...}`, `\bloquepostulantesportada{...}{...}{...}`, `\bloquetutorportada{...}{...}`, `\bloquepieportada{...}{...}`: Bloques semánticos estructurados con espaciado vertical integrado.

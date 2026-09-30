@@ -47,7 +47,7 @@ Actúa como el **presidente de tribunal de titulación del Bachillerato Técnico
 - Compilación oficial: Ejecutado mediante `./compilar.sh --clean` o `compilar.bat --clean` (generación de `main.pdf`)
 - Formato tipográfico y márgenes:
   * Papel carta (`letterpaper`), Times New Roman 12pt (`mathptmx`), interlineado 1.5 en texto principal (conforme a `docs/formato.md`).
-  * Margen derecho: 3.0 cm | Márgenes superior, inferior e izquierdo: 2.5 cm.
+  * Margen izquierdo: 3.0 cm | Márgenes superior, inferior y derecho: 2.5 cm.
   * Silabación/guionado desactivado globalmente.
   * Sin encabezados de página (`headrulewidth=0pt`), números de página en la parte inferior derecha (`\rfoot{\thepage}`).
 

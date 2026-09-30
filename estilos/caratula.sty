@@ -83,7 +83,6 @@
 % 3. BLOQUES SEMÁNTICOS ESTRUCTURADOS CON ESPACIADO INTEGRADO
 % ============================================================
 \newcommand{\bloqueinstitucionportada}[2]{%
-    \vspace*{0.2cm}%
     \institucionportadabth{#1}%
     \vspace{0.25cm}%
     \especialidadportadabth{#2}%
@@ -91,7 +90,7 @@
 
 \newcommand{\bloquelogoportada}[2][\alturalogobth]{%
     \vspace{0.35cm}%
-    \par{\centering\includegraphics[width=\anchologoportadabth,height=#1,keepaspectratio]{#2}\par}%
+    \par{\centering\includegraphics[height=#1]{#2}\par}%
     \vspace{0.4cm}%
 }
 
@@ -139,7 +138,7 @@
 % Entorno que encapsula la geometría (2.5 cm izq, 3.0 cm der, 2.5 cm sup/inf),
 % tipografía Times New Roman (ptm), marco decorativo y centrado.
 \newenvironment{estilocaratulabth}{%
-    \newgeometry{left=2.5cm, right=3.0cm, top=2.5cm, bottom=2.5cm}%
+    \newgeometry{left=3.0cm, right=2.5cm, top=2.5cm, bottom=2.5cm}%
     \begin{titlepage}%
         \renewcommand{\familydefault}{ptm}%
         \normalfont
